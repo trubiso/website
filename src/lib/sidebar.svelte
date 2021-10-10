@@ -3,6 +3,7 @@
     export let theme_change_func;
     import {theme} from '../store';	
     import { get } from 'svelte/store';
+import { onMount } from 'svelte';
     type SidebarItem = {
         name: string,
         link: string
@@ -57,14 +58,24 @@
         }
     }
     const updateSidebar = () => {
-
+        setTimeout( () => {
+        [...Array(items.length).keys()].forEach(v=>{
+            const d = document.getElementById(`sitem-${v}`);
+            if (!d) return;
+            if (items[v].link === location.pathname) {
+                d.classList.add("sidebar-b");
+            } else {
+                d.classList.remove("sidebar-b");
+            }
+        })}, 100 );
     }
+    onMount(updateSidebar);
 </script>
 
 <div class="sidebar" style="width: {size}px; {getTheme()}">
     <img src="/logo.png" alt="logo" id="logo" on:click="{clickLogo}" />
     {#each items as item}
-        <a href={item.link} id="sitem_{items.findIndex(v=>v===item)}" on:click="{updateSidebar}">{item.name}</a>
+        <a href={item.link} id="sitem-{items.findIndex(v=>v===item)}" on:click="{updateSidebar}">{item.name}</a>
     {/each}
     <div class="sidebar-foot"> 
         <span class="btn" on:click|preventDefault={v => {
@@ -74,6 +85,7 @@
             }
         }}>switch theme</span>
     </div>
+    <span class="sidebar-b"></span>
 </div>
 
 <style>
@@ -87,6 +99,11 @@
         overflow-x: hidden;
         padding-top: 20px;
         text-align: center;
+    }
+
+    .sidebar-b {
+        font-weight: bold;
+        font-size: 22;
     }
 
     .sidebar img {
