@@ -65,7 +65,6 @@
 	const langChange = v=>{
 		const s = document.getElementById("lang") as HTMLSelectElement;
 		lang = langs.indexOf(s.value) ?? 0;
-		console.log(lang);
 	}
 </script>
 

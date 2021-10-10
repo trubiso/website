@@ -23,6 +23,14 @@
         {
             name: "don't cliq",
             link: "/bad"
+        },
+        {
+            name: "kity",
+            link: "/kity"
+        },
+        {
+            name: "githube",
+            link: "https://www.github.com/trubiso"
         }
     ];
     const themes: SidebarTheme[] = [
@@ -44,16 +52,18 @@
 </script>
 
 <div class="sidebar" style="width: {size}px; {getTheme()}">
+    <img src="/logo.png" alt="logo"/>
     {#each items as item}
         <a href={item.link}>{item.name}</a>
     {/each}
     <div class="sidebar-foot">
-        <button on:click|preventDefault={v => {
+        
+        <span class="btn" on:click|preventDefault={v => {
             theme_change_func();
             if (document.getElementsByClassName("sidebar")) {
                 document.getElementsByClassName("sidebar")[0].setAttribute("style", `width: ${size}px; ${getTheme()}`)
             }
-        }}>Switch Theme</button>
+        }}>switch theme</span>
     </div>
 </div>
 
@@ -67,9 +77,15 @@
         background-color: var(--bg);
         overflow-x: hidden;
         padding-top: 20px;
+        text-align: center;
     }
 
-    .sidebar a {
+    .sidebar img {
+        text-align: center;
+        padding: 13px;
+    }
+
+    .sidebar a, .sidebar .btn {
         padding: 6px 8px 6px 8px;
         text-decoration: none;
         font-size: 25px;
@@ -79,17 +95,18 @@
     }
 
     .sidebar-foot {
-        position: absolute;
-        bottom:2vw;
+        position:relative;
+        overflow: hidden;
+        text-align: center;
     }
     
-    .sidebar button {
-        margin-left: 5vh;
-        padding: 10px;
+    .sidebar .btn {
         color: #fff;
         background-color: transparent;
         outline:0;
         border-style: none;
         outline-style: none;
+        cursor:pointer;
+        user-select: none;
     }
 </style>
