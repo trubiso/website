@@ -35,12 +35,12 @@
     ];
     const themes: SidebarTheme[] = [
         {
-            bg: "#889",
+            bg: "#8181b0",
             tc: "#181818"
         },
         {
-            bg: "#223",
-            tc: "#818181"
+            bg: "#21213e",
+            tc: "#e6bb1c"
         }
     ]
     const getTheme = () => {
