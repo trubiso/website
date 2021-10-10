@@ -5,6 +5,14 @@
 	const sidebar_size = 200;
 </script>
 
+<svelte:head>
+	<meta content="trubiso" property="og:title" />
+    <meta content="come have fun" property="og:description" />
+    <meta content="http://trubiso.tk" property="og:url" />
+    <meta content="http://trubiso.tk/favicon.png" property="og:image" />
+    <meta content="#ffc600" data-react-helmet="true" name="theme-color" />
+</svelte:head>
+
 <main>
 	<Sidebar size={sidebar_size} theme_change_func={()=>{ 
 		theme.set(1 - (get(theme) ?? 1));
