@@ -63,8 +63,7 @@
     {#each items as item}
         <a href={item.link}>{item.name}</a>
     {/each}
-    <div class="sidebar-foot">
-        
+    <div class="sidebar-foot"> 
         <span class="btn" on:click|preventDefault={v => {
             theme_change_func();
             if (document.getElementsByClassName("sidebar")) {
