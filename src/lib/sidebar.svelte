@@ -49,10 +49,17 @@
         else t = themes[get(theme) ?? 0];
         return `--bg: ${t.bg}; --c: ${t.tc}`;
     }
+    let ctr = 0;
+    const clickLogo = () => {
+        ctr++;
+        if (ctr >= 10) {
+            document.getElementById("logo").setAttribute("src", "https://cdn.discordapp.com/emojis/729411456491323412.png")
+        }
+    }
 </script>
 
 <div class="sidebar" style="width: {size}px; {getTheme()}">
-    <img src="/logo.png" alt="logo"/>
+    <img src="/logo.png" alt="logo" id="logo" on:click="{clickLogo}" />
     {#each items as item}
         <a href={item.link}>{item.name}</a>
     {/each}
