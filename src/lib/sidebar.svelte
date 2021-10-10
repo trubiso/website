@@ -1,8 +1,6 @@
 <script lang="ts">
     export let size;
-    export let theme_change_func;
-    import {theme} from '../store';	
-    import { get } from 'svelte/store';
+    let theme = 0;
 import { onMount } from 'svelte';
     type SidebarItem = {
         name: string,
@@ -30,8 +28,8 @@ import { onMount } from 'svelte';
             link: "/kity"
         },
         {
-            name: "githube",
-            link: "https://www.github.com/trubiso"
+            name: "socials",
+            link: "/socials"
         }
     ];
     const themes: SidebarTheme[] = [
@@ -46,8 +44,8 @@ import { onMount } from 'svelte';
     ]
     const getTheme = () => {
         let t : SidebarTheme;
-        if (!get(theme)) t = themes[0];
-        else t = themes[get(theme) ?? 0];
+        if (!theme) t = themes[0];
+        else t = themes[theme ?? 0];
         return `--bg: ${t.bg}; --c: ${t.tc}`;
     }
     let ctr = 0;
@@ -69,7 +67,22 @@ import { onMount } from 'svelte';
             }
         })}, 100 );
     }
-    onMount(updateSidebar);
+    const updateTheme = () => {
+        if (document.getElementsByClassName("sidebar")) {
+            document.getElementsByClassName("sidebar")[0].setAttribute("style", `width: ${size}px; ${getTheme()}`)
+        }
+    }
+
+    const switchTheme = () => {
+        theme = (themes.length-1)-theme;
+        window.localStorage.setItem("theme", theme.toString());
+    }
+
+    onMount(()=>{
+        theme = parseInt(window.localStorage.getItem("theme") ?? "0");
+        updateSidebar();
+        updateTheme();
+    });
 </script>
 
 <div class="sidebar" style="width: {size}px; {getTheme()}">
@@ -78,12 +91,7 @@ import { onMount } from 'svelte';
         <a href={item.link} id="sitem-{items.findIndex(v=>v===item)}" on:click="{updateSidebar}">{item.name}</a>
     {/each}
     <div class="sidebar-foot"> 
-        <span class="btn" on:click|preventDefault={v => {
-            theme_change_func();
-            if (document.getElementsByClassName("sidebar")) {
-                document.getElementsByClassName("sidebar")[0].setAttribute("style", `width: ${size}px; ${getTheme()}`)
-            }
-        }}>switch theme</span>
+        <span class="btn" on:click|preventDefault={()=>{switchTheme(); updateTheme();}}>switch theme</span>
     </div>
     <span class="sidebar-b"></span>
 </div>

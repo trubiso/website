@@ -1,21 +1,41 @@
 <script lang="ts">
+    import { onMount } from "svelte";
+import { get } from "svelte/store";
+    const getVars = () : HTMLElement[] =>{
+        if (!document.getElementById("kity")) throw "";
+        if (!document.getElementById("moarkity")) throw "";
+        return [
+            document.getElementById("kity"),
+            document.getElementById("moarkity"),
+        ]
+    }
+
+    const h = () => {
+        const [i,b] = getVars();
+        b.innerText = "get mor kity";
+        b.removeAttribute("disabled");
+    }
+
     const getNewKity = ()=>{
-        if (!document.getElementById("kity")) return;
-        if (!document.getElementById("moarkity")) return;
-        const i = document.getElementById("kity");
-        const b = document.getElementById("moarkity")
+        const [i,b] = getVars();
         i.setAttribute("src", `http://placekitten.com/${Math.floor(Math.random() * 600 + 200)}`);
         b.innerText = "geting kity...";
         b.setAttribute("disabled", "");
-        i.onload = ()=>{
-            b.innerText = "get mor kity";
-            b.removeAttribute("disabled");
-        };
+        i.onload = h;
     }
+
+    onMount(()=>{
+        getVars()[0].onload = h;
+    })
+
 </script>
+
+<svelte:head>
+    <title>kity</title>
+</svelte:head>
 
 <section>
     <img src="http://placekitten.com/{Math.floor(Math.random() * 600 + 200)}" alt="kity" id="kity">
     <br>
-    <button on:click="{()=>{ getNewKity(); }}" id="moarkity">get mor kity</button>
+    <button on:click="{()=>{ getNewKity(); }}" id="moarkity" disabled>geting kity...</button>
 </section>

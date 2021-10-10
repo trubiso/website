@@ -1,5 +1,4 @@
 <script lang="ts">
-	import {theme} from '../store';	
 	import { get } from 'svelte/store';
 	import Sidebar from '$lib/sidebar.svelte';
 	const sidebar_size = 200;
@@ -14,9 +13,7 @@
 </svelte:head>
 
 <main>
-	<Sidebar size={sidebar_size} theme_change_func={()=>{ 
-		theme.set(1 - (get(theme) ?? 1));
-	}} />
+	<Sidebar size={sidebar_size} />
 	<div class="content" style="margin-left: {sidebar_size}px">
 		<slot/>
 	</div>
