@@ -56,12 +56,15 @@
             document.getElementById("logo").setAttribute("src", "https://cdn.discordapp.com/emojis/729411456491323412.png")
         }
     }
+    const updateSidebar = () => {
+
+    }
 </script>
 
 <div class="sidebar" style="width: {size}px; {getTheme()}">
     <img src="/logo.png" alt="logo" id="logo" on:click="{clickLogo}" />
     {#each items as item}
-        <a href={item.link}>{item.name}</a>
+        <a href={item.link} id="sitem_{items.findIndex(v=>v===item)}" on:click="{updateSidebar}">{item.name}</a>
     {/each}
     <div class="sidebar-foot"> 
         <span class="btn" on:click|preventDefault={v => {
