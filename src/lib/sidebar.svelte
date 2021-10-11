@@ -7,7 +7,8 @@ import { onMount } from 'svelte';
         link: string
     };
     type SidebarTheme = {
-        bg: string,
+        bg1: string,
+        bg2: string,
         tc: string
     };
     const items: SidebarItem[] = [
@@ -34,19 +35,26 @@ import { onMount } from 'svelte';
     ];
     const themes: SidebarTheme[] = [
         {
-            bg: "#8181b0",
+            bg1: "#9292c1",
+            bg2: "#7070a0",
             tc: "#181818"
         },
         {
-            bg: "#21213e",
+            bg1: "#32324f",
+            bg2: "#10102d",
             tc: "#e6bb1c"
+        },
+        {
+            bg1: "#990099",
+            bg2: "#660066",
+            tc: "#ff00ff"
         }
     ]
     const getTheme = () => {
         let t : SidebarTheme;
         if (!theme) t = themes[0];
         else t = themes[theme ?? 0];
-        return `--bg: ${t.bg}; --c: ${t.tc}`;
+        return `--bg1: ${t.bg1}; --bg2: ${t.bg2}; --c: ${t.tc}`;
     }
     let ctr = 0;
     const clickLogo = () => {
@@ -73,8 +81,10 @@ import { onMount } from 'svelte';
         }
     }
 
-    const switchTheme = () => {
-        theme = (themes.length-1)-theme;
+    const switchTheme = (secret: boolean = false) => {
+        if (theme === 2) theme = 1;
+        else if (secret) theme = 2;
+        else theme = 1-theme;
         window.localStorage.setItem("theme", theme.toString());
     }
 
@@ -91,7 +101,7 @@ import { onMount } from 'svelte';
         <a href={item.link} id="sitem-{items.findIndex(v=>v===item)}" on:click="{updateSidebar}">{item.name}</a>
     {/each}
     <div class="sidebar-foot"> 
-        <span class="btn" on:click|preventDefault={()=>{switchTheme(); updateTheme();}}>switch theme</span>
+        <span class="btn" on:contextmenu|preventDefault="{()=>{switchTheme(true); updateTheme();}}" on:click|preventDefault={()=>{switchTheme(); updateTheme();}}>switch theme</span>
     </div>
     <span class="sidebar-b"></span>
 </div>
@@ -103,7 +113,7 @@ import { onMount } from 'svelte';
         z-index: 1;
         top: 0;
         left: 0;
-        background-color: var(--bg);
+        background: linear-gradient(to bottom, var(--bg1), var(--bg2));
         overflow-x: hidden;
         padding-top: 20px;
         text-align: center;
