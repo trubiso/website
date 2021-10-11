@@ -58,7 +58,7 @@
 </svelte:head>
 
 <section>
-    heer ar my fren smilys !! (sourc: <a href="https://discord.gg/JY7PapMSFR">emtotiguy aprenecietion</a>)
+    heer ar my fren smilys !! (sourc: <a href="https://discord.gg/JY7PapMSFR" target="_blank">emtotiguy aprenecietion</a>)
     <br><span>sorte by:</span>
     <select name="sort" id="sort" on:change="{sortChange}">
         {#each sortOptions as opt}
