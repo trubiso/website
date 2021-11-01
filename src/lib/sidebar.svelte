@@ -103,7 +103,8 @@ import { onMount } from 'svelte';
     <div class="sidebar-foot"> 
         <span class="btn" on:contextmenu|preventDefault="{()=>{switchTheme(true); updateTheme();}}" on:click|preventDefault={()=>{switchTheme(); updateTheme();}}>switch theme</span>
     </div>
-    <span class="sidebar-b"></span>
+    <span class="sidebar-b"><!--this span is useless--></span>
+    <span class="sidebar-s">trubiso.tk/awesome</span>
 </div>
 
 <style>
@@ -115,6 +116,7 @@ import { onMount } from 'svelte';
         left: 0;
         background: linear-gradient(to bottom, var(--bg1), var(--bg2));
         overflow-x: hidden;
+        overflow-y: hidden;
         padding-top: 20px;
         text-align: center;
     }
@@ -122,6 +124,11 @@ import { onMount } from 'svelte';
     .sidebar-b {
         font-weight: bold;
         font-size: 22;
+    }
+
+    .sidebar-s {
+        position: relative;
+        top: 13290vh;
     }
 
     .sidebar img {
