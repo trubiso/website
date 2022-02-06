@@ -3,7 +3,7 @@
 	const cln = ()=>{
 		ss(
 			"<h1>why didn't you listen to me</h1>\
-			<br>that's rude<span style='color: white; cursor: default;'> (or is it? use 'dQw4w9WgXcQ')</span>"
+			<br>that's rude<span style='opacity: 2%; cursor: default;'> (or is it? use 'dQw4w9WgXcQ')</span>"
 		);
 	}
 	const lp = ()=>{
