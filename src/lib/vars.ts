@@ -51,7 +51,7 @@ export const SidebarThemes: SidebarTheme[] = [
         bg1: "#9292c1",
         bg2: "#7070a0",
         tc: "#181818",
-        mb: "#e8e8f7",
+        mb: "#f1d7b2",
         mc: "#101020"
     },
     {
