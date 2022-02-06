@@ -1,3 +1,6 @@
+import { writable } from 'svelte/store';
+
+// SOCIALS
 export interface ISocialMediaEntry {
     name: string;
 username: string;
@@ -20,6 +23,7 @@ export const SocialMediaCollection : ISocialMediaEntry[] = [
 }
 ]
 
+// SMILIES
 export const EmotiguyEmoteLinks = [
     'https://cdn.discordapp.com/emojis/717683480787550228.png', 'https://cdn.discordapp.com/emojis/717683548487811111.png', 'https://cdn.discordapp.com/emojis/717684437508161546.png', 'https://cdn.discordapp.com/emojis/717684438506405969.png', 'https://cdn.discordapp.com/emojis/717690391499112508.png', 'https://cdn.discordapp.com/emojis/718886770963382303.png', 'https://cdn.discordapp.com/emojis/720998912139460679.png', 'https://cdn.discordapp.com/emojis/723288149530509342.png', 'https://cdn.discordapp.com/emojis/725041947160477780.png', 'https://cdn.discordapp.com/emojis/725447448385945671.png', 'https://cdn.discordapp.com/emojis/729126433779220510.png', 'https://cdn.discordapp.com/emojis/729362524184510575.png', 'https://cdn.discordapp.com/emojis/729363169151287307.png', 'https://cdn.discordapp.com/emojis/729364446157471865.png', 'https://cdn.discordapp.com/emojis/729364877134790696.png', 'https://cdn.discordapp.com/emojis/729366167449501727.png', 'https://cdn.discordapp.com/emojis/729370646051684365.png', 'https://cdn.discordapp.com/emojis/729373986491859007.png', 'https://cdn.discordapp.com/emojis/729374854104612934.png', 'https://cdn.discordapp.com/emojis/729378455728422924.png', 'https://cdn.discordapp.com/emojis/729378600503214111.png', 'https://cdn.discordapp.com/emojis/729384114628591726.png', 'https://cdn.discordapp.com/emojis/729386039474520159.png', 'https://cdn.discordapp.com/emojis/729404457124757576.png', 'https://cdn.discordapp.com/emojis/729404506730659930.png', 'https://cdn.discordapp.com/emojis/729406247870267412.png', 'https://cdn.discordapp.com/emojis/729408546667495464.png', 'https://cdn.discordapp.com/emojis/729408547833511967.png', 'https://cdn.discordapp.com/emojis/729408548118855762.png', 'https://cdn.discordapp.com/emojis/729410549892251667.png', 'https://cdn.discordapp.com/emojis/729411456491323412.png', 'https://cdn.discordapp.com/emojis/729447550846763040.png', 'https://cdn.discordapp.com/emojis/736962738886279178.png', 'https://cdn.discordapp.com/emojis/739213424311009302.png', 'https://cdn.discordapp.com/emojis/744987859592806551.gif', 'https://cdn.discordapp.com/emojis/744988153793871893.gif', 'https://cdn.discordapp.com/emojis/744989557065515091.gif', 'https://cdn.discordapp.com/emojis/750019258842480663.png', 'https://cdn.discordapp.com/emojis/750033819637383189.png', 'https://cdn.discordapp.com/emojis/750034917743919256.png', 'https://cdn.discordapp.com/emojis/750044215664312401.png', 'https://cdn.discordapp.com/emojis/750047454405066773.png', 'https://cdn.discordapp.com/emojis/750313444758257734.png', 'https://cdn.discordapp.com/emojis/750325881796296755.png', 'https://cdn.discordapp.com/emojis/751067773786128435.gif', 'https://cdn.discordapp.com/emojis/753969363685605487.png', 'https://cdn.discordapp.com/emojis/753969363882606610.png', 'https://cdn.discordapp.com/emojis/753969363916292186.png', 'https://cdn.discordapp.com/emojis/753969564408086600.png', 'https://cdn.discordapp.com/emojis/755450193616568371.png', 'https://cdn.discordapp.com/emojis/755561754796228750.png', 'https://cdn.discordapp.com/emojis/755563588650795121.png', 'https://cdn.discordapp.com/emojis/757892107376525350.gif', 'https://cdn.discordapp.com/emojis/757892107850481665.gif', 'https://cdn.discordapp.com/emojis/761335187245236276.gif', 'https://cdn.discordapp.com/emojis/783796596247625770.gif', 'https://cdn.discordapp.com/emojis/784130705747345488.gif', 'https://cdn.discordapp.com/emojis/785085650038030336.png', 'https://cdn.discordapp.com/emojis/785091277560479764.png', 'https://cdn.discordapp.com/emojis/785092855533535252.png', 'https://cdn.discordapp.com/emojis/785093685569388544.png', 'https://cdn.discordapp.com/emojis/785094462191829002.png', 'https://cdn.discordapp.com/emojis/785198631757283388.png', 'https://cdn.discordapp.com/emojis/787643241985212427.gif', 'https://cdn.discordapp.com/emojis/787651730607177778.png', 'https://cdn.discordapp.com/emojis/787989251346137098.gif', 'https://cdn.discordapp.com/emojis/790006753366114325.png', 'https://cdn.discordapp.com/emojis/791104892302262292.png', 'https://cdn.discordapp.com/emojis/791830392503271445.png', 'https://cdn.discordapp.com/emojis/791831100515155998.png', 'https://cdn.discordapp.com/emojis/791833356416843776.png', 'https://cdn.discordapp.com/emojis/791997103794290708.png', 'https://cdn.discordapp.com/emojis/791997930352934922.png', 'https://cdn.discordapp.com/emojis/791998537624977419.png', 'https://cdn.discordapp.com/emojis/791999970957852712.png', 'https://cdn.discordapp.com/emojis/792000418850406420.png', 'https://cdn.discordapp.com/emojis/792000884371488788.png', 'https://cdn.discordapp.com/emojis/792001151573688341.png', 'https://cdn.discordapp.com/emojis/792001790837129257.png', 'https://cdn.discordapp.com/emojis/793509333777514506.png', 'https://cdn.discordapp.com/emojis/795664529459249192.png', 'https://cdn.discordapp.com/emojis/796019207611088916.gif', 'https://cdn.discordapp.com/emojis/796417990497140787.png', 'https://cdn.discordapp.com/emojis/796714560262373407.gif', 'https://cdn.discordapp.com/emojis/796714824364720138.png', 'https://cdn.discordapp.com/emojis/798127314235424788.png', 'https://cdn.discordapp.com/emojis/798319913303146516.gif', 'https://cdn.discordapp.com/emojis/798481327107211264.png', 'https://cdn.discordapp.com/emojis/800038626578661397.gif', 'https://cdn.discordapp.com/emojis/800058521282019348.gif', 'https://cdn.discordapp.com/emojis/812711125639888916.gif', 'https://cdn.discordapp.com/emojis/830926210678652961.png', 'https://cdn.discordapp.com/emojis/830955589877104660.png', 'https://cdn.discordapp.com/emojis/838502784822673469.png', 'https://cdn.discordapp.com/emojis/839643005321609218.png', 'https://cdn.discordapp.com/emojis/852700969220309012.png', 'https://cdn.discordapp.com/emojis/852700969963094057.png', 'https://cdn.discordapp.com/emojis/854509009418453024.png', 'https://cdn.discordapp.com/emojis/870244771241799720.png', 'https://cdn.discordapp.com/emojis/888843018050871376.png', 'https://cdn.discordapp.com/emojis/888843044193976390.png', 'https://cdn.discordapp.com/emojis/888843063974326284.png', 'https://cdn.discordapp.com/emojis/888843084627066930.png', 'https://cdn.discordapp.com/emojis/888843092050968586.png'
 ]
@@ -31,6 +35,43 @@ export interface IEmote {
     url: string;
 }
 
+// SIDEBAR
+export type SidebarTheme = {
+    bg1: string,
+    bg2: string,
+    tc: string,
+    mb: string,
+    mc: string
+};
+export const SidebarItems = [
+    "/", "/smilys", "/bad", "/kity", "/socials"
+];
+export const SidebarThemes: SidebarTheme[] = [
+    {
+        bg1: "#9292c1",
+        bg2: "#7070a0",
+        tc: "#181818",
+        mb: "#e8e8f7",
+        mc: "#101020"
+    },
+    {
+        bg1: "#32324f",
+        bg2: "#10102d",
+        tc: "#e6bb1c",
+        mb: "#00001c",
+        mc: "#ddddef"
+    },
+    {
+        bg1: "#990099",
+        bg2: "#660066",
+        tc: "#ff00ff",
+        mb: "#ffaaff",
+        mc: "#220022"
+    }
+]
+export const SidebarSTI = 5;
+
+// GLOBAL LANG STUFF
 const texts = <const>{
     langs: [ "English (UK/US)", "English (Smilieland)", "Oogie Boogie (Kqüntniétt)", "Español (España)" ],
     index: {
@@ -93,13 +134,38 @@ const texts = <const>{
     },
     sidebar: {
         item_names: [
-            [ "home", "smilies",
+            [
+                "home",
+                "smilies",
                 "don't click",
                 "kitty",
                 "socials",
                 "switch theme"
             ],
-            []
+            [
+                "hoem",
+                "smilis",
+                "dont cliq",
+                "kity!!",
+                "socialese",
+                "swich theem"
+            ],
+            [
+                "gagroog",
+                "qurgehoq",
+                "baga click goog",
+                "grugogoh !!",
+                "grinqi broogo",
+                "kefwano gragoqe"
+            ],
+            [
+                "inicio",
+                "smilies",
+                "no me pulses",
+                "gatito",
+                "redes sociales",
+                "cambiar tema"
+            ]
         ]
     }
 }
@@ -114,3 +180,6 @@ export function getTextCollection(identifier: string): string[] {
     if (!current) throw `Text collection ${identifier} does not exist.`;
     return current;
 }
+
+export const lang = writable(0);
+export const theme = writable(0);

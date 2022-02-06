@@ -1,59 +1,15 @@
 <script lang="ts">
     export let size;
-    let theme = 0;
 import { onMount } from 'svelte';
-    type SidebarItem = {
-        name: string,
-        link: string
-    };
-    type SidebarTheme = {
-        bg1: string,
-        bg2: string,
-        tc: string
-    };
-    const items: SidebarItem[] = [
-        {
-            name: "hoem",
-            link: "/"
-        },
-        {
-            name: "smilys !!",
-            link: "/smilys"
-        },
-        {
-            name: "don't cliq",
-            link: "/bad"
-        },
-        {
-            name: "kity",
-            link: "/kity"
-        },
-        {
-            name: "socials",
-            link: "/socials"
-        }
-    ];
-    const themes: SidebarTheme[] = [
-        {
-            bg1: "#9292c1",
-            bg2: "#7070a0",
-            tc: "#181818"
-        },
-        {
-            bg1: "#32324f",
-            bg2: "#10102d",
-            tc: "#e6bb1c"
-        },
-        {
-            bg1: "#990099",
-            bg2: "#660066",
-            tc: "#ff00ff"
-        }
-    ]
+import { theme, lang, getTextCollection, SidebarItems, SidebarThemes, SidebarTheme, SidebarSTI } from "$lib/vars";
+    let cl = 0, ct = 0;
+	lang.subscribe(value => { cl = value; });
+    theme.subscribe(value => { ct = value; });
+
+    const SidebarItemNames = getTextCollection("sidebar.item_names");
+
     const getTheme = () => {
-        let t : SidebarTheme;
-        if (!theme) t = themes[0];
-        else t = themes[theme ?? 0];
+        let t = SidebarThemes[ct];
         return `--bg1: ${t.bg1}; --bg2: ${t.bg2}; --c: ${t.tc}`;
     }
     let ctr = 0;
@@ -65,10 +21,10 @@ import { onMount } from 'svelte';
     }
     const updateSidebar = () => {
         setTimeout( () => {
-        [...Array(items.length).keys()].forEach(v=>{
+        [...Array(SidebarItems.length).keys()].forEach(v=>{
             const d = document.getElementById(`sitem-${v}`);
             if (!d) return;
-            if (items[v].link === location.pathname) {
+            if (SidebarItems[v] === location.pathname) {
                 d.classList.add("sidebar-b");
             } else {
                 d.classList.remove("sidebar-b");
@@ -82,14 +38,12 @@ import { onMount } from 'svelte';
     }
 
     const switchTheme = (secret: boolean = false) => {
-        if (theme === 2) theme = 1;
-        else if (secret) theme = 2;
-        else theme = 1-theme;
-        window.localStorage.setItem("theme", theme.toString());
+        if (ct === 2) theme.set(1);
+        else if (secret) theme.set(2);
+        else theme.set(1-ct);
     }
 
     onMount(()=>{
-        theme = parseInt(window.localStorage.getItem("theme") ?? "0");
         updateSidebar();
         updateTheme();
     });
@@ -97,11 +51,11 @@ import { onMount } from 'svelte';
 
 <div class="sidebar" style="width: {size}px; {getTheme()}">
     <img src="/logo.png" alt="logo" id="logo" on:click="{clickLogo}" />
-    {#each items as item}
-        <a href={item.link} id="sitem-{items.findIndex(v=>v===item)}" on:click="{updateSidebar}">{item.name}</a>
+    {#each SidebarItems as item}
+        <a href={item} id="sitem-{SidebarItems.findIndex(v=>v===item)}" on:click="{updateSidebar}">{SidebarItemNames[cl][SidebarItems.findIndex(v=>v===item)]}</a>
     {/each}
     <div class="sidebar-foot"> 
-        <span class="btn" on:contextmenu|preventDefault="{()=>{switchTheme(true); updateTheme();}}" on:click|preventDefault={()=>{switchTheme(); updateTheme();}}>switch theme</span>
+        <span class="btn" on:contextmenu|preventDefault="{()=>{switchTheme(true); updateTheme();}}" on:click|preventDefault={()=>{switchTheme(); updateTheme();}}>{SidebarItemNames[cl][SidebarSTI]}</span>
     </div>
     <span class="sidebar-b"><!--this span is useless--></span>
     <span class="sidebar-s">trubiso.tk/awesome</span>
