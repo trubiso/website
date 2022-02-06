@@ -2,6 +2,7 @@
     export let size;
 import { onMount } from 'svelte';
 import { theme, lang, getTextCollection, SidebarItems, SidebarThemes, SidebarTheme, SidebarSTI } from "$lib/vars";
+import { get } from 'svelte/store';
     let cl = 0, ct = 0;
     let vv = false;
 
@@ -48,6 +49,7 @@ import { theme, lang, getTextCollection, SidebarItems, SidebarThemes, SidebarThe
 
     onMount(()=>{
         vv = true;
+        ct = parseInt(window.localStorage.getItem("theme") ?? "0");
         updateSidebar();
         updateTheme();
     });
