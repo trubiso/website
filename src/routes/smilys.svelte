@@ -61,7 +61,7 @@ import { EmotiguyEmoteLinks, EmotiguyEmoteNames, IEmote } from "$lib/vars";
             <h1>{emote.name}</h1>
             <img src="{emote.url}" alt=""/>
             {#if vEmotes.findIndex(v=>v===emote) === 20}
-                <span style="cursor:default;color:white;">Lucky you! You found a 2883 :)</span>
+                <span style="cursor:default;opacity:2%;">Lucky you! You found a 2883 :)</span>
             {/if}
         </div>
     {/each}
