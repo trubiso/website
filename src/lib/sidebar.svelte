@@ -3,8 +3,23 @@
 import { onMount } from 'svelte';
 import { theme, lang, getTextCollection, SidebarItems, SidebarThemes, SidebarTheme, SidebarSTI } from "$lib/vars";
     let cl = 0, ct = 0;
+    let vv = false;
+
+    const updateSidebar = () => {
+        setTimeout( () => {
+        [...Array(SidebarItems.length).keys()].forEach(v=>{
+            const d = document.getElementById(`sitem-${v}`);
+            if (!d) return;
+            if (SidebarItems[v] === location.pathname) {
+                d.classList.add("sidebar-b");
+            } else {
+                d.classList.remove("sidebar-b");
+            }
+        })}, 100 );
+    }
+
 	lang.subscribe(value => { cl = value; });
-    theme.subscribe(value => { ct = value; });
+    theme.subscribe(value => { ct = value; if (vv) updateSidebar(); });
 
     const SidebarItemNames = getTextCollection("sidebar.item_names");
 
@@ -19,18 +34,6 @@ import { theme, lang, getTextCollection, SidebarItems, SidebarThemes, SidebarThe
             document.getElementById("logo").setAttribute("src", "https://cdn.discordapp.com/emojis/729411456491323412.png")
         }
     }
-    const updateSidebar = () => {
-        setTimeout( () => {
-        [...Array(SidebarItems.length).keys()].forEach(v=>{
-            const d = document.getElementById(`sitem-${v}`);
-            if (!d) return;
-            if (SidebarItems[v] === location.pathname) {
-                d.classList.add("sidebar-b");
-            } else {
-                d.classList.remove("sidebar-b");
-            }
-        })}, 100 );
-    }
     const updateTheme = () => {
         if (document.getElementsByClassName("sidebar")) {
             document.getElementsByClassName("sidebar")[0].setAttribute("style", `width: ${size}px; ${getTheme()}`)
@@ -44,6 +47,7 @@ import { theme, lang, getTextCollection, SidebarItems, SidebarThemes, SidebarThe
     }
 
     onMount(()=>{
+        vv = true;
         updateSidebar();
         updateTheme();
     });

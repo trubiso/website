@@ -44,6 +44,7 @@ import { onMount } from 'svelte';
 		left: 0;
 		height: 100%;
 		width: 100%;
+		overflow-y: scroll;
 	}
 	.everything {
 		position: flex;
@@ -51,9 +52,7 @@ import { onMount } from 'svelte';
 		flex: 1;
 		display: flex;
 		flex-direction: column;
-		width: 100%;
-		overflow: hidden;
-		overflow-y: scroll;
+		width: 100%;	
 		margin-top: 0;
 		max-width: 1024px;
 		height: 100%;
