@@ -48,8 +48,8 @@ export const SidebarItems = [
 ];
 export const SidebarThemes: SidebarTheme[] = [
     {
-        bg1: "#9292c1",
-        bg2: "#7070a0",
+        bg1: "#ffc600",
+        bg2: "#dda400",
         tc: "#181818",
         mb: "#f1d7b2",
         mc: "#101020"
@@ -167,10 +167,73 @@ const texts = <const>{
                 "cambiar tema"
             ]
         ]
+    },
+    smilies: {
+        top_text: [
+            [
+                "here are my friend smilies! (source: ",
+                "emotiguy appreciation",
+                "sort by: "
+            ],
+            [
+                
+                "heer ar my fren smilis !! (sourc: ",
+                "emtotiguy aprenecietion",
+                "sorte by: "
+            ],
+            [
+                
+                "ga gboorqe grano giqurgehoqe boog !! (gagro gru: ",
+                "qaqurgeho gribugbano",
+                "gri grabo groo: "
+            ],
+            [
+                "aquí están mis amigos smilies (fuente: ",
+                "emotiguy appreciation",
+                "orden: "
+            ]
+        ],
+        sorts: [
+            [
+                "alphabetical (a-z)",
+                "alphabetical (z-a)",
+                "creation date (old-new)",
+                "creation date (new-old)",
+                "random"
+            ],
+            [
+                "alfabeticale (a-z)",
+                "alfabeticale (z-a)",
+                "creatione daet (olde-newe)",
+                "creatione daet (newe-olde)",
+                "rAndOm !! :P"
+            ],
+            [
+                "grana abragoq (a-z)",
+                "grana abragoq (z-a)",
+                "groq gihargooqeg (brano-qigu)",
+                "groq gihargooqeg (qigu-brano)",
+                "girguno"
+            ],
+            [
+                "alfabético (a-z)",
+                "alfabético (z-a)",
+                "fecha de creación (viejo-nuevo)",
+                "fecha de creación (nuevo-viejo)",
+                "aleatorio"
+            ]
+        ],
+        lucky_2883: [
+            "Lucky you! You found a 2883 :)",
+            "LUKI YUO !!! yu fuonde a 2883 :)",
+            "GRUNO GABROOGE !!! grigano ga boog 2883 grano :)",
+            "¡Qué suertudo! Encontraste un 2883 :)"
+        ]
     }
 }
 
-export function getTextCollection(identifier: string): string[] {
+// eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
+export function getTextCollection(identifier: string) {
     const path = identifier.split('.');
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     let current: any = texts;
