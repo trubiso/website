@@ -8,20 +8,25 @@
     }
 </script>
 
-<script>
+<script lang="ts">
 import Emote from "$lib/emote.svelte";
+import {getTextCollection, lang} from "$lib/vars"
 
     export let title;
+    let cl;
+    lang.subscribe(v => {cl = v;});
+
+    const error = getTextCollection("error");
 </script>
 
-<h1>ERRORE {title} !!! <Emote name="shock" size="44"/></h1>
+<h1>{error[cl][0]} {title} !!! <Emote name="shock" size="44"/></h1>
 {#if title === "404"}
-    OH NOE ! YU GO TO RONG PAEG !! <Emote name="allifeelispain" /><br>
-    its onke thuogh.. <Emote name="happy" /><br>
-    yu see da siedbar ?!?!? YESE ?!?!? <Emote name="shock_handless" /><br>
-    yu can finde moar pages ther <Emote name="glad" /><br><br>
-    ALTHUOGUHGOHEGHEH !! it mite be my (trumbinso) fualt !! <Emote name="sad" /><Emote name="sad2" /><Emote name="sad" /><br>
-    in dat caes yu can contaqt me and i wil FIX !! <Emote name="excited" /><Emote name="excited_jumping" />
+    {error[cl][1]} <Emote name="allifeelispain" /><br>
+    {error[cl][2]} <Emote name="happy" /><br>
+    {error[cl][3]} <Emote name="shock_handless" /><br>
+    {error[cl][4]} <Emote name="glad" /><br><br>
+    {error[cl][5]} <Emote name="sad" /><Emote name="sad2" /><Emote name="sad" /><br>
+    {error[cl][6]} <Emote name="excited" /><Emote name="excited_jumping" />
 {:else}
-    waht da frinq did yu dOe !! <Emote name="think" />
+    {error[cl][7]} <Emote name="think" /><Emote name="silly" />
 {/if}

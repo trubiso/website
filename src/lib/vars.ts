@@ -109,6 +109,48 @@ export const SidebarSTI = 5;
 // GLOBAL LANG STUFF
 const texts = <const>{
     langs: [ "English (UK/US)", "English (Smilieland)", "Oogie Boogie (Kqüntniétt)", "Español (España)" ],
+    error: [
+        [
+            "ERROR",
+            "OH NO! you went to a wrong page",
+            "it's okay though...",
+            "do you see the sidebar?",
+            "you can find more pages there",
+            "ALTHOUGH! it might be my (trubiso's) fault!",
+            "in that case you can contact me and i will fix the issue!!",
+            "what the hell did you do"
+        ],
+        [
+            "ERRORE",
+            "OH NOE ! YU GO TO RONG PAEG !!",
+            "its onke thuogh..",
+            "yu see da siedbar ?!?!? YESE ?!?!?",
+            "yu can finde moar pages ther",
+            "ALTHUOGUHGOHEGHEH !! it mite be my (trumbinso'se) fualt !!",
+            "in dat caes yu can contaqt me and i wil FIX !!",
+            "waht da FSH did yu dOe !!"
+        ],
+        [
+            "GIGGUG",
+            "OH NOE ! GRUBO GRANOB GRUQ GEHE BARGONO QWIFANO !!",
+            "grino grub gaqoog..",
+            "go grubo sidebar groono ?!? GRABO !?!??!",
+            "ginqe grabo qwifano greno bargaboog",
+            "GARBHEQO !! grinbu grag giibu (qetrumbinso) giggug !!",
+            "grubno aqob, guno grab geeg gino gruq QIGQU !!!1",
+            "grabon gruq greno barga goqona groog !!"
+        ],
+        [
+            "ERROR",
+            "OH NO! te fuiste a una página incorrecta",
+            "pero no te preocupes",
+            "¿ves la barra lateral?",
+            "puedes encontrar más páginas ahí",
+            "¡AUNQUE! puede ser mi (trubiso) culpa",
+            "en ese caso, puedes contactarme e intentaré arreglar el problema",
+            "qué has hecho"
+        ]
+    ],
     themes: [
         [
             "smilie",
