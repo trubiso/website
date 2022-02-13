@@ -18,7 +18,7 @@ import { get } from "svelte/store";
 
     const getNewKity = ()=>{
         const [i,b] = getVars();
-        i.setAttribute("src", `http://placekitten.com/${Math.floor(Math.random() * 600 + 200)}`);
+        i.setAttribute("src", `https://placekitten.com/${Math.floor(Math.random() * 600 + 200)}`);
         b.innerText = "geting kity...";
         b.setAttribute("disabled", "");
         i.onload = h;
@@ -35,7 +35,7 @@ import { get } from "svelte/store";
 </svelte:head>
 
 <section>
-    <img src="http://placekitten.com/{Math.floor(Math.random() * 600 + 200)}" alt="kity" id="kity">
+    <img src="https://placekitten.com/{Math.floor(Math.random() * 600 + 200)}" alt="kity" id="kity">
     <br>
     <button on:click="{()=>{ getNewKity(); }}" id="moarkity" disabled>geting kity...</button>
 </section>
