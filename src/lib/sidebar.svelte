@@ -3,6 +3,7 @@
 import { onMount } from 'svelte';
 import { theme, lang, getTextCollection, SidebarItems, SidebarThemes, SidebarTheme, SidebarSTI } from "$lib/vars";
 import { get } from 'svelte/store';
+import Themepicker from './themepicker.svelte';
     let cl = 0, ct = 0;
     let vv = false;
 
@@ -20,7 +21,7 @@ import { get } from 'svelte/store';
     }
 
 	lang.subscribe(value => { cl = value; });
-    theme.subscribe(value => { ct = value; if (vv) updateSidebar(); });
+    theme.subscribe(value => { ct = value; if (vv) updateTheme(); });
 
     const SidebarItemNames = getTextCollection("sidebar.item_names");
 
@@ -41,27 +42,25 @@ import { get } from 'svelte/store';
         }
     }
 
-    const switchTheme = (secret: boolean = false) => {
-        if (ct === 2) theme.set(1);
-        else if (secret) theme.set(2);
-        else theme.set(1-ct);
-    }
-
     onMount(()=>{
         vv = true;
-        ct = parseInt(window.localStorage.getItem("theme") ?? "0");
         updateSidebar();
         updateTheme();
     });
+
+    let toggleTP = false;
 </script>
 
 <div class="sidebar" style="width: {size}px; {getTheme()}">
     <img src="/logo.png" alt="logo" id="logo" on:click="{clickLogo}" />
-    {#each SidebarItems as item}
-        <a href={item} id="sitem-{SidebarItems.findIndex(v=>v===item)}" on:click="{updateSidebar}">{SidebarItemNames[cl][SidebarItems.findIndex(v=>v===item)]}</a>
+    {#each SidebarItems as item, i}
+        <a href={item} id="sitem-{i}" on:click="{updateSidebar}">{SidebarItemNames[cl][i]}</a>
     {/each}
     <div class="sidebar-foot"> 
-        <span class="btn" on:contextmenu|preventDefault="{()=>{switchTheme(true); updateTheme();}}" on:click|preventDefault={()=>{switchTheme(); updateTheme();}}>{SidebarItemNames[cl][SidebarSTI]}</span>
+        <span class="btn" on:click|preventDefault={()=>{toggleTP = !toggleTP}}>{SidebarItemNames[cl][SidebarSTI]}</span>
+    </div>
+    <div style="display: {toggleTP ? "block" : "none"}">
+        <Themepicker/>
     </div>
     <span class="sidebar-b"><!--this span is useless--></span>
     <span class="sidebar-s">trubiso.tk/awesome</span>

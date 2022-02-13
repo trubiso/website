@@ -55,6 +55,20 @@ export const SidebarThemes: SidebarTheme[] = [
         mc: "#101020"
     },
     {
+        bg1: "#9292c1",
+        bg2: "#7070a0",
+        tc: "#181818",
+        mb: "#ffffff",
+        mc: "#101020"
+    },
+    {
+        bg1: "#32324f",
+        bg2: "#10102d",
+        tc: "#e6bb1c",
+        mb: "#ffffff",
+        mc: "#101020"
+    },
+    {
         bg1: "#32324f",
         bg2: "#10102d",
         tc: "#e6bb1c",
@@ -74,6 +88,36 @@ export const SidebarSTI = 5;
 // GLOBAL LANG STUFF
 const texts = <const>{
     langs: [ "English (UK/US)", "English (Smilieland)", "Oogie Boogie (Kqüntniétt)", "Español (España)" ],
+    themes: [
+        [
+            "smilie",
+            "purple marble",
+            "dark marble",
+            "owl",
+            "hot pink"
+        ],
+        [
+            "smili",
+            "pruple marbel",
+            "darke marbel",
+            "owle",
+            "htot pinq"
+        ],
+        [
+            "qurgeh",
+            "grabno giqurgano",
+            "grabno gibrug",
+            "gogroog",
+            "ragbo grino"
+        ],
+        [
+            "smilie",
+            "mármol violeta",
+            "mármol oscuro",
+            "buho",
+            "rosa cálido"
+        ]
+    ],
     index: {
         reasons: [
             [

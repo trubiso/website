@@ -45,6 +45,7 @@ import { onMount } from 'svelte';
 		height: 100%;
 		width: 100%;
 		overflow-y: scroll;
+		font-family: 'Times New Roman', Times, serif;
 	}
 	.everything {
 		position: flex;
