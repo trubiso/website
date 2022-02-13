@@ -76,9 +76,30 @@ export const SidebarThemes: SidebarTheme[] = [
         mc: "#ddddef"
     },
     {
+        bg1: "#570f8a",
+        bg2: "#36124f",
+        tc: "#e6bb1c",
+        mb: "#270042",
+        mc: "#e8ddf0"
+    },
+    {
+        bg1: "#333333",
+        bg2: "#333333",
+        tc: "#e6bb1c",
+        mb: "#000000",
+        mc: "#ffffff"
+    },
+    {
+        bg1: "#333333",
+        bg2: "#333333",
+        tc: "#e6bb1c",
+        mb: "#ffffff",
+        mc: "#000000"
+    },
+    {
         bg1: "#990099",
         bg2: "#660066",
-        tc: "#ff00ff",
+        tc: "#e6bb1c",
         mb: "#ffaaff",
         mc: "#220022"
     }
@@ -94,6 +115,9 @@ const texts = <const>{
             "purple marble",
             "dark marble",
             "owl",
+            "purple owl",
+            "black",
+            "white",
             "hot pink"
         ],
         [
@@ -101,6 +125,9 @@ const texts = <const>{
             "pruple marbel",
             "darke marbel",
             "owle",
+            "pruple owle",
+            "blak",
+            "whiet",
             "htot pinq"
         ],
         [
@@ -108,6 +135,9 @@ const texts = <const>{
             "grabno giqurgano",
             "grabno gibrug",
             "gogroog",
+            "qurgano gigogroog",
+            "bagbo",
+            "gabgo",
             "ragbo grino"
         ],
         [
@@ -115,6 +145,9 @@ const texts = <const>{
             "mármol violeta",
             "mármol oscuro",
             "buho",
+            "buho violeta",
+            "negro",
+            "blanco",
             "rosa cálido"
         ]
     ],

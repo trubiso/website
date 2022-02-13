@@ -7,7 +7,7 @@ import { EmotiguyEmoteLinks, EmotiguyEmoteNames } from "./vars";
 </script>
 
 <div class="emote">
-    <img src="{link}" alt="{name}" width="{size}" height="{size}" />
+    <img src="{link}" alt="{name}" height="{size}" />
 </div>
 
 <style>
