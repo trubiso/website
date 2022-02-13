@@ -76,6 +76,13 @@ export const SidebarThemes: SidebarTheme[] = [
         mc: "#ddddef"
     },
     {
+        bg1: "#43324f",
+        bg2: "#22112e",
+        tc: "#e6bb1c",
+        mb: "#10001c",
+        mc: "#e8ddf0"
+    },
+    {
         bg1: "#570f8a",
         bg2: "#36124f",
         tc: "#e6bb1c",
@@ -157,6 +164,7 @@ const texts = <const>{
             "purple marble",
             "dark marble",
             "owl",
+            "plum owl",
             "purple owl",
             "black",
             "white",
@@ -167,6 +175,7 @@ const texts = <const>{
             "pruple marbel",
             "darke marbel",
             "owle",
+            "plume owle",
             "pruple owle",
             "blak",
             "whiet",
@@ -177,6 +186,7 @@ const texts = <const>{
             "grabno giqurgano",
             "grabno gibrug",
             "gogroog",
+            "bungo grongo gigogroog",
             "qurgano gigogroog",
             "bagbo",
             "gabgo",
@@ -187,6 +197,7 @@ const texts = <const>{
             "mármol violeta",
             "mármol oscuro",
             "buho",
+            "buho ciruela",
             "buho violeta",
             "negro",
             "blanco",
