@@ -8,6 +8,7 @@ import { theme, lang, SidebarThemes, getTextCollection, EmotiguyEmoteLinks, Emot
     const sortOptions = getTextCollection("smilies.sorts");
     const topText = getTextCollection("smilies.top_text");
     const lucky2883 = getTextCollection("smilies.lucky_2883");
+    const names = getTextCollection("sidebar.item_names");
 
     const emotes: IEmote[] = [];
     for (let i = 0 ; i < EmotiguyEmoteLinks.length ; i ++) {
@@ -47,10 +48,11 @@ import { theme, lang, SidebarThemes, getTextCollection, EmotiguyEmoteLinks, Emot
 </script>
 
 <svelte:head>
-	<title>smilys !!</title>
+	<title>{names[cl][1]}</title>
 </svelte:head>
 
 <section>
+    <h1>{names[cl][1]}</h1>
     {topText[cl][0]}<a href="https://discord.gg/JY7PapMSFR" target="_blank">{topText[cl][1]}</a>)
     <br><span>{topText[cl][2]}</span>
     <select name="sort" id="sort" on:change="{sortChange}">
@@ -60,7 +62,7 @@ import { theme, lang, SidebarThemes, getTextCollection, EmotiguyEmoteLinks, Emot
     </select>
     {#each vEmotes as emote}
         <div>
-            <h1>{emote.name}</h1>
+            <h2>{emote.name}</h2>
             <img src="{emote.url}" alt=""/>
             {#if vEmotes.findIndex(v=>v===emote) === 20}
                 <span style="cursor:default;color:{SidebarThemes[ct].mb}">{lucky2883[cl]}</span>
