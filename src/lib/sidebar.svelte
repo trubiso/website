@@ -1,41 +1,46 @@
 <script lang="ts">
     export let size;
 import { onMount } from 'svelte';
-import { theme, lang, getTextCollection, SidebarItems, SidebarThemes, SidebarTheme, SidebarSTI } from "$lib/vars";
+import { theme, lang, getTextCollection, SidebarItems, SidebarThemes, EmotiguyEmoteLinks, EmotiguyEmoteNames } from "$lib/vars";
 import { get } from 'svelte/store';
 import Themepicker from './themepicker.svelte';
+import Langpicker from './langpicker.svelte';
     let cl = 0, ct = 0;
-    let vv = false;
+    let loaded = false;
 
-    const updateSidebar = () => {
-        setTimeout( () => {
-        [...Array(SidebarItems.length).keys()].forEach(v=>{
+    const updateSidebar = (item?: string) => {
+        [...Array(SidebarItems.length).keys()].forEach(v => {
             const d = document.getElementById(`sitem-${v}`);
             if (!d) return;
-            if (SidebarItems[v] === location.pathname) {
+
+            if ((!item && SidebarItems[v] === location.pathname) ||
+                (item  && SidebarItems[v] === item))
                 d.classList.add("sidebar-b");
-            } else {
+            else
                 d.classList.remove("sidebar-b");
-            }
-        })}, 100 );
-    }
+        });
+    };
 
 	lang.subscribe(value => { cl = value; });
-    theme.subscribe(value => { ct = value; if (vv) updateTheme(); });
+    theme.subscribe(value => { ct = value; if (loaded) updateTheme(); });
 
     const SidebarItemNames = getTextCollection("sidebar.item_names");
+    const emoteLinks = EmotiguyEmoteLinks;
+    const emoteNames = EmotiguyEmoteNames;
 
     const getTheme = () => {
-        let t = SidebarThemes[ct];
+        const t = SidebarThemes[ct];
         return `--bg1: ${t.bg1}; --bg2: ${t.bg2}; --c: ${t.tc}`;
     }
+
     let ctr = 0;
     const clickLogo = () => {
         ctr++;
         if (ctr >= 10) {
-            document.getElementById("logo").setAttribute("src", "https://cdn.discordapp.com/emojis/729411456491323412.png")
+            document.getElementById("logo").setAttribute("src", emoteLinks[emoteNames.findIndex(v => v === "silly")]);
         }
     }
+
     const updateTheme = () => {
         if (document.getElementsByClassName("sidebar")) {
             document.getElementsByClassName("sidebar")[0].setAttribute("style", `width: ${size}px; ${getTheme()}`)
@@ -43,24 +48,24 @@ import Themepicker from './themepicker.svelte';
     }
 
     onMount(()=>{
-        vv = true;
+        loaded = true;
         updateSidebar();
         updateTheme();
     });
 
-    let toggleTP = false;
+    let toggleTP = false, toggleLP = false;
 </script>
 
 <div class="sidebar" style="width: {size}px; {getTheme()}">
     <img src="/logo.png" alt="logo" id="logo" on:click="{clickLogo}" />
     {#each SidebarItems as item, i}
-        <a href={item} id="sitem-{i}" on:click="{updateSidebar}">{SidebarItemNames[cl][i]}</a>
+        <a href={item} id="sitem-{i}" on:click="{()=>updateSidebar(item)}">{SidebarItemNames[cl][i]}</a>
     {/each}
     <div class="sidebar-foot"> 
-        <span class="btn" on:click|preventDefault={()=>{toggleTP = !toggleTP}}>{SidebarItemNames[cl][SidebarSTI]}</span>
-    </div>
-    <div style="display: {toggleTP ? "block" : "none"}">
-        <Themepicker/>
+        <span class="btn" style="font-weight:{toggleTP ? "bold" : "normal"}" on:click|preventDefault={()=>{toggleTP = !toggleTP; if (toggleLP) toggleLP = false;}}>{SidebarItemNames[cl][SidebarItemNames[cl].length - 2]}</span>
+        <div style="display: {toggleTP ? "block" : "none"}"> <Themepicker/> </div>
+        <span class="btn" style="font-weight:{toggleLP ? "bold" : "normal"}" on:click|preventDefault={()=>{toggleLP = !toggleLP; if (toggleTP) toggleTP = false;}}>{SidebarItemNames[cl][SidebarItemNames[cl].length - 1]}</span>
+        <div style="display: {toggleLP ? "block" : "none"}"> <Langpicker/> </div>
     </div>
     <span class="sidebar-b"><!--this span is useless--></span>
     <span class="sidebar-s">trubiso.tk/awesome</span>

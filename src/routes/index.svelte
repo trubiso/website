@@ -1,33 +1,20 @@
 <script lang="ts">
 import Emote from "$lib/emote.svelte";
 import { getTextCollection, lang } from "$lib/vars";
-import { onMount } from "svelte";
 	const reasons = getTextCollection("index.reasons");
 	const texts = getTextCollection("index.texts");
-	const langs = getTextCollection("langs");
-	const langChange = v=>{
-		const s = document.getElementById("lang") as HTMLSelectElement;
-		lang.set(langs.indexOf(s.value) ?? 0);
-	}
 
-	let cl;
-	let hl = false;
-	lang.subscribe(value => {
-		cl = value;
-		if (hl) {
-			(document.getElementById("lang") as HTMLSelectElement).value = langs[value];
-		}
-	});
+	const names = getTextCollection("sidebar.item_names");
 
-	onMount(()=>{
-		hl = true;
-		(document.getElementById("lang") as HTMLSelectElement).value = langs[cl];
-	});
+	let cl = 0;
+
+	lang.subscribe(v => { cl = v; });
+
 </script>
 
 
 <svelte:head>
-	<title>hoem</title>
+	<title>{names[cl][0]}</title>
 </svelte:head>
 
 <section>
@@ -38,12 +25,6 @@ import { onMount } from "svelte";
 			<li>{reason}</li>
 		{/each}
 	</ol>
-	{texts[cl][2]}
-	<select id="lang" on:change={langChange}>
-		{#each langs as lang}
-			<option value="{langs.find(v=>v===lang)}">{lang}</option>
-		{/each}
-	</select>
 	<p></p>
 	<img src="/likangel.png" alt="" width="256">
 </section>

@@ -44,7 +44,7 @@ export type SidebarTheme = {
     mc: string
 };
 export const SidebarItems = [
-    "/", "/smilys", "/bad", "/kity", "/socials"
+    "/", "/smilys", "/bad", "/kity", "/games", "/socials"
 ];
 export const SidebarThemes: SidebarTheme[] = [
     {
@@ -110,8 +110,7 @@ export const SidebarThemes: SidebarTheme[] = [
         mb: "#ffaaff",
         mc: "#220022"
     }
-]
-export const SidebarSTI = 5;
+];
 
 // GLOBAL LANG STUFF
 const texts = <const>{
@@ -242,23 +241,19 @@ const texts = <const>{
         texts: [
             [
                 "welcome to my website",
-                "why you should use it:",
-                "languages:"
+                "why you should use it:"
             ],
             [
                 "welcom to my websiet !!!1",
-                "why yu shulde use it:",
-                "languegese:"
+                "why yu shulde use it:"
             ],
             [
                 "grono gago websiet bogo grano !",
-                "guro gaobo qagofo grukwago:",
-                "groqo grabo:"
+                "guro gaobo qagofo grukwago:"
             ],
             [
                 "bienvenido a mi página web",
-                "por qué deberías usarla:",
-                "idiomas:"
+                "por qué deberías usarla:"
             ]
         ]
     },
@@ -269,32 +264,40 @@ const texts = <const>{
                 "smilies",
                 "don't click",
                 "kitty",
+                "games",
                 "socials",
-                "switch theme"
+                "switch theme",
+                "language"
             ],
             [
                 "hoem",
                 "smilis",
                 "dont cliq",
                 "kity!!",
+                "gaesm",
                 "socialese",
-                "swich theem"
+                "swich theem",
+                "languag"
             ],
             [
                 "gagroog",
                 "qurgehoq",
                 "baga click goog",
                 "grugogoh !!",
+                "ugagaagoq",
                 "grinqi broogo",
-                "kefwano gragoqe"
+                "kefwano gragoqe",
+                "groqo grabo"
             ],
             [
                 "inicio",
                 "smilies",
                 "no me pulses",
                 "gatito",
+                "juegos",
                 "redes sociales",
-                "cambiar tema"
+                "cambiar tema",
+                "idioma"
             ]
         ]
     },

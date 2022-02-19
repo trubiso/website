@@ -14,7 +14,7 @@
 <div class="picker">
     <br>
     {#each themes[cl] as theme, i}
-        <a href="#h" on:click|preventDefault="{()=>switchTheme(i)}">{theme}</a><br><br>
+        <a href="#h" style="font-weight:{ct === i ? "bold" : "normal"}" on:click|preventDefault="{()=>switchTheme(i)}">{theme}</a><br><br>
     {/each}
 </div>
 

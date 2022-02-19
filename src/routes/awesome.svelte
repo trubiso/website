@@ -1,6 +1,4 @@
 <script lang="ts">
-import { onMount } from "svelte";
-
     let a: HTMLAudioElement;
 
     const rickroll = () => {
