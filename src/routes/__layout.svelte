@@ -23,6 +23,7 @@
 	<meta content="http://trubiso.tk" property="og:url" />
 	<meta content="http://trubiso.tk/favicon.png" property="og:image" />
 	<meta content="#ffc600" data-react-helmet="true" name="theme-color" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </svelte:head>
 
 <main style="background-color: {SidebarThemes[ct].mb}; color: {SidebarThemes[ct].mc}">
