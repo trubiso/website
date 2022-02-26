@@ -1,17 +1,17 @@
 <script lang="ts">
-import Emote from "$lib/emote.svelte";
-import { getTextCollection, lang } from "$lib/vars";
-	const reasons = getTextCollection("index.reasons");
-	const texts = getTextCollection("index.texts");
+	import Emote from '$lib/emote.svelte';
+	import { getTextCollection, lang } from '$lib/vars';
+	const reasons = getTextCollection('index.reasons');
+	const texts = getTextCollection('index.texts');
 
-	const names = getTextCollection("sidebar.item_names");
+	const names = getTextCollection('sidebar.item_names');
 
 	let cl = 0;
 
-	lang.subscribe(v => { cl = v; });
-
+	lang.subscribe((v) => {
+		cl = v;
+	});
 </script>
-
 
 <svelte:head>
 	<title>{names[cl][0]}</title>
@@ -25,8 +25,8 @@ import { getTextCollection, lang } from "$lib/vars";
 			<li>{reason}</li>
 		{/each}
 	</ol>
-	<p></p>
-	<img src="/likangel.png" alt="" width="256">
+	<p />
+	<img src="/likangel.png" alt="" width="256" />
 </section>
 
 <style>

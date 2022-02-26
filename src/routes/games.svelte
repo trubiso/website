@@ -1,6 +1,4 @@
 <svelte:head>
-    <title>
-        games
-    </title>
+	<title>games</title>
 </svelte:head>
 WIPe !!
