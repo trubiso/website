@@ -3,6 +3,7 @@
 import { onMount } from 'svelte';
 import { theme, lang, getTextCollection, SidebarItems, SidebarThemes, EmotiguyEmoteLinks, EmotiguyEmoteNames } from "$lib/vars";
 import { get } from 'svelte/store';
+import { fade, draw, scale, slide } from 'svelte/transition';
 import Themepicker from './themepicker.svelte';
 import Langpicker from './langpicker.svelte';
     let cl = 0, ct = 0;
@@ -54,6 +55,17 @@ import Langpicker from './langpicker.svelte';
     });
 
     let toggleTP = false, toggleLP = false;
+
+    function toggleTLP(tp = false) {
+        if (tp) {
+            toggleTP = !toggleTP;
+            if (toggleLP) toggleLP = false;
+        } else {
+            toggleLP = !toggleLP;
+            if (toggleTP) toggleTP = false;
+        }
+    }
+
 </script>
 
 <div class="sidebar" style="width: {size}px; {getTheme()}">
@@ -62,10 +74,19 @@ import Langpicker from './langpicker.svelte';
         <a href={item} id="sitem-{i}" on:click="{()=>updateSidebar(item)}">{SidebarItemNames[cl][i]}</a>
     {/each}
     <div class="sidebar-foot"> 
-        <span class="btn" style="font-weight:{toggleTP ? "bold" : "normal"}" on:click|preventDefault={()=>{toggleTP = !toggleTP; if (toggleLP) toggleLP = false;}}>{SidebarItemNames[cl][SidebarItemNames[cl].length - 2]}</span>
-        <div style="display: {toggleTP ? "block" : "none"}"> <Themepicker/> </div>
-        <span class="btn" style="font-weight:{toggleLP ? "bold" : "normal"}" on:click|preventDefault={()=>{toggleLP = !toggleLP; if (toggleTP) toggleTP = false;}}>{SidebarItemNames[cl][SidebarItemNames[cl].length - 1]}</span>
-        <div style="display: {toggleLP ? "block" : "none"}"> <Langpicker/> </div>
+        <span class="btn" style="font-weight:{toggleTP ? "bold" : "normal"}" on:click|preventDefault={ ()=>toggleTLP(true) } >{
+            SidebarItemNames[cl][SidebarItemNames[cl].length - 2]}
+        </span>
+        {#if toggleTP}
+            <div id="tp" transition:slide> <Themepicker/> </div>
+        {/if}
+
+        <span class="btn" style="font-weight:{toggleLP ? "bold" : "normal"}" on:click|preventDefault={ ()=>toggleTLP() }>
+            {SidebarItemNames[cl][SidebarItemNames[cl].length - 1]}
+        </span>
+        {#if toggleLP}
+            <div id="lp" transition:slide> <Langpicker/> </div>
+        {/if}
     </div>
     <span class="sidebar-b"><!--this span is useless--></span>
     <span class="sidebar-s">trubiso.tk/awesome</span>
@@ -87,7 +108,6 @@ import Langpicker from './langpicker.svelte';
 
     .sidebar-b {
         font-weight: bold;
-        font-size: 22;
     }
 
     .sidebar-s {

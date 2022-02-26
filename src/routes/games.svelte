@@ -1,4 +1,6 @@
-<title>
-    halo
-</title>
+<svelte:head>
+    <title>
+        games
+    </title>
+</svelte:head>
 WIPe !!
