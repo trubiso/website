@@ -94,7 +94,7 @@
 
 <div class="sidebar" style={getTheme()}>
 	<img src="/logo.png" alt="logo" id="logo" on:click={clickLogo} />
-    <div class="name sidebar-b">{SidebarItemNames[cl][current].replaceAll(' ', '\u00a0')}</div>
+    <div class="name sidebar-b">{SidebarItemNames[cl][current].replace(/ /g, '\u00a0')}</div>
 	<span class="btn triangle" on:click|preventDefault={() => {tsm = !tsm; setTimeout(updateSidebar, 20); if(!tsm) toggleTP = toggleLP = false;}}>V</span>
     {#if matches || tsm}
 	<div class="items" transition:slide>
