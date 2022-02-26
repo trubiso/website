@@ -2,7 +2,7 @@
 	import Sidebar from '$lib/sidebar.svelte';
 	import { lang, SidebarThemes, theme } from '$lib/vars';
 	import { onMount } from 'svelte';
-	const sidebar_size = 200;
+	const sidebarSize = 200;
 	let ct = 0;
 	onMount(() => {
 		lang.set(parseInt(window.localStorage.getItem('lang') ?? '0'));
@@ -28,8 +28,8 @@
 
 <main style="background-color: {SidebarThemes[ct].mb}; color: {SidebarThemes[ct].mc}">
 	<div class="everything">
-		<Sidebar size={sidebar_size} />
-		<div class="content" style="margin-left: {sidebar_size}px">
+		<Sidebar size={sidebarSize} />
+		<div class="content" style="--ss: {sidebarSize}px">
 			<slot />
 		</div>
 	</div>
@@ -48,18 +48,22 @@
 		font-family: 'Times New Roman', Times, serif;
 	}
 	.everything {
-		position: flex;
 		min-height: 100%;
-		flex: 1;
-		display: flex;
-		flex-direction: column;
 		width: 100%;
 		margin-top: 0;
 		max-width: 1024px;
 		height: 100%;
 	}
 	.content {
-		flex-grow: 1;
 		padding: 30px;
+		margin-left: 0;
+		margin-top: calc(var(--ss) / 3);
+	}
+
+	@media only screen and (min-width: 600px) {
+		.content {
+			margin-left: var(--ss);
+			margin-top: 0;
+		}
 	}
 </style>
