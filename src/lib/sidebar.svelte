@@ -168,6 +168,5 @@
 		cursor: pointer;
 		user-select: none;
 	}
-
-    @media 
+    
 </style>
