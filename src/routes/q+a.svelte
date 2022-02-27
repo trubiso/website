@@ -30,7 +30,7 @@ import { base } from '$app/paths';
 			body: JSON.stringify({
 				question
 			})
-		}).then((v) => v.json());
+		}).then(v => v.json());
 	}
 
 	function handleSubmit() {
