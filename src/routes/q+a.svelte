@@ -4,7 +4,7 @@
 	import '../styles/q+a.scss';
 
 	export const load: Load = async ({ fetch }) => {
-		const { questions } = await fetch('/api/fetchQuestions.json').then((r) => r.json());
+		const questions = await fetch('/api/fetchQuestions.json').then((v) => v.json()).then((v) => v.questions);
 		return {
 			props: {
 				questions
@@ -15,7 +15,7 @@
 
 <script lang="ts">
 	import Emote from '$lib/emote.svelte';
-import { formatDate } from '$lib/vars';
+	import { formatDate } from '$lib/vars';
 
 	export let questions: qa[];
 
@@ -24,24 +24,22 @@ import { formatDate } from '$lib/vars';
 
 	let question = '';
 	async function submitQuestion() {
-		return await (
-			await fetch('/api/sendQuestion.json', {
-				method: 'POST',
-				body: JSON.stringify({
-					question
-				})
+		return await fetch('/api/sendQuestion.json', {
+			method: 'POST',
+			body: JSON.stringify({
+				question
 			})
-		).json();
+		}).then((v) => v.json());
 	}
 
 	function handleSubmit() {
-        if (hasSubmittedQuestion) {
-            hasSubmittedQuestion = false;
-            question = '';
-        } else {
-            hasSubmittedQuestion = true;
-		    questionPromise = submitQuestion();
-        }
+		if (hasSubmittedQuestion) {
+			hasSubmittedQuestion = false;
+			question = '';
+		} else {
+			hasSubmittedQuestion = true;
+			questionPromise = submitQuestion();
+		}
 	}
 </script>
 
@@ -56,11 +54,11 @@ import { formatDate } from '$lib/vars';
 			{:else}
 				{#await questionPromise}
 					<label for="">SUBMITING QUESTIONE !</label>
-                    <Emote name='silly' spinning />
+					<Emote name="silly" spinning />
 				{:then result}
 					{#if result.success}
 						<label for="">submited YUOR questione suncesnfuly !</label>
-                        <input type="submit" value="ask moar?">
+						<input type="submit" value="ask moar?" />
 					{:else}
 						<label for="">ERROAR !! {result.error}</label>
 					{/if}
@@ -82,7 +80,7 @@ import { formatDate } from '$lib/vars';
 					{@html question.answer}
 				</div>
 			</div>
-            <br>
+			<br />
 		{/each}
 	</div>
 </main>
