@@ -28,6 +28,7 @@
 
 	let question = '';
 	async function submitQuestion() {
+		console.log(`/api/q+a?question=${question}`);
 		return await fetch(`/api/q+a?question=${question}`, { method: 'GET' }).then((v) => v.json());
 	}
 
