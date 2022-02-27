@@ -21,6 +21,7 @@ nav {
 		display: block;
 		text-align: center;
 		cursor: pointer;
+		user-select: none;
 	}
 
 	div.navbar-item {
@@ -91,6 +92,7 @@ nav {
 				position: absolute;
 				transition: transform 0.4s ease-in-out;
 				cursor: pointer;
+				user-select: none;
 			}
 			.spin {
 				transition: transform 0.4s ease-in-out;

@@ -25,6 +25,14 @@
 		}
 	}
 
+	function toggleSidebarOpen() {
+		sidebarOpen = !sidebarOpen;
+		if (!sidebarOpen) {
+			tPicker = false;
+			lPicker = false;
+		}
+	}
+
 	let matches = false;
 
 	onMount(() => {
@@ -36,7 +44,7 @@
 
 <nav class="navbar">
 	<div class="header-wrapper">
-		<div class="navbar-toggle" class:spin={sidebarOpen} on:click={() => (sidebarOpen = !sidebarOpen)}>▼</div>
+		<div class="navbar-toggle" class:spin={sidebarOpen} on:click={toggleSidebarOpen}>▼</div>
 		<div class="logo">
 			{#if clicks < 10}
 				<img src="/logo.png" alt="logo" on:click={() => clicks++} />

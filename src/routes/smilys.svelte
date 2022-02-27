@@ -64,7 +64,7 @@
 	<title>{names[$lang][1]}</title>
 </svelte:head>
 
-<main>
+<main class="smilys">
 	<h1>{names[$lang][1]}</h1>
 	{topText[$lang][0]}<a href="https://discord.gg/JY7PapMSFR" target="_blank">{topText[$lang][1]}</a>)
 	<br /><span>{topText[$lang][2]}</span>
@@ -79,8 +79,20 @@
 			<h2>{emote.name}</h2>
 			<img src={emote.url} alt="" />
 			{#if vEmotes.findIndex((v) => v === emote) === 20}
-				<span style="cursor:default;color:var(--mb)">{lucky2883[$lang]}</span>
+				<span class="lucky">{lucky2883[$lang]}</span>
 			{/if}
 		</div>
 	{/each}
 </main>
+
+<style lang="scss">
+	main.smilys {
+		text-align: center;
+
+		span.lucky {
+			cursor: default;
+			color: var(--mb);
+			position: absolute;
+		}
+	}
+</style>

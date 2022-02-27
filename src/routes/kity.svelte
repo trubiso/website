@@ -30,7 +30,7 @@
 	<title>kity</title>
 </svelte:head>
 
-<section>
+<main class="kity">
 	<img src="https://placekitten.com/{Math.floor(Math.random() * 600 + 200)}" alt="kity" id="kity" />
 	<br />
 	<button
@@ -40,4 +40,16 @@
 		id="moarkity"
 		disabled>geting kity...</button
 	>
-</section>
+</main>
+
+<style lang="scss">
+	main.kity {
+		@media (max-width:600px) {
+			text-align: center;
+		}
+		img {
+			max-width:100%;
+			max-height:100%;
+		}
+	}
+</style>
