@@ -15,7 +15,6 @@ export const get: RequestHandler = async ({ url }) => {
                 }
             });
             return {
-                status: 200,
                 body: {
                     success: true
                 }
@@ -31,7 +30,6 @@ export const get: RequestHandler = async ({ url }) => {
         }
     } else {
         return {
-            status: 200,
             body: {
                 questions: (await prisma.qa.findMany({
                     where: {

@@ -8,7 +8,10 @@ const config = {
     preprocess: preprocess(),
 
     kit: {
-        adapter: netlify()
+        adapter: netlify(),
+        browser: {
+            router: false
+        }
     }
 };
 
