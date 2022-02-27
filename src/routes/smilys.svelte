@@ -87,7 +87,9 @@
 
 <style lang="scss">
 	main.smilys {
-		text-align: center;
+		@media (max-width: 600px) {
+			text-align: center;
+		}
 
 		span.lucky {
 			cursor: default;

@@ -242,7 +242,7 @@ export interface IEmote {
 }
 
 // SIDEBAR
-export const sidebarItems = ['/', '/smilys', '/bad', '/kity', '/games', '/socials'];
+export const sidebarItems = ['/', '/smilys', '/bad', '/kity', '/games', '/q+a', '/socials'];
 
 
 // GLOBAL LANG STUFF
@@ -385,14 +385,15 @@ const texts = <const>{
 	},
 	sidebar: {
 		item_names: [
-			['home', 'smilies', "don't click", 'kitty', 'games', 'socials', 'switch theme', 'language'],
-			['hoem', 'smilis', 'dont cliq', 'kity!!', 'gaesm', 'socialese', 'swich theem', 'languag'],
+			['home', 'smilies', "don't click", 'kitty', 'games', 'q+a', 'socials', 'switch theme', 'language'],
+			['hoem', 'smilis', 'dont cliq', 'kity!!', 'gaesm', 'q+a', 'socialese', 'swich theem', 'languag'],
 			[
 				'gagroog',
 				'qurgehoq',
 				'baga click goog',
 				'grugogoh !!',
 				'ugagaagoq',
+				'gboqo+gruno',
 				'grinqi broogo',
 				'kefwano gragqe',
 				'groqo grabo'
@@ -403,6 +404,7 @@ const texts = <const>{
 				'no me pulses',
 				'gatito',
 				'juegos',
+				'preguntas',
 				'redes sociales',
 				'cambiar tema',
 				'idioma'
@@ -472,3 +474,25 @@ export function getTextCollection(identifier: string) {
 }
 
 export const lang = writable(0);
+
+export function padNumber(num: number, digits = 2) : string {
+	return `${'0'.repeat(digits - num.toString().length)}${num}`;
+}
+
+export function formatDate(date: Date, template = 'YYYY-MM-DD HH:mm:ss') : string {
+	const month = date.getMonth() + 1;
+	const day = date.getDate();
+	const year = date.getFullYear();
+	const hours = date.getHours();
+	const minutes = date.getMinutes();
+	const seconds = date.getSeconds();
+
+	return template
+		.replace('YYYY', year.toString())
+		.replace('YY', year.toString().slice(-2))
+		.replace('MM', padNumber(month))
+		.replace('DD', padNumber(day))
+		.replace('HH', padNumber(hours))
+		.replace('mm', padNumber(minutes))
+		.replace('ss', padNumber(seconds));
+}

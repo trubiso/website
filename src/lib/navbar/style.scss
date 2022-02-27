@@ -1,4 +1,5 @@
 @import '../../styles/mixins';
+@import '../../styles/keyframes';
 
 nav {
 	display: flex;
@@ -53,22 +54,6 @@ nav {
 		width: 100%;
 		text-align: center;
 		img {
-			@keyframes spin {
-				0% 		{ transform:rotate(0deg)   }
-				25% 	{ transform:rotate(90deg)  }
-				50% 	{ transform:rotate(180deg) }
-				75% 	{ transform:rotate(270deg) }
-				100% 	{ transform:rotate(360deg) }
-			}
-
-			@keyframes spinMore {
-				0% 		{ transform:scale(2)   rotate(0deg)  }
-				25% 	{ transform:scale(1)   rotate(90deg) }
-				50% 	{ transform:scale(0.5) rotate(180deg)}
-				75% 	{ transform:scale(1)   rotate(270deg)}
-				100% 	{ transform:scale(2)   rotate(360deg)}
-			}
-
 			padding: 13px;
 			min-width: 178px;
 			max-width: 178px;
@@ -79,7 +64,7 @@ nav {
 				animation: spin 1s linear infinite;
 				&.spinning-fast {
 					animation: spin 0.5s linear infinite;
-					animation-name: spinMore;
+					animation-name: spinScale;
 				}
 			}
 		}
