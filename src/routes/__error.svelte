@@ -37,8 +37,6 @@
 		<Emote name="excited" /><Emote name="excited_jumping" />
 	{:else}
 		{errorText[$lang][7]} <Emote name="think" /><Emote name="silly" /><br />
-		FULL ERROR: (check console as well)<br />
-		{error.toString()}
 		{console.log(error)}
 	{/if}
 </main>
