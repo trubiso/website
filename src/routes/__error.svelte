@@ -1,9 +1,10 @@
 <script context="module">
 	// eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
-	export function load({ status }) {
+	export function load(error) {
 		return {
 			props: {
-				title: `${status}`
+				title: `${error.status}`,
+				error: error
 			}
 		};
 	}
@@ -38,6 +39,9 @@
 		{error[cl][6]}
 		<Emote name="excited" /><Emote name="excited_jumping" />
 	{:else}
-		{error[cl][7]} <Emote name="think" /><Emote name="silly" />
+		{error[cl][7]} <Emote name="think" /><Emote name="silly" /><br />
+		FULL ERROR: (check console as well)<br />
+		{error.toString()}
+		{console.log(error)}
 	{/if}
 </main>
