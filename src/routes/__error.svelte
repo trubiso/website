@@ -15,31 +15,28 @@
 	import { getTextCollection, lang } from '$lib/vars';
 
 	export let title;
-	let cl;
-	lang.subscribe((v) => {
-		cl = v;
-	});
+	export let error;
 
-	const error = getTextCollection('error');
+	const errorText = getTextCollection('error');
 </script>
 
 <main>
-	<h1>{error[cl][0]} {title} !!! <Emote name="shock" size="44" /></h1>
+	<h1>{errorText[$lang][0]} {title} !!! <Emote name="shock" size="44" /></h1>
 	{#if title === '404'}
-		{error[cl][1]}
+		{errorText[$lang][1]}
 		<Emote name="allifeelispain" /><br />
-		{error[cl][2]}
+		{errorText[$lang][2]}
 		<Emote name="happy" /><br />
-		{error[cl][3]}
+		{errorText[$lang][3]}
 		<Emote name="shock_handless" /><br />
-		{error[cl][4]}
+		{errorText[$lang][4]}
 		<Emote name="glad" /><br /><br />
-		{error[cl][5]}
+		{errorText[$lang][5]}
 		<Emote name="sad" /><Emote name="sad2" /><Emote name="sad" /><br />
-		{error[cl][6]}
+		{errorText[$lang][6]}
 		<Emote name="excited" /><Emote name="excited_jumping" />
 	{:else}
-		{error[cl][7]} <Emote name="think" /><Emote name="silly" /><br />
+		{errorText[$lang][7]} <Emote name="think" /><Emote name="silly" /><br />
 		FULL ERROR: (check console as well)<br />
 		{error.toString()}
 		{console.log(error)}
