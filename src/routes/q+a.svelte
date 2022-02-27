@@ -4,7 +4,7 @@
 	import '../styles/q+a.scss';
 
 	export const load: Load = async ({ fetch }) => {
-		const questions = await fetch('/api/fetchQuestions').then((v) => v.json()).then((v) => v.questions);
+		const questions = await fetch(`${base}/api/fetchQuestions`).then((v) => v.json()).then((v) => v.questions);
 		return {
 			props: {
 				questions
@@ -16,6 +16,7 @@
 <script lang="ts">
 	import Emote from '$lib/emote.svelte';
 	import { formatDate } from '$lib/vars';
+import { base } from '$app/paths';
 
 	export let questions: qa[];
 
@@ -24,7 +25,7 @@
 
 	let question = '';
 	async function submitQuestion() {
-		return await fetch('/api/sendQuestion', {
+		return await fetch(`${base}/api/sendQuestion`, {
 			method: 'POST',
 			body: JSON.stringify({
 				question

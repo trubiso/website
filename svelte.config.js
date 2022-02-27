@@ -12,7 +12,8 @@ const config = {
         prerender: {
             entries: [
                 '*',
-                '/api/fetchQuestions'
+                '/api/fetchQuestions',
+                '/api/sendQuestion'
             ]
         }
     }
