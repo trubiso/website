@@ -8,12 +8,7 @@ const config = {
     preprocess: preprocess(),
 
     kit: {
-        adapter: netlify(),
-        prerender: {
-            entries: [
-                '/api/q+a'
-            ]
-        }
+        adapter: netlify()
     }
 };
 
