@@ -4,7 +4,7 @@
 	import '../styles/q+a.scss';
 
 	export const load: Load = async ({ fetch }) => {
-		const questions = await fetch(`${base}/api/fetchQuestions`).then((v) => v.json()).then((v) => v.questions);
+		const questions = await fetch(`/api/fetchQuestions`).then((v) => v.json()).then((v) => v.questions);
 		return {
 			props: {
 				questions
@@ -21,11 +21,11 @@ import { base } from '$app/paths';
 	export let questions: qa[];
 
 	let hasSubmittedQuestion = false;
-	let questionPromise;
+	let questionPromise: Promise<any>;
 
 	let question = '';
 	async function submitQuestion() {
-		return await fetch(`${base}/api/sendQuestion`, {
+		return await fetch(`/api/sendQuestion`, {
 			method: 'POST',
 			body: JSON.stringify({
 				question
@@ -62,6 +62,7 @@ import { base } from '$app/paths';
 						<input type="submit" value="ask moar?" />
 					{:else}
 						<label for="">ERROAR !! {result.error}</label>
+						{console.log(result)}
 					{/if}
 				{/await}
 			{/if}

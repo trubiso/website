@@ -1,7 +1,9 @@
 import pkg from '@prisma/client';
-const prisma = new pkg.PrismaClient();
-prisma.$connect().then(() => {
-	console.log('Connected to Prisma!');
-});
 
-export default prisma;
+export default async function getPrisma() : Promise<pkg.PrismaClient> {
+	const prisma = new pkg.PrismaClient();
+	await prisma.$connect().then(() => {
+		console.log('Connected to Prisma!');
+	});
+	return prisma;
+}

@@ -1,7 +1,8 @@
-import prisma from '$lib/db';
+import getPrisma from '$lib/db';
 import type { RequestHandler } from '@sveltejs/kit';
 
 export const get: RequestHandler = async () => {
+	const prisma = await getPrisma();
 	return {
 		status: 200,
 		body: {

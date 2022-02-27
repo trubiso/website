@@ -1,16 +1,8 @@
-import prisma from '$lib/db';
+import getPrisma from '$lib/db';
 import type { RequestHandler } from '@sveltejs/kit';
 
-export const get: RequestHandler = async () => {
-	return {
-		status: 200,
-		body: {
-			message: "halo"
-		}
-	}
-}
-
 export const post: RequestHandler = async ({ request }) => { 
+	const prisma = await getPrisma();
 	const formBody = await request.json();
 	try {
 		await prisma.qa.create({
@@ -36,3 +28,12 @@ export const post: RequestHandler = async ({ request }) => {
 		};
 	}
 };
+
+export const get: RequestHandler = async () => {
+	return {
+		status: 200,
+		body: {
+			message: "halo"
+		}
+	}
+}
