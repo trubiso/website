@@ -11,9 +11,7 @@ const config = {
         adapter: netlify(),
         prerender: {
             entries: [
-                '*',
-                '/api/q+a',
-                '/q+a'
+                'api/q+a.ts'
             ]
         }
     }
