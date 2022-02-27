@@ -4,7 +4,7 @@
 	import '../styles/q+a.scss';
 
 	export const load: Load = async ({ fetch }) => {
-		const questions = await fetch('/api/fetchQuestions.json').then((v) => v.json()).then((v) => v.questions);
+		const questions = await fetch('/api/fetchQuestions').then((v) => v.json()).then((v) => v.questions);
 		return {
 			props: {
 				questions
@@ -24,7 +24,7 @@
 
 	let question = '';
 	async function submitQuestion() {
-		return await fetch('/api/sendQuestion.json', {
+		return await fetch('/api/sendQuestion', {
 			method: 'POST',
 			body: JSON.stringify({
 				question
