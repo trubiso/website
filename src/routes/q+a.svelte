@@ -18,6 +18,7 @@
 <script lang="ts">
 	import Emote from '$lib/emote.svelte';
 	import { formatDate } from '$lib/vars';
+	import { onMount } from 'svelte';
 
 	export let questions: qa[] = [];
 
@@ -43,6 +44,12 @@
 			questionPromise = submitQuestion();
 		}
 	}
+
+	onMount(async () => {
+		questions = await fetch(`/api/q+a`, { method: 'GET' })
+			.then((v) => v.json())
+			.then((v) => v.questions);
+	});
 </script>
 
 <main class="q-a">
