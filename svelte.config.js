@@ -8,15 +8,7 @@ const config = {
     preprocess: preprocess(),
 
     kit: {
-        adapter: netlify(),
-        prerender: {
-            entries: [
-                '*',
-                '/q+a',
-                '/api/fetchQuestions',
-                '/api/sendQuestion'
-            ]
-        }
+        adapter: netlify()
     }
 };
 
