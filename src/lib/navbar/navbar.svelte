@@ -52,8 +52,9 @@
 				<img
 					src={emoteLinks[emoteNames.findIndex((v) => v === 'silly')]}
 					alt="logo"
-					width="178"
-					height="66"
+					on:click={() => clicks++}
+					class:spinning={clicks >= 25}
+					class:spinning-fast={clicks >= 50}
 				/>
 			{/if}
 		</div>
