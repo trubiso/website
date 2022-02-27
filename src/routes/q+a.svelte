@@ -28,8 +28,12 @@
 
 	let question = '';
 	async function submitQuestion() {
-		console.log(`/api/q+a?question=${question}`);
-		return await fetch(`/api/q+a?question=${question}`, { method: 'GET' }).then((v) => v.json());
+		return await fetch(`/api/q+a`, {
+			method: 'POST',
+			body: JSON.stringify({
+				question
+			})
+		}).then((v) => v.json());
 	}
 
 	function handleSubmit() {
@@ -81,7 +85,7 @@
 					{formatDate(new Date(question.created_at))}
 				</div>
 				<div class="question-title">
-					{question.question}
+					{@html question.question}
 				</div>
 				<div class="question-answer">
 					{@html question.answer}

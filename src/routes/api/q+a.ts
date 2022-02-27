@@ -1,44 +1,45 @@
-import getPrisma from '$lib/db';
+import prisma from '$lib/db';
 import type { RequestHandler } from '@sveltejs/kit';
 
-export const get: RequestHandler = async ({ url }) => {
-	const prisma = await getPrisma();
+export const post: RequestHandler = async ({ request }) => {
+	const question = (await request.json()).question;
+	try {
+		await prisma.qa.create({
+			data: {
+				created_at: new Date(),
+				question: question,
+				answer: null
+			}
+		});
+		return {
+			body: {
+				success: true
+			}
+		};
+	} catch (e) {
+		return {
+			status: 500,
+			body: {
+				success: false,
+				error: e
+			}
+		};
+	}
+};
 
-    if (url.searchParams.get('question')) {
-        const question = url.searchParams.get('question');
-        try {
-            await prisma.qa.create({
-                data: {
-                    created_at: new Date(),
-                    question: question,
-                    answer: null
-                }
-            });
-            return {
-                body: {
-                    success: true
-                }
-            };
-        } catch (e) {
-            return {
-                status: 500,
-                body: {
-                    success: false,
-                    error: e
-                }
-            };
-        }
-    } else {
-        return {
-            body: {
-                questions: (await prisma.qa.findMany({
-                    where: {
-                        NOT: {
-                            answer: null
-                        }
-                    }
-                })).sort( (a, b) => a.created_at > b.created_at ? -1 : 1)
-            }
-        };
-    }
+export const get: RequestHandler = async () => {
+	return {
+		body: {
+			questions: await prisma.qa.findMany({
+				where: {
+					NOT: {
+						answer: null
+					}
+				},
+				orderBy: {
+					created_at: 'desc'
+				}
+			})
+		}
+	};
 };

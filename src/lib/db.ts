@@ -1,9 +1,7 @@
-import { PrismaClient } from '@prisma/client';
+import Prisma, * as PrismaScope from '@prisma/client';
+const PrismaClient = Prisma?.PrismaClient || PrismaScope.PrismaClient;
 
-export default async function getPrisma() : Promise<PrismaClient> {
-	const prisma = new PrismaClient();
-	await prisma.$connect().then(() => {
-		console.log('Connected to Prisma!');
-	});
-	return prisma;
-}
+const prisma = new PrismaClient();
+prisma.$connect().then(() => console.log('Connected to Prisma'));
+
+export default prisma;
