@@ -23,7 +23,7 @@
 	<title>don't cliq</title>
 </svelte:head>
 
-<section>
+<main>
 	THIS IS A VERY BAD PAGE. LEAVE IT IMMEDIATELY.
 	<br /><br /><br /><br />(there's nothing more to it)
 	<br /><br /><br /><br />(just leave it)
@@ -36,8 +36,8 @@
 	<br /><br /><br /><br />
 	<br /><br /><br /><br />
 	<br /><br /><br /><br /><span on:click={cln} style="cursor: pointer;">(leave now)</span>
-</section>
+</main>
 
-<section id="h">
+<main id="h">
 	<input type="text" id="huh" value="" on:change|preventDefault={nl} />
-</section>
+</main>

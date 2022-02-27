@@ -1,22 +1,11 @@
 <script lang="ts">
 	import {
-		theme,
 		lang,
-		SidebarThemes,
 		getTextCollection,
-		EmotiguyEmoteLinks,
-		EmotiguyEmoteNames,
+		emoteLinks,
+		emoteNames,
 		IEmote
 	} from '$lib/vars';
-
-	let cl = 0,
-		ct = 0;
-	lang.subscribe((v) => {
-		cl = v;
-	});
-	theme.subscribe((v) => {
-		ct = v;
-	});
 
 	const sortOptions = getTextCollection('smilies.sorts');
 	const topText = getTextCollection('smilies.top_text');
@@ -24,13 +13,13 @@
 	const names = getTextCollection('sidebar.item_names');
 
 	const emotes: IEmote[] = [];
-	for (let i = 0; i < EmotiguyEmoteLinks.length; i++)
-		emotes.push({ name: EmotiguyEmoteNames[i], url: EmotiguyEmoteLinks[i] });
+	for (let i = 0; i < emoteLinks.length; i++)
+		emotes.push({ name: emoteNames[i], url: emoteLinks[i] });
 	let vEmotes: IEmote[] = emotes.map((v) => v);
 	let currentSort = 2;
 	const sortChange = () => {
 		const s = document.getElementById('sort') as HTMLSelectElement;
-		currentSort = sortOptions[cl].indexOf(s.value) ?? 0;
+		currentSort = sortOptions[$lang].indexOf(s.value) ?? 0;
 		resortArray();
 	};
 	const resortArray = () => {
@@ -72,16 +61,16 @@
 </script>
 
 <svelte:head>
-	<title>{names[cl][1]}</title>
+	<title>{names[$lang][1]}</title>
 </svelte:head>
 
-<section>
-	<h1>{names[cl][1]}</h1>
-	{topText[cl][0]}<a href="https://discord.gg/JY7PapMSFR" target="_blank">{topText[cl][1]}</a>)
-	<br /><span>{topText[cl][2]}</span>
+<main>
+	<h1>{names[$lang][1]}</h1>
+	{topText[$lang][0]}<a href="https://discord.gg/JY7PapMSFR" target="_blank">{topText[$lang][1]}</a>)
+	<br /><span>{topText[$lang][2]}</span>
 	<select name="sort" id="sort" on:change={sortChange}>
-		{#each sortOptions[cl] as opt}
-			<option value={opt} selected={sortOptions[cl].findIndex((v) => v === opt) === 2}>{opt}</option
+		{#each sortOptions[$lang] as opt}
+			<option value={opt} selected={sortOptions[$lang].findIndex((v) => v === opt) === 2}>{opt}</option
 			>
 		{/each}
 	</select>
@@ -90,8 +79,8 @@
 			<h2>{emote.name}</h2>
 			<img src={emote.url} alt="" />
 			{#if vEmotes.findIndex((v) => v === emote) === 20}
-				<span style="cursor:default;color:{SidebarThemes[ct].mb}">{lucky2883[cl]}</span>
+				<span style="cursor:default;color:var(--mb)">{lucky2883[$lang]}</span>
 			{/if}
 		</div>
 	{/each}
-</section>
+</main>

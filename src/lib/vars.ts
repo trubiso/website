@@ -24,7 +24,7 @@ export const SocialMediaCollection: ISocialMediaEntry[] = [
 ];
 
 // SMILIES
-export const EmotiguyEmoteLinks = [
+export const emoteLinks = [
 	'https://cdn.discordapp.com/emojis/717683480787550228.png',
 	'https://cdn.discordapp.com/emojis/717683548487811111.png',
 	'https://cdn.discordapp.com/emojis/717684437508161546.png',
@@ -130,7 +130,7 @@ export const EmotiguyEmoteLinks = [
 	'https://cdn.discordapp.com/emojis/888843084627066930.png',
 	'https://cdn.discordapp.com/emojis/888843092050968586.png'
 ];
-export const EmotiguyEmoteNames = [
+export const emoteNames = [
 	'happy',
 	'sad',
 	'coolwoah',
@@ -242,79 +242,8 @@ export interface IEmote {
 }
 
 // SIDEBAR
-export type SidebarTheme = {
-	bg1: string;
-	bg2: string;
-	tc: string;
-	mb: string;
-	mc: string;
-};
-export const SidebarItems = ['/', '/smilys', '/bad', '/kity', '/games', '/socials'];
-export const SidebarThemes: SidebarTheme[] = [
-	{
-		bg1: '#ffc600',
-		bg2: '#dda400',
-		tc: '#181818',
-		mb: '#f1d7b2',
-		mc: '#101020'
-	},
-	{
-		bg1: '#9292c1',
-		bg2: '#7070a0',
-		tc: '#181818',
-		mb: '#ffffff',
-		mc: '#101020'
-	},
-	{
-		bg1: '#32324f',
-		bg2: '#10102d',
-		tc: '#e6bb1c',
-		mb: '#ffffff',
-		mc: '#101020'
-	},
-	{
-		bg1: '#32324f',
-		bg2: '#10102d',
-		tc: '#e6bb1c',
-		mb: '#00001c',
-		mc: '#ddddef'
-	},
-	{
-		bg1: '#43324f',
-		bg2: '#22112e',
-		tc: '#e6bb1c',
-		mb: '#10001c',
-		mc: '#e8ddf0'
-	},
-	{
-		bg1: '#570f8a',
-		bg2: '#36124f',
-		tc: '#e6bb1c',
-		mb: '#270042',
-		mc: '#e8ddf0'
-	},
-	{
-		bg1: '#333333',
-		bg2: '#333333',
-		tc: '#e6bb1c',
-		mb: '#000000',
-		mc: '#ffffff'
-	},
-	{
-		bg1: '#333333',
-		bg2: '#333333',
-		tc: '#e6bb1c',
-		mb: '#ffffff',
-		mc: '#000000'
-	},
-	{
-		bg1: '#990099',
-		bg2: '#660066',
-		tc: '#e6bb1c',
-		mb: '#ffaaff',
-		mc: '#220022'
-	}
-];
+export const sidebarItems = ['/', '/smilys', '/bad', '/kity', '/games', '/socials'];
+
 
 // GLOBAL LANG STUFF
 const texts = <const>{
@@ -465,7 +394,7 @@ const texts = <const>{
 				'grugogoh !!',
 				'ugagaagoq',
 				'grinqi broogo',
-				'kefwano gragoqe',
+				'kefwano gragqe',
 				'groqo grabo'
 			],
 			[
@@ -543,4 +472,3 @@ export function getTextCollection(identifier: string) {
 }
 
 export const lang = writable(0);
-export const theme = writable(0);

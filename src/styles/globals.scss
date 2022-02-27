@@ -1,0 +1,26 @@
+@import 'themes', 'mixins';
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	min-height: 100vh;
+	display: flex;
+	font-family: 'Times New Roman', Times, serif;
+	background-color: var(--mb);
+	color: var(--mc);
+}
+
+main.content {
+	padding: 30px;
+	width: 100%;
+}
+
+@media screen and (max-width: 600px) {
+	body {
+		flex-direction: column;
+	}
+}

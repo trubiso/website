@@ -1,8 +1,8 @@
 <script lang="ts">
-	import { EmotiguyEmoteLinks, EmotiguyEmoteNames } from './vars';
+	import { emoteLinks, emoteNames } from './vars';
 	export let name = 'happy';
 	export let size = '22';
-	const link = EmotiguyEmoteLinks[EmotiguyEmoteNames.findIndex((e) => e === name)];
+	const link = emoteLinks[emoteNames.findIndex((e) => e === name)];
 </script>
 
 <div class="emote">

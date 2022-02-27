@@ -17,7 +17,7 @@
 	<title>{names[cl][0]}</title>
 </svelte:head>
 
-<section>
+<main>
 	<h1>{texts[cl][0]} <Emote name="happy" size="44" /></h1>
 	<span> {texts[cl][1]} <Emote name="nerd_emotiguy" /> </span>
 	<ol>
@@ -27,17 +27,9 @@
 	</ol>
 	<p />
 	<img src="/likangel.png" alt="" width="256" />
-</section>
+</main>
 
 <style>
-	section {
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		/* align-items: center; */
-		flex: 1;
-	}
-
 	h1 {
 		width: 100%;
 	}
