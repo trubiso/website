@@ -3,30 +3,35 @@
 	import type { qa } from '@prisma/client';
 	import '../styles/q+a.scss';
 
-	export const load: Load = async ({ fetch }) => {
-		const questions = await fetch(`/api/q+a`, { method: 'GET' })
-			.then((v) => v.json())
-			.then((v) => v.questions);
-		return {
-			props: {
-				questions
-			}
-		};
-	};
+	// export const load: Load = async ({ fetch }) => {
+	// 	const questions = await fetch(`/api/q+a`, { method: 'GET' })
+	// 		.then((v) => v.json())
+	// 		.then((v) => v.questions);
+	// 	return {
+	// 		props: {
+	// 			questions
+	// 		}
+	// 	};
+	// };
 </script>
 
 <script lang="ts">
 	import Emote from '$lib/emote.svelte';
 	import { formatDate } from '$lib/vars';
 
-	export let questions: qa[];
+	export let questions: qa[] = [];
 
 	let hasSubmittedQuestion = false;
 	let questionPromise: Promise<any>;
 
 	let question = '';
 	async function submitQuestion() {
-		
+		// return await fetch(`/api/q+a`, {
+		// 	method: 'POST',
+		// 	body: JSON.stringify({
+		// 		question
+		// 	})
+		// }).then((v) => v.json());
 	}
 
 	function handleSubmit() {
