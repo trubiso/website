@@ -4,7 +4,7 @@ import type { RequestHandler } from '@sveltejs/kit';
 export const get: RequestHandler = async ({ url }) => {
 	const prisma = await getPrisma();
 
-    if (url.searchParams.has('question')) {
+    if (url.searchParams.get('question')) {
         const question = url.searchParams.get('question');
         try {
             await prisma.qa.create({
