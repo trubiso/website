@@ -19,6 +19,7 @@
 	import Emote from '$lib/emote.svelte';
 	import { formatDate } from '$lib/vars';
 	import { onMount } from 'svelte';
+	import { scale } from 'svelte/transition';
 
 	export let questions: qa[] = [];
 
@@ -27,12 +28,7 @@
 
 	let question = '';
 	async function submitQuestion() {
-		return await fetch(`/api/q+a`, {
-			method: 'POST',
-			body: JSON.stringify({
-				question
-			})
-		}).then((v) => v.json());
+		return await fetch(`/api/q+a?question=${question}`, { method: 'GET' }).then((v) => v.json());
 	}
 
 	function handleSubmit() {
@@ -79,7 +75,7 @@
 
 	<div class="question-wrapper">
 		{#each questions as question}
-			<div class="question">
+			<div class="question" transition:scale>
 				<div class="question-timestamp">
 					{formatDate(new Date(question.created_at))}
 				</div>
