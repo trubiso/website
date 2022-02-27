@@ -4,7 +4,7 @@
 	import '../styles/q+a.scss';
 
 	export const load: Load = async ({ fetch }) => {
-		const { questions } = await fetch('/api/fetchQuestions').then((r) => r.json());
+		const { questions } = await fetch('/api/fetchQuestions.json').then((r) => r.json());
 		return {
 			props: {
 				questions
@@ -25,7 +25,7 @@ import { formatDate } from '$lib/vars';
 	let question = '';
 	async function submitQuestion() {
 		return await (
-			await fetch('/api/sendQuestion', {
+			await fetch('/api/sendQuestion.json', {
 				method: 'POST',
 				body: JSON.stringify({
 					question
