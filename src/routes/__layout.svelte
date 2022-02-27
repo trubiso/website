@@ -8,6 +8,10 @@
 
 	// let ct = 0; // ct stands for current theme
 	onMount(() => {
+		if (!isNaN(parseInt(localStorage.getItem('theme')))) {
+			localStorage.setItem('theme', 'smilie');
+		}
+
 		if(localStorage.getItem('theme')) {
 			document.documentElement.classList.add(localStorage.getItem('theme'));
 		} else {
