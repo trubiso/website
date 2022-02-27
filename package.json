@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "scripts": {
     "dev": "svelte-kit dev",
-    "build": "prisma generate && svelte-kit build",
+    "build": "svelte-kit build",
     "preview": "svelte-kit preview",
     "test": "svelte-kit dev --host",
     "check": "svelte-check --tsconfig ./tsconfig.json",
