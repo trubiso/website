@@ -26,12 +26,12 @@
 
 	let question = '';
 	async function submitQuestion() {
-		// return await fetch(`/api/q+a`, {
-		// 	method: 'POST',
-		// 	body: JSON.stringify({
-		// 		question
-		// 	})
-		// }).then((v) => v.json());
+		return await fetch(`/api/q+a`, {
+			method: 'POST',
+			body: JSON.stringify({
+				question
+			})
+		}).then((v) => v.json());
 	}
 
 	function handleSubmit() {
