@@ -46,14 +46,9 @@ h1 {
 
 	input[type='submit'] {
 		display: flex;
-		width: 100%;
-		background-color: var(--mb);
-		color: var(--mc);
-		border: none;
-		cursor: pointer;
-		font-size: 16px;
-		padding: 5px;
-        margin: 5px;
+		text-align: center;
+		left: 50%;
+		right: 50%;
 	}
 
 	textarea {

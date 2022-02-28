@@ -85,7 +85,7 @@
 					{formatDate(new Date(question.created_at))}
 				</div>
 				<div class="question-title">
-					{@html question.question}
+					{question.question}
 				</div>
 				<div class="question-answer">
 					{@html question.answer}
