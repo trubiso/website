@@ -1,4 +1,4 @@
-@import 'themes', 'mixins';
+@import 'themes';
 
 * {
 	box-sizing: border-box;
@@ -10,8 +10,8 @@ body {
 	min-height: 100vh;
 	display: flex;
 	font-family: 'Times New Roman', Times, serif;
-	background-color: var(--mb);
-	color: var(--mc);
+	background-color: var(--bg);
+	color: var(--text);
 }
 
 main.content {

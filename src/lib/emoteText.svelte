@@ -10,27 +10,25 @@
 	const regex = new RegExp(`:(${joinedNames}):`, 'g');
 
 	const splitText: string[] = text.split(regex).filter((v) => v);
-	let emoteText = splitText.map((v) =>
-		emoteNames.includes(v) ? { text: v, emote: true } : { text: v, emote: false }
-	);
+	let emoteText = splitText.map((v) => ({ text: v, emote: emoteNames.includes(v) }));
 </script>
 
 <span>
-    {#if html}
-        {#each emoteText as e}
-            {#if e.emote}
-                <Emote name={e.text} {size} />
-            {:else}
-                {@html e.text}
-            {/if}
-        {/each}
-    {:else}
-        {#each emoteText as e}
-            {#if e.emote}
-                <Emote name={e.text} {size} />
-            {:else}
-                {e.text}
-            {/if}
-        {/each}
-    {/if}
+	{#if html}
+		{#each emoteText as e}
+			{#if e.emote}
+				<Emote name={e.text} {size} />
+			{:else}
+				{@html e.text}
+			{/if}
+		{/each}
+	{:else}
+		{#each emoteText as e}
+			{#if e.emote}
+				<Emote name={e.text} {size} />
+			{:else}
+				{e.text}
+			{/if}
+		{/each}
+	{/if}
 </span>

@@ -93,7 +93,7 @@
 
 		span.lucky {
 			cursor: default;
-			color: var(--mb);
+			color: var(--bg);
 			position: absolute;
 		}
 	}
