@@ -60,7 +60,7 @@ import Question from '$lib/question.svelte';
 		<div class="question-input" class:smaller-qi={hasSubmittedQuestion}>
 			{#if !hasSubmittedQuestion}
 				<label for="text">ask mee!</label>
-				<textarea name="text" id="text" cols="30" rows="10" bind:value={question} />
+				<textarea name="text" id="text" cols="30" rows="10" bind:value={question} required />
 				<input type="submit" value="submite" />
 			{:else}
 				{#await questionPromise}
