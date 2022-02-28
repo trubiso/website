@@ -17,6 +17,7 @@
 
 <script lang="ts">
 	import Emote from '$lib/emote.svelte';
+import Question from '$lib/question.svelte';
 	import { formatDate } from '$lib/vars';
 	import { onMount } from 'svelte';
 	import { scale } from 'svelte/transition';
@@ -80,18 +81,7 @@
 
 	<div class="question-wrapper">
 		{#each questions as question}
-			<div class="question" transition:scale>
-				<div class="question-timestamp">
-					{formatDate(new Date(question.created_at))}
-				</div>
-				<div class="question-title">
-					{question.question}
-				</div>
-				<div class="question-answer">
-					{@html question.answer}
-				</div>
-			</div>
-			<br />
+			<Question {question} />
 		{/each}
 	</div>
 </main>
