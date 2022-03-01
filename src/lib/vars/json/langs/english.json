@@ -1,0 +1,60 @@
+{
+  "error": [
+    "ERROR",
+    "OH NO! you went to a wrong page",
+    "it's okay though...",
+    "do you see the sidebar?",
+    "you can find more pages there",
+    "ALTHOUGH! it might be my (trubiso's) fault!",
+    "in that case you can contact me and i will fix the issue!!",
+    "what the hell did you do"
+  ],
+  "themes": [
+    "smilie",
+    "purple marble",
+    "dark marble",
+    "owl",
+    "plum owl",
+    "purple owl",
+    "black",
+    "white",
+    "hot pink"
+  ],
+  "index": {
+    "reasons": [
+      "its great",
+      "it uses svelte",
+      "it is pretty",
+      "it has a great point of view on industrail machinery",
+      "it has typos (see item above)",
+      "h"
+    ],
+    "texts": ["welcome to my website", "why you should use it:"]
+  },
+  "navbar_items": [
+    "home",
+    "smilies",
+    "don't click",
+    "kitty",
+    "games",
+    "q+a",
+    "socials",
+    "switch theme",
+    "language"
+  ],
+  "smilies": {
+    "top_text": ["here are my friend smilies! (source: ", "emotiguy appreciation", "sort by: "],
+    "sorts": [
+			{
+				"display": "Alphabetical (A-|)",
+				"value": "a-z"
+			},
+      "alphabetical (a-z)",
+      "alphabetical (z-a)",
+      "creation date (old-new)",
+      "creation date (new-old)",
+      "random"
+    ],
+    "lucky_2883": "Lucky you! You found a 2883 :)"
+  }
+}
