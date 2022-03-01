@@ -242,243 +242,264 @@ export interface IEmote {
 }
 
 // SIDEBAR
-export const sidebarItems = ['/', '/smilys', '/bad', '/kity', '/games', '/q+a', '/socials'];
+export const navbarItems = ['/', '/smilys', '/bad', '/kity', '/games', '/q+a', '/socials'];
 
 // GLOBAL LANG STUFF
-const texts = <const>{
+const international = {
 	langs: [
 		'English (UK/US)',
 		'English (Smilieland)',
 		'Oogie Boogie (Kqüntniétt)',
 		'Español (España)'
-	],
+	]
+};
+
+const english = <const>{
 	error: [
-		[
-			'ERROR',
-			'OH NO! you went to a wrong page',
-			"it's okay though...",
-			'do you see the sidebar?',
-			'you can find more pages there',
-			"ALTHOUGH! it might be my (trubiso's) fault!",
-			'in that case you can contact me and i will fix the issue!!',
-			'what the hell did you do'
-		],
-		[
-			'ERRORE',
-			'OH NOE ! YU GO TO RONG PAEG !!',
-			'its onke thuogh..',
-			'yu see da siedbar ?!?!? YESE ?!?!?',
-			'yu can finde moar pages ther',
-			"ALTHUOGUHGOHEGHEH !! it mite be my (trumbinso'se) fualt !!",
-			'in dat caes yu can contaqt me and i wil FIX !!',
-			'waht da FSH did yu dOe !!'
-		],
-		[
-			'GIGGUG',
-			'OH NOE ! GRUBO GRANOB GRUQ GEHE BARGONO QWIFANO !!',
-			'grino grub gaqoog..',
-			'go grubo sidebar groono ?!? GRABO !?!??!',
-			'ginqe grabo qwifano greno bargaboog',
-			'GARBHEQO !! grinbu grag giibu (qetrumbinso) giggug !!',
-			'grubno aqob, guno grab geeg gino gruq QIGQU !!!1',
-			'grabon gruq greno barga goqona groog !!'
-		],
-		[
-			'ERROR',
-			'OH NO! te fuiste a una página incorrecta',
-			'pero no te preocupes',
-			'¿ves la barra lateral?',
-			'puedes encontrar más páginas ahí',
-			'¡AUNQUE! puede ser mi (trubiso) culpa',
-			'en ese caso, puedes contactarme e intentaré arreglar el problema',
-			'qué has hecho'
-		]
+		'ERROR',
+		'OH NO! you went to a wrong page',
+		"it's okay though...",
+		'do you see the sidebar?',
+		'you can find more pages there',
+		"ALTHOUGH! it might be my (trubiso's) fault!",
+		'in that case you can contact me and i will fix the issue!!',
+		'what the hell did you do'
 	],
 	themes: [
-		[
-			'smilie',
-			'purple marble',
-			'dark marble',
-			'owl',
-			'plum owl',
-			'purple owl',
-			'black',
-			'white',
-			'hot pink'
-		],
-		[
-			'smili',
-			'pruple marbel',
-			'darke marbel',
-			'owle',
-			'plume owle',
-			'pruple owle',
-			'blak',
-			'whiet',
-			'htot pinq'
-		],
-		[
-			'qurgeh',
-			'grabno giqurgano',
-			'grabno gibrug',
-			'gogroog',
-			'bungo grongo gigogroog',
-			'qurgano gigogroog',
-			'bagbo',
-			'gabgo',
-			'ragbo grino'
-		],
-		[
-			'smilie',
-			'mármol violeta',
-			'mármol oscuro',
-			'buho',
-			'buho ciruela',
-			'buho violeta',
-			'negro',
-			'blanco',
-			'rosa cálido'
-		]
+		'smilie',
+		'purple marble',
+		'dark marble',
+		'owl',
+		'plum owl',
+		'purple owl',
+		'black',
+		'white',
+		'hot pink'
 	],
 	index: {
 		reasons: [
-			[
-				'its great',
-				'it uses svelte',
-				'it is pretty',
-				'it has a great point of view on industrail machinery',
-				'it has typos (see item above)',
-				'h'
-			],
-			[
-				'its greate !!!',
-				'it usese svelteing',
-				'it is prety',
-				'it has a greate pointe of viewe on indsustrileale machienery',
-				'it hase typoese (see ietem abov)',
-				'h'
-			],
-			[
-				'grongo garqo !!',
-				'brugo gango svelte grogona',
-				'goqo gahoq gruno',
-				'girino grabo grobo grnokwo fragow wogowno gragohoqoqo grobogo',
-				'gingo gaga goobo gaga boog (grogo gano gobo)',
-				'h'
-			],
-			[
-				'es excelente',
-				'usa svelte',
-				'es bonita',
-				'tiene un muy buen punto de vista sobre las máquinas indsutriales',
-				'tiene erratas (mira el punto anterior)',
-				'h'
-			]
+			'its great',
+			'it uses svelte',
+			'it is pretty',
+			'it has a great point of view on industrail machinery',
+			'it has typos (see item above)',
+			'h'
 		],
-		texts: [
-			['welcome to my website', 'why you should use it:'],
-			['welcom to my websiet !!!1', 'why yu shulde use it:'],
-			['grono gago websiet bogo grano !', 'guro gaobo qagofo grukwago:'],
-			['bienvenido a mi página web', 'por qué deberías usarla:']
-		]
+		texts: ['welcome to my website', 'why you should use it:']
 	},
-	sidebar: {
-		item_names: [
-			[
-				'home',
-				'smilies',
-				"don't click",
-				'kitty',
-				'games',
-				'q+a',
-				'socials',
-				'switch theme',
-				'language'
-			],
-			[
-				'hoem',
-				'smilis',
-				'dont cliq',
-				'kity!!',
-				'gaesm',
-				'q+a',
-				'socialese',
-				'swich theem',
-				'languag'
-			],
-			[
-				'gagroog',
-				'qurgehoq',
-				'baga click goog',
-				'grugogoh !!',
-				'ugagaagoq',
-				'gboqo+gruno',
-				'grinqi broogo',
-				'kefwano gragqe',
-				'groqo grabo'
-			],
-			[
-				'inicio',
-				'smilies',
-				'no me pulses',
-				'gatito',
-				'juegos',
-				'preguntas',
-				'redes sociales',
-				'cambiar tema',
-				'idioma'
-			]
-		]
-	},
+	navbar_items: [
+		'home',
+		'smilies',
+		"don't click",
+		'kitty',
+		'games',
+		'q+a',
+		'socials',
+		'switch theme',
+		'language'
+	],
 	smilies: {
-		top_text: [
-			['here are my friend smilies! (source: ', 'emotiguy appreciation', 'sort by: '],
-			['heer ar my fren smilis !! (sourc: ', 'emtotiguy aprenecietion', 'sorte by: '],
-			[
-				'ga gboorqe grano giqurgehoqe boog !! (gagro gru: ',
-				'qaqurgeho gribugbano',
-				'gri grabo groo: '
-			],
-			['aquí están mis amigos smilies (fuente: ', 'emotiguy appreciation', 'orden: ']
-		],
+		top_text: ['here are my friend smilies! (source: ', 'emotiguy appreciation', 'sort by: '],
 		sorts: [
-			[
-				'alphabetical (a-z)',
-				'alphabetical (z-a)',
-				'creation date (old-new)',
-				'creation date (new-old)',
-				'random'
-			],
-			[
-				'alfabeticale (a-z)',
-				'alfabeticale (z-a)',
-				'creatione daet (olde-newe)',
-				'creatione daet (newe-olde)',
-				'rAndOm !! :P'
-			],
-			[
-				'grana abragoq (a-z)',
-				'grana abragoq (z-a)',
-				'groq gihargooqeg (brano-qigu)',
-				'groq gihargooqeg (qigu-brano)',
-				'girguno'
-			],
-			[
-				'alfabético (a-z)',
-				'alfabético (z-a)',
-				'fecha de creación (viejo-nuevo)',
-				'fecha de creación (nuevo-viejo)',
-				'aleatorio'
-			]
+			'alphabetical (a-z)',
+			'alphabetical (z-a)',
+			'creation date (old-new)',
+			'creation date (new-old)',
+			'random'
 		],
-		lucky_2883: [
-			'Lucky you! You found a 2883 :)',
-			'LUKI YUO !!! yu fuonde a 2883 :)',
-			'GRUNO GABROOGE !!! grigano ga boog 2883 grano :)',
-			'¡Qué suertudo! Encontraste un 2883 :)'
-		]
+		lucky_2883: 'Lucky you! You found a 2883 :)'
 	}
 };
+
+const englishSmilie = <const>{
+	error: [
+		'ERRORE',
+		'OH NOE ! YU GO TO RONG PAEG !!',
+		'its onke thuogh..',
+		'yu see da siedbar ?!?!? YESE ?!?!?',
+		'yu can finde moar pages ther',
+		"ALTHUOGUHGOHEGHEH !! it mite be my (trumbinso'se) fualt !!",
+		'in dat caes yu can contaqt me and i wil FIX !!',
+		'waht da FSH did yu dOe !!'
+	],
+	themes: [
+		'smili',
+		'pruple marbel',
+		'darke marbel',
+		'owle',
+		'plume owle',
+		'pruple owle',
+		'blak',
+		'whiet',
+		'htot pinq'
+	],
+	index: {
+		reasons: [
+			'its greate !!!',
+			'it usese svelteing',
+			'it is prety',
+			'it has a greate pointe of viewe on indsustrileale machienery',
+			'it hase typoese (see ietem abov)',
+			'h'
+		],
+		texts: ['welcom to my websiet !!!1', 'why yu shulde use it:']
+	},
+	navbar_items: [
+		'hoem',
+		'smilis',
+		'dont cliq',
+		'kity!!',
+		'gaesm',
+		'q+a',
+		'socialese',
+		'swich theem',
+		'languag'
+	],
+	smilies: {
+		top_text: ['heer ar my fren smilis !! (sourc: ', 'emtotiguy aprenecietion', 'sorte by: '],
+		sorts: [
+			'alfabeticale (a-z)',
+			'alfabeticale (z-a)',
+			'creatione daet (olde-newe)',
+			'creatione daet (newe-olde)',
+			'rAndOm !! :P'
+		],
+		lucky_2883: 'LUKI YUO !!! yu fuonde a 2883 :)'
+	}
+};
+
+const oogieBoogie = <const>{
+	error: [
+		'GIGGUG',
+		'OH NOE ! GRUBO GRANOB GRUQ GEHE BARGONO QWIFANO !!',
+		'grino grub gaqoog..',
+		'go grubo sidebar groono ?!? GRABO !?!??!',
+		'ginqe grabo qwifano greno bargaboog',
+		'GARBHEQO !! grinbu grag giibu (qetrumbinso) giggug !!',
+		'grubno aqob, guno grab geeg gino gruq QIGQU !!!1',
+		'grabon gruq greno barga goqona groog !!'
+	],
+	themes: [
+		'qurgeh',
+		'grabno giqurgano',
+		'grabno gibrug',
+		'gogroog',
+		'bungo grongo gigogroog',
+		'qurgano gigogroog',
+		'bagbo',
+		'gabgo',
+		'ragbo grino'
+	],
+	index: {
+		reasons: [
+			'grongo garqo !!',
+			'brugo gango svelte grogona',
+			'goqo gahoq gruno',
+			'girino grabo grobo grnokwo fragow wogowno gragohoqoqo grobogo',
+			'gingo gaga goobo gaga boog (grogo gano gobo)',
+			'h'
+		],
+		texts: ['grono gago websiet bogo grano !', 'guro gaobo qagofo grukwago:']
+	},
+	navbar_items: [
+		'gagroog',
+		'qurgehoq',
+		'baga click goog',
+		'grugogoh !!',
+		'ugagaagoq',
+		'gboqo+gruno',
+		'grinqi broogo',
+		'kefwano gragqe',
+		'groqo grabo'
+	],
+	smilies: {
+		top_text: [
+			'ga gboorqe grano giqurgehoqe boog !! (gagro gru: ',
+			'qaqurgeho gribugbano',
+			'gri grabo groo: '
+		],
+		sorts: [
+			'grana abragoq (a-z)',
+			'grana abragoq (z-a)',
+			'groq gihargooqeg (brano-qigu)',
+			'groq gihargooqeg (qigu-brano)',
+			'girguno'
+		],
+		lucky_2883: 'GRUNO GABROOGE !!! grigano ga boog 2883 grano :)'
+	}
+};
+
+const spanish = <const>{
+	error: [
+		'ERROR',
+		'OH NO! te fuiste a una página incorrecta',
+		'pero no te preocupes',
+		'¿ves la barra lateral?',
+		'puedes encontrar más páginas ahí',
+		'¡AUNQUE! puede ser mi (trubiso) culpa',
+		'en ese caso, puedes contactarme e intentaré arreglar el problema',
+		'qué has hecho'
+	],
+	themes: [
+		'smilie',
+		'mármol violeta',
+		'mármol oscuro',
+		'buho',
+		'buho ciruela',
+		'buho violeta',
+		'negro',
+		'blanco',
+		'rosa cálido'
+	],
+	index: {
+		reasons: [
+			'es excelente',
+			'usa svelte',
+			'es bonita',
+			'tiene un muy buen punto de vista sobre las máquinas indsutriales',
+			'tiene erratas (mira el punto anterior)',
+			'h'
+		],
+		texts: ['bienvenido a mi página web', 'por qué deberías usarla:']
+	},
+	navbar_items: [
+		'inicio',
+		'smilies',
+		'no me pulses',
+		'gatito',
+		'juegos',
+		'preguntas',
+		'redes sociales',
+		'cambiar tema',
+		'idioma'
+	],
+	smilies: {
+		top_text: ['aquí están mis amigos smilies (fuente: ', 'emotiguy appreciation', 'orden: '],
+		sorts: [
+			'alfabético (a-z)',
+			'alfabético (z-a)',
+			'fecha de creación (viejo-nuevo)',
+			'fecha de creación (nuevo-viejo)',
+			'aleatorio'
+		],
+		lucky_2883: '¡Qué suertudo! Encontraste un 2883 :)'
+	}
+};
+
+const texts = {...international, ...{
+	error: [english.error, englishSmilie.error, oogieBoogie.error, spanish.error],
+	themes: [english.themes, englishSmilie.themes, oogieBoogie.themes, spanish.themes],
+	index: {
+		reasons: [english.index.reasons, englishSmilie.index.reasons, oogieBoogie.index.reasons, spanish.index.reasons],
+		texts: [english.index.texts, englishSmilie.index.texts, oogieBoogie.index.texts, spanish.index.texts]
+	},
+	navbar_items: [english.navbar_items, englishSmilie.navbar_items, oogieBoogie.navbar_items, spanish.navbar_items],
+	smilies: {
+		top_text: [english.smilies.top_text, englishSmilie.smilies.top_text, oogieBoogie.smilies.top_text, spanish.smilies.top_text],
+		sorts: [english.smilies.sorts, englishSmilie.smilies.sorts, oogieBoogie.smilies.sorts, spanish.smilies.sorts],
+		lucky_2883: [english.smilies.lucky_2883, englishSmilie.smilies.lucky_2883, oogieBoogie.smilies.lucky_2883, spanish.smilies.lucky_2883]
+	}
+}};
 
 // eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
 export function getTextCollection(identifier: string) {

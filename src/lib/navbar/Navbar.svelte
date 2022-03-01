@@ -1,6 +1,6 @@
 <script lang="ts">
 	import './style.scss';
-	import { getTextCollection, lang, sidebarItems, emoteLinks, emoteNames } from '../vars';
+	import { getTextCollection, lang, navbarItems, emoteLinks, emoteNames } from '../vars';
 	import ThemePicker from './themePicker.svelte';
 	import LangPicker from './langPicker.svelte';
     //@ts-ignore-next-line
@@ -8,7 +8,7 @@
 	import { onMount } from 'svelte';
 	import { slide } from 'svelte/transition';
 
-	const itemNames = getTextCollection('sidebar.item_names');
+	const itemNames = getTextCollection('navbar_items');
 
 	let tPicker = false,
 		lPicker = false,
@@ -64,11 +64,11 @@
 	{#if sidebarOpen || matches }
 		<div class="sidebar-wrapper" transition:slide>
 			{#each itemNames[$lang] as item, idx}
-				{#if sidebarItems[idx]}
+				{#if navbarItems[idx]}
 					<a
-						href={sidebarItems[idx]}
+						href={navbarItems[idx]}
 						class="navbar-item"
-						class:bold={$page.url.pathname === sidebarItems[idx]}>{item}</a
+						class:bold={$page.url.pathname === navbarItems[idx]}>{item}</a
 					>
 				{/if}
 			{/each}

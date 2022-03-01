@@ -10,7 +10,7 @@
 	const sortOptions = getTextCollection('smilies.sorts');
 	const topText = getTextCollection('smilies.top_text');
 	const lucky2883 = getTextCollection('smilies.lucky_2883');
-	const names = getTextCollection('sidebar.item_names');
+	const names = getTextCollection('navbar_items');
 
 	const emotes: IEmote[] = [];
 	for (let i = 0; i < emoteLinks.length; i++)

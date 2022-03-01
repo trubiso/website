@@ -1,5 +1,5 @@
 <script lang="ts">
-	import Navbar from '$lib/navbar/navbar.svelte';
+	import Navbar from '$lib/navbar/Navbar.svelte';
 	import { getTextCollection, lang } from '$lib/vars';
 	import { onMount } from 'svelte';
 	import '../styles/globals.scss';

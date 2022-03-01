@@ -4,7 +4,7 @@
 	const reasons = getTextCollection('index.reasons');
 	const texts = getTextCollection('index.texts');
 
-	const names = getTextCollection('sidebar.item_names');
+	const names = getTextCollection('navbar_items');
 
 	let cl = 0;
 
