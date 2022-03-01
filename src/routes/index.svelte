@@ -1,18 +1,14 @@
 <script lang="ts">
   import Emote from '$lib/emote.svelte';
-  import { getTextCollection } from '$lib/vars';
+  import { getTextCollection, getTitleOfPage } from '$lib/vars';
   import { lang } from '$lib/stores';
-  import { emotes } from '$lib/vars/index';
 
   const reasons = getTextCollection('index.reasons');
   const texts = getTextCollection('index.texts');
-  const names = getTextCollection('navbar_items');
-
-  console.log(emotes);
 </script>
 
 <svelte:head>
-  <title>{names[$lang][0]}</title>
+  <title>{getTitleOfPage('home', $lang)}</title>
 </svelte:head>
 
 <main>

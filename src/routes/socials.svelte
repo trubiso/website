@@ -1,6 +1,5 @@
 <script lang="ts">
   import { lang } from '$lib/stores';
-
   import { socialMedias, getTitleOfPage } from '$lib/vars';
 </script>
 
@@ -9,7 +8,7 @@
 </svelte:head>
 
 <section>
-  <h1>here's my stuff</h1>
+  <h1>{getTitleOfPage('socials', $lang)}</h1>
   <ul>
     {#each Array.from(socialMedias.entries()) as [name, data]}
       <li>

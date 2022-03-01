@@ -43,14 +43,18 @@
     "idioma"
   ],
   "smilies": {
-    "top_text": ["aquí están mis amigos smilies (fuente: ", "emotiguy appreciation", "orden: "],
+    "texts": [
+      "aquí están mis amigos smilies (fuente: ",
+      "emotiguy appreciation",
+      "orden: ",
+      "¡Qué suertudo! Encontraste un 2883 :)"
+    ],
     "sorts": [
       "alfabético (a-z)",
       "alfabético (z-a)",
       "fecha de creación (viejo-nuevo)",
       "fecha de creación (nuevo-viejo)",
       "aleatorio"
-    ],
-    "lucky_2883": "¡Qué suertudo! Encontraste un 2883 :)"
+    ]
   }
 }

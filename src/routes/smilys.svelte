@@ -1,12 +1,11 @@
 <script lang="ts">
-  import { getTextCollection, emotes } from '$lib/vars';
+  import { getTextCollection, emotes, getTitleOfPage } from '$lib/vars';
   import { lang } from '$lib/stores';
 
   const sortOptions = getTextCollection('smilies.sorts');
   const sorts = ['a-z', 'z-a', 'old-new', 'new-old', 'random'];
-  const topText = getTextCollection('smilies.top_text');
-  const lucky2883 = getTextCollection('smilies.lucky_2883');
-  const names = getTextCollection('navbar_items');
+  const topText = getTextCollection('smilies.texts');
+  const lucky2883 = topText.at(-1);
 
 	const originalEmotes = Array.from(emotes.keys());
   let sortedEmotes = originalEmotes;
@@ -16,10 +15,10 @@
     const sortIndex: number = sortOptions[$lang].findIndex((v) => v === currentSort);
     switch (sorts[sortIndex]) {
       case 'a-z':
-				sortedEmotes = [...sortedEmotes].sort().reverse();
+				sortedEmotes = [...sortedEmotes].sort();
         break;
       case 'z-a':
-				sortedEmotes = [...sortedEmotes].sort();
+				sortedEmotes = [...sortedEmotes].sort().reverse();
         break;
       case 'old-new':
         sortedEmotes = [...originalEmotes];
@@ -35,15 +34,15 @@
 </script>
 
 <svelte:head>
-  <title>{names[$lang][1]}</title>
+  <title>{getTitleOfPage('smilies', $lang)}</title>
 </svelte:head>
 
 <main class="smilys">
-  <h1>{names[$lang][1]}</h1>
+  <h1>{getTitleOfPage('smilies', $lang)}</h1>
   {topText[$lang][0]}<a href="https://discord.gg/JY7PapMSFR" target="_blank">{topText[$lang][1]}</a
   >)
   <br /><span>{topText[$lang][2]}</span>
-  <select name="sort" id="sort" on:change={resortArray} bind:value={currentSort}>
+  <select name="sort" id="sort" bind:value={currentSort} on:change={resortArray}>
     {#each sortOptions[$lang] as opt}
       <option value={opt}>{opt}</option>
     {/each}

@@ -57,23 +57,17 @@ export const texts = {
     spanish.navbar_items
   ],
   smilies: {
-    top_text: [
-      english.smilies.top_text,
-      smilie.smilies.top_text,
-      oogieBoogie.smilies.top_text,
-      spanish.smilies.top_text
+    texts: [
+      english.smilies.texts,
+      smilie.smilies.texts,
+      oogieBoogie.smilies.texts,
+      spanish.smilies.texts
     ],
     sorts: [
       english.smilies.sorts,
       smilie.smilies.sorts,
       oogieBoogie.smilies.sorts,
       spanish.smilies.sorts
-    ],
-    lucky_2883: [
-      english.smilies.lucky_2883,
-      smilie.smilies.lucky_2883,
-      oogieBoogie.smilies.lucky_2883,
-      spanish.smilies.lucky_2883
     ]
   }
 };

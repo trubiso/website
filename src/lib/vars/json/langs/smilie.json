@@ -43,14 +43,18 @@
     "languag"
   ],
   "smilies": {
-    "top_text": ["heer ar my fren smilis !! (sourc: ", "emtotiguy aprenecietion", "sorte by: "],
+    "texts": [
+      "heer ar my fren smilis !! (sourc: ",
+      "emtotiguy aprenecietion",
+      "sorte by: ",
+      "LUKI YUO !!! yu fuonde a 2883 :)"
+    ],
     "sorts": [
       "alfabeticale (a-z)",
       "alfabeticale (z-a)",
       "creatione daet (olde-newe)",
       "creatione daet (newe-olde)",
       "rAndOm !! :P"
-    ],
-    "lucky_2883": "LUKI YUO !!! yu fuonde a 2883 :)"
+    ]
   }
 }

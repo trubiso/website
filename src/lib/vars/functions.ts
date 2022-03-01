@@ -1,20 +1,19 @@
 import { texts } from '.';
 
-// [key: string]: string;
+type TextCollectionTraverser = string[] | string[][] | Record<string, string[] | string[][] | Record<string, string[][]>>;
+type TextCollection<T extends string> = T extends 'langs' ? string[] : string[][];
 
-// TODO: Make this a proper good type (pls help dave)
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-type TextCollection = any;
-
-export function getTextCollection(id: string): TextCollection {
+export function getTextCollection<T extends string>(id: T): TextCollection<T> {
   const path = id.split('.');
-  let current: TextCollection = texts;
+  let current: TextCollectionTraverser = texts;
+
+  typeof texts;
 
   for (const step of path) current = current[step];
 
   if (!current) throw `Text collection ${id} does not exist.`;
 
-  return current;
+  return current as TextCollection<T>;
 }
 
 export function getTitleOfPage(page: string, lang: number): string {
