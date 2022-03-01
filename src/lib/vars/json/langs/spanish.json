@@ -1,0 +1,56 @@
+{
+  "error": [
+    "ERROR",
+    "OH NO! te fuiste a una página incorrecta",
+    "pero no te preocupes",
+    "¿ves la barra lateral?",
+    "puedes encontrar más páginas ahí",
+    "¡AUNQUE! puede ser mi (trubiso) culpa",
+    "en ese caso, puedes contactarme e intentaré arreglar el problema",
+    "qué has hecho"
+  ],
+  "themes": [
+    "smilie",
+    "mármol violeta",
+    "mármol oscuro",
+    "buho",
+    "buho ciruela",
+    "buho violeta",
+    "negro",
+    "blanco",
+    "rosa cálido"
+  ],
+  "index": {
+    "reasons": [
+      "es excelente",
+      "usa svelte",
+      "es bonita",
+      "tiene un muy buen punto de vista sobre las máquinas indsutriales",
+      "tiene erratas (mira el punto anterior)",
+      "h"
+    ],
+    "texts": ["bienvenido a mi página web", "por qué deberías usarla:"]
+  },
+  "navbar_items": [
+    "inicio",
+    "smilies",
+    "no me pulses",
+    "gatito",
+    "juegos",
+    "preguntas",
+    "redes sociales",
+    "cambiar tema",
+    "idioma"
+  ],
+  "smilies": {
+    "top_text": ["aquí están mis amigos smilies (fuente: ", "emotiguy appreciation", "orden: "],
+    "sorts": [
+      "alfabético (a-z)",
+      "alfabético (z-a)",
+      "fecha de creación (viejo-nuevo)",
+      "fecha de creación (nuevo-viejo)",
+      "aleatorio"
+    ],
+    "lucky_2883": "¡Qué suertudo! Encontraste un 2883 :)"
+  }
+}

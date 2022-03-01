@@ -1,45 +1,45 @@
 .question-wrapper {
-	display: flex;
-	flex-direction: column;
-	padding-top: 50px;
+  display: flex;
+  flex-direction: column;
+  padding-top: 50px;
 }
 
 h1 {
-    @media (max-width: 600px) {
-        text-align: center;
-    }
+  @media (max-width: 600px) {
+    text-align: center;
+  }
 }
 
 .question-input {
-	text-align: center;
-	display: flex;
-	flex-direction: column;
-	padding: 10px;
-	width: 100%;
-	height: 250px;
-	align-items: center;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  width: 100%;
+  height: 250px;
+  align-items: center;
 
-	label {
-		font-size: 20px;
-		font-weight: bold;
-	}
+  label {
+    font-size: 20px;
+    font-weight: bold;
+  }
 
-	input[type='submit'] {
-		display: flex;
-		text-align: center;
-		left: 50%;
-		right: 50%;
-	}
+  input[type='submit'] {
+    display: flex;
+    text-align: center;
+    left: 50%;
+    right: 50%;
+  }
 
-	textarea {
-		min-width: 60%;
-		min-height: 80%;
-		max-height: 100%;
-		width: 100%;
-		height: 50px;
-	}
+  textarea {
+    min-width: 60%;
+    min-height: 80%;
+    max-height: 100%;
+    width: 100%;
+    height: 50px;
+  }
 
-	&.smaller-qi {
-		height: 30px;
-	}
+  &.smaller-qi {
+    height: 30px;
+  }
 }

@@ -1,15 +1,35 @@
 @keyframes spin {
-    0% 		{ transform:rotate(0deg)   }
-    25% 	{ transform:rotate(90deg)  }
-    50% 	{ transform:rotate(180deg) }
-    75% 	{ transform:rotate(270deg) }
-    100% 	{ transform:rotate(360deg) }
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(90deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  75% {
+    transform: rotate(270deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 @keyframes spinScale {
-    0% 		{ transform:scale(2)   rotate(0deg)  }
-    25% 	{ transform:scale(1)   rotate(90deg) }
-    50% 	{ transform:scale(0.5) rotate(180deg)}
-    75% 	{ transform:scale(1)   rotate(270deg)}
-    100% 	{ transform:scale(2)   rotate(360deg)}
+  0% {
+    transform: scale(2) rotate(0deg);
+  }
+  25% {
+    transform: scale(1) rotate(90deg);
+  }
+  50% {
+    transform: scale(0.5) rotate(180deg);
+  }
+  75% {
+    transform: scale(1) rotate(270deg);
+  }
+  100% {
+    transform: scale(2) rotate(360deg);
+  }
 }

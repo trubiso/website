@@ -1,21 +1,21 @@
 <script>
-import Emote from "$lib/emote.svelte";
-import { onMount } from "svelte";
+  import Emote from '$lib/emote.svelte';
+  import { onMount } from 'svelte';
 
-let size = 100;
-let q = Array(size);
+  let size = 100;
+  let q = Array(size);
 
-function incrementSilliness() {
+  function incrementSilliness() {
     size += 100;
     q = Array(size);
     setTimeout(incrementSilliness, 500);
-}
+  }
 
-onMount(() => incrementSilliness())
+  onMount(() => incrementSilliness());
 </script>
 
 <main>
-    {#each q as _}
-        <Emote name="silly" spinning />
-    {/each}
+  {#each q as _}
+    <Emote name="silly" spinning />
+  {/each}
 </main>

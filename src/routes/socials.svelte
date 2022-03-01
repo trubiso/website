@@ -1,22 +1,24 @@
 <script lang="ts">
-	import { SocialMediaCollection } from '$lib/vars';
+  import { lang } from '$lib/stores';
+
+  import { socialMedias, getTitleOfPage } from '$lib/vars';
 </script>
 
 <svelte:head>
-	<title>socials</title>
+  <title>{getTitleOfPage('socials', $lang)}</title>
 </svelte:head>
 
 <section>
-	<h1>here's my stuff</h1>
-	<ul>
-		{#each SocialMediaCollection as s}
-			<li>
-				{s.name}: {#if s.link}
-					<a href={s.link} target="_blank">{s.username}</a>
-				{:else}
-					<span>{s.username}</span>
-				{/if}
-			</li>
-		{/each}
-	</ul>
+  <h1>here's my stuff</h1>
+  <ul>
+    {#each Array.from(socialMedias.entries()) as [name, data]}
+      <li>
+        {name}: {#if data.link}
+          <a href={data.link} target="_blank">{data.name}</a>
+        {:else}
+          <span>{data.name}</span>
+        {/if}
+      </li>
+    {/each}
+  </ul>
 </section>

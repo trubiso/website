@@ -1,36 +1,34 @@
 <script lang="ts">
-	import Emote from '$lib/emote.svelte';
-	import { getTextCollection, lang } from '$lib/vars';
-	const reasons = getTextCollection('index.reasons');
-	const texts = getTextCollection('index.texts');
+  import Emote from '$lib/emote.svelte';
+  import { getTextCollection } from '$lib/vars';
+  import { lang } from '$lib/stores';
+  import { emotes } from '$lib/vars/index';
 
-	const names = getTextCollection('navbar_items');
+  const reasons = getTextCollection('index.reasons');
+  const texts = getTextCollection('index.texts');
+  const names = getTextCollection('navbar_items');
 
-	let cl = 0;
-
-	lang.subscribe((v) => {
-		cl = v;
-	});
+  console.log(emotes);
 </script>
 
 <svelte:head>
-	<title>{names[cl][0]}</title>
+  <title>{names[$lang][0]}</title>
 </svelte:head>
 
 <main>
-	<h1>{texts[cl][0]} <Emote name="happy" size="44" /></h1>
-	<span> {texts[cl][1]} <Emote name="nerd_emotiguy" /> </span>
-	<ol>
-		{#each reasons[cl] as reason}
-			<li>{reason}</li>
-		{/each}
-	</ol>
-	<p />
-	<img src="/likangel.png" alt="" width="256" />
+  <h1>{texts[$lang][0]} <Emote name="happy" size="44" /></h1>
+  <span> {texts[$lang][1]} <Emote name="nerd_emotiguy" /> </span>
+  <ol>
+    {#each reasons[$lang] as reason}
+      <li>{reason}</li>
+    {/each}
+  </ol>
+  <p />
+  <img src="/likangel.png" alt="" width="256" />
 </main>
 
 <style>
-	h1 {
-		width: 100%;
-	}
+  h1 {
+    width: 100%;
+  }
 </style>

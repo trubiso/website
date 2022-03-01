@@ -1,23 +1,23 @@
 .question {
-    display: flex;
-    flex-direction: column;
-    padding: 10px;
-    background-color: var(--text);
-    color: var(--bg);
-    margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  background-color: var(--text);
+  color: var(--bg);
+  margin-bottom: 20px;
 
-    .question-timestamp {
-        opacity: 0.5;
-    }
+  .question-timestamp {
+    opacity: 0.5;
+  }
 
-    .question-title {
-        font-size: 20px;
-        font-weight: bold;
-        margin-bottom: 10px;
-        white-space: pre-line;
-    }
+  .question-title {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    white-space: pre-line;
+  }
 
-    .question-answer {
-        font-size: 14px;
-    }
+  .question-answer {
+    font-size: 14px;
+  }
 }
