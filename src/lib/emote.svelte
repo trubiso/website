@@ -7,7 +7,7 @@
 </script>
 
 <div class="emote">
-  <img src={link} alt={name} height={size} title=":{name}:" class:spinning />
+  <img src={link} alt=":{name}:" height={size} title=":{name}:" class:spinning />
 </div>
 
 <style lang="scss">

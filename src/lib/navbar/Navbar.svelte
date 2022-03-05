@@ -4,7 +4,6 @@
   import { lang } from '../stores';
   import ThemePicker from './themePicker.svelte';
   import LangPicker from './langPicker.svelte';
-  //@ts-ignore-next-line
   import { page } from '$app/stores';
   import { onMount } from 'svelte';
   import { slide } from 'svelte/transition';

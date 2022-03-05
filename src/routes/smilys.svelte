@@ -4,8 +4,7 @@
 
   const sortOptions = getTextCollection('smilies.sorts');
   const sorts : Sorts[] = ['a-z', 'z-a', 'none', 'reverse', 'random'];
-  const topText = getTextCollection('smilies.texts');
-  const lucky2883 = topText.at(-1);
+  const texts = getTextCollection('smilies.texts');
 
 	const originalEmotes = Array.from(emotes.keys());
   let sortedEmotes = originalEmotes;
@@ -23,9 +22,9 @@
 
 <main class="smilys">
   <h1>{getTitleOfPage('smilies', $lang)}</h1>
-  {topText[$lang][0]}<a href="https://discord.gg/JY7PapMSFR" target="_blank">{topText[$lang][1]}</a
+  {texts[$lang][0]}<a href="https://discord.gg/JY7PapMSFR" target="_blank">{texts[$lang][1]}</a
   >)
-  <br /><span>{topText[$lang][2]}</span>
+  <br /><span>{texts[$lang][2]}</span>
   <select name="sort" id="sort" bind:value={currentSort} on:change={resortArray}>
     {#each sortOptions[$lang] as opt}
       <option value={opt}>{opt}</option>
@@ -36,7 +35,7 @@
       <h2>{emote}</h2>
       <img src={emotes.get(emote)} alt="" />
       {#if i === 20}
-        <span class="lucky">{lucky2883[$lang]}</span>
+        <span class="lucky">{texts[$lang][texts[$lang].length - 1]}</span>
       {/if}
     </div>
   {/each}
