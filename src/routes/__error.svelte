@@ -21,6 +21,10 @@
   const errorText = getTextCollection('error');
 </script>
 
+<svelte:head>
+  <title>{errorText[$lang][0]} !!!</title>
+</svelte:head>
+
 <main>
   <h1>{errorText[$lang][0]} {title} !!! <Emote name="shock" size="44" /></h1>
   {#if title === '404'}

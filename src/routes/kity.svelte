@@ -1,45 +1,40 @@
 <script lang="ts">
-  import { onMount } from 'svelte';
-  const getVars = (): HTMLElement[] => {
-    if (!document.getElementById('kity')) throw '';
-    if (!document.getElementById('moarkity')) throw '';
+  import { getTitleOfPage } from '$lib/vars';
+  import { lang } from '$lib/stores';
 
-    return [document.getElementById('kity'), document.getElementById('moarkity')];
-  };
+  let kity: HTMLElement;
+  let isLoadingKity = true;
 
-  const h = () => {
-    const [, b] = getVars();
-    b.innerText = 'get mor kity';
-    b.removeAttribute('disabled');
+  const enableKities = () => {
+    isLoadingKity = false;
   };
 
   const getNewKity = () => {
-    const [i, b] = getVars();
-    i.setAttribute('src', `https://placekitten.com/${Math.floor(Math.random() * 600 + 200)}`);
-    b.innerText = 'geting kity...';
-    b.setAttribute('disabled', '');
-    i.onload = h;
+    isLoadingKity = true;
+    kity.setAttribute('src', `https://placekitten.com/${Math.floor(Math.random() * 600 + 200)}`);
   };
-
-  onMount(() => {
-    getVars()[0].onload = h;
-  });
 </script>
 
 <svelte:head>
-  <title>kity</title>
+  <title>{getTitleOfPage('kitty', $lang)}</title>
 </svelte:head>
 
 <main class="kity">
-  <img src="https://placekitten.com/{Math.floor(Math.random() * 600 + 200)}" alt="kity" id="kity" />
+  <img
+    src="https://placekitten.com/{Math.floor(Math.random() * 600 + 200)}"
+    alt="kity"
+    id="kity"
+    bind:this={kity}
+    on:load={enableKities}
+  />
   <br />
-  <button
-    on:click={() => {
-      getNewKity();
-    }}
-    id="moarkity"
-    disabled>geting kity...</button
-  >
+  <button on:click={getNewKity} id="moarkity" disabled={isLoadingKity}>
+    {#if isLoadingKity}
+      geting kity...
+    {:else}
+      get mor kity
+    {/if}
+  </button>
 </main>
 
 <style lang="scss">
@@ -47,6 +42,7 @@
     @media (max-width: 600px) {
       text-align: center;
     }
+
     img {
       max-width: 100%;
       max-height: 100%;

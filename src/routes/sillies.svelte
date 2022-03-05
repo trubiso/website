@@ -14,6 +14,10 @@
   onMount(() => incrementSilliness());
 </script>
 
+<svelte:head>
+  <title>silliness</title>
+</svelte:head>
+
 <main>
   {#each q as _}
     <Emote name="silly" spinning />

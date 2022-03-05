@@ -18,6 +18,8 @@
 <script lang="ts">
   import Emote from '$lib/emote.svelte';
   import Question from '$lib/question.svelte';
+  import { getTitleOfPage } from '$lib/vars';
+  import { lang } from '$lib/stores';
 
   export let questions: qa[] = [];
 
@@ -44,6 +46,10 @@
     }
   }
 </script>
+
+<svelte:head>
+  <title>{getTitleOfPage('q+a', $lang)}</title>
+</svelte:head>
 
 <main class="q-a">
   <h1>questionese + ANSWERESE</h1>
