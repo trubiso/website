@@ -6,18 +6,18 @@
   color: var(--bg);
   margin-bottom: 20px;
 
-  .question-timestamp {
+  &-timestamp {
     opacity: 0.5;
   }
 
-  .question-title {
+  &-title {
     font-size: 20px;
     font-weight: bold;
     margin-bottom: 10px;
     white-space: pre-line;
   }
 
-  .question-answer {
+  &-answer {
     font-size: 14px;
   }
 }

@@ -61,7 +61,7 @@ nav {
       user-select: none;
       &.spinning {
         animation: spin 1s linear infinite;
-        &.spinning-fast {
+        &-fast {
           animation: spin 0.5s linear infinite;
           animation-name: spinScale;
         }

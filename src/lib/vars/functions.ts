@@ -1,6 +1,10 @@
 import { texts } from '.';
+import type { Sorts } from './types';
 
-type TextCollectionTraverser = string[] | string[][] | Record<string, string[] | string[][] | Record<string, string[][]>>;
+type TextCollectionTraverser =
+  | string[]
+  | string[][]
+  | Record<string, string[] | string[][] | Record<string, string[][]>>;
 type TextCollection<T extends string> = T extends 'langs' ? string[] : string[][];
 
 export function getTextCollection<T extends string>(id: T): TextCollection<T> {
@@ -14,6 +18,28 @@ export function getTextCollection<T extends string>(id: T): TextCollection<T> {
   if (!current) throw `Text collection ${id} does not exist.`;
 
   return current as TextCollection<T>;
+}
+
+export function sortArray<T>(array: T[], sort: Sorts): T[] {
+  let sortedArray: T[];
+  switch (sort) {
+    case 'a-z':
+      sortedArray = [...array].sort();
+      break;
+    case 'z-a':
+      sortedArray = [...array].sort().reverse();
+      break;
+    case 'none':
+      sortedArray = [...array];
+      break;
+    case 'reverse':
+      sortedArray = [...array].reverse();
+      break;
+    case 'random':
+      sortedArray = [...array].sort(() => 0.5 - Math.random());
+      break;
+  }
+  return sortedArray;
 }
 
 export function getTitleOfPage(page: string, lang: number): string {

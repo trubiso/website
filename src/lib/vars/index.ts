@@ -1,6 +1,7 @@
 import type { ISocialMediaEntry } from './types';
 import { emoteLinks, emoteNames } from './json/emotes.json';
 export * from './functions';
+export * from './types';
 
 import international from './json/langs/international.json';
 import english from './json/langs/english.json';

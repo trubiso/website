@@ -1,9 +1,9 @@
 <script lang="ts">
-  import { getTextCollection, emotes, getTitleOfPage } from '$lib/vars';
+  import { getTextCollection, emotes, getTitleOfPage, sortArray, Sorts } from '$lib/vars';
   import { lang } from '$lib/stores';
 
   const sortOptions = getTextCollection('smilies.sorts');
-  const sorts = ['a-z', 'z-a', 'old-new', 'new-old', 'random'];
+  const sorts : Sorts[] = ['a-z', 'z-a', 'none', 'reverse', 'random'];
   const topText = getTextCollection('smilies.texts');
   const lucky2883 = topText.at(-1);
 
@@ -13,23 +13,7 @@
 
   const resortArray = () => {
     const sortIndex: number = sortOptions[$lang].findIndex((v) => v === currentSort);
-    switch (sorts[sortIndex]) {
-      case 'a-z':
-				sortedEmotes = [...sortedEmotes].sort();
-        break;
-      case 'z-a':
-				sortedEmotes = [...sortedEmotes].sort().reverse();
-        break;
-      case 'old-new':
-        sortedEmotes = [...originalEmotes];
-        break;
-      case 'new-old':
-        sortedEmotes = [...originalEmotes].reverse();
-        break;
-      case 'random':
-        sortedEmotes = [...originalEmotes].sort(() => 0.5 - Math.random());
-        break;
-    }
+    sortedEmotes = sortArray(originalEmotes, sorts[sortIndex]);
   };
 </script>
 
