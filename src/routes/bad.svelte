@@ -47,7 +47,7 @@
     <span on:click={() => phase++} style="cursor: pointer;">(leave now)</span>
   {:else if phase === 1}
     <h1>why didn't you listen to me</h1>
-    <br />that's rude <br /><span class="hidden">(or is it? use 'dQw4w9WgXcQ')</span><br>
+    <br />that's rude <br /><span class="hidden">(or is it? use 'dQw4w9WgXcQ')</span><br />
     <input type="text" bind:value={text} on:change={textPhase} />
   {:else if phase === 2}
     <div class="infinite-smilies">
