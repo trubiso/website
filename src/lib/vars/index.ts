@@ -31,7 +31,7 @@ export const navbarItems: string[] = [
   '/',
   '/smilys',
   '/bad',
-  '/kitty',
+  '/kity',
   '/games',
   '/q+a',
   '/socials'
