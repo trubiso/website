@@ -12,8 +12,9 @@
 
   let tPicker = false,
     lPicker = false,
-    sidebarOpen = false,
     clicks = 0;
+  
+  export let sidebarOpen = false;
 
   function togglePickers(tp = false) {
     if (tp) {

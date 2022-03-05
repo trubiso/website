@@ -20,9 +20,11 @@
       window.localStorage.setItem('lang', v.toString());
     });
   });
+
+  let sidebarOpen = false;
 </script>
 
-<Navbar />
-<main class="content">
+<Navbar bind:sidebarOpen />
+<main class="content" class:content-sidebar-open={sidebarOpen}>
   <slot />
 </main>
