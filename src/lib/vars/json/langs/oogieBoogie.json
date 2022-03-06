@@ -2,7 +2,7 @@
   "error": [
     "GIGGUG",
     "OH NOE ! GRUBO GRANOB GRUQ GEHE BARGONO QWIFANO !!",
-    "grino grub gaqoog...",
+    "grino grub gaqoog..",
     "go grubo sidebar groono ?!? GRABO !?!??!",
     "ginqe grabo qwifano greno bargaboog",
     "GARBHEQO !! grinbu grag giibu (qetrumbinso) giggug !!",
@@ -24,9 +24,7 @@
     "ragbo grino"
   ],
   "options": {
-    "langs": [
-      "groqo grabo"
-    ],
+    "langs": ["groqo grabo"],
     "themes": [
       "kefwano",
       "kefwo websiet grono qubrino gargaboog...",
@@ -51,10 +49,7 @@
       "gingo gaga goobo gaga boog (grogo gano gobo)",
       "h"
     ],
-    "texts": [
-      "grono gago websiet bogo grano !",
-      "guro gaobo qagofo grukwago:"
-    ]
+    "texts": ["grono gago websiet bogo grano !", "guro gaobo qagofo grukwago:"]
   },
   "navbar_items": [
     "gagroog",
