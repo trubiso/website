@@ -5,3 +5,4 @@ import { localStorage, persist } from '@macfja/svelte-persistent-store';
 export const lang = writable(0);
 export const todo = writable<ITodoList[]>([]);
 persist(todo, localStorage(true), 'todo');
+export const spiny = writable(false);

@@ -1,7 +1,7 @@
 <script lang="ts">
   import './style.scss';
   import { emotes, getTextCollection, navbarItems } from '../vars';
-  import { lang } from '../stores';
+  import { lang, spiny } from '../stores';
   import { page } from '$app/stores';
   import { onMount } from 'svelte';
   import { slide } from 'svelte/transition';
@@ -9,7 +9,7 @@
   const itemNames = getTextCollection('navbar_items');
 
   let clicks = 0;
-  
+
   export let sidebarOpen = false;
 
   function toggleSidebarOpen() {
@@ -56,7 +56,8 @@
           <a
             href={navbarItems[idx]}
             class="navbar-item navbar-item-special"
-            class:bold={$page.url.pathname === navbarItems[idx]}>{item}</a
+            class:bold={$page.url.pathname === navbarItems[idx]}
+            on:contextmenu|preventDefault={() => spiny.set(true)}>{item}</a
           >
         {/if}
       {/each}
