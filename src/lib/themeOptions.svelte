@@ -23,6 +23,7 @@
       'style',
       `--navbar-bg1: ${navbarBG1}; --navbar-bg2: ${navbarBG2}; --navbar-text: ${navbarText}; --accent: ${accent}; --bg: ${bg}; --text: ${text};`
     );
+    saveTheme();
   }
 
   function liveUpdate() {
@@ -145,7 +146,6 @@
   </div>
 
   <button on:click={randomTheme}>{texts[$lang][11]}</button>
-  <button on:click={saveTheme}>{texts[$lang][12]}</button>
 </main>
 
 <style lang="scss">
