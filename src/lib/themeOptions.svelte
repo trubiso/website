@@ -105,7 +105,7 @@
     {#each themes[$lang] as theme, i}
       <div
         class="theme {getThemeName(i)}"
-        class:bold={ct === getThemeName(i)}
+        class:bold={ct === getThemeName(i).replace(/-/g, '_')}
         on:click={() => switchTheme(getThemeName(i))}
       >
         {theme}
@@ -147,46 +147,3 @@
 
   <button on:click={randomTheme}>{texts[$lang][11]}</button>
 </main>
-
-<style lang="scss">
-  .picker {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-
-    * {
-      width: 100%;
-      padding: 10px;
-      text-decoration: none;
-      font-size: 14pt;
-      cursor: pointer;
-    }
-
-    .theme {
-      background-color: var(--navbar-bg1);
-      color: var(--accent);
-    }
-  }
-
-  .bold {
-    font-weight: bold;
-  }
-
-  .color-input {
-    display: flex;
-    vertical-align: middle;
-    align-items: center;
-
-    input[type='color'] {
-      margin-right: 10px;
-    }
-    margin-top: 5px;
-    margin-bottom: 5px;
-  }
-
-  @media (max-width: 600px) {
-    * :not(.custom-colors) {
-      text-align: center;
-    }
-  }
-</style>

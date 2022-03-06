@@ -15,8 +15,7 @@
   };
 
   const meow = () => {
-    meowAudio.fastSeek(0);
-    meowAudio.play();
+    new Audio('./meow.mp3').play();
   }
 </script>
 
@@ -41,8 +40,6 @@
       get mor kity
     {/if}
   </button>
-
-  <audio src="/meow.mp3" bind:this={meowAudio}></audio>
 </main>
 
 <style lang="scss">

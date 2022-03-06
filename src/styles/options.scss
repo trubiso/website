@@ -1,0 +1,74 @@
+.picker {
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+
+  * {
+    width: 100%;
+    padding: 10px;
+    text-decoration: none;
+    font-size: 14pt;
+    cursor: pointer;
+  }
+
+  .lang, .theme {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .lang {
+    background-color: var(--navbar-bg1);
+    &.alt {
+      background-color: var(--navbar-bg2);
+    }
+    color: white;
+  }
+
+  .theme {
+    background: linear-gradient(to bottom, var(--navbar-bg1), var(--navbar-bg2));
+    color: var(--accent);
+    min-height: 64px;
+  }
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.custom-colors {
+  display: flex;
+
+  .color-input {
+    display: flex;
+    vertical-align: middle;
+    align-items: center;
+    flex-direction: column;
+
+    margin: 10px;
+  }
+}
+
+@media (max-width: 1050px) {
+  .picker {
+    flex-direction: column;
+  }
+
+  .custom-colors {
+    flex-direction: column;
+
+    .color-input {
+      flex-direction: row;
+      input[type='color'] {
+        margin-right: 10px;
+      }
+      margin: 5px;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  main :not(.custom-colors) {
+    text-align: center;
+  }
+}

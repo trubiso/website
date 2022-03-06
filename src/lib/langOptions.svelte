@@ -1,8 +1,7 @@
 <script lang="ts">
   import { lang } from '$lib/stores';
 
-  import { getTextCollection, ITheme, randomHex, themeColors } from '$lib/vars';
-  import { onMount } from 'svelte';
+  import { getTextCollection } from '$lib/vars';
 
   const langs = getTextCollection('langs');
   const texts = getTextCollection('options.langs');
@@ -18,36 +17,3 @@
     {/each}
   </div>
 </main>
-
-<style lang="scss">
-  .picker {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-
-    * {
-      width: 100%;
-      padding: 10px;
-      text-decoration: none;
-      font-size: 14pt;
-      cursor: pointer;
-    }
-
-    background-color: var(--navbar-bg1);
-    .alt {
-      background-color: var(--navbar-bg2);
-    }
-    color: white;
-  }
-
-  .bold {
-    font-weight: bold;
-    color: var(--accent);
-  }
-
-  @media (max-width: 600px) {
-    * {
-      text-align: center;
-    }
-  }
-</style>
