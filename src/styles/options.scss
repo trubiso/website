@@ -11,7 +11,8 @@
     cursor: pointer;
   }
 
-  .lang, .theme {
+  .lang,
+  .theme {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -38,32 +39,23 @@
 
 .custom-colors {
   display: flex;
+  flex-direction: column;
 
   .color-input {
     display: flex;
     vertical-align: middle;
     align-items: center;
-    flex-direction: column;
-
-    margin: 10px;
+    flex-direction: row;
+    input[type='color'] {
+      margin-right: 10px;
+    }
+    margin: 5px;
   }
 }
 
 @media (max-width: 1050px) {
   .picker {
     flex-direction: column;
-  }
-
-  .custom-colors {
-    flex-direction: column;
-
-    .color-input {
-      flex-direction: row;
-      input[type='color'] {
-        margin-right: 10px;
-      }
-      margin: 5px;
-    }
   }
 }
 
