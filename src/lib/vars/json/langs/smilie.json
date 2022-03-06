@@ -2,7 +2,7 @@
   "error": [
     "ERRORE",
     "OH NOE ! YU GO TO RONG PAEG !!",
-    "its onke thuogh..",
+    "its onke thuogh...",
     "yu see da siedbar ?!?!? YESE ?!?!?",
     "yu can finde moar pages ther",
     "ALTHUOGUHGOHEGHEH !! it mite be my (trumbinso'se) fualt !!",
@@ -24,7 +24,9 @@
     "htot pinq"
   ],
   "options": {
-    "langs": ["langueg"],
+    "langs": [
+      "langueg"
+    ],
     "themes": [
       "theems",
       "pik wan of da pre-mad websit's theems...",
@@ -49,7 +51,10 @@
       "it hase typoese (see ietem abov)",
       "h"
     ],
-    "texts": ["welcom to my websiet !!!1", "why yu shulde use it:"]
+    "texts": [
+      "welcom to my websiet !!!1",
+      "why yu shulde use it:"
+    ]
   },
   "navbar_items": [
     "hoem",

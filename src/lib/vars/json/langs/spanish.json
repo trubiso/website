@@ -2,7 +2,7 @@
   "error": [
     "ERROR",
     "OH NO! te fuiste a una página incorrecta",
-    "pero no te preocupes",
+    "pero no te preocupes...",
     "¿ves la barra lateral?",
     "puedes encontrar más páginas ahí",
     "¡AUNQUE! puede ser mi (trubiso) culpa",
@@ -24,7 +24,9 @@
     "rosa cálido"
   ],
   "options": {
-    "langs": ["idioma"],
+    "langs": [
+      "idioma"
+    ],
     "themes": [
       "temas",
       "escoge uno de los temas ya hechos para la página...",
@@ -49,7 +51,10 @@
       "tiene erratas (mira el punto anterior)",
       "h"
     ],
-    "texts": ["bienvenido a mi página web", "por qué deberías usarla:"]
+    "texts": [
+      "bienvenidos a mi página web",
+      "por qué deberíais usarla:"
+    ]
   },
   "navbar_items": [
     "inicio",
@@ -78,7 +83,7 @@
   },
   "q+a": [
     "preguntas + respuestas",
-    "pregúntame",
+    "¡pregúntame!",
     "enviar",
     "enviando pregunta...",
     "¡se ha enviado tu pregunta satisfactoriamente!",
