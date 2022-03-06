@@ -21,7 +21,7 @@
             `--bg: ${parsedTheme.bg}; --text: ${parsedTheme.text};`
         );
       } else {
-        document.documentElement.classList.add(theme);
+        document.documentElement.classList.add(theme.replace(/_/, '-'));
       }
     } else {
       localStorage.setItem('theme', 'smilie'); // bg hasnt isnt
