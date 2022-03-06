@@ -2,7 +2,7 @@
   import { getTitleOfPage } from '$lib/vars';
   import { lang } from '$lib/stores';
 
-  let kity: HTMLElement;
+  let kity: HTMLElement, meowAudio: HTMLAudioElement;
   let isLoadingKity = true;
 
   const enableKities = () => {
@@ -13,6 +13,11 @@
     isLoadingKity = true;
     kity.setAttribute('src', `https://placekitten.com/${Math.floor(Math.random() * 600 + 200)}`);
   };
+
+  const meow = () => {
+    meowAudio.fastSeek(0);
+    meowAudio.play();
+  }
 </script>
 
 <svelte:head>
@@ -26,6 +31,7 @@
     id="kity"
     bind:this={kity}
     on:load={enableKities}
+    on:click={meow}
   />
   <br />
   <button on:click={getNewKity} id="moarkity" disabled={isLoadingKity}>
@@ -35,6 +41,8 @@
       get mor kity
     {/if}
   </button>
+
+  <audio src="/meow.mp3" bind:this={meowAudio}></audio>
 </main>
 
 <style lang="scss">
@@ -46,6 +54,10 @@
     img {
       max-width: 100%;
       max-height: 100%;
+      cursor: grab;
+      &:active {
+        cursor: grabbing;
+      }
     }
   }
 </style>
