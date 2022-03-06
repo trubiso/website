@@ -23,6 +23,21 @@
     "white",
     "hot pink"
   ],
+  "kitty": [
+    "getting kitty...",
+    "get more kitties"
+  ],
+  "bad": [
+    "THIS IS A VERY BAD PAGE. LEAVE IT IMMEDIATELY.",
+    "(there's nothing more to it)",
+    "(just leave it)",
+    "(please)",
+    "(don't waste your time)",
+    "(leave now)",
+    "why didn't you listen to me",
+    "that's rude",
+    "(or is it? use 'dQw4w9WgXcQ')"
+  ],
   "options": {
     "langs": ["language"],
     "themes": [
