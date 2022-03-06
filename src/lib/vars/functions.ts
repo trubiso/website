@@ -68,3 +68,12 @@ export function formatDate(date: Date, template = 'YYYY-MM-DD HH:mm:ss'): string
 
 export const padNumber = (num: number, digits = 2): string =>
   '0'.repeat(digits - num.toString().length) + num;
+
+export function randomHex(length = 6, includeHashtag = true): string {
+  let out = includeHashtag ? '#' : '';
+  [...Array(length)].forEach(() => {
+    const random = Math.floor(Math.random() * 16);
+    out += random.toString(16);
+  });
+  return out;
+}

@@ -1,0 +1,98 @@
+{
+  "smilie": {
+    "navbar_bg1": "#ffc600",
+    "navbar_bg2": "#dda400",
+    "navbar_text": "#000000",
+    "accent": "#181818",
+    "bg": "#f1d7b2",
+    "text": "#101020"
+  },
+  "purple_marble": {
+    "navbar_bg1": "#9292c1",
+    "navbar_bg2": "#7070a0",
+    "navbar_text": "#000000",
+    "accent": "#181818",
+    "bg": "#ffffff",
+    "text": "#101020"
+  },
+  "dark_marble": {
+    "navbar_bg1": "#32324f",
+    "navbar_bg2": "#10102d",
+    "navbar_text": "#ffffff",
+    "accent": "#e6bb1c",
+    "bg": "#ffffff",
+    "text": "#101020"
+  },
+  "owl": {
+    "navbar_bg1": "#32324f",
+    "navbar_bg2": "#10102d",
+    "navbar_text": "#ffffff",
+    "accent": "#e6bb1c",
+    "bg": "#00001c",
+    "text": "#ddddef"
+  },
+  "plum_owl": {
+    "navbar_bg1": "#43324f",
+    "navbar_bg2": "#22112e",
+    "navbar_text": "#ffffff",
+    "accent": "#e6bb1c",
+    "bg": "#10001c",
+    "text": "#e8ddf0"
+  },
+  "purple_owl": {
+    "navbar_bg1": "#570f8a",
+    "navbar_bg2": "#36124f",
+    "navbar_text": "#ffffff",
+    "accent": "#e6bb1c",
+    "bg": "#270042",
+    "text": "#e8ddf0"
+  },
+  "lavender": {
+    "navbar_bg1": "#8166b3",
+    "navbar_bg2": "#614980",
+    "navbar_text": "#000000",
+    "accent": "#000000",
+    "bg": "#000000",
+    "text": "#ffbf00"
+  },
+  "salmon": {
+    "navbar_bg1": "#b3667d",
+    "navbar_bg2": "#80495e",
+    "navbar_text": "#000000",
+    "accent": "#000000",
+    "bg": "#000000",
+    "text": "#ffbf00"
+  },
+  "panda": {
+    "navbar_bg1": "#000000",
+    "navbar_bg2": "#000000",
+    "navbar_text": "#ffffff",
+    "accent": "#ffffff",
+    "bg": "#ffffff",
+    "text": "#000000"
+  },
+  "black": {
+    "navbar_bg1": "#333333",
+    "navbar_bg2": "#333333",
+    "navbar_text": "#ffffff",
+    "accent": "#e6bb1c",
+    "bg": "#000000",
+    "text": "#ffffff"
+  },
+  "white": {
+    "navbar_bg1": "#333333",
+    "navbar_bg2": "#333333",
+    "navbar_text": "#ffffff",
+    "accent": "#e6bb1c",
+    "bg": "#ffffff",
+    "text": "#000000"
+  },
+  "hot_pink": {
+    "navbar_bg1": "#990099",
+    "navbar_bg2": "#660066",
+    "navbar_text": "#ffffff",
+    "accent": "#e6bb1c",
+    "bg": "#ffaaff",
+    "text": "#220022"
+  }
+}

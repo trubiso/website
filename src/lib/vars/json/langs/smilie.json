@@ -23,6 +23,24 @@
     "whiet",
     "htot pinq"
   ],
+  "options": {
+    "langs": ["langueg"],
+    "themes": [
+      "theems",
+      "pik wan of da pre-mad websit's theems...",
+      "or mak wan YURSLEF !!",
+      "updat global them",
+      "updat liev?",
+      "navbar bakgrund (tope)",
+      "navbar bakgrund (botom)",
+      "navbar texte",
+      "accentete",
+      "bakgrund",
+      "texte",
+      "generat randome theem",
+      "saev theem"
+    ]
+  },
   "index": {
     "reasons": [
       "its greate !!!",
@@ -42,8 +60,7 @@
     "gaesm",
     "q+a",
     "socialese",
-    "theem",
-    "languag"
+    "optniose"
   ],
   "smilies": {
     "texts": [
@@ -59,5 +76,13 @@
       "creatione daet (newe-olde)",
       "rAndOm !! :P"
     ]
-  }
+  },
+  "q+a": [
+    "questionese + ANSWERESE",
+    "ask mee!",
+    "submite",
+    "SUBMITING QUESTIONE !",
+    "submited YUOR questione suncesnfuly !",
+    "ask moar?"
+  ]
 }

@@ -18,7 +18,7 @@
 <script lang="ts">
   import Emote from '$lib/emote.svelte';
   import Question from '$lib/question.svelte';
-  import { getTitleOfPage } from '$lib/vars';
+  import { getTextCollection, getTitleOfPage } from '$lib/vars';
   import { lang } from '$lib/stores';
 
   export let questions: qa[] = [];
@@ -45,6 +45,9 @@
       questionPromise = submitQuestion();
     }
   }
+
+  const texts = getTextCollection('q+a');
+  const error = getTextCollection('error');
 </script>
 
 <svelte:head>
@@ -52,23 +55,23 @@
 </svelte:head>
 
 <main class="q-a">
-  <h1>questionese + ANSWERESE</h1>
+  <h1>{texts[$lang][0]}</h1>
   <form action="" on:submit|preventDefault={handleSubmit}>
     <div class="question-input" class:smaller-qi={hasSubmittedQuestion}>
       {#if !hasSubmittedQuestion}
-        <label for="text">ask mee!</label>
+        <label for="text">{texts[$lang][1]}</label>
         <textarea name="text" id="text" cols="30" rows="10" bind:value={question} required />
-        <input type="submit" value="submite" />
+        <input type="submit" value={texts[$lang][2]} />
       {:else}
         {#await questionPromise}
-          <label for="">SUBMITING QUESTIONE !</label>
+          <label for="">{texts[$lang][3]}</label>
           <Emote name="silly" spinning />
         {:then result}
           {#if result.success}
-            <label for="">submited YUOR questione suncesnfuly !</label>
-            <input type="submit" value="ask moar?" />
+            <label for="">{texts[$lang][4]}</label>
+            <input type="submit" value={texts[$lang][5]} />
           {:else}
-            <label for="">ERROAR !! {result.error}</label>
+            <label for="">{error[$lang][0]} !! {result.error}</label>
             {console.log(result)}
           {/if}
         {/await}

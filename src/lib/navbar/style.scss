@@ -22,10 +22,9 @@ nav {
     text-align: center;
     cursor: pointer;
     user-select: none;
-  }
-
-  div.navbar-item {
-    color: white;
+    &-special {
+      color: white;
+    }
   }
 
   .bold {

@@ -23,6 +23,24 @@
     "white",
     "hot pink"
   ],
+  "options": {
+    "langs": ["language"],
+    "themes": [
+      "themes",
+      "pick one of the pre-made website's themes...",
+      "or make one yourself!",
+      "update global theme",
+      "update live?",
+      "navbar background (top)",
+      "navbar background (bottom)",
+      "navbar text",
+      "accent",
+      "background",
+      "text",
+      "generate random theme",
+      "save theme"
+    ]
+  },
   "index": {
     "reasons": [
       "its great",
@@ -42,8 +60,7 @@
     "games",
     "q+a",
     "socials",
-    "theme",
-    "language"
+    "options"
   ],
   "smilies": {
     "texts": [
@@ -59,5 +76,13 @@
       "creation date (new-old)",
       "random"
     ]
-  }
+  },
+  "q+a": [
+    "questions + answers",
+    "ask me!",
+    "submit",
+    "submitting question...",
+    "submitted your question successfully!",
+    "ask more?"
+  ]
 }

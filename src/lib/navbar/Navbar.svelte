@@ -2,36 +2,18 @@
   import './style.scss';
   import { emotes, getTextCollection, navbarItems } from '../vars';
   import { lang } from '../stores';
-  import ThemePicker from './themePicker.svelte';
-  import LangPicker from './langPicker.svelte';
   import { page } from '$app/stores';
   import { onMount } from 'svelte';
   import { slide } from 'svelte/transition';
 
   const itemNames = getTextCollection('navbar_items');
 
-  let tPicker = false,
-    lPicker = false,
-    clicks = 0;
+  let clicks = 0;
   
   export let sidebarOpen = false;
 
-  function togglePickers(tp = false) {
-    if (tp) {
-      tPicker = !tPicker;
-      if (lPicker) lPicker = false;
-    } else {
-      lPicker = !lPicker;
-      if (tPicker) tPicker = false;
-    }
-  }
-
   function toggleSidebarOpen() {
     sidebarOpen = !sidebarOpen;
-    if (!sidebarOpen) {
-      tPicker = false;
-      lPicker = false;
-    }
   }
 
   let matches = false;
@@ -64,26 +46,20 @@
   {#if sidebarOpen || matches}
     <div class="sidebar-wrapper" transition:slide>
       {#each itemNames[$lang] as item, idx}
-        {#if navbarItems[idx]}
+        {#if idx !== itemNames[0].length - 1}
           <a
             href={navbarItems[idx]}
             class="navbar-item"
             class:bold={$page.url.pathname === navbarItems[idx]}>{item}</a
           >
+        {:else}
+          <a
+            href={navbarItems[idx]}
+            class="navbar-item navbar-item-special"
+            class:bold={$page.url.pathname === navbarItems[idx]}>{item}</a
+          >
         {/if}
       {/each}
-      <div class="navbar-item" class:bold={tPicker} on:click={() => togglePickers(true)}>
-        {itemNames[$lang][itemNames[$lang].length - 2]}
-      </div>
-      {#if tPicker}
-        <ThemePicker />
-      {/if}
-      <div class="navbar-item" class:bold={lPicker} on:click={() => togglePickers()}>
-        {itemNames[$lang][itemNames[$lang].length - 1]}
-      </div>
-      {#if lPicker}
-        <LangPicker />
-      {/if}
     </div>
   {/if}
 

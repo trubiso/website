@@ -23,6 +23,24 @@
     "blanco",
     "rosa cálido"
   ],
+  "options": {
+    "langs": ["idioma"],
+    "themes": [
+      "temas",
+      "escoge uno de los temas ya hechos para la página...",
+      "¡o crea uno tú mismo!",
+      "actualizar tema global",
+      "¿actualizar en directo?",
+      "fondo de la barra de navegación (superior)",
+      "fondo de la barra de navegación (inferior)",
+      "texto de la barra de navegación",
+      "tono de contraste",
+      "fondo",
+      "texto",
+      "generar tema aleatorio",
+      "guardar tema"
+    ]
+  },
   "index": {
     "reasons": [
       "es excelente",
@@ -42,8 +60,7 @@
     "juegos",
     "preguntas",
     "redes sociales",
-    "tema",
-    "idioma"
+    "opciones"
   ],
   "smilies": {
     "texts": [
@@ -59,5 +76,13 @@
       "fecha de creación (nuevo-viejo)",
       "aleatorio"
     ]
-  }
+  },
+  "q+a": [
+    "preguntas + respuestas",
+    "pregúntame",
+    "enviar",
+    "enviando pregunta...",
+    "¡se ha enviado tu pregunta satisfactoriamente!",
+    "¿preguntar de nuevo?"
+  ]
 }

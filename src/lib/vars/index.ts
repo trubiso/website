@@ -2,6 +2,7 @@ import type { ISocialMediaEntry } from './types';
 import { emoteLinks, emoteNames } from './json/emotes.json';
 export * from './functions';
 export * from './types';
+import * as themesJSON from './json/themes.json';
 
 import international from './json/langs/international.json';
 import english from './json/langs/english.json';
@@ -35,7 +36,8 @@ export const navbarItems: string[] = [
   '/kity',
   '/games',
   '/q+a',
-  '/socials'
+  '/socials',
+  '/options'
 ];
 
 export const texts = {
@@ -50,6 +52,20 @@ export const texts = {
       spanish.index.reasons
     ],
     texts: [english.index.texts, smilie.index.texts, oogieBoogie.index.texts, spanish.index.texts]
+  },
+  options: {
+    langs: [
+      english.options.langs,
+      smilie.options.langs,
+      oogieBoogie.options.langs,
+      spanish.options.langs
+    ],
+    themes: [
+      english.options.themes,
+      smilie.options.themes,
+      oogieBoogie.options.themes,
+      spanish.options.themes
+    ]
   },
   navbar_items: [
     english.navbar_items,
@@ -70,5 +86,8 @@ export const texts = {
       oogieBoogie.smilies.sorts,
       spanish.smilies.sorts
     ]
-  }
+  },
+  'q+a': [english['q+a'], smilie['q+a'], oogieBoogie['q+a'], spanish['q+a']]
 };
+
+export const themeColors = themesJSON;
