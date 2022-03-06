@@ -1,6 +1,4 @@
 <script lang="ts">
-  import { spiny } from './stores';
-
   import { emotes } from './vars';
   export let name = 'happy';
   export let size = '22';
@@ -9,13 +7,7 @@
 </script>
 
 <div class="emote">
-  <img
-    src={link}
-    alt=":{name}:"
-    height={size}
-    title=":{name}:"
-    class:spinning={spinning || $spiny}
-  />
+  <img src={link} alt=":{name}:" height={size} title=":{name}:" class:spinning />
 </div>
 
 <style lang="scss">
