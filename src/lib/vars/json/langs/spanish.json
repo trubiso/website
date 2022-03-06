@@ -23,6 +23,21 @@
     "blanco",
     "rosa cálido"
   ],
+  "kitty": [
+    "obteniendo gatito...",
+    "obtener más gatitos"
+  ],
+  "bad": [
+    "ESTA PÁGINA ES MUY MALA. SAL DE ELLA INMEDIATAMENTE.",
+    "(no tiene nada más que esto)",
+    "(sólo vete)",
+    "(por favor)",
+    "(no malgastes tu tiempo)",
+    "(vete ya)",
+    "por qué no me has escuchado",
+    "me parece una falta de respeto",
+    "(¿o quizá no? usa 'dQw4w9WgXcQ')"
+  ],
   "options": {
     "langs": [
       "idioma"
