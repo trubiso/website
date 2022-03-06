@@ -9,6 +9,7 @@ import english from './json/langs/english.json';
 import oogieBoogie from './json/langs/oogieBoogie.json';
 import smilie from './json/langs/smilie.json';
 import spanish from './json/langs/spanish.json';
+import macedonian from './json/langs/macedonian.json';
 
 export const socialMedias: Map<string, ISocialMediaEntry> = new Map()
   .set('github', {
@@ -42,52 +43,64 @@ export const navbarItems: string[] = [
 
 export const texts = {
   ...international,
-  error: [english.error, smilie.error, oogieBoogie.error, spanish.error],
-  themes: [english.themes, smilie.themes, oogieBoogie.themes, spanish.themes],
+  error: [english.error, smilie.error, oogieBoogie.error, spanish.error, macedonian.error],
+  themes: [english.themes, smilie.themes, oogieBoogie.themes, spanish.themes, macedonian.themes],
   index: {
     reasons: [
       english.index.reasons,
       smilie.index.reasons,
       oogieBoogie.index.reasons,
-      spanish.index.reasons
+      spanish.index.reasons,
+      macedonian.index.reasons
     ],
-    texts: [english.index.texts, smilie.index.texts, oogieBoogie.index.texts, spanish.index.texts]
+    texts: [
+      english.index.texts,
+      smilie.index.texts,
+      oogieBoogie.index.texts,
+      spanish.index.texts,
+      macedonian.index.texts
+    ]
   },
   options: {
     langs: [
       english.options.langs,
       smilie.options.langs,
       oogieBoogie.options.langs,
-      spanish.options.langs
+      spanish.options.langs,
+      macedonian.options.langs
     ],
     themes: [
       english.options.themes,
       smilie.options.themes,
       oogieBoogie.options.themes,
-      spanish.options.themes
+      spanish.options.themes,
+      macedonian.options.themes
     ]
   },
   navbar_items: [
     english.navbar_items,
     smilie.navbar_items,
     oogieBoogie.navbar_items,
-    spanish.navbar_items
+    spanish.navbar_items,
+    macedonian.navbar_items
   ],
   smilies: {
     texts: [
       english.smilies.texts,
       smilie.smilies.texts,
       oogieBoogie.smilies.texts,
-      spanish.smilies.texts
+      spanish.smilies.texts,
+      macedonian.smilies.texts
     ],
     sorts: [
       english.smilies.sorts,
       smilie.smilies.sorts,
       oogieBoogie.smilies.sorts,
-      spanish.smilies.sorts
+      spanish.smilies.sorts,
+      macedonian.smilies.sorts
     ]
   },
-  'q+a': [english['q+a'], smilie['q+a'], oogieBoogie['q+a'], spanish['q+a']]
+  'q+a': [english['q+a'], smilie['q+a'], oogieBoogie['q+a'], spanish['q+a'], macedonian['q+a']]
 };
 
 export const themeColors = themesJSON;
