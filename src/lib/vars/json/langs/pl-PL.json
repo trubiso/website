@@ -1,0 +1,107 @@
+{
+  "error": [
+    "ERROR",
+    "OH NO! you went to a wrong page",
+    "it's okay though...",
+    "do you see the sidebar?",
+    "you can find more pages there",
+    "ALTHOUGH! it might be my (trubiso's) fault!",
+    "in that case you can contact me and i will fix the issue!!",
+    "what the hell did you do"
+  ],
+  "themes": [
+    "smilie",
+    "purple marble",
+    "dark marble",
+    "owl",
+    "plum owl",
+    "purple owl",
+    "lavender",
+    "salmon",
+    "panda",
+    "black",
+    "white",
+    "hot pink"
+  ],
+  "kitty": [
+    "getting kitty...",
+    "get more kitties"
+  ],
+  "bad": [
+    "THIS IS A VERY BAD PAGE. LEAVE IT IMMEDIATELY.",
+    "(there's nothing more to it)",
+    "(just leave it)",
+    "(please)",
+    "(don't waste your time)",
+    "(leave now)",
+    "why didn't you listen to me",
+    "that's rude",
+    "(or is it? use 'dQw4w9WgXcQ')"
+  ],
+  "options": {
+    "langs": [
+      "language"
+    ],
+    "themes": [
+      "themes",
+      "pick one of the pre-made website's themes...",
+      "or make one yourself!",
+      "update global theme",
+      "update live?",
+      "navbar background (top)",
+      "navbar background (bottom)",
+      "navbar text",
+      "accent",
+      "background",
+      "text",
+      "generate random theme"
+    ]
+  },
+  "index": {
+    "reasons": [
+      "its great",
+      "it uses svelte",
+      "it is pretty",
+      "it has a great point of view on industrail machinery",
+      "it has typos (see item above)",
+      "h"
+    ],
+    "texts": [
+      "welcome to my website",
+      "why you should use it:"
+    ]
+  },
+  "navbar_items": [
+    "home",
+    "smilies",
+    "don't click",
+    "kitty",
+    "games",
+    "q+a",
+    "socials",
+    "options"
+  ],
+  "smilies": {
+    "texts": [
+      "here are my friend smilies! (main smilie source: ",
+      "emotiguy appreciation",
+      "sort by: ",
+      "lucky you! you found a 2883 :)"
+    ],
+    "sorts": [
+      "alphabetical (a-z)",
+      "alphabetical (z-a)",
+      "creation date (old-new)",
+      "creation date (new-old)",
+      "random"
+    ]
+  },
+  "q+a": [
+    "questions + answers",
+    "ask me!",
+    "submit",
+    "submitting question...",
+    "submitted your question successfully!",
+    "ask more?"
+  ]
+}
