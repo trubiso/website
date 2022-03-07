@@ -1,0 +1,3 @@
+files:
+  - source: /src/lib/vars/json/langs/en.json
+    translation: /src/lib/vars/json/langs/%locale%.json

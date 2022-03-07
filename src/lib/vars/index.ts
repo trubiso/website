@@ -5,7 +5,7 @@ export * from './types';
 import * as themesJSON from './json/themes.json';
 
 import international from './json/langs/international.json';
-import english from './json/langs/english.json';
+import english from './json/langs/en.json';
 import oogieBoogie from './json/langs/oogieBoogie.json';
 import smilie from './json/langs/smilie.json';
 import spanish from './json/langs/spanish.json';
