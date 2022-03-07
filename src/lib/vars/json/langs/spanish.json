@@ -1,0 +1,107 @@
+{
+  "error": [
+    "ERROR",
+    "OH NO! te fuiste a una página incorrecta",
+    "pero no te preocupes...",
+    "¿ves la barra lateral?",
+    "puedes encontrar más páginas ahí",
+    "¡AUNQUE! puede ser mi (trubiso) culpa",
+    "en ese caso, puedes contactarme e intentaré arreglar el problema",
+    "qué has hecho"
+  ],
+  "themes": [
+    "smilie",
+    "mármol violeta",
+    "mármol oscuro",
+    "buho",
+    "buho ciruela",
+    "buho violeta",
+    "lavanda",
+    "salmón",
+    "panda",
+    "negro",
+    "blanco",
+    "rosa cálido"
+  ],
+  "kitty": [
+    "obteniendo gatito...",
+    "obtener más gatitos"
+  ],
+  "bad": [
+    "ESTA PÁGINA ES MUY MALA. SAL DE ELLA INMEDIATAMENTE.",
+    "(no tiene nada más que esto)",
+    "(sólo vete)",
+    "(por favor)",
+    "(no malgastes tu tiempo)",
+    "(vete ya)",
+    "por qué no me has escuchado",
+    "me parece una falta de respeto",
+    "(¿o quizá no? usa 'dQw4w9WgXcQ')"
+  ],
+  "options": {
+    "langs": [
+      "idioma"
+    ],
+    "themes": [
+      "temas",
+      "escoge uno de los temas ya hechos para la página...",
+      "¡o crea uno tú mismo!",
+      "actualizar tema global",
+      "¿actualizar en directo?",
+      "fondo de la barra de navegación (superior)",
+      "fondo de la barra de navegación (inferior)",
+      "texto de la barra de navegación",
+      "tono de contraste",
+      "fondo",
+      "texto",
+      "generar tema aleatorio"
+    ]
+  },
+  "index": {
+    "reasons": [
+      "es excelente",
+      "usa svelte",
+      "es bonita",
+      "tiene un muy buen punto de vista sobre las máquinas indsutriales",
+      "tiene erratas (mira el punto anterior)",
+      "h"
+    ],
+    "texts": [
+      "bienvenidos a mi página web",
+      "por qué deberíais usarla:"
+    ]
+  },
+  "navbar_items": [
+    "inicio",
+    "smilies",
+    "no me pulses",
+    "gatito",
+    "juegos",
+    "preguntas",
+    "redes sociales",
+    "opciones"
+  ],
+  "smilies": {
+    "texts": [
+      "aquí están mis amigos smilies (fuente principal: ",
+      "emotiguy appreciation",
+      "orden: ",
+      "¡qué suertudo! encontraste un 2883 :)"
+    ],
+    "sorts": [
+      "alfabético (a-z)",
+      "alfabético (z-a)",
+      "fecha de creación (viejo-nuevo)",
+      "fecha de creación (nuevo-viejo)",
+      "aleatorio"
+    ]
+  },
+  "q+a": [
+    "preguntas + respuestas",
+    "¡pregúntame!",
+    "enviar",
+    "enviando pregunta...",
+    "¡se ha enviado tu pregunta satisfactoriamente!",
+    "¿preguntar de nuevo?"
+  ]
+}

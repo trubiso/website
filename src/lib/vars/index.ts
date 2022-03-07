@@ -6,11 +6,11 @@ import * as themesJSON from './json/themes.json';
 
 import international from './json/langs/international.json';
 import english from './json/langs/en.json';
-import oogieBoogie from './json/langs/ob-KQ.json';
-import smilie from './json/langs/en-SL.json';
-import spanish from './json/langs/es-ES.json';
-import macedonian from './json/langs/mk-MK.json';
-import french from './json/langs/fr-FR.json';
+import oogieBoogie from './json/langs/oogieBoogie.json';
+import smilie from './json/langs/smilie.json';
+import spanish from './json/langs/spanish.json';
+import macedonian from './json/langs/macedonian.json';
+import french from './json/langs/french.json';
 
 export const socialMedias: Map<string, ISocialMediaEntry> = new Map()
   .set('github', {
