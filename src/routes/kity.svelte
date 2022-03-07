@@ -1,9 +1,11 @@
 <script lang="ts">
-  import { getTitleOfPage } from '$lib/vars';
+  import { getTextCollection, getTitleOfPage } from '$lib/vars';
   import { lang } from '$lib/stores';
 
-  let kity: HTMLElement, meowAudio: HTMLAudioElement;
+  let kity: HTMLElement;
   let isLoadingKity = true;
+
+  const texts = getTextCollection('kitty');
 
   const enableKities = () => {
     isLoadingKity = false;
@@ -16,7 +18,7 @@
 
   const meow = () => {
     new Audio('./meow.mp3').play();
-  }
+  };
 </script>
 
 <svelte:head>
@@ -35,9 +37,9 @@
   <br />
   <button on:click={getNewKity} id="moarkity" disabled={isLoadingKity}>
     {#if isLoadingKity}
-      geting kity...
+      {texts[$lang][0]}
     {:else}
-      get mor kity
+      {texts[$lang][1]}
     {/if}
   </button>
 </main>

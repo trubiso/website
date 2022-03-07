@@ -3,7 +3,9 @@
 
   import { lang } from '$lib/stores';
 
-  import { getTitleOfPage } from '$lib/vars';
+  import { getTextCollection, getTitleOfPage } from '$lib/vars';
+
+  const texts = getTextCollection('bad');
 
   let phase = 0,
     text = '',
@@ -28,26 +30,26 @@
 
 <main>
   {#if phase === 0}
-    THIS IS A VERY BAD PAGE. LEAVE IT IMMEDIATELY.
+    {texts[$lang][0]}
     <span class="whitespace" />
-    (there's nothing more to it)
+    {texts[$lang][1]}
     <span class="whitespace" />
-    (just leave it)
-    <span class="whitespace" />
-    <span class="whitespace" />
-    (please)
+    {texts[$lang][2]}
     <span class="whitespace" />
     <span class="whitespace" />
-    <span class="whitespace" />
-    (don't waste your time)
+    {texts[$lang][3]}
     <span class="whitespace" />
     <span class="whitespace" />
     <span class="whitespace" />
+    {texts[$lang][4]}
     <span class="whitespace" />
-    <span on:click={() => phase++} style="cursor: pointer;">(leave now)</span>
+    <span class="whitespace" />
+    <span class="whitespace" />
+    <span class="whitespace" />
+    <span on:click={() => phase++} style="cursor: pointer;">{texts[$lang][5]}</span>
   {:else if phase === 1}
-    <h1>why didn't you listen to me</h1>
-    <br />that's rude <br /><span class="hidden">(or is it? use 'dQw4w9WgXcQ')</span><br />
+    <h1>{texts[$lang][6]}</h1>
+    <br />{texts[$lang][7]} <br /><span class="hidden">{texts[$lang][8]}</span><br />
     <input type="text" bind:value={text} on:change={textPhase} />
   {:else if phase === 2}
     <div class="infinite-smilies">

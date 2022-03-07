@@ -45,22 +45,8 @@ export const texts = {
   ...international,
   error: [english.error, smilie.error, oogieBoogie.error, spanish.error, macedonian.error],
   themes: [english.themes, smilie.themes, oogieBoogie.themes, spanish.themes, macedonian.themes],
-  index: {
-    reasons: [
-      english.index.reasons,
-      smilie.index.reasons,
-      oogieBoogie.index.reasons,
-      spanish.index.reasons,
-      macedonian.index.reasons
-    ],
-    texts: [
-      english.index.texts,
-      smilie.index.texts,
-      oogieBoogie.index.texts,
-      spanish.index.texts,
-      macedonian.index.texts
-    ]
-  },
+  kitty: [english.kitty, smilie.kitty, oogieBoogie.kitty, spanish.kitty, macedonian.kitty],
+  bad: [english.bad, smilie.bad, oogieBoogie.bad, spanish.bad, macedonian.bad],
   options: {
     langs: [
       english.options.langs,
@@ -75,6 +61,22 @@ export const texts = {
       oogieBoogie.options.themes,
       spanish.options.themes,
       macedonian.options.themes
+    ]
+  },
+  index: {
+    reasons: [
+      english.index.reasons,
+      smilie.index.reasons,
+      oogieBoogie.index.reasons,
+      spanish.index.reasons,
+      macedonian.index.reasons
+    ],
+    texts: [
+      english.index.texts,
+      smilie.index.texts,
+      oogieBoogie.index.texts,
+      spanish.index.texts,
+      macedonian.index.texts
     ]
   },
   navbar_items: [
