@@ -10,18 +10,19 @@
   let navbarBG1: string,
     navbarBG2: string,
     navbarText: string,
+    navbarAccent: string,
     accent: string,
     bg: string,
     text: string;
   navbarBG1 = navbarBG2 = text = '#000000';
-  navbarText = accent = bg = '#ffffff';
+  navbarText = navbarAccent = accent = bg = '#ffffff';
   let updateLive = true;
   let ct = '';
 
   function updateGlobalTheme() {
     document.documentElement.setAttribute(
       'style',
-      `--navbar-bg1: ${navbarBG1}; --navbar-bg2: ${navbarBG2}; --navbar-text: ${navbarText}; --accent: ${accent}; --bg: ${bg}; --text: ${text};`
+      `--navbar-bg1: ${navbarBG1}; --navbar-bg2: ${navbarBG2}; --navbar-text: ${navbarText}; --navbar-accent: ${navbarAccent}; --accent: ${accent}; --bg: ${bg}; --text: ${text};`
     );
     saveTheme();
   }
@@ -34,6 +35,7 @@
     navbarBG1 = randomHex();
     navbarBG2 = randomHex();
     navbarText = randomHex();
+    navbarAccent = randomHex();
     accent = randomHex();
     bg = randomHex();
     text = randomHex();
@@ -52,9 +54,9 @@
   function updateThemeColors() {
     if (ct.includes('{')) {
       const theme = JSON.parse(ct) as ITheme;
-      [navbarBG1, navbarBG2, navbarText, accent, bg, text] = Object.values(theme);
+      [navbarBG1, navbarBG2, navbarText, navbarAccent, accent, bg, text] = Object.values(theme);
     } else {
-      [navbarBG1, navbarBG2, navbarText, accent, bg, text] = Object.values(
+      [navbarBG1, navbarBG2, navbarText, navbarAccent, accent, bg, text] = Object.values(
         themeColors[ct.replace(/-/g, '_')]
       );
     }
@@ -75,6 +77,7 @@
         theme.navbar_bg1 === navbarBG1 &&
         theme.navbar_bg2 === navbarBG2 &&
         theme.navbar_text === navbarText &&
+        theme.navbar_accent === navbarAccent &&
         theme.accent === accent &&
         theme.bg === bg &&
         theme.text === text
@@ -90,6 +93,7 @@
         navbarBG1,
         navbarBG2,
         navbarText,
+        navbarAccent,
         accent,
         bg,
         text
@@ -132,18 +136,22 @@
       <label for="navbar-text">{texts[$lang][7]}</label>
     </div>
     <div class="color-input">
+      <input type="color" id="navbar-accent" bind:value={navbarAccent} on:change={liveUpdate} />
+      <label for="navbar-accent">{texts[$lang][8]}</label>
+    </div>
+    <div class="color-input">
       <input type="color" id="accent" bind:value={accent} on:change={liveUpdate} />
-      <label for="accent">{texts[$lang][8]}</label>
+      <label for="accent">{texts[$lang][9]}</label>
     </div>
     <div class="color-input">
       <input type="color" id="bg" bind:value={bg} on:change={liveUpdate} />
-      <label for="bg">{texts[$lang][9]}</label>
+      <label for="bg">{texts[$lang][10]}</label>
     </div>
     <div class="color-input">
       <input type="color" id="text" bind:value={text} on:change={liveUpdate} />
-      <label for="text">{texts[$lang][10]}</label>
+      <label for="text">{texts[$lang][11]}</label>
     </div>
   </div>
 
-  <button on:click={randomTheme}>{texts[$lang][11]}</button>
+  <button on:click={randomTheme}>{texts[$lang][12]}</button>
 </main>

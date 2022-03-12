@@ -17,7 +17,7 @@
         document.documentElement.setAttribute(
           'style',
           `--navbar-bg1: ${parsedTheme.navbarBG1}; --navbar-bg2: ${parsedTheme.navbarBG2};` +
-            `--navbar-text: ${parsedTheme.navbarText}; --accent: ${parsedTheme.accent};` +
+            `--navbar-text: ${parsedTheme.navbarText}; --navbar-accent: ${parsedTheme.navbarAccent}; --accent: ${parsedTheme.accent};` +
             `--bg: ${parsedTheme.bg}; --text: ${parsedTheme.text};`
         );
       } else {

@@ -97,7 +97,7 @@
     {:else}
       <span class="previous" />
     {/if}
-    <div class="page">page {page}</div>
+    <div class="page">{texts[$lang][6]} {page}</div>
     {#if hasNextPage}
       <a href="/q+a?page={page + 1}" class="next">→</a>
     {:else}
