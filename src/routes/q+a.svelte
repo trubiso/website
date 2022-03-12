@@ -3,13 +3,16 @@
   import type { qa } from '@prisma/client';
   import '../styles/q+a.scss';
 
-  export const load: Load = async ({ fetch }) => {
-    const questions = await fetch(`/api/q+a`, { method: 'GET' })
-      .then((v) => v.json())
-      .then((v) => v.questions);
+  export const load: Load = async ({ fetch, url }) => {
+    const page = url.searchParams.has('page') ? parseInt(url.searchParams.get('page')) : 1;
+    const fetched = await fetch(`/api/q+a?page=${page}`, { method: 'GET' }).then((v) => v.json());
+    const { questions, hasPreviousPage, hasNextPage } = fetched;
     return {
       props: {
-        questions
+        questions,
+        hasPreviousPage,
+        hasNextPage,
+        page
       }
     };
   };
@@ -22,6 +25,9 @@
   import { lang } from '$lib/stores';
 
   export let questions: qa[] = [];
+  export let hasPreviousPage = false;
+  export let hasNextPage = false;
+  export let page = 1;
 
   let hasSubmittedQuestion = false;
   let questionPromise: Promise<any>;
@@ -83,5 +89,19 @@
     {#each questions as question}
       <Question {question} />
     {/each}
+  </div>
+
+  <div class="navigation">
+    {#if hasPreviousPage}
+      <a href="/q+a?page={page - 1}" class="previous">←</a>
+    {:else}
+      <span class="previous" />
+    {/if}
+    <div class="page">page {page}</div>
+    {#if hasNextPage}
+      <a href="/q+a?page={page + 1}" class="next">→</a>
+    {:else}
+      <span class="next" />
+    {/if}
   </div>
 </main>

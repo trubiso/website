@@ -2,8 +2,8 @@
   display: flex;
   flex-direction: column;
   padding: 10px;
-  background-color: var(--text);
-  color: var(--bg);
+  background-color: var(--navbar-bg2);
+  color: white;
   margin-bottom: 20px;
 
   &-timestamp {
@@ -19,5 +19,9 @@
 
   &-answer {
     font-size: 14px;
+  }
+
+  a {
+    color: var(--accent);
   }
 }

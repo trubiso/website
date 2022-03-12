@@ -43,3 +43,27 @@ h1 {
     height: 100px;
   }
 }
+
+.navigation {
+  display: flex;
+  font-size: 20px;
+  align-items: center;
+
+  .previous, .next, .page {
+    flex-grow: 1;
+    text-decoration: none;
+    color: var(--text);
+  }
+
+  .previous {
+    text-align: left;
+  }
+
+  .page {
+    text-align: center;
+  }
+
+  .next {
+    text-align: right;
+  }
+}
