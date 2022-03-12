@@ -49,6 +49,7 @@
       "navbar background (top)",
       "navbar background (bottom)",
       "navbar text",
+      "navbar special text",
       "accent",
       "background",
       "text",
@@ -73,7 +74,7 @@
     "kitty",
     "games",
     "q+a",
-    "socials",
+    "about",
     "options"
   ],
   "smilies": {
@@ -97,6 +98,7 @@
     "submit",
     "submitting question...",
     "submitted your question successfully!",
-    "ask more?"
+    "ask more?",
+    "page"
   ]
 }
