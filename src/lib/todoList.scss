@@ -1,6 +1,6 @@
 .todo-list {
   display: flex;
-  max-width: 600px;
+  max-width: 500px;
   min-width: 400px;
   height: 300px;
   background: linear-gradient(to bottom, var(--navbar-bg1), var(--navbar-bg2));
@@ -16,28 +16,34 @@
     font-weight: bold;
     margin: 20px;
     text-overflow: ellipsis;
+    text-decoration: none;
     overflow: hidden;
     white-space: nowrap;
     width: 100%;
   }
 
   .todo-item {
-    display: block;
+    display: flex;
     width: 100%;
-    justify-content: center;
+    justify-content: left;
     background-color: rgba(0, 0, 0, 0.3);
     padding: 5px;
     margin-bottom: 5px;
     overflow: hidden;
-    text-overflow: ellipsis;
+
+    .emote {
+      margin-left: 4px;
+    }
+
+    .bullet {
+      width: 20px;
+    }
   }
 
   &-edit {
     display: flex;
     color: green;
     position:absolute;
-    
-    
   }
 
   @media (max-width: 600px) {

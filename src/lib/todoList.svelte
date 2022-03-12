@@ -1,22 +1,18 @@
 <script lang="ts">
-  import { formatDate, ITodoList } from './vars';
+  import type { ITodoList } from './vars';
 
   import './todoList.scss';
+  import TodoItem from './todoItem.svelte';
 
   export let list: ITodoList;
 </script>
 
 <div class="todo-list">
-  <div class="todo-list-name">
+  <a href="/todo/{list.name}" class="todo-list-name">
     {list.name}
-  </div>
-  {#each list.items.slice(0, 3) as item}
-    <div class="todo-item">
-      <b>{item.name}</b>
-      {#if item.deadline}
-        due <i>{formatDate(item.deadline)}</i>
-      {/if}
-    </div>
+  </a>
+  {#each list.items.slice(0, 7) as item}
+    <TodoItem {item} />
   {/each}
-  <div class="todo-list-edit">Edit</div>
+  ...
 </div>

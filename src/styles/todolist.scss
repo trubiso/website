@@ -1,0 +1,25 @@
+.items {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  flex-direction: column;
+  color: var(--navbar-text);
+  
+  .todo-item {
+    background-color: var(--navbar-bg1);
+    display: flex;
+    width: 100%;
+    justify-content: left;
+    padding: 5px;
+    margin-bottom: 5px;
+    overflow: hidden;
+
+    .emote {
+      margin-left: 4px;
+    }
+
+    .bullet {
+      width: 20px;
+    }
+  }
+}
