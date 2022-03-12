@@ -4,11 +4,11 @@
 </script>
 
 <svelte:head>
-  <title>{getTitleOfPage('socials', $lang)}</title>
+  <title>{getTitleOfPage('about', $lang)}</title>
 </svelte:head>
 
 <section>
-  <h1>{getTitleOfPage('socials', $lang)}</h1>
+  <h1>{getTitleOfPage('about', $lang)}</h1>
   <ul>
     {#each Array.from(socialMedias.entries()) as [name, data]}
       <li>

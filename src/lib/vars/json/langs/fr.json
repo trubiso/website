@@ -51,6 +51,7 @@
       "fond de la barre de navigation (haut)",
       "fond de la barre de navigation (bas)",
       "texte de la barre de navigation (le bouton menu sur mobile)",
+      "navbar special text",
       "couleur d'accentuation",
       "fond du site",
       "texte",
@@ -64,7 +65,7 @@
       "it est joli",
       "it a un super point de vue sur l'endustrie de la machine",
       "il contient des fautes de frappe (voir la ligne ci-dessus)",
-      "時"
+      "h"
     ],
     "texts": [
       "bienvenue sur mon site",
@@ -78,7 +79,7 @@
     "chatons",
     "jeux",
     "faq",
-    "social",
+    "about",
     "réglages"
   ],
   "smilies": {
@@ -102,6 +103,7 @@
     "envoyer",
     "envoi de la question...",
     "votre question a bien été envoyée !",
-    "en poser une autre ?"
+    "en poser une autre ?",
+    "page"
   ]
 }

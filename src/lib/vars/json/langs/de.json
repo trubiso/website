@@ -1,0 +1,109 @@
+{
+  "error": [
+    "FEHLER",
+    "Oh nein! Du bist auf eine falsche Seite gegangen",
+    "ist aber in Ordnung...",
+    "siehst du die Sidebar?",
+    "dort sind andere Seiten",
+    "ABER! es könnte meine (Trubisos) Schuld sein!",
+    "Wenn das so ist, kannst du mich kontaktieren und ich werde den Fehler beheben!!",
+    "was zum Teufel hast du gemacht"
+  ],
+  "themes": [
+    "smilie",
+    "lila Marmor",
+    "dunkler Marmor",
+    "Eule",
+    "Pflaumeneule",
+    "lila Eule",
+    "Lavendel",
+    "Lachs",
+    "Panda",
+    "schwarz",
+    "weiß",
+    "heißes Rosa"
+  ],
+  "kitty": [
+    "hole ein Kätzchen...",
+    "hole mehr Kätzchen"
+  ],
+  "bad": [
+    "DIES IST EINE SEHR SCHLECHTE SEITE. VERLASSE SIE SOFORT.",
+    "(es gibt nichts anderes hier)",
+    "(geh einfach weg)",
+    "(bitte)",
+    "(verschwende deine Zeit nicht)",
+    "(gehe jetzt)",
+    "warum hast du mir nicht zugehört",
+    "das ist unhöflich",
+    "(oder nicht? benutze 'dQw4w9WgXcQ')"
+  ],
+  "options": {
+    "langs": [
+      "Sprache"
+    ],
+    "themes": [
+      "Designs",
+      "Wähle eines der vorgefertigten Designs aus...",
+      "oder mache selbst eins!",
+      "globales Design updaten",
+      "live updaten?",
+      "Seitenleiste - Hintergrund (oben)",
+      "Seitenleiste - Hintergrund (unten)",
+      "Seitenleiste - Text",
+      "Seitenleiste besonderer Text",
+      "Akzent",
+      "Hintergrund",
+      "Text",
+      "zufälliges Design generieren"
+    ]
+  },
+  "index": {
+    "reasons": [
+      "sie ist toll",
+      "sie benutzt svelte",
+      "sie ist hübsch",
+      "sie hat eine großartige Meinung zu industriellen Maschinen",
+      "sie hat Tippfehler (siehe oben)",
+      "h"
+    ],
+    "texts": [
+      "wilkommen zu meiner Website",
+      "Warum du sie benutzen solltest:"
+    ]
+  },
+  "navbar_items": [
+    "home",
+    "smilies",
+    "nicht klicken",
+    "Kätzchen",
+    "Spiele",
+    "q+a",
+    "Infos",
+    "Optionen"
+  ],
+  "smilies": {
+    "texts": [
+      "hier sind meine Smiliefreunde! (Haupt-Smilie-Quelle: ",
+      "emotiguy appreciation",
+      "Sortieren nach: ",
+      "du Glücklicher! Du hast eine 2883 gefunden :)"
+    ],
+    "sorts": [
+      "alphabetisch (a-z)",
+      "alphabetisch (z-a)",
+      "Erstelldatum (alte zuerst)",
+      "Erstelldatum (neue zuerst)",
+      "zufällig"
+    ]
+  },
+  "q+a": [
+    "Fragen + Antworten",
+    "frag mich!",
+    "absenden",
+    "sende Frage...",
+    "deine Frage wurde erfolgreich eingesendet!",
+    "frage mehr?",
+    "Seite"
+  ]
+}

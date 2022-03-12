@@ -51,6 +51,7 @@
       "fondo de la barra de navegación (superior)",
       "fondo de la barra de navegación (inferior)",
       "texto de la barra de navegación",
+      "texto especial de la barra de navegación",
       "tono de contraste",
       "fondo",
       "texto",
@@ -78,7 +79,7 @@
     "gatito",
     "juegos",
     "preguntas",
-    "redes sociales",
+    "sobre mí",
     "opciones"
   ],
   "smilies": {
@@ -102,6 +103,7 @@
     "enviar",
     "enviando pregunta...",
     "¡se ha enviado tu pregunta satisfactoriamente!",
-    "¿preguntar de nuevo?"
+    "¿preguntar de nuevo?",
+    "página"
   ]
 }

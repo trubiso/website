@@ -1,0 +1,109 @@
+{
+  "error": [
+    "BŁĄD",
+    "O NIE! poszłeś na złą stronę",
+    "ale jest w porządku...",
+    "widzisz pasek boczny?",
+    "możesz tu znaleźć więcej stron",
+    "ALE! to może być mója (Trubisa) wina!",
+    "w tym przypadku możesz się ze mną skontaktować i naprawię problem!!",
+    "co ty do cholery jasnej zrobiłeś"
+  ],
+  "themes": [
+    "smilie",
+    "fioletowy marmur",
+    "ciemny marmur",
+    "sowa",
+    "śliwkowa sowa",
+    "fioletowa sowa",
+    "lawenda",
+    "łosoś",
+    "panda",
+    "czarny",
+    "biały",
+    "gorący różowy"
+  ],
+  "kitty": [
+    "branie kotków...",
+    "weź więcej kotków"
+  ],
+  "bad": [
+    "TO JEST BARDZO ZŁA STRONA. WYJDŹ TERAZ.",
+    "(nie ma nic więcej)",
+    "(po prosty wyjdź)",
+    "(proszę)",
+    "(nie marnuj swojego czasu)",
+    "(wyjdź teraz)",
+    "dlaczego mnie nie słuchałeś",
+    "to jest okropne",
+    "(albo? użyj 'dQw4w9WgXcQ)"
+  ],
+  "options": {
+    "langs": [
+      "język"
+    ],
+    "themes": [
+      "motyw",
+      "wybierz jeden z prestworzonych motywów...",
+      "albo zrób sam!",
+      "aktualizuj globalny motyw",
+      "aktualizować na żywo?",
+      "tło paska nawigacyjnego (góra)",
+      "tło paska nawigacyjnego (dół)",
+      "text pasku nawigacyjnego",
+      "specjalny tekst paska nawigacji",
+      "akcent",
+      "tło",
+      "tekst",
+      "generuj randomowy motyw"
+    ]
+  },
+  "index": {
+    "reasons": [
+      "jest wspaniały",
+      "używa svelte",
+      "jest ładna",
+      "ma dobry punkt widzenia na maszyny pzemysłowe",
+      "posiada literówki (Patrz na rzecz wyżej)",
+      "h"
+    ],
+    "texts": [
+      "witaj na mojej stronie",
+      "dlaczego powinieneś ją używać:"
+    ]
+  },
+  "navbar_items": [
+    "dom",
+    "smilies",
+    "nie klikaj",
+    "kociki",
+    "gry",
+    "q+a",
+    "o",
+    "opcje"
+  ],
+  "smilies": {
+    "texts": [
+      "tutaj są moje przyjaciele, smilies!! (główne źródło: ",
+      "emotiguy appreciation",
+      "sortuj: ",
+      "ale masz szczęście! znalazłeś 2883 :)"
+    ],
+    "sorts": [
+      "alfabetycznie (a-z)",
+      "alfabetycznie (z-a)",
+      "data stworzenia (stare-nowe)",
+      "data stworzenia (nowe-stare)",
+      "randomowe"
+    ]
+  },
+  "q+a": [
+    "pytania i odpowiedzi",
+    "zapytaj mnie!",
+    "prześlij",
+    "przesyłanie pytania...",
+    "przesłano twoje pytanie pomyślnie!",
+    "zapytać więcej?",
+    "strona"
+  ]
+}
