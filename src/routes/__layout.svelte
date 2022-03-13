@@ -1,5 +1,6 @@
 <script lang="ts">
-  import Navbar from '$lib/navbar/Navbar.svelte';
+  import Flowers from '$lib/flowers.svelte';
+import Navbar from '$lib/navbar/Navbar.svelte';
   import { lang } from '$lib/stores';
   import type { ITheme } from '$lib/vars';
   import { onMount } from 'svelte';
@@ -37,6 +38,7 @@
 </script>
 
 <Navbar bind:sidebarOpen />
+<Flowers />
 <main class="content" class:content-sidebar-open={sidebarOpen}>
   <slot />
 </main>
