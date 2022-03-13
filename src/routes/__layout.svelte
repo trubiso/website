@@ -25,15 +25,12 @@
         }
       } else {
         if (typeof ct === 'string') {
-          document.documentElement.classList.remove(
-            (ct as string).replace(/_/, '-')
-          );
+          document.documentElement.classList.remove((ct as string).replace(/_/, '-'));
         }
         document.documentElement.setAttribute(
           'style',
           `--navbar-bg1: ${$theme.navbarBG1}; --navbar-bg2: ${$theme.navbarBG2}; --navbar-text: ${$theme.navbarText}; --navbar-accent: ${$theme.navbarAccent}; --accent: ${$theme.accent}; + --bg: ${$theme.bg}; --text: ${$theme.text};`
         );
-
       }
 
       ct = v;
