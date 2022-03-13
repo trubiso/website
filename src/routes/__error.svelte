@@ -1,7 +1,6 @@
 <script context="module">
   // eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
   export function load(error) {
-    console.log(error);
     return {
       props: {
         title: `${error.status}`,
@@ -20,6 +19,7 @@
   export let error;
 
   const errorText = getTextCollection('error');
+  error = error; // just so svelte stops logging that error is not used. i know. i dont care, svelte. ty
 </script>
 
 <svelte:head>
