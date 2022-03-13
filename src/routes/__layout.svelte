@@ -38,7 +38,7 @@ import Navbar from '$lib/navbar/Navbar.svelte';
 </script>
 
 <Navbar bind:sidebarOpen />
-<Flowers />
+<!--<Flowers />-->
 <main class="content" class:content-sidebar-open={sidebarOpen}>
   <slot />
 </main>
