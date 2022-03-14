@@ -1,59 +1,59 @@
 import international from './json/langs/international.json';
-import english from './json/langs/en.json';
-import oogieBoogie from './json/langs/ob.json';
-import smilie from './json/langs/el.json';
-import spanish from './json/langs/es.json';
-import macedonian from './json/langs/mk.json';
-import french from './json/langs/fr.json';
-import polish from './json/langs/pl.json';
-import tokipona from './json/langs/tp.json';
-import german from './json/langs/de.json';
+import en from './json/langs/en.json';
+import ob from './json/langs/ob.json';
+import el from './json/langs/el.json';
+import es from './json/langs/es.json';
+import mk from './json/langs/mk.json';
+import fr from './json/langs/fr.json';
+import pl from './json/langs/pl.json';
+import tp from './json/langs/tp.json';
+import de from './json/langs/de.json';
 
-function getTextInAllLangs(text: string, text2?: string) {
+function get(text: string, text2?: string) {
   if (text2) {
     return [
-      english[text][text2],
-      smilie[text][text2],
-      oogieBoogie[text][text2],
-      spanish[text][text2],
-      macedonian[text][text2],
-      french[text][text2],
-      polish[text][text2],
-      tokipona[text][text2],
-      german[text][text2]
+      en[text][text2],
+      el[text][text2],
+      ob[text][text2],
+      es[text][text2],
+      mk[text][text2],
+      fr[text][text2],
+      pl[text][text2],
+      tp[text][text2],
+      de[text][text2]
     ];
   }
 
-  if (typeof english[text][0] !== 'string') {
+  if (typeof en[text][0] !== 'string') {
     const obj = {};
-    for (const key in english[text]) {
-      obj[key] = getTextInAllLangs(text, key);
+    for (const key in en[text]) {
+      obj[key] = get(text, key);
     }
     return obj;
   } else {
     return [
-      english[text],
-      smilie[text],
-      oogieBoogie[text],
-      spanish[text],
-      macedonian[text],
-      french[text],
-      polish[text],
-      tokipona[text],
-      german[text]
+      en[text],
+      el[text],
+      ob[text],
+      es[text],
+      mk[text],
+      fr[text],
+      pl[text],
+      tp[text],
+      de[text]
     ];
   }
 }
 
 export const texts = {
   ...international,
-  error: getTextInAllLangs('error'),
-  themes: getTextInAllLangs('themes'),
-  kitty: getTextInAllLangs('kitty'),
-  bad: getTextInAllLangs('bad'),
-  options: getTextInAllLangs('options'),
-  index: getTextInAllLangs('index'),
-  navbar_items: getTextInAllLangs('navbar_items'),
-  smilies: getTextInAllLangs('smilies'),
-  'q+a': getTextInAllLangs('q+a')
+  error: get('error'),
+  themes: get('themes'),
+  kitty: get('kitty'),
+  bad: get('bad'),
+  options: get('options'),
+  index: get('index'),
+  navbar_items: get('navbar_items'),
+  smilies: get('smilies'),
+  'q+a': get('q+a')
 };
