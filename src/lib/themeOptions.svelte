@@ -41,9 +41,9 @@
   // sets the local colors to the global theme colors
   function updateLocalColors() {
     if (typeof $theme === 'string') {
-      t = themeColors[$theme];
+      t = {...themeColors[$theme]};
     } else {
-      t = $theme;
+      t = {...$theme};
     }
   }
 
