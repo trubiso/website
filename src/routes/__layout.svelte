@@ -1,7 +1,8 @@
 <script lang="ts">
+  import Emote from '$lib/emote.svelte';
   import Flowers from '$lib/flowers.svelte';
   import Navbar from '$lib/navbar/Navbar.svelte';
-  import { lang, theme } from '$lib/stores';
+  import { fishy, lang, theme } from '$lib/stores';
   import type { ITheme } from '$lib/vars';
   import { onMount } from 'svelte';
   import '../styles/globals.scss';
@@ -41,9 +42,12 @@
     lang.subscribe((v) => {
       window.localStorage.setItem('lang', v.toString());
     });
+
+    fishyArray = [...Array(Math.floor(window.screen.width / 32))];
   });
 
   let sidebarOpen = false;
+  let fishyArray = [];
 </script>
 
 <Navbar bind:sidebarOpen />
@@ -51,3 +55,13 @@
 <main class="content" class:content-sidebar-open={sidebarOpen}>
   <slot />
 </main>
+
+{#if !$fishy}
+  <div class="fish" width="100%">
+    <div class="fishy">
+      {#each fishyArray as _}
+        <Emote name="swim" size="32" />&nbsp;
+      {/each}
+    </div>
+  </div>
+{/if}

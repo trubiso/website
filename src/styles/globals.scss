@@ -12,6 +12,40 @@ body {
   font-family: 'Times New Roman', Times, serif;
   background-color: var(--bg);
   color: var(--text);
+
+  .fish {
+    pointer-events: none;
+    position: fixed;
+    bottom: 0%;
+    overflow: hidden;
+    z-index: 1;
+    --offset: 20vw;
+    --move-initial: calc(-25% + var(--offset));
+    --move-final: calc(-50% + var(--offset));
+
+    .fishy {
+      width: fit-content;
+      display: flex;
+      position: relative;
+      transform: translate3d(var(--move-initial), 0, 0);
+      animation: marquee 5s linear infinite;
+    }
+
+    span {
+      font-size: 10vw;
+      padding: 0 2vw;
+    }
+
+    @keyframes marquee {
+      0% {
+        transform: translate3d(var(--move-initial), 0, 0);
+      }
+
+      100% {
+        transform: translate3d(var(--move-final), 0, 0);
+      }
+    }
+  }
 }
 
 main.content {
@@ -26,13 +60,13 @@ main.content {
   }
 
   main.content-sidebar-open {
-    position:static;
+    position: static;
     overflow: hidden;
     slot {
-      position:static;
+      position: static;
       overflow: hidden;
       element {
-        position:static;
+        position: static;
         overflow: hidden;
       }
     }
