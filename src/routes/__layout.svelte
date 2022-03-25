@@ -11,8 +11,9 @@
 
   onMount(() => {
     const lt = localStorage.getItem('theme');
-    if (lt.includes('{')) theme.set(JSON.parse(lt));
-    else theme.set(lt || 'smilie');
+    if (!lt) theme.set('smilie');
+    else if (lt.includes('{')) theme.set(JSON.parse(lt));
+    else theme.set(lt);
     theme.subscribe((v) => {
       if (typeof $theme === 'string') {
         if (typeof ct !== 'string' || ct === 'q') {
