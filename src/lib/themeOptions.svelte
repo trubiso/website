@@ -91,8 +91,9 @@
   }
 
   function importTheme() {
-    const themeString = prompt('Theme code');
+    let themeString = prompt('Theme code');
     if (!themeString) return;
+    themeString = themeString.trim();
     const nums: string[] = ['', '', '', '', '', '', ''];
     for (let i = 0; i < themeString.length; i += 7) {
       nums[0] += themeString[i + 0];
