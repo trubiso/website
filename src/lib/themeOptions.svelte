@@ -1,7 +1,7 @@
 <script lang="ts">
   import { lang, theme } from '$lib/stores';
 
-  import { getTextCollection, ITheme, randomHex, themeColors } from '$lib/vars';
+  import { getTextCollection, ITheme, padNumber, randomHex, themeColors } from '$lib/vars';
 
   const themeNames = getTextCollection('themes');
   const texts = getTextCollection('options.themes');
@@ -65,6 +65,54 @@
 
     theme.set(t);
   }
+
+  function exportTheme() {
+    const themeString = (
+      t.navbarBG1 +
+      t.navbarBG2 +
+      t.navbarText +
+      t.navbarAccent +
+      t.accent +
+      t.bg +
+      t.text
+    ).replace(/#/g, '');
+    console.log(themeString);
+    const nums: string[] = ['', '', '', '', '', ''];
+    for (let i = 0; i < themeString.length; i += 6) {
+      nums[0] += themeString[i + 0];
+      nums[1] += themeString[i + 1];
+      nums[2] += themeString[i + 2];
+      nums[3] += themeString[i + 3];
+      nums[4] += themeString[i + 4];
+      nums[5] += themeString[i + 5];
+    }
+    const exportedTheme = nums.join('');
+    alert(`Theme code: ${exportedTheme}`);
+  }
+
+  function importTheme() {
+    const themeString = prompt('Theme code');
+    if (!themeString) return;
+    const nums: string[] = ['', '', '', '', '', '', ''];
+    for (let i = 0; i < themeString.length; i += 7) {
+      nums[0] += themeString[i + 0];
+      nums[1] += themeString[i + 1];
+      nums[2] += themeString[i + 2];
+      nums[3] += themeString[i + 3];
+      nums[4] += themeString[i + 4];
+      nums[5] += themeString[i + 5];
+      nums[6] += themeString[i + 6];
+    }
+    const exportedTheme = nums.join('');
+    t.navbarBG1 = '#' + exportedTheme.slice(0, 6);
+    t.navbarBG2 = '#' + exportedTheme.slice(6, 12);
+    t.navbarText = '#' + exportedTheme.slice(12, 18);
+    t.navbarAccent = '#' + exportedTheme.slice(18, 24);
+    t.accent = '#' + exportedTheme.slice(24, 30);
+    t.bg = '#' + exportedTheme.slice(30, 36);
+    t.text = '#' + exportedTheme.slice(36, 42);
+    liveUpdate();
+  }
 </script>
 
 <main>
@@ -119,4 +167,6 @@
   </div>
 
   <button on:click={generateRandomTheme}>{texts[$lang][12]}</button>
+  <button on:click={exportTheme}>export</button>
+  <button on:click={importTheme}>import</button>
 </main>
