@@ -55,7 +55,11 @@
       "kule pi ijo suli",
       "kule monsi",
       "kule sitelen",
-      "o pali e kule nasa"
+      "o pali e kule nasa",
+      "o pana",
+      "o lanpan",
+      "kule sitelen pi lipu",
+      "kule monsi pi lipu"
     ]
   },
   "index": {
@@ -84,9 +88,9 @@
   ],
   "smilies": {
     "texts": [
-      "ma ni la, jan pona mi - simaili - li lon! (tan: ",
+      "ma ni la, jan pona mi - simaili - li lon! (tan:",
       "olin pi emosiki",
-      "nasin: ",
+      "nasin:",
       "sina pona nasa! sina kama lukin e nanpa 2883 :)"
     ],
     "sorts": [
@@ -105,5 +109,13 @@
     "pana li pona!",
     "o alasa e sona sin?",
     "lipu nanpa"
+  ],
+  "about": [
+    "trubiso.tk li pona la mi wile e ni",
+    "awen la: o awen e ante sina la, tan ni, lipu ni li kepeken e \"localStorage\" sina. jan seme ken lukin e ante sina la, sina jan taso. taso, lipu ni li kepeken ala e \"cookies\".",
+    "jan pali la: lipu ni pi toki ilo la ale ken lukin e ni. lon ni la sina ken pali tawa lipu ni:",
+    "venn en clembs en karl2883 en dave en carrot farmer en sina li jan pona",
+    "lon lipu ni la sina ken lukin e mi:",
+    "tawa pona"
   ]
 }

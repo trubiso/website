@@ -55,7 +55,11 @@
       "Akzent",
       "Hintergrund",
       "Text",
-      "zufälliges Design generieren"
+      "zufälliges Design generieren",
+      "Export",
+      "Import",
+      "Kästchentext",
+      "Kästchenhintergrund"
     ]
   },
   "index": {
@@ -84,9 +88,9 @@
   ],
   "smilies": {
     "texts": [
-      "hier sind meine Smiliefreunde! (Haupt-Smilie-Quelle: ",
+      "hier sind meine Smiliefreunde! (Haupt-Smilie-Quelle:",
       "emotiguy appreciation",
-      "Sortieren nach: ",
+      "Sortieren nach:",
       "du Glücklicher! Du hast eine 2883 gefunden :)"
     ],
     "sorts": [
@@ -105,5 +109,13 @@
     "deine Frage wurde erfolgreich eingesendet!",
     "frage mehr?",
     "Seite"
+  ],
+  "about": [
+    "vielen Dank für den Besuch auf trubiso.tk",
+    "bezüglich Datenschutz: Diese Website verwendet deinen localStorage, um deine Einstellungen (auf die nur du zugreifen kannst) zu speichern, aber sie benutzt niemals Cookies um dich zu tracken oder irgendetwas zu speichern.",
+    "bezüglich Kollaboratoren: Diese Website ist Open Source, sodass du durch eine Pull-Request oder durch das Öffnen eines Issues beim Repo ihrer Entwicklung helfen kannst. Link:",
+    "besonderen Dank an: venn, clembs, karl2883, dave, carrot farmer und dich",
+    "du kannst mich in den folgenden sozialen Medien finden:",
+    "pass auf dich auf"
   ]
 }

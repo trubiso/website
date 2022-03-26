@@ -55,7 +55,11 @@
       "couleur d'accentuation",
       "fond du site",
       "texte",
-      "générer un thème aléatoirement"
+      "générer un thème aléatoirement",
+      "export",
+      "import",
+      "card text",
+      "card background"
     ]
   },
   "index": {
@@ -84,9 +88,9 @@
   ],
   "smilies": {
     "texts": [
-      "voici mes amis smilies ! (source principale des smilies : ",
+      "voici mes amis smilies ! (source principale des smilies :",
       "l'appréciation de l'émotigars (emotiguy appreciation)",
-      "trier par : ",
+      "trier par :",
       "la chance ! vous avez trouvé un 2883 :)"
     ],
     "sorts": [
@@ -105,5 +109,13 @@
     "votre question a bien été envoyée !",
     "en poser une autre ?",
     "page"
+  ],
+  "about": [
+    "thanks for visiting trubiso.tk",
+    "regarding privacy: this website uses your localStorage to store your preferences (which only you have access to), but it does not ever use any cookie to track you or to store anything at all.",
+    "regarding collaborators: this website is open source, so you can contribute to it by making a pull request or opening an issue over at the repo. link:",
+    "special thanks to: venn, clembs, karl2883, dave, carrot farmer and you",
+    "you can find me on the following social media:",
+    "take care"
   ]
 }

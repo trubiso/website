@@ -55,5 +55,6 @@ export const texts = {
   index: get('index'),
   navbar_items: get('navbar_items'),
   smilies: get('smilies'),
-  'q+a': get('q+a')
+  'q+a': get('q+a'),
+  about: get('about')
 };

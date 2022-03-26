@@ -55,7 +55,11 @@
       "accentete",
       "bakgrund",
       "texte",
-      "generat randome theem"
+      "generat randome theem",
+      "enxprot",
+      "imprort",
+      "crard textete",
+      "crard bankgruond"
     ]
   },
   "index": {
@@ -84,9 +88,9 @@
   ],
   "smilies": {
     "texts": [
-      "heer ar my fren smilis !! (mein smili sourc: ",
+      "heer ar my fren smilis !! (mein smili sourc:",
       "emtotiguy aprenecietion",
-      "sorte by: ",
+      "sorte by:",
       "LUKI YUO !!! yu fuonde a 2883 :)"
     ],
     "sorts": [
@@ -105,5 +109,13 @@
     "submited YUOR questione suncesnfuly !",
     "ask moar?",
     "paeg"
+  ],
+  "about": [
+    "thankse foar visitinge trubiso.tk",
+    "rengrading privacie: dis websait usese yuor localStorage to stoar yur prefrensese (wich only YUO hab accesse toe), but it does note evar use any conkie to trak yuo or to stoar enything at alle.",
+    "rengrading colaboraetors: dis websait is opan sours, so yuo can contriboot to it by makinge a pul requestete or openinge an issu over at da repoe. linq:",
+    "speciale thanx to: venn, clembs, karl2883, dave, carrot farmer ande YUO !!1",
+    "yu can finde me on da folowing sociale meedia:",
+    "TAEK CAER !!"
   ]
 }

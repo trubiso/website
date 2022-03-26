@@ -55,7 +55,11 @@
       "tono de contraste",
       "fondo",
       "texto",
-      "generar tema aleatorio"
+      "generar tema aleatorio",
+      "exportar",
+      "importar",
+      "texto de tarjeta",
+      "fondo de tarjeta"
     ]
   },
   "index": {
@@ -84,9 +88,9 @@
   ],
   "smilies": {
     "texts": [
-      "aquí están mis amigos smilies (fuente principal: ",
+      "aquí están mis amigos smilies (fuente principal:",
       "emotiguy appreciation",
-      "orden: ",
+      "ordenar por:",
       "¡qué suertudo! encontraste un 2883 :)"
     ],
     "sorts": [
@@ -105,5 +109,13 @@
     "¡se ha enviado tu pregunta satisfactoriamente!",
     "¿preguntar de nuevo?",
     "página"
+  ],
+  "about": [
+    "gracias por visitar trubiso.tk",
+    "con respecto a la privacidad: este sitio web usa tu localStorage para guardar tus preferencias (a las cuales sólo tienes acceso tú), pero nunca utiliza ninguna cookie para rastrearte o guardar nada en absoluto.",
+    "con respecto a los colaboradores: este sitio web es de código abierto, así que puedes contribuir haciendo un pull request o abriendo un issue en el repositorio. enlace:",
+    "agradecimiento especial a: venn, clembs, karl2883, dave, carrot farmer y a ti",
+    "puedes encontrarme en las siguientes redes sociales:",
+    "cuídate"
   ]
 }

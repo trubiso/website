@@ -22,7 +22,7 @@
 
 <main class="smilys">
   <h1>{getTitleOfPage('smilies', $lang)}</h1>
-  {texts[$lang][0]}<a href="https://discord.gg/JY7PapMSFR" target="_blank">{texts[$lang][1]}</a
+  {texts[$lang][0]} <a href="https://discord.gg/JY7PapMSFR" target="_blank">{texts[$lang][1]}</a
   >)
   <br /><span>{texts[$lang][2]}</span>
   <select name="sort" id="sort" bind:value={currentSort} on:change={resortArray}>
