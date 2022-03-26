@@ -8,7 +8,7 @@
   const texts = getTextCollection('index.texts');
 </script>
 
-<Meta title={getTitleOfPage('home', $lang)} description="come have fun" />
+<Meta title="trubiso" description="come have fun" />
 
 <main>
   <h1>{texts[$lang][0]} <Emote name="happy" size="44" /></h1>
