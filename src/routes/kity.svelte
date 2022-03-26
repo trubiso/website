@@ -22,7 +22,10 @@
   };
 </script>
 
-<Meta title={getTitleOfPage('kitty', $lang)} />
+<Meta
+  title={getTitleOfPage('kitty', $lang)}
+  description="obtain quality kitties for enjoyment and happiness"
+/>
 
 <main class="kity">
   <img

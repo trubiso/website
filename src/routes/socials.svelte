@@ -7,7 +7,7 @@
   const texts = getTextCollection('about');
 </script>
 
-<Meta title={getTitleOfPage('about', $lang)} description={texts[$lang][0]} />
+<Meta title={getTitleOfPage('about', $lang)} description="come to know more about my page!" />
 
 <main>
   <h1>{getTitleOfPage('about', $lang)}</h1>

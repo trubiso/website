@@ -10,7 +10,10 @@
   let fishyOn = !$fishy;
 </script>
 
-<Meta title={getTitleOfPage('options', $lang)} />
+<Meta
+  title={getTitleOfPage('options', $lang)}
+  description="customize your experience in the trubiso.tk website!"
+/>
 
 <main>
   <LangOptions />
