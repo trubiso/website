@@ -15,7 +15,7 @@
   onMount(() => incrementSilliness());
 </script>
 
-<Meta title="silliness" description={[...Array(100).keys()].map((_) => ':silly:').join('')} />
+<Meta title="silliness" description=":PPPPPPPPPPPPPP" />
 
 <main>
   {#each q as _}
