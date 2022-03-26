@@ -6,4 +6,4 @@
 
 <title>{title}</title>
 <meta content={metatitle ?? title} property="og:title" />
-{#if description} <meta content={description} property="og:description" /> {/if}
+{#if description !== null} <meta content={description} property="og:description" /> {/if}
