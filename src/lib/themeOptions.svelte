@@ -168,6 +168,6 @@
   </div>
 
   <button on:click={generateRandomTheme}>{texts[$lang][12]}</button>
-  <button on:click={exportTheme}>export</button>
-  <button on:click={importTheme}>import</button>
+  <button on:click={exportTheme}>{texts[$lang][13]}</button>
+  <button on:click={importTheme}>{texts[$lang][14]}</button>
 </main>
