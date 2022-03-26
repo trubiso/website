@@ -44,7 +44,7 @@
       window.localStorage.setItem('lang', v.toString());
     });
 
-    fishyArray = [...Array(Math.floor(window.screen.width / 32))];
+    fishyArray = [...Array(Math.floor(window.screen.width / 16))];
   });
 
   let sidebarOpen = false;
