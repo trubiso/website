@@ -1,5 +1,6 @@
 <script lang="ts">
   import Emote from '$lib/emote.svelte';
+import Meta from '$lib/meta.svelte';
   import { todo } from '$lib/stores';
   import TodoList from '$lib/todoList.svelte';
 
@@ -10,6 +11,8 @@
     hasLoaded = true;
   });
 </script>
+
+<Meta title="todo" description="make your own SMILIE to-do lists!" />
 
 <main>
   {#if !hasLoaded}

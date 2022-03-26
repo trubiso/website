@@ -23,6 +23,7 @@
   import Question from '$lib/question.svelte';
   import { getTextCollection, getTitleOfPage } from '$lib/vars';
   import { lang } from '$lib/stores';
+  import Meta from '$lib/meta.svelte';
 
   export let questions: qa[] = [];
   export let hasPreviousPage = false;
@@ -56,9 +57,7 @@
   const error = getTextCollection('error');
 </script>
 
-<svelte:head>
-  <title>{getTitleOfPage('q+a', $lang)}</title>
-</svelte:head>
+<Meta title={getTitleOfPage('q+a', $lang)} description="{texts[$lang][0]} - {texts[$lang][1]}" />
 
 <main class="q-a">
   <h1>{texts[$lang][0]}</h1>

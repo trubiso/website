@@ -1,12 +1,13 @@
 <script lang="ts">
   import { getTextCollection, emotes, getTitleOfPage, sortArray, Sorts } from '$lib/vars';
   import { lang } from '$lib/stores';
+  import Meta from '$lib/meta.svelte';
 
   const sortOptions = getTextCollection('smilies.sorts');
-  const sorts : Sorts[] = ['a-z', 'z-a', 'none', 'reverse', 'random'];
+  const sorts: Sorts[] = ['a-z', 'z-a', 'none', 'reverse', 'random'];
   const texts = getTextCollection('smilies.texts');
 
-	const originalEmotes = Array.from(emotes.keys());
+  const originalEmotes = Array.from(emotes.keys());
   let sortedEmotes = originalEmotes;
   let currentSort = sortOptions[$lang][2];
 
@@ -16,14 +17,11 @@
   };
 </script>
 
-<svelte:head>
-  <title>{getTitleOfPage('smilies', $lang)}</title>
-</svelte:head>
+<Meta title={getTitleOfPage('smilies', $lang)} description="{texts[$lang][0]} {texts[$lang][1]})" />
 
 <main class="smilys">
   <h1>{getTitleOfPage('smilies', $lang)}</h1>
-  {texts[$lang][0]} <a href="https://discord.gg/JY7PapMSFR" target="_blank">{texts[$lang][1]}</a
-  >)
+  {texts[$lang][0]} <a href="https://discord.gg/JY7PapMSFR" target="_blank">{texts[$lang][1]}</a>)
   <br /><span>{texts[$lang][2]}</span>
   <select name="sort" id="sort" bind:value={currentSort} on:change={resortArray}>
     {#each sortOptions[$lang] as opt}

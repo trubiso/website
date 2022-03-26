@@ -2,14 +2,13 @@
   import Emote from '$lib/emote.svelte';
   import { getTextCollection, getTitleOfPage } from '$lib/vars';
   import { lang } from '$lib/stores';
+  import Meta from '$lib/meta.svelte';
 
   const reasons = getTextCollection('index.reasons');
   const texts = getTextCollection('index.texts');
 </script>
 
-<svelte:head>
-  <title>{getTitleOfPage('home', $lang)}</title>
-</svelte:head>
+<Meta title={getTitleOfPage('home', $lang)} description="come have fun" />
 
 <main>
   <h1>{texts[$lang][0]} <Emote name="happy" size="44" /></h1>

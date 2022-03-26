@@ -1,5 +1,6 @@
 <script lang="ts">
   import Emote from '$lib/emote.svelte';
+  import Meta from '$lib/meta.svelte';
 
   import { lang } from '$lib/stores';
 
@@ -24,9 +25,7 @@
   }
 </script>
 
-<svelte:head>
-  <title>{getTitleOfPage("don't click", $lang)}</title>
-</svelte:head>
+<Meta title={getTitleOfPage("don't click", $lang)} description={texts[$lang][0]} />
 
 <main>
   {#if phase === 0}

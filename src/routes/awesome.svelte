@@ -1,4 +1,6 @@
 <script lang="ts">
+  import Meta from '$lib/meta.svelte';
+
   let a: HTMLAudioElement;
 
   const rickroll = () => {
@@ -9,9 +11,7 @@
   };
 </script>
 
-<svelte:head>
-  <title>awesome</title>
-</svelte:head>
+<Meta title="awesome" description="amazing page" />
 
 <section>
   <h1>awesome</h1>

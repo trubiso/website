@@ -1,6 +1,7 @@
 <script lang="ts">
   import { getTextCollection, getTitleOfPage } from '$lib/vars';
   import { lang } from '$lib/stores';
+  import Meta from '$lib/meta.svelte';
 
   let kity: HTMLElement;
   let isLoadingKity = true;
@@ -21,9 +22,7 @@
   };
 </script>
 
-<svelte:head>
-  <title>{getTitleOfPage('kitty', $lang)}</title>
-</svelte:head>
+<Meta title={getTitleOfPage('kitty', $lang)} />
 
 <main class="kity">
   <img

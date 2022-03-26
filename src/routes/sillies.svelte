@@ -1,5 +1,6 @@
 <script>
   import Emote from '$lib/emote.svelte';
+  import Meta from '$lib/meta.svelte';
   import { onMount } from 'svelte';
 
   let size = 100;
@@ -14,9 +15,7 @@
   onMount(() => incrementSilliness());
 </script>
 
-<svelte:head>
-  <title>silliness</title>
-</svelte:head>
+<Meta title="silliness" description={q.map((_) => ':silly:').join('')} />
 
 <main>
   {#each q as _}

@@ -1,14 +1,13 @@
 <script lang="ts">
   import Emote from '$lib/emote.svelte';
+  import Meta from '$lib/meta.svelte';
   import { lang } from '$lib/stores';
   import { socialMedias, getTitleOfPage, getTextCollection } from '$lib/vars';
 
   const texts = getTextCollection('about');
 </script>
 
-<svelte:head>
-  <title>{getTitleOfPage('about', $lang)}</title>
-</svelte:head>
+<Meta title={getTitleOfPage('about', $lang)} description={texts[$lang][0]} />
 
 <main>
   <h1>{getTitleOfPage('about', $lang)}</h1>

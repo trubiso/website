@@ -3,7 +3,7 @@
   import Flowers from '$lib/flowers.svelte';
   import Navbar from '$lib/navbar/Navbar.svelte';
   import { fishy, lang, theme } from '$lib/stores';
-  import type { ITheme } from '$lib/vars';
+  import { ITheme, themeColors } from '$lib/vars';
   import { onMount } from 'svelte';
   import '../styles/globals.scss';
 
@@ -50,6 +50,16 @@
   let sidebarOpen = false;
   let fishyArray = [];
 </script>
+
+<svelte:head>
+  <meta
+    content={typeof ct == 'string'
+      ? themeColors[ct === 'q' ? 'smilie' : ct].navbarBG1
+      : ct.navbarBG1}
+    data-react-helmet="true"
+    name="theme-color"
+  />
+</svelte:head>
 
 <Navbar bind:sidebarOpen />
 <!--<Flowers />-->
