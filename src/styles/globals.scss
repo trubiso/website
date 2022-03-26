@@ -1,4 +1,8 @@
 @import 'themes';
+@font-face {
+  font-family: 'Linja Pona';
+  src: url(/static/linja_pona.otf);
+}
 
 * {
   box-sizing: border-box;
@@ -10,6 +14,13 @@ body {
   min-height: 100vh;
   display: flex;
   font-family: 'Times New Roman', Times, serif;
+  button, input[type="submit"] {
+    font-family: 'Times New Roman', Times, serif;
+  }
+  a {
+    color: var(--text); 
+  }
+
   background-color: var(--bg);
   color: var(--text);
 
