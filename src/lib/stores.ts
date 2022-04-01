@@ -8,4 +8,4 @@ export const todo = writable<ITodoList[]>([]);
 persist(todo, localStorage(true), 'todo');
 export const fishy = writable(true);
 persist(fishy, localStorage(true), 'fishy');
-export const spiny = writable(false);
+export const spiny = writable(true);
