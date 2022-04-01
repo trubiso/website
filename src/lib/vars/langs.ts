@@ -8,6 +8,7 @@ import fr from './json/langs/fr.json';
 import pl from './json/langs/pl.json';
 import tp from './json/langs/tp.json';
 import de from './json/langs/de.json';
+import ja from './json/langs/ja.json';
 
 function get(text: string, text2?: string) {
   if (text2) {
@@ -20,7 +21,8 @@ function get(text: string, text2?: string) {
       fr[text][text2],
       pl[text][text2],
       tp[text][text2],
-      de[text][text2]
+      de[text][text2],
+      ja[text][text2]
     ];
   }
 
@@ -40,7 +42,8 @@ function get(text: string, text2?: string) {
       fr[text],
       pl[text],
       tp[text],
-      de[text]
+      de[text],
+      ja[text]
     ];
   }
 }

@@ -1,0 +1,121 @@
+{
+  "error": [
+    "ERROR",
+    "OH NO! you went to a wrong page",
+    "it's okay though...",
+    "do you see the sidebar?",
+    "you can find more pages there",
+    "ALTHOUGH! it might be my (trubiso's) fault!",
+    "in that case you can contact me and i will fix the issue!!",
+    "what the hell did you do"
+  ],
+  "themes": [
+    "スマイリー",
+    "紫の大理石",
+    "濃いの大理石",
+    "宵っぱり",
+    "梅の宵っぱり",
+    "紫の宵っぱり",
+    "ラベンダー",
+    "鮭",
+    "パンダ",
+    "黒色",
+    "白色",
+    "紅紫"
+  ],
+  "kitty": [
+    "子猫を受け中…",
+    "今一つ子猫を受ける"
+  ],
+  "bad": [
+    "THIS IS A VERY BAD PAGE. LEAVE IT IMMEDIATELY.",
+    "(there's nothing more to it)",
+    "(just leave it)",
+    "(please)",
+    "(don't waste your time)",
+    "(leave now)",
+    "why didn't you listen to me",
+    "that's rude",
+    "(or is it? use 'dQw4w9WgXcQ')"
+  ],
+  "options": {
+    "langs": [
+      "言語"
+    ],
+    "themes": [
+      "色",
+      "pick one of the pre-made website's themes...",
+      "or make one yourself!",
+      "色を更新する",
+      "独りでに色を更新するか？",
+      "サイドバーの背景色（上）",
+      "サイドバーの背景色（下）",
+      "サイドバーのテキストの色",
+      "サイドバーのアクセントの色",
+      "アクセントの色",
+      "背景色",
+      "テキストの色",
+      "ランダムの色を生成する",
+      "輸出する",
+      "輸入する",
+      "card text",
+      "card background"
+    ]
+  },
+  "index": {
+    "reasons": [
+      "its great",
+      "it uses svelte",
+      "it is pretty",
+      "it has a great point of view on industrail machinery",
+      "it has typos (see item above)",
+      "h"
+    ],
+    "texts": [
+      "ウェブサイトへようこそ！",
+      "why you should use it:"
+    ]
+  },
+  "navbar_items": [
+    "ホームページ",
+    "スマイリー",
+    "クリックしない",
+    "子猫",
+    "ゲーム",
+    "質問と答え",
+    "知識",
+    "選択肢"
+  ],
+  "smilies": {
+    "texts": [
+      "here are my friend smilies! (main smilie source:",
+      "emotiguy appreciation",
+      "sort by:",
+      "lucky you! you found a 2883 :)"
+    ],
+    "sorts": [
+      "alphabetical (a-z)",
+      "alphabetical (z-a)",
+      "creation date (old-new)",
+      "creation date (new-old)",
+      "random"
+    ]
+  },
+  "q+a": [
+    "質問と答え",
+    "私には尋ねる！",
+    "その質問を送信する",
+    "質問を送信中…",
+    "首尾よく質問の送信した！",
+    "また質問を送信？",
+    "ページ"
+  ],
+  "about": [
+    "thanks for visiting trubiso.tk",
+    "regarding privacy: this website uses your localStorage to store your preferences (which only you have access to), but it does not ever use any cookie to track you or to store anything at all.",
+    "regarding collaborators: this website is open source, so you can contribute to it by making a pull request or opening an issue over at the repo. link:",
+    "どうもありがとうvenn、clembs、karl2883、dave、carrot farmerとあなた",
+    "you can find me on the following social media:",
+    "take care"
+  ]
+}

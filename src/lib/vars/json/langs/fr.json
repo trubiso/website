@@ -51,15 +51,15 @@
       "fond de la barre de navigation (haut)",
       "fond de la barre de navigation (bas)",
       "texte de la barre de navigation (le bouton menu sur mobile)",
-      "navbar special text",
+      "texte spécial de la barre de navigation",
       "couleur d'accentuation",
       "fond du site",
       "texte",
       "générer un thème aléatoirement",
-      "export",
-      "import",
-      "card text",
-      "card background"
+      "exporter",
+      "importer",
+      "texte de la carte",
+      "arrière-plan de la carte"
     ]
   },
   "index": {
@@ -83,7 +83,7 @@
     "chatons",
     "jeux",
     "faq",
-    "about",
+    "à propos",
     "réglages"
   ],
   "smilies": {
@@ -111,11 +111,11 @@
     "page"
   ],
   "about": [
-    "thanks for visiting trubiso.tk",
-    "regarding privacy: this website uses your localStorage to store your preferences (which only you have access to), but it does not ever use any cookie to track you or to store anything at all.",
-    "regarding collaborators: this website is open source, so you can contribute to it by making a pull request or opening an issue over at the repo. link:",
-    "special thanks to: venn, clembs, karl2883, dave, carrot farmer and you",
-    "you can find me on the following social media:",
-    "take care"
+    "merci de visiter trubiso.tk",
+    "à propos de votre vie privée : ce site utilise \"localStorage\" pour enregistrer vos préférences (seul le site et vous même y avez accès), mais il n'utilise aucun cookie pour vous tracer ou autre chose de la sorte.",
+    "à propos des collaborateurs : ce site est open source, ce qui signifie que vous pouvez y contribuer en créant une pull request ou en ouvrant une issue sur la repository :",
+    "un grand merci à : venn, clembs, karl2883, dave, carrot farmer et vous",
+    "retrouvez-moi sur les réseaux sociaux suivants :",
+    "prenez soin de vous"
   ]
 }

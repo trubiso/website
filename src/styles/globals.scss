@@ -9,9 +9,9 @@ body {
   padding: 0;
   min-height: 100vh;
   display: flex;
-  font-family: 'Times New Roman', Times, serif;
+  font-family: 'Times New Roman', 'MS PGothic', Osaka, Times, serif;
   button, input[type="submit"] {
-    font-family: 'Times New Roman', Times, serif;
+    font-family: 'Times New Roman', 'MS PGothic', Osaka, Times, serif;
   }
   a {
     color: var(--text); 
