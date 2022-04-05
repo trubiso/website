@@ -34,7 +34,6 @@ nav {
   .logo {
     width: 100%;
     text-align: center;
-    pointer-events: none;
     img {
       padding: 13px;
       min-width: 178px;
@@ -47,6 +46,7 @@ nav {
         &-fast {
           animation: spin 0.5s linear infinite;
           animation-name: spinScale;
+          pointer-events: none;
         }
       }
     }
