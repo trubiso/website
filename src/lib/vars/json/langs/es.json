@@ -59,7 +59,8 @@
       "exportar",
       "importar",
       "texto de tarjeta",
-      "fondo de tarjeta"
+      "fondo de tarjeta",
+      "tono de contraste de tarjeta"
     ]
   },
   "index": {

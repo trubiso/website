@@ -59,7 +59,8 @@
       "export",
       "import",
       "card text",
-      "card background"
+      "card background",
+      "card accent"
     ]
   },
   "index": {
