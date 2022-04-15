@@ -16,7 +16,21 @@
 
   // generates a silly random theme
   function generateRandomTheme() {
-    [t.navbarBG1, t.navbarBG2, t.navbarText, t.navbarAccent, t.accent, t.bg, t.text] = [
+    [
+      t.navbarBG1,
+      t.navbarBG2,
+      t.navbarText,
+      t.navbarAccent,
+      t.accent,
+      t.bg,
+      t.text,
+      t.cardBG,
+      t.cardText,
+      t.cardAccent
+    ] = [
+      randomHex(),
+      randomHex(),
+      randomHex(),
       randomHex(),
       randomHex(),
       randomHex(),
@@ -109,7 +123,11 @@
   <h2>{texts[$lang][1]}</h2>
   <div class="picker">
     {#each themeNames[$lang] as d, i}
-      <div class="theme" style="{themeToString(themeColors[getThemeName(i, '_')])}" on:click={() => setTheme(getThemeName(i, '_'))}>
+      <div
+        class="theme"
+        style={themeToString(themeColors[getThemeName(i, '_')])}
+        on:click={() => setTheme(getThemeName(i, '_'))}
+      >
         {d}
       </div>
     {/each}
@@ -148,6 +166,18 @@
     <div class="color-input">
       <input type="color" id="text" bind:value={t.text} on:change={liveUpdate} />
       <label for="text">{texts[$lang][11]}</label>
+    </div>
+    <div class="color-input">
+      <input type="color" id="text" bind:value={t.cardBG} on:change={liveUpdate} />
+      <label for="text">{texts[$lang][16]}</label>
+    </div>
+    <div class="color-input">
+      <input type="color" id="text" bind:value={t.cardText} on:change={liveUpdate} />
+      <label for="text">{texts[$lang][15]}</label>
+    </div>
+    <div class="color-input">
+      <input type="color" id="text" bind:value={t.cardAccent} on:change={liveUpdate} />
+      <label for="text">{texts[$lang][17]}</label>
     </div>
   </div>
 

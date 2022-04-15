@@ -2,8 +2,8 @@
   display: flex;
   flex-direction: column;
   padding: 10px;
-  background-color: var(--navbar-bg2);
-  color: var(--navbar-accent);
+  background-color: var(--card-bg);
+  color: var(--card-text);
   margin-bottom: 20px;
 
   &-timestamp {
@@ -22,6 +22,6 @@
   }
 
   a {
-    color: var(--accent);
+    color: var(--card-accent);
   }
 }

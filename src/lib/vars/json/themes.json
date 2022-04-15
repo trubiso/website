@@ -6,7 +6,10 @@
     "navbarAccent": "#ffffff",
     "accent": "#181818",
     "bg": "#f1d7b2",
-    "text": "#101020"
+    "text": "#101020",
+    "cardBG": "#101020",
+    "cardText": "#f1d7b2",
+    "cardAccent": "#181818"
   },
   "purple_marble": {
     "navbarBG1": "#9292c1",
@@ -15,7 +18,10 @@
     "navbarAccent": "#ffffff",
     "accent": "#181818",
     "bg": "#ffffff",
-    "text": "#101020"
+    "text": "#101020",
+    "cardBG": "#101020",
+    "cardText": "#ffffff",
+    "cardAccent": "#181818"
   },
   "dark_marble": {
     "navbarBG1": "#32324f",
@@ -24,7 +30,10 @@
     "navbarAccent": "#ffffff",
     "accent": "#e6bb1c",
     "bg": "#ffffff",
-    "text": "#101020"
+    "text": "#101020",
+    "cardBG": "#101020",
+    "cardText": "#ffffff",
+    "cardAccent": "#e6bb1c"
   },
   "owl": {
     "navbarBG1": "#32324f",
@@ -33,7 +42,10 @@
     "navbarAccent": "#ffffff",
     "accent": "#e6bb1c",
     "bg": "#00001c",
-    "text": "#ddddef"
+    "text": "#ddddef",
+    "cardBG": "#ddddef",
+    "cardText": "#00001c",
+    "cardAccent": "#e6bb1c"
   },
   "plum_owl": {
     "navbarBG1": "#43324f",
@@ -42,7 +54,10 @@
     "navbarAccent": "#ffffff",
     "accent": "#e6bb1c",
     "bg": "#10001c",
-    "text": "#e8ddf0"
+    "text": "#e8ddf0",
+    "cardBG": "#e8ddf0",
+    "cardText": "#10001c",
+    "cardAccent": "#e6bb1c"
   },
   "purple_owl": {
     "navbarBG1": "#570f8a",
@@ -51,7 +66,10 @@
     "navbarAccent": "#ffffff",
     "accent": "#e6bb1c",
     "bg": "#270042",
-    "text": "#e8ddf0"
+    "text": "#e8ddf0",
+    "cardBG": "#e8ddf0",
+    "cardText": "#270042",
+    "cardAccent": "#e6bb1c"
   },
   "lavender": {
     "navbarBG1": "#8166b3",
@@ -60,7 +78,10 @@
     "navbarAccent": "#ffffff",
     "accent": "#000000",
     "bg": "#000000",
-    "text": "#ffbf00"
+    "text": "#ffbf00",
+    "cardBG": "#ffbf00",
+    "cardText": "#000000",
+    "cardAccent": "#000000"
   },
   "salmon": {
     "navbarBG1": "#b3667d",
@@ -69,7 +90,10 @@
     "navbarAccent": "#ffffff",
     "accent": "#000000",
     "bg": "#000000",
-    "text": "#ffbf00"
+    "text": "#ffbf00",
+    "cardBG": "#ffbf00",
+    "cardText": "#000000",
+    "cardAccent": "#000000"
   },
   "panda": {
     "navbarBG1": "#000000",
@@ -78,7 +102,10 @@
     "navbarAccent": "#ffffff",
     "accent": "#ffffff",
     "bg": "#ffffff",
-    "text": "#000000"
+    "text": "#000000",
+    "cardBG": "#000000",
+    "cardText": "#ffffff",
+    "cardAccent": "#ffffff"
   },
   "black": {
     "navbarBG1": "#333333",
@@ -87,7 +114,10 @@
     "navbarAccent": "#ffffff",
     "accent": "#e6bb1c",
     "bg": "#000000",
-    "text": "#ffffff"
+    "text": "#ffffff",
+    "cardBG": "#ffffff",
+    "cardText": "#000000",
+    "cardAccent": "#e6bb1c"
   },
   "white": {
     "navbarBG1": "#333333",
@@ -96,7 +126,10 @@
     "navbarAccent": "#ffffff",
     "accent": "#e6bb1c",
     "bg": "#ffffff",
-    "text": "#000000"
+    "text": "#000000",
+    "cardBG": "#000000",
+    "cardText": "#ffffff",
+    "cardAccent": "#e6bb1c"
   },
   "hot_pink": {
     "navbarBG1": "#990099",
@@ -105,6 +138,9 @@
     "navbarAccent": "#ffffff",
     "accent": "#e6bb1c",
     "bg": "#ffaaff",
-    "text": "#220022"
+    "text": "#220022",
+    "cardBG": "#220022",
+    "cardText": "#ffaaff",
+    "cardAccent": "#e6bb1c"
   }
 }

@@ -79,5 +79,5 @@ export function randomHex(length = 6, includeHashtag = true): string {
 }
 
 export function themeToString(theme: ITheme): string {
-  return `--navbar-bg1: ${theme.navbarBG1}; --navbar-bg2: ${theme.navbarBG2}; --navbar-text: ${theme.navbarText}; --navbar-accent: ${theme.navbarAccent}; --accent: ${theme.accent}; --bg: ${theme.bg}; --text: ${theme.text};`
+  return `--navbar-bg1: ${theme.navbarBG1}; --navbar-bg2: ${theme.navbarBG2}; --navbar-text: ${theme.navbarText}; --navbar-accent: ${theme.navbarAccent}; --accent: ${theme.accent}; --bg: ${theme.bg}; --text: ${theme.text}; --card-bg: ${theme.cardBG}; --card-text: ${theme.cardText}; --card-accent: ${theme.cardAccent};`;
 }

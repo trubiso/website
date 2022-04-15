@@ -26,4 +26,7 @@ export interface ITheme {
   accent: string;
   bg: string;
   text: string;
+  cardBG: string;
+  cardText: string;
+  cardAccent: string;
 }
