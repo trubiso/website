@@ -1,7 +1,7 @@
 <script lang="ts">
   import { lang, theme } from '$lib/stores';
 
-  import { getTextCollection, ITheme, padNumber, randomHex, themeColors } from '$lib/vars';
+  import { getTextCollection, ITheme, randomHex, themeColors, themeToString } from '$lib/vars';
 
   const themeNames = getTextCollection('themes');
   const texts = getTextCollection('options.themes');
@@ -40,29 +40,17 @@
 
   // sets the local colors to the global theme colors
   function updateLocalColors() {
-    if (typeof $theme === 'string') {
-      t = {...themeColors[$theme]};
-    } else {
-      t = {...$theme};
-    }
+    t = { ...$theme };
   }
 
   // changes the theme to one of the string themes
   function setTheme(v: string) {
-    theme.set(v);
+    theme.set(themeColors[v]);
     liveUpdate();
   }
 
   // saves the current theme to the store / local storage
   function saveTheme() {
-    for (const r in themeColors) {
-      const m = themeColors[r] as ITheme;
-      if (Object.values(t) === Object.values(m)) {
-        theme.set(r.replace(' ', '_'));
-        return;
-      }
-    }
-
     theme.set(t);
   }
 
@@ -121,11 +109,7 @@
   <h2>{texts[$lang][1]}</h2>
   <div class="picker">
     {#each themeNames[$lang] as d, i}
-      <div
-        class="theme {getThemeName(i)}"
-        class:bold={$theme === getThemeName(i, '_')}
-        on:click={() => setTheme(getThemeName(i, '_'))}
-      >
+      <div class="theme" style="{themeToString(themeColors[getThemeName(i, '_')])}" on:click={() => setTheme(getThemeName(i, '_'))}>
         {d}
       </div>
     {/each}

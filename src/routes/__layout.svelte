@@ -3,7 +3,7 @@
   import Flowers from '$lib/flowers.svelte';
   import Navbar from '$lib/navbar/Navbar.svelte';
   import { fishy, lang, theme } from '$lib/stores';
-  import { ITheme, themeColors } from '$lib/vars';
+  import { ITheme, themeColors, themeToString } from '$lib/vars';
   import { onMount } from 'svelte';
   import '../styles/globals.scss';
 
@@ -15,11 +15,11 @@
     theme.subscribe((v) => {
       document.documentElement.setAttribute(
         'style',
-        `--navbar-bg1: ${$theme.navbarBG1}; --navbar-bg2: ${$theme.navbarBG2}; --navbar-text: ${$theme.navbarText}; --navbar-accent: ${$theme.navbarAccent}; --accent: ${$theme.accent}; --bg: ${$theme.bg}; --text: ${$theme.text};`
+        themeToString($theme)
       );
 
       ct = v;
-      localStorage.setItem('theme', typeof ct === 'string' ? ct : JSON.stringify(ct));
+      localStorage.setItem('theme', JSON.stringify(ct));
     });
 
     lang.set(parseInt(window.localStorage.getItem('lang') ?? '0'));

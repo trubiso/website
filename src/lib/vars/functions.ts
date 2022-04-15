@@ -1,5 +1,5 @@
 import { texts } from '.';
-import type { Sorts } from './types';
+import type { ITheme, Sorts } from './types';
 
 type TextCollectionTraverser =
   | string[]
@@ -76,4 +76,8 @@ export function randomHex(length = 6, includeHashtag = true): string {
     out += random.toString(16);
   });
   return out;
+}
+
+export function themeToString(theme: ITheme): string {
+  return `--navbar-bg1: ${theme.navbarBG1}; --navbar-bg2: ${theme.navbarBG2}; --navbar-text: ${theme.navbarText}; --navbar-accent: ${theme.navbarAccent}; --accent: ${theme.accent}; --bg: ${theme.bg}; --text: ${theme.text};`
 }
