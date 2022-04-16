@@ -2,6 +2,7 @@
   import { lang, theme } from '$lib/stores';
 
   import { getTextCollection, ITheme, randomHex, themeColors, themeToString } from '$lib/vars';
+  import Emote from './emote.svelte';
 
   const themeNames = getTextCollection('themes');
   const texts = getTextCollection('options.themes');
@@ -134,54 +135,86 @@
   </div>
 
   <h2>{texts[$lang][2]}</h2>
-  <input type="submit" value={texts[$lang][3]} on:click={saveTheme} />
-  <input type="checkbox" id="live-update" bind:checked={updateLive} />
-  <label for="live-update">{texts[$lang][4]}</label>
+  <div class="custom-container">
+    <div class="custom-maker">
+      <input type="submit" value={texts[$lang][3]} on:click={saveTheme} />
+      <input type="checkbox" id="live-update" bind:checked={updateLive} />
+      <label for="live-update">{texts[$lang][4]}</label>
 
-  <div class="custom-colors">
-    <div class="color-input">
-      <input type="color" id="navbar-bg1" bind:value={t.navbarBG1} on:change={liveUpdate} />
-      <label for="navbar-bg1">{texts[$lang][5]}</label>
+      <div class="custom-colors">
+        <div class="color-input">
+          <input type="color" id="navbar-bg1" bind:value={t.navbarBG1} on:change={liveUpdate} />
+          <label for="navbar-bg1">{texts[$lang][5]}</label>
+        </div>
+        <div class="color-input">
+          <input type="color" id="navbar-bg2" bind:value={t.navbarBG2} on:change={liveUpdate} />
+          <label for="navbar-bg2">{texts[$lang][6]}</label>
+        </div>
+        <div class="color-input">
+          <input type="color" id="navbar-text" bind:value={t.navbarText} on:change={liveUpdate} />
+          <label for="navbar-text">{texts[$lang][7]}</label>
+        </div>
+        <div class="color-input">
+          <input
+            type="color"
+            id="navbar-accent"
+            bind:value={t.navbarAccent}
+            on:change={liveUpdate}
+          />
+          <label for="navbar-accent">{texts[$lang][8]}</label>
+        </div>
+        <div class="color-input">
+          <input type="color" id="accent" bind:value={t.accent} on:change={liveUpdate} />
+          <label for="accent">{texts[$lang][9]}</label>
+        </div>
+        <div class="color-input">
+          <input type="color" id="bg" bind:value={t.bg} on:change={liveUpdate} />
+          <label for="bg">{texts[$lang][10]}</label>
+        </div>
+        <div class="color-input">
+          <input type="color" id="text" bind:value={t.text} on:change={liveUpdate} />
+          <label for="text">{texts[$lang][11]}</label>
+        </div>
+        <div class="color-input">
+          <input type="color" id="text" bind:value={t.cardBG} on:change={liveUpdate} />
+          <label for="text">{texts[$lang][16]}</label>
+        </div>
+        <div class="color-input">
+          <input type="color" id="text" bind:value={t.cardText} on:change={liveUpdate} />
+          <label for="text">{texts[$lang][15]}</label>
+        </div>
+        <div class="color-input">
+          <input type="color" id="text" bind:value={t.cardAccent} on:change={liveUpdate} />
+          <label for="text">{texts[$lang][17]}</label>
+        </div>
+      </div>
+
+      <button on:click={generateRandomTheme}>{texts[$lang][12]}</button>
+      <button on:click={exportTheme}>{texts[$lang][13]}</button>
+      <button on:click={importTheme}>{texts[$lang][14]}</button>
     </div>
-    <div class="color-input">
-      <input type="color" id="navbar-bg2" bind:value={t.navbarBG2} on:change={liveUpdate} />
-      <label for="navbar-bg2">{texts[$lang][6]}</label>
-    </div>
-    <div class="color-input">
-      <input type="color" id="navbar-text" bind:value={t.navbarText} on:change={liveUpdate} />
-      <label for="navbar-text">{texts[$lang][7]}</label>
-    </div>
-    <div class="color-input">
-      <input type="color" id="navbar-accent" bind:value={t.navbarAccent} on:change={liveUpdate} />
-      <label for="navbar-accent">{texts[$lang][8]}</label>
-    </div>
-    <div class="color-input">
-      <input type="color" id="accent" bind:value={t.accent} on:change={liveUpdate} />
-      <label for="accent">{texts[$lang][9]}</label>
-    </div>
-    <div class="color-input">
-      <input type="color" id="bg" bind:value={t.bg} on:change={liveUpdate} />
-      <label for="bg">{texts[$lang][10]}</label>
-    </div>
-    <div class="color-input">
-      <input type="color" id="text" bind:value={t.text} on:change={liveUpdate} />
-      <label for="text">{texts[$lang][11]}</label>
-    </div>
-    <div class="color-input">
-      <input type="color" id="text" bind:value={t.cardBG} on:change={liveUpdate} />
-      <label for="text">{texts[$lang][16]}</label>
-    </div>
-    <div class="color-input">
-      <input type="color" id="text" bind:value={t.cardText} on:change={liveUpdate} />
-      <label for="text">{texts[$lang][15]}</label>
-    </div>
-    <div class="color-input">
-      <input type="color" id="text" bind:value={t.cardAccent} on:change={liveUpdate} />
-      <label for="text">{texts[$lang][17]}</label>
+    <div class="examples" style={themeToString(t)}>
+      <div class="top-group">
+        <div class="sample-text">
+          <div class="text">
+            <p>dis is how text luks !! :P</p>
+            <p>loarem imspmsum dolore sitte amenteinges !! <Emote name="business" /></p>
+            <p>consectetettur adscpsicisinginge elitte... <Emote name="youradhere" /></p>
+          </div>
+        </div>
+        <div class="sample-navbar">
+          <div class="arrow">▼ (togel arow)</div>
+          <div>hoameings</div>
+          <div>kitis</div>
+          <div>toangs</div>
+          <div class="accent">CLIK DIS !</div>
+        </div>
+      </div>
+      <div class="sample-card">
+        <h2>HALO !! I AM A CARDE !!</h2>
+        <p class="accent">i hab special colore !! :O</p>
+        <p>hehe eEeH!! <Emote name="silly" /> <Emote name="lik" /></p>
+      </div>
     </div>
   </div>
-
-  <button on:click={generateRandomTheme}>{texts[$lang][12]}</button>
-  <button on:click={exportTheme}>{texts[$lang][13]}</button>
-  <button on:click={importTheme}>{texts[$lang][14]}</button>
 </main>
