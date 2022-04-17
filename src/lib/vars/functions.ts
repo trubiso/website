@@ -1,5 +1,5 @@
-import { texts } from '.';
-import type { ITheme, Sorts } from './types';
+import { ITheme, texts } from '.';
+import type { Sorts } from './types';
 
 type TextCollectionTraverser =
   | string[]

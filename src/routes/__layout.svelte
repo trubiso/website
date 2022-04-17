@@ -3,15 +3,15 @@
   import Flowers from '$lib/flowers.svelte';
   import Navbar from '$lib/navbar/Navbar.svelte';
   import { fishy, lang, theme } from '$lib/stores';
-  import { ITheme, themeColors, themeToString } from '$lib/vars';
+  import { combineTheme, ITheme, themeToString } from '$lib/vars';
   import { onMount } from 'svelte';
   import '../styles/globals.scss';
 
-  let ct: ITheme | string = themeColors.smilie;
+  let ct: ITheme = combineTheme();
 
   onMount(() => {
     const lt = localStorage.getItem('theme');
-    theme.set(lt ? JSON.parse(lt) : themeColors.smilie);
+    theme.set(lt ? JSON.parse(lt) : combineTheme());
     theme.subscribe((v) => {
       document.documentElement.setAttribute(
         'style',
@@ -36,9 +36,7 @@
 
 <svelte:head>
   <meta
-    content={typeof ct == 'string'
-      ? themeColors[ct === 'q' ? 'smilie' : ct].navbarBG1
-      : ct.navbarBG1}
+    content={ct.navbarBG1}
     data-react-helmet="true"
     name="theme-color"
   />

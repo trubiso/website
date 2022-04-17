@@ -1,13 +1,13 @@
 <script lang="ts">
   import { lang, theme } from '$lib/stores';
 
-  import { getTextCollection, ITheme, randomHex, themeColors, themeToString } from '$lib/vars';
+  import { combineTheme, getTextCollection, ITheme, NavbarThemeName, randomHex, themeToString } from '$lib/vars';
   import Emote from './emote.svelte';
 
   const themeNames = getTextCollection('themes');
   const texts = getTextCollection('options.themes');
 
-  let t: ITheme = themeColors.panda;
+  let t: ITheme = combineTheme("panda");
   let updateLive = true;
 
   // is called on every change
@@ -49,8 +49,8 @@
   });
 
   // gets a theme name as it would be named in the css, relying on the english translation
-  function getThemeName(themeIdx: number, k = '-') {
-    return themeNames[0][themeIdx].replace(/ /g, k);
+  function getThemeName(themeIdx: number, k = '-'): NavbarThemeName {
+    return themeNames[0][themeIdx].replace(/ /g, k) as NavbarThemeName;
   }
 
   // sets the local colors to the global theme colors
@@ -60,6 +60,7 @@
 
   // changes the theme to one of the string themes
   function setTheme(v: string) {
+    switch
     theme.set(themeColors[v]);
     liveUpdate();
   }
@@ -122,16 +123,18 @@
 <main>
   <h1>{texts[$lang][0]}</h1>
   <h2>{texts[$lang][1]}</h2>
-  <div class="picker">
-    {#each themeNames[$lang] as d, i}
-      <div
-        class="theme"
-        style={themeToString(themeColors[getThemeName(i, '_')])}
-        on:click={() => setTheme(getThemeName(i, '_'))}
-      >
-        {d}
-      </div>
-    {/each}
+  <div class="pickers">
+    <div class="picker themepicker">
+      {#each themeNames[$lang] as d, i}
+        <div
+          class="theme"
+          style={themeToString(combineTheme(getThemeName(i, '_')))}
+          on:click={() => setTheme(getThemeName(i, '_'))}
+        >
+          {d}
+        </div>
+      {/each}
+    </div>
   </div>
 
   <h2>{texts[$lang][2]}</h2>

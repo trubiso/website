@@ -3,6 +3,10 @@
   flex-direction: row;
   text-align: center;
 
+  &.themepicker {
+    flex-direction: column;
+  }
+
   * {
     width: 100%;
     padding: 10px;
