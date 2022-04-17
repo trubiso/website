@@ -3,7 +3,7 @@ import { emoteLinks, emoteNames } from './json/emotes.json';
 export * from './functions';
 export * from './types';
 export * from './langs';
-export * from './themes';
+import * as themesJSON from './json/themes.json';
 
 export const socialMedias: Map<string, ISocialMediaEntry> = new Map()
   .set('github', {
@@ -34,3 +34,5 @@ export const navbarItems: string[] = [
   '/socials',
   '/options'
 ];
+
+export const themeColors = themesJSON;
