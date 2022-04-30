@@ -3,6 +3,7 @@
 
   import { getTextCollection, ITheme, randomHex, themeColors, themeToString } from '$lib/vars';
   import Emote from './emote.svelte';
+  import Hoverable from './hoverable.svelte';
 
   const themeNames = getTextCollection('themes');
   const texts = getTextCollection('options.themes');
@@ -124,13 +125,15 @@
   <h2>{texts[$lang][1]}</h2>
   <div class="picker">
     {#each themeNames[$lang] as d, i}
-      <div
-        class="theme"
-        style={themeToString(themeColors[getThemeName(i, '_')])}
-        on:click={() => setTheme(getThemeName(i, '_'))}
-      >
-        {d}
-      </div>
+      <!--<Hoverable>-->
+        <div
+          class="theme"
+          style={themeToString(themeColors[getThemeName(i, '_')])}
+          on:click={() => setTheme(getThemeName(i, '_'))}
+        >
+          {d}
+        </div>
+      <!--</Hoverable>-->
     {/each}
   </div>
 
