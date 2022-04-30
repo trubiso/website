@@ -30,3 +30,13 @@ export interface ITheme {
   cardText: string;
   cardAccent: string;
 }
+
+export class Point {
+  constructor(public x: number, public y: number) {}
+  toString(): string {
+    return `(${this.x}, ${this.y})`;
+  }
+  toArray(): number[] {
+    return [this.x, this.y];
+  }
+}

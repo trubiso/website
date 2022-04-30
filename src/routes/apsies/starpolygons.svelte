@@ -1,20 +1,10 @@
 <script lang="ts">
   import Emote from '$lib/emote.svelte';
-import Meta from '$lib/meta.svelte';
+  import Meta from '$lib/meta.svelte';
 
-  import { clamp, clampOverflow } from '$lib/vars';
+  import { clamp, clampOverflow, Point } from '$lib/vars';
 
   import { onMount } from 'svelte';
-
-  class Point {
-    constructor(public x: number, public y: number) {}
-    toString() {
-      return `(${this.x}, ${this.y})`;
-    }
-    toArray() {
-      return [this.x, this.y];
-    }
-  }
 
   let canvas: HTMLCanvasElement;
 
@@ -136,7 +126,11 @@ import Meta from '$lib/meta.svelte';
   {#if !canBeDrawn}
     <div class="warning">
       <span>
-        AAAHHE !! dis star-polygone dosnt exist or is a stare but not a polygone ! <Emote name="sad" size="36" spinning />
+        AAAHHE !! dis star-polygone dosnt exist or is a stare but not a polygone ! <Emote
+          name="sad"
+          size="36"
+          spinning
+        />
       </span>
     </div>
   {/if}
