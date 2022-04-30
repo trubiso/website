@@ -39,4 +39,10 @@ export class Point {
   toArray(): number[] {
     return [this.x, this.y];
   }
+  scale(n: number): Point {
+    return new Point(this.x * n, this.y * n);
+  }
+  move(n: Point): Point {
+    return new Point(this.x + n.x, this.y + n.y);
+  }
 }
