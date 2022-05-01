@@ -12,3 +12,10 @@ model qa {
   question   String
   answer     String?
 }
+
+model users {
+  id       String @id @db.Uuid
+  username String @unique
+  password String
+  token    String[]
+}
