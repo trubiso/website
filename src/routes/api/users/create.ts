@@ -9,8 +9,18 @@ export const post: RequestHandler = async ({ request }) => {
   try {
     const req = await request.json();
 
-    const username = req.username;
-    const password = req.password;
+    const username: string = req.username;
+
+    if (!username.match(/[a-zA-Z0-9._\-?!]+/))
+        return {
+          status: 500,
+          body: {
+            message: `Username must only have alphanumeric or punctuation characters.`,
+            error: 'badname'
+          }
+        };
+
+    const password: string = req.password;
 
     const saltRounds = 10;
     const salt = await bcrypt.genSalt(saltRounds);
