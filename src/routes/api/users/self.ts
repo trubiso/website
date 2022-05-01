@@ -1,10 +1,10 @@
 import prisma from '$lib/db';
+import { getRequestCookie } from '$lib/vars';
 import type { RequestHandler } from '@sveltejs/kit';
-import cookie from 'cookie';
 
 export const get: RequestHandler = async ({ request }) => {
   try {
-    const sentToken = cookie.parse(request.headers.get('Cookie'))['token'];
+    const sentToken = getRequestCookie(request, 'token');
 
     if (!sentToken) {
       return {
@@ -43,8 +43,10 @@ export const get: RequestHandler = async ({ request }) => {
     };
   } catch (error) {
     return {
+      status: 500,
       body: {
-        message: `Error: ${error}`
+        message: `${error}`,
+        error: 'unknown'
       }
     };
   }

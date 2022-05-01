@@ -3,6 +3,7 @@ import type { RequestHandler } from '@sveltejs/kit';
 import * as bcrypt from 'bcrypt';
 import * as uuid from 'uuid';
 import cookie from 'cookie';
+import { getRequestCookie } from '$lib/vars';
 
 export const post: RequestHandler = async ({ request }) => {
   try {
@@ -11,7 +12,7 @@ export const post: RequestHandler = async ({ request }) => {
     const username = req.username;
     const password = req.password;
 
-    const sentToken = cookie.parse(request.headers.get('Cookie'))['token'];
+    const sentToken = getRequestCookie(request, 'token');
 
     const user = await prisma.users.findFirst({
       where: {
@@ -19,22 +20,22 @@ export const post: RequestHandler = async ({ request }) => {
       }
     });
 
-    if (user.token.includes(sentToken)) {
-      return {
-        status: 500,
-        body: {
-          message: 'Already logged in.',
-          error: 'ok'
-        }
-      };
-    }
-
     if (!user) {
       return {
         status: 500,
         body: {
           message: `User not found.`,
           error: 'username'
+        }
+      };
+    }
+
+    if (user.token.includes(sentToken)) {
+      return {
+        status: 500,
+        body: {
+          message: 'Already logged in.',
+          error: 'ok'
         }
       };
     }
@@ -74,8 +75,10 @@ export const post: RequestHandler = async ({ request }) => {
     };
   } catch (error) {
     return {
+      status: 500,
       body: {
-        message: `Error: ${error}`
+        message: `${error}`,
+        error: 'unknown'
       }
     };
   }

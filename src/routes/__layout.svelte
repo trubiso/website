@@ -2,7 +2,7 @@
   import Emote from '$lib/emote.svelte';
   import Flowers from '$lib/flowers.svelte';
   import Navbar from '$lib/navbar/Navbar.svelte';
-  import { fishy, lang, theme } from '$lib/stores';
+  import { canScroll, fishy, lang, theme } from '$lib/stores';
   import { ITheme, themeColors, themeToString } from '$lib/vars';
   import { onMount } from 'svelte';
   import '../styles/globals.scss';
@@ -46,7 +46,7 @@
 
 <Navbar bind:sidebarOpen />
 <!--<Flowers />-->
-<main class="content" class:content-sidebar-open={sidebarOpen}>
+<main class="content" class:content-sidebar-open={sidebarOpen} class:noscroll={!$canScroll}>
   <slot />
 </main>
 

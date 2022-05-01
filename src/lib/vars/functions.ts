@@ -1,5 +1,6 @@
 import { texts } from '.';
 import type { ITheme, Sorts } from './types';
+import cookie from 'cookie';
 
 type TextCollectionTraverser =
   | string[]
@@ -87,7 +88,19 @@ export function clamp(value: number, min: number, max: number): number {
 }
 
 export function clampOverflow(value: number, min: number, max: number): number {
-  return value > max ? clampOverflow(value - max, min, max)
-  : value < min ? clampOverflow(value + max, min, max)
-  : value;
+  return value > max
+    ? clampOverflow(value - max, min, max)
+    : value < min
+    ? clampOverflow(value + max, min, max)
+    : value;
+}
+
+export function getRequestCookie(request: Request, name: string): string | undefined {
+  try {
+    const cookies = cookie.parse(request.headers.get('Cookie'));
+    if (cookies == null) return undefined;
+    else return cookies[name];
+  } catch (_) {
+    return undefined;
+  }
 }

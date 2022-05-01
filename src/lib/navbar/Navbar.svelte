@@ -5,6 +5,7 @@
   import { page } from '$app/stores';
   import { onMount } from 'svelte';
   import { slide } from 'svelte/transition';
+  import Account from './account.svelte';
 
   const itemNames = getTextCollection('navbar_items');
 
@@ -61,6 +62,7 @@
           >
         {/if}
       {/each}
+      <Account />
     </div>
   {/if}
 

@@ -8,7 +8,7 @@ body {
   min-height: 100vh;
   display: flex;
   font-family: 'Times New Roman', 'MS PGothic', Osaka, Times, serif;
-  button, input[type="submit"] {
+  button, input[type="submit"], input[type="text"], input[type="password"] {
     font-family: 'Times New Roman', 'MS PGothic', Osaka, Times, serif;
   }
   a {
@@ -49,6 +49,19 @@ body {
       100% {
         transform: translate3d(var(--move-final), 0, 0);
       }
+    }
+  }
+}
+
+main.noscroll {
+  position: static;
+  overflow: hidden;
+  slot {
+    position: static;
+    overflow: hidden;
+    element {
+      position: static;
+      overflow: hidden;
     }
   }
 }
