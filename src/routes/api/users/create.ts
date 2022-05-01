@@ -31,8 +31,9 @@ export const post: RequestHandler = async ({ request }) => {
       data: {
         id,
         username: username,
-        password: hash
-      }
+        password: hash,
+        creation: new Date()
+      },
     });
 
     return {

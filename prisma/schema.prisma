@@ -14,8 +14,9 @@ model qa {
 }
 
 model users {
-  id       String @id @db.Uuid
-  username String @unique
+  id       String    @id @db.Uuid
+  username String    @unique
   password String
   token    String[]
+  creation DateTime  @db.Timestamptz(6)
 }
