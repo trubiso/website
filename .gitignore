@@ -6,4 +6,3 @@ node_modules
 /public
 /.netlify
 .env
-/src/routes/api/users
