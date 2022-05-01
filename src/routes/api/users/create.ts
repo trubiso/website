@@ -20,6 +20,15 @@ export const post: RequestHandler = async ({ request }) => {
           }
         };
 
+    if (username.length > 32)        
+        return {
+          status: 500,
+          body: {
+            message: `Username must be less than 32 characters.`,
+            error: 'badname'
+          }
+        };
+
     const password: string = req.password;
 
     const saltRounds = 10;
