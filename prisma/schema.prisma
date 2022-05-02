@@ -14,19 +14,25 @@ model qa {
 }
 
 model user {
-  id       String    @id @db.Uuid
-  username String    @unique
+  id       String   @id @db.Uuid
+  username String   @unique
   password String
   token    String[]
-  creation DateTime  @db.Timestamptz(6)
+  creation DateTime @db.Timestamptz(6)
   profile  profile?
 }
 
 model profile {
-  user     user    @relation(fields: [id], references: [id])
+  user     user     @relation(fields: [id], references: [id])
   id       String   @id @db.Uuid
-  name     String
+  name     String?
   avatar   String?
+  bg       String?
+  isBgLink Boolean?
+  isBgTile Boolean?
+  text     String?
+  accent   String?
+  banner   String?
   bio      String?
   location String?
   website  String?
