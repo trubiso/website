@@ -14,7 +14,7 @@ export const post: RequestHandler = async ({ request }) => {
 
     const sentToken = getRequestCookie(request, 'token');
 
-    const user = await prisma.users.findFirst({
+    const user = await prisma.user.findFirst({
       where: {
         username: username
       }
@@ -53,7 +53,7 @@ export const post: RequestHandler = async ({ request }) => {
 
     const token = bcrypt.hashSync(uuid.v4(), 10);
 
-    await prisma.users.update({
+    await prisma.user.update({
       where: {
         id: user.id
       },

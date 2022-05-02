@@ -17,7 +17,7 @@ export const get: RequestHandler = async ({ url, request }) => {
       };
     }
 
-    const user = await prisma.users.findFirst({
+    const user = await prisma.user.findFirst({
       where: {
         token: { has: sentToken }
       }
@@ -33,7 +33,7 @@ export const get: RequestHandler = async ({ url, request }) => {
       };
     }
 
-    await prisma.users.update({
+    await prisma.user.update({
       where: {
         id: user.id
       },

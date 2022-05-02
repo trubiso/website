@@ -36,7 +36,7 @@ export const post: RequestHandler = async ({ request }) => {
     const hash = await bcrypt.hash(password, salt);
     const id = uuid.v4();
 
-    await prisma.users.create({
+    await prisma.user.create({
       data: {
         id,
         username: username,

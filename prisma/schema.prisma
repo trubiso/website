@@ -13,10 +13,21 @@ model qa {
   answer     String?
 }
 
-model users {
+model user {
   id       String    @id @db.Uuid
   username String    @unique
   password String
   token    String[]
   creation DateTime  @db.Timestamptz(6)
+  profile  profile?
+}
+
+model profile {
+  user     user    @relation(fields: [id], references: [id])
+  id       String   @id @db.Uuid
+  name     String
+  avatar   String?
+  bio      String?
+  location String?
+  website  String?
 }

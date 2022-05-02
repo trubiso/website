@@ -16,7 +16,7 @@ export const get: RequestHandler = async ({ request }) => {
       };
     }
 
-    const user = await prisma.users.findFirst({
+    const user = await prisma.user.findFirst({
       where: {
         token: { has: sentToken }
       }
