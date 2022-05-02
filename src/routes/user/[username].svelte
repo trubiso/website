@@ -63,8 +63,8 @@
   {/if}
   {#if profile.banner}
     <div class="banner" />
-    <div class="banner-aid" />
   {/if}
+  <div class="banner-aid" />
   {#if profile.avatar}
     <img src={profile.avatar} alt="{user.username} avatar !" class="avatar" />
   {/if}
@@ -101,6 +101,8 @@
       text-align: justify;
       margin-top: 25px;
       background-color: #0001;
+
+      white-space: pre-line;
 
       span {
         font-size: 14pt;
