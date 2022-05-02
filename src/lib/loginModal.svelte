@@ -36,7 +36,7 @@
           goodError = false;
           loading = false;
         } else {
-          setTimeout(()=>{
+          setTimeout(() => {
             location.reload();
           }, 500);
           kms();
@@ -46,6 +46,14 @@
 
   function register() {
     const d = new FormData(form);
+
+    if (d.get('confirmPassword') !== d.get('password')) {
+      error = 'Passwords do not match';
+      goodError = false;
+      loading = false;
+      return;
+    }
+
     loading = true;
     fetch('/api/users/create', {
       method: 'POST',
@@ -73,7 +81,7 @@
 
 <main>
   <div class="box" transition:fly={{ y: 1000 }}>
-    <div class="close" on:click={kms}>X</div>
+    <div class="close" on:click={kms}><img src="/close.png" alt="X" /></div>
     {#if loading}
       <div class="spinner">
         <Emote name="silly" size="100" spinning />
@@ -86,11 +94,11 @@
         {#if isLI} LOGE IN !! {:else} REGISTAR !! {/if}
       </h1>
       <form action="" on:submit|preventDefault={isLI ? login : register} bind:this={form}>
-        <div class="input">
+        <div class="input" class:sa={!isLI}>
           <label for="username">uzernaem</label>
           <input type="text" name="username" id="username" placeholder="tongu" required />
         </div>
-        <div class="input">
+        <div class="input" class:sa={!isLI}>
           <label for="password">pasworde</label>
           <input
             type="password"
@@ -100,6 +108,18 @@
             required
           />
         </div>
+        {#if !isLI}
+          <div class="input" class:sa={!isLI}>
+            <label for="confirmPassword">confirme pasworde</label>
+            <input
+              type="password"
+              name="confirmPassword"
+              id="confirmPassword"
+              placeholder="don maek a mistak :P"
+              required
+            />
+          </div>
+        {/if}
         <div class="login">
           {#if isLI}
             <input type="submit" value="LOGE IN !!" />
@@ -174,18 +194,18 @@
       display: flex;
       flex-direction: column;
       position: absolute;
-      background-color: red;
+      background-color: #ff3d1f;
       justify-content: center;
       align-items: center;
       padding: 10px;
       width: 200px;
-      left: 0;
-      top: 200px;
+      left: 10px;
+      top: 227px;
       height: 150px;
-      border-radius: 1px;
+      border-radius: 5px;
 
       &.success {
-        background-color: lime;
+        background-color: #66e8ff;
       }
 
       span {
@@ -231,7 +251,29 @@
     }
 
     .input {
+      display: flex;
       padding: 2px;
+      justify-content: center;
+      align-items: center;
+
+      label {
+        display: flex;
+        width: 70px;
+        height: 25px;
+        justify-content: right;
+        align-items: center;
+        margin-right: 5px;
+      }
+      input {
+        width: 165;
+        height: 22.5px;
+      }
+
+      &.sa {
+        label {
+          width: 130px;
+        }
+      }
     }
 
     h1 {
@@ -241,13 +283,13 @@
     .psa {
       position: absolute;
       right: 0;
-      bottom: 20px;
+      bottom: 40px;
     }
 
     .smilie-platform {
       position: absolute;
       left: 0;
-      bottom: 20px;
+      bottom: 40px;
       width: 100%;
       height: 20px;
       z-index: -1;
@@ -256,7 +298,7 @@
 
     .footer {
       display: flex;
-      height: 20px;
+      height: 40px;
       font-size: 10pt;
       position: absolute;
       bottom: 0;

@@ -9,9 +9,9 @@ export const post: RequestHandler = async ({ request }) => {
   try {
     const req = await request.json();
 
-    const username: string = req.username;
+    const username: string = req.username.trim();
 
-    if (!username.match(/[a-zA-Z0-9._\-?!]+/))
+    if (!username.match(/^[a-zA-Z0-9._\-?!]+$/))
         return {
           status: 500,
           body: {
