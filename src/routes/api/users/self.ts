@@ -20,7 +20,10 @@ export const get: RequestHandler = async ({ request, url }) => {
     const user = await prisma.user.findFirst({
       where: requested
         ? {
-            username: requested
+            username: {
+              equals: requested,
+              mode: 'insensitive'
+            }
           }
         : {
             token: { has: sentToken }

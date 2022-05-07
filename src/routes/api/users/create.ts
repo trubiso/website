@@ -1,6 +1,5 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import prisma from '$lib/db';
-import { PrismaClientKnownRequestError } from '@prisma/client/runtime';
 import type { RequestHandler } from '@sveltejs/kit';
 import * as bcrypt from 'bcrypt';
 import * as uuid from 'uuid';
@@ -11,23 +10,42 @@ export const post: RequestHandler = async ({ request }) => {
 
     const username: string = req.username.trim();
 
-    if (!username.match(/^[a-zA-Z0-9._\-?!]+$/))
-        return {
-          status: 500,
-          body: {
-            message: `Username must only have alphanumeric or punctuation characters.`,
-            error: 'badname'
+    if (
+      (await prisma.user.findFirst({
+        where: {
+          username: {
+            equals: username,
+            mode: 'insensitive'
           }
-        };
+        }
+      })) != null
+    ) {
+      return {
+        status: 500,
+        body: {
+          message: 'Username already exists',
+          error: 'username'
+        }
+      };
+    }
 
-    if (username.length > 32)        
-        return {
-          status: 500,
-          body: {
-            message: `Username must be less than 32 characters.`,
-            error: 'badname'
-          }
-        };
+    if (!username.match(/^[a-zA-Z0-9._\-?!]+$/))
+      return {
+        status: 500,
+        body: {
+          message: `Username must only have alphanumeric or punctuation characters.`,
+          error: 'badname'
+        }
+      };
+
+    if (username.length > 32)
+      return {
+        status: 500,
+        body: {
+          message: `Username must be less than 32 characters.`,
+          error: 'badname'
+        }
+      };
 
     const password: string = req.password;
 
@@ -42,7 +60,7 @@ export const post: RequestHandler = async ({ request }) => {
         username: username,
         password: hash,
         creation: new Date()
-      },
+      }
     });
 
     return {
@@ -51,19 +69,6 @@ export const post: RequestHandler = async ({ request }) => {
       }
     };
   } catch (error) {
-    if (
-      error instanceof PrismaClientKnownRequestError &&
-      error.meta &&
-      (error.meta as any).target.includes('username')
-    ) {
-      return {
-        status: 500,
-        body: {
-          message: `Username already exists.`,
-          error: 'username'
-        }
-      };
-    }
     return {
       status: 500,
       body: {
