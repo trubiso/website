@@ -265,7 +265,9 @@
         margin-right: 5px;
       }
       input {
-        width: 165;
+        border:1px solid #8f8f9d;
+        border-radius: 5px;
+        width: 165px;
         height: 22.5px;
       }
 
