@@ -1,6 +1,7 @@
 import prisma from '$lib/db';
-import { getRequestCookie } from '$lib/vars';
+import { arrContainsHashed, getRequestCookie } from '$lib/vars';
 import type { RequestHandler } from '@sveltejs/kit';
+import * as bcrypt from 'bcrypt';
 
 export const get: RequestHandler = async ({ url, request }) => {
   try {
@@ -17,11 +18,15 @@ export const get: RequestHandler = async ({ url, request }) => {
       };
     }
 
-    const user = await prisma.user.findFirst({
+    const users = await prisma.user.findMany({
       where: {
-        token: { has: sentToken }
+        token: {
+          isEmpty: false
+        }
       }
     });
+
+    const user = users.find((v) => arrContainsHashed(sentToken, v.token));
 
     if (user == null) {
       return {
@@ -38,7 +43,9 @@ export const get: RequestHandler = async ({ url, request }) => {
         id: user.id
       },
       data: {
-        token: removeTokens ? [] : user.token.filter((token) => token !== sentToken)
+        token: removeTokens
+          ? []
+          : user.token.filter((token) => !bcrypt.compareSync(token, sentToken))
       }
     });
 
