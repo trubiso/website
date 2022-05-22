@@ -1,9 +1,9 @@
 import prisma from '$lib/db';
-import { arrContainsHashed, getRequestCookie } from '$lib/vars';
 import type { RequestHandler } from '@sveltejs/kit';
 import * as bcrypt from 'bcrypt';
-import cookie from 'cookie';
 import * as uuid from 'uuid';
+import cookie from 'cookie';
+import { getRequestCookie } from '$lib/vars';
 
 export const post: RequestHandler = async ({ request }) => {
   try {
@@ -30,8 +30,7 @@ export const post: RequestHandler = async ({ request }) => {
       };
     }
 
-    if (arrContainsHashed(sentToken, user.token)) {
-      // token's hashed
+    if (user.token.includes(sentToken)) {
       return {
         status: 500,
         body: {
@@ -59,7 +58,7 @@ export const post: RequestHandler = async ({ request }) => {
         id: user.id
       },
       data: {
-        token: [...user.token, bcrypt.hashSync(token, 10)] // hash token again
+        token: [...user.token, token]
       }
     });
 

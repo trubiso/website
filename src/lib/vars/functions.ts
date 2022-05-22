@@ -1,7 +1,6 @@
 import { texts } from '.';
 import type { ITheme, Sorts } from './types';
 import cookie from 'cookie';
-import * as bcrypt from 'bcrypt';
 
 type TextCollectionTraverser =
   | string[]
@@ -104,8 +103,4 @@ export function getRequestCookie(request: Request, name: string): string | undef
   } catch (_) {
     return undefined;
   }
-}
-
-export function arrContainsHashed(str: string, arr: string[]): boolean {
-  return arr.some((v) => bcrypt.compareSync(str, v));
 }
