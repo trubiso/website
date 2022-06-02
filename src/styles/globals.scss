@@ -23,7 +23,7 @@ body {
     position: fixed;
     bottom: 0%;
     overflow: hidden;
-    z-index: 1;
+    z-index: 0;
     --offset: 20vw;
     --move-initial: calc(-25% + var(--offset));
     --move-final: calc(-50% + var(--offset));
@@ -69,6 +69,17 @@ main.noscroll {
 main.content {
   padding: 30px;
   width: 100%;
+}
+
+@media screen and (min-width: 600px) {
+  main.content {
+    &.left-margin {
+      margin-left: 200px;
+    }
+    &.right-margin {
+      margin-right: 200px;
+    }
+  }
 }
 
 @media screen and (max-width: 600px) {

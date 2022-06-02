@@ -62,10 +62,10 @@ nav {
     .navbar-toggle {
       display: none;
     }
-  }
-
-  main.content {
-    margin-left: 200px;
+    &.right {
+      right: 0;
+      left: auto;
+    }
   }
 
   .navbar-item-bottom {

@@ -5,6 +5,7 @@ import { localStorage, persist } from '@macfja/svelte-persistent-store';
 export const canScroll = writable(false);
 export const lang = writable(0);
 export const theme = writable<ITheme>(themeColors.smilie);
+export const sidebarLocation = writable(1);
 export const todo = writable<ITodoList[]>([]);
 persist(todo, localStorage(true), 'todo');
 export const fishy = writable(true);

@@ -60,6 +60,7 @@
       &:active {
         cursor: grabbing;
       }
+      user-select: none;
     }
   }
 </style>

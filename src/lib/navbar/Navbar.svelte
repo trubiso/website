@@ -12,6 +12,7 @@
   let clicks = 0;
 
   export let sidebarOpen = false;
+  export let location = 0;
 
   function toggleSidebarOpen() {
     sidebarOpen = !sidebarOpen;
@@ -26,45 +27,47 @@
   });
 </script>
 
-<nav class="navbar">
-  <div class="header-wrapper">
-    <div class="navbar-toggle" class:spin={sidebarOpen} on:click={toggleSidebarOpen}>▼</div>
-    <div class="logo">
-      {#if clicks < 10}
-        <img src="/logo.png" alt="logo" on:click={() => clicks++} />
-      {:else}
-        <img
-          src={emotes.get('silly')}
-          alt="logo"
-          on:click={() => clicks++}
-          class:spinning={clicks >= 25}
-          class:spinning-fast={clicks >= 50}
-        />
-      {/if}
-    </div>
-  </div>
-
-  {#if sidebarOpen || matches}
-    <div class="sidebar-wrapper" transition:slide>
-      {#each itemNames[$lang] as item, idx}
-        {#if idx !== itemNames[0].length - 1}
-          <a
-            href={navbarItems[idx]}
-            class="navbar-item"
-            class:bold={$page.url.pathname === navbarItems[idx]}>{item}</a
-          >
+<main>
+  <nav class="navbar" class:right={location === 1}>
+    <div class="header-wrapper">
+      <div class="navbar-toggle" class:spin={sidebarOpen} on:click={toggleSidebarOpen}>▼</div>
+      <div class="logo">
+        {#if clicks < 10}
+          <img src="/logo.png" alt="logo" on:click={() => clicks++} />
         {:else}
-          <a
-            href={navbarItems[idx]}
-            class="navbar-item navbar-item-special"
-            class:bold={$page.url.pathname === navbarItems[idx]}
-            on:contextmenu|preventDefault={() => spiny.set(true)}>{item}</a
-          >
+          <img
+            src={emotes.get('silly')}
+            alt="logo"
+            on:click={() => clicks++}
+            class:spinning={clicks >= 25}
+            class:spinning-fast={clicks >= 50}
+          />
         {/if}
-      {/each}
-      <Account />
+      </div>
     </div>
-  {/if}
 
-  <div style="display: none;">trubiso.tk/awesome</div>
-</nav>
+    {#if sidebarOpen || matches}
+      <div class="sidebar-wrapper" transition:slide>
+        {#each itemNames[$lang] as item, idx}
+          {#if idx !== itemNames[0].length - 1}
+            <a
+              href={navbarItems[idx]}
+              class="navbar-item"
+              class:bold={$page.url.pathname === navbarItems[idx]}>{item}</a
+            >
+          {:else}
+            <a
+              href={navbarItems[idx]}
+              class="navbar-item navbar-item-special"
+              class:bold={$page.url.pathname === navbarItems[idx]}
+              on:contextmenu|preventDefault={() => spiny.set(true)}>{item}</a
+            >
+          {/if}
+        {/each}
+        <Account />
+      </div>
+    {/if}
+
+    <div style="display: none;">trubiso.tk/awesome</div>
+  </nav>
+</main>

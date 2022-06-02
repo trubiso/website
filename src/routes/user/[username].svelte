@@ -110,10 +110,12 @@
     }
 
     .avatar {
-      top: 270px;
-      left: 270px;
+      position: absolute;
+      margin-left: 10px;
+      margin-top: -30px;
       width: 150px;
       height: 150px;
+      top: 270px;
     }
 
     h1.name {
@@ -133,7 +135,6 @@
       color: var(--text);
     }
 
-    .avatar,
     .banner {
       position: absolute;
       margin-left: -30px;
