@@ -102,5 +102,23 @@ nav {
         transform: rotate(180deg);
       }
     }
+
+    &.right {
+      top: auto;
+      bottom: 0;
+
+      .header-wrapper {
+        
+        height: 70px;
+        width: 100%;
+        bottom: 70px;
+        .navbar-toggle {
+          transform: rotate(180deg);
+        }
+        .spin {
+          transform: rotate(0deg);
+        }
+      }
+    }
   }
 }

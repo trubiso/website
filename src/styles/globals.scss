@@ -83,8 +83,13 @@ main.content {
 }
 
 @media screen and (max-width: 600px) {
-  body {
-    margin-top: 70px;
+  main.content {
+    &.left-margin {
+      margin-top: 70px;
+    }
+    &.right-margin {
+      margin-bottom: 70px;
+    }
     flex-direction: column;
   }
 

@@ -5,11 +5,20 @@
   import { fishy, lang, sidebarLocation } from '$lib/stores';
   import ThemeOptions from '$lib/themeOptions.svelte';
   import { getTitleOfPage } from '$lib/vars';
+  import { onMount } from 'svelte';
   import '../styles/options.scss';
 
   let fishyOn = !$fishy;
   let locationSelect = '0';
   sidebarLocation.subscribe((v) => (locationSelect = v.toString()));
+
+  let matches = false;
+
+  onMount(() => {
+    const query = window.matchMedia('(max-width: 600px)');
+    query.addListener((v) => (matches = v.matches));
+    matches = query.matches;
+  });
 </script>
 
 <Meta
@@ -34,8 +43,8 @@
       bind:value={locationSelect}
       on:change={() => sidebarLocation.set(parseInt(locationSelect))}
     >
-      <option value="0">←</option>
-      <option value="1">→</option>
+      <option value="0"> {#if matches}↑{:else}←{/if} </option>
+      <option value="1"> {#if matches}↓{:else}→{/if} </option>
     </select>
   </span>
 </main>
