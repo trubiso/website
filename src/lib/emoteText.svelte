@@ -15,21 +15,13 @@
 </script>
 
 <span>
-  {#if html}
-    {#each emoteText as e}
-      {#if e.emote}
-        <Emote name={e.text} {size} />
-      {:else}
-        {@html e.text}
-      {/if}
-    {/each}
-  {:else}
-    {#each emoteText as e}
-      {#if e.emote}
-        <Emote name={e.text} {size} />
-      {:else}
-        {e.text}
-      {/if}
-    {/each}
-  {/if}
+  {#each emoteText as e}
+    {#if e.emote}
+      <Emote name={e.text} {size} />
+    {:else if html}
+      {@html e.text}
+    {:else}
+      {e.text}
+    {/if}
+  {/each}
 </span>

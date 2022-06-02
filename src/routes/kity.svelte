@@ -35,6 +35,7 @@
     bind:this={kity}
     on:load={enableKities}
     on:click={meow}
+    draggable=false
   />
   <br />
   <button on:click={getNewKity} id="moarkity" disabled={isLoadingKity}>
