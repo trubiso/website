@@ -14,12 +14,14 @@ model qa {
 }
 
 model user {
-  id       String   @id @db.Uuid
-  username String   @unique
+  id       String    @id @db.Uuid
+  username String    @unique
   password String
   token    String[]
-  creation DateTime @db.Timestamptz(6)
+  creation DateTime  @db.Timestamptz(6)
   profile  profile?
+  posts    post[]
+  comments comment[]
 }
 
 model profile {
@@ -36,4 +38,24 @@ model profile {
   bio      String?
   location String?
   website  String?
+}
+
+model post {
+  id        String    @id @db.Uuid
+  author    String    @db.Uuid
+  user      user      @relation(fields: [author], references: [id])
+  createdAt DateTime  @db.Timestamptz(6)
+  text      String
+  comments  comment[]
+}
+
+model comment {
+  id       String    @id @db.Uuid
+  author   String    @db.Uuid
+  user     user      @relation(fields: [author], references: [id])
+  postId   String    @db.Uuid
+  parentId String?   @db.Uuid
+  post     post      @relation(fields: [postId], references: [id])
+  children comment[] @relation("Nested")
+  parent   comment?  @relation("Nested", fields: [parentId], references: [id])
 }
