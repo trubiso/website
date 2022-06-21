@@ -45,4 +45,6 @@
     {errorText[$lang][7]}
     <Emote name="think" /><Emote name="silly" /><br />
   {/if}
+  <br /><br />
+  <img src="https://http.cat/{error}" alt="{error}">
 </main>

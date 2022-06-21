@@ -108,7 +108,7 @@
   ],
   "about": [
     "thanks for visiting trubiso.tk",
-    "regarding privacy: this website uses your localStorage to store your preferences (which only you have access to), but it does not ever use any cookie to track you or to store anything at all.",
+    "regarding privacy: this website uses your localStorage to store your preferences (which only you have access to), but it does not ever use any cookie to track you. it does use cookies to store your login session but you can check that for yourself",
     "regarding collaborators: this website is open source, so you can contribute to it by making a pull request or opening an issue over at the repo. link:",
     "special thanks to: venn, clembs, karl2883, dave, carrot farmer and you",
     "you can find me on the following social media:",
