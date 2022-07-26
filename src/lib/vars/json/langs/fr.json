@@ -60,7 +60,7 @@
       "importer",
       "texte de la carte",
       "arrière-plan de la carte",
-      "card accent"
+      "couleur d'accentuation de la carte"
     ]
   },
   "index": {
@@ -113,7 +113,7 @@
   ],
   "about": [
     "merci de visiter trubiso.tk",
-    "à propos de votre vie privée : ce site utilise \"localStorage\" pour enregistrer vos préférences (seul le site et vous même y avez accès), mais il n'utilise aucun cookie pour vous tracer ou autre chose de la sorte.",
+    "regarding privacy: this website uses your localStorage to store your preferences (which only you have access to), but it does not ever use any cookie to track you. it does use cookies to store your login session but you can check that for yourself",
     "à propos des collaborateurs : ce site est open source, ce qui signifie que vous pouvez y contribuer en créant une pull request ou en ouvrant une issue sur la repository :",
     "un grand merci à : venn, clembs, karl2883, dave, carrot farmer et vous",
     "retrouvez-moi sur les réseaux sociaux suivants :",

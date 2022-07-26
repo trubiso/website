@@ -113,7 +113,7 @@
   ],
   "about": [
     "фала што го посетивте trubiso.tk",
-    "во врска со приватноста: веб-страницава го користи вашиот localStorage за да ви ги зачува опциите (до кои само вие имате пристап), но никогаш не користи колачиња за ве следи.",
+    "regarding privacy: this website uses your localStorage to store your preferences (which only you have access to), but it does not ever use any cookie to track you. it does use cookies to store your login session but you can check that for yourself",
     "во врска со соработување: секој може да го промени кодот на веб-страницава, па може да придонесеш со правење на pull request или со отворање на repository issue. линк:",
     "посебна благодарност до: venn, clembs, karl2883, dave, carrot farmer и до тебе",
     "може да ме најдеш на следниве социјални мрежи:",

@@ -1,40 +1,40 @@
 {
   "error": [
-    "PAKALA",
+    "PAKALA A!",
     "IKE A! sina kama lon lipu pakala",
     "taso, ale li pona...",
-    "sina lukin ala lukin e lipu nasin?",
-    "lon ni la, sina ken lukin e lipu mute",
-    "TASO! ken la, pakala ni li tan mi (tan jan Telupiso)!",
-    "ni la sina ken e toki tawa mi. mi wile pona e pakala!!",
-    "sina pali pakala seme???"
+    "o lukin e lipu nasin",
+    "lon ni la, sina ken tawa lipu mute",
+    "TASO! ken la, mi (jan Telupiso) pali e pakala ni!",
+    "ni la sina ken toki tawa mi!! mi pona e pakala.",
+    "sina pali e pakala seme a???"
   ],
   "themes": [
-    "sinpin pona",
-    "sike laso loje",
-    "sike pimeja",
-    "waso sona",
-    "waso sona pi kili sike",
-    "waso sona pi laso loje",
-    "kasi laso loje",
-    "kala loje walo",
-    "soweli pimeja walo",
+    "jelo",
+    "laso loje suno",
+    "laso loje pimeja",
+    "laso pimeja",
+    "laso pimeja pi loje lili",
+    "laso pimeja pi loje suli",
+    "kasi",
+    "kala",
+    "soweli",
     "pimeja",
     "walo",
-    "loje walo"
+    "loje walo wawa"
   ],
   "kitty": [
-    "mi kama pana e soweli suwi...",
+    "mi kama jo e soweli suwi sin...",
     "o pana e soweli suwi sin"
   ],
   "bad": [
     "LIPU NI LI IKE MUTE. O WEKA LON TENPO NI A.",
     "(ni li ale. ijo pona ala li lon)",
     "(o weka a)",
-    "(o weka)",
+    "(o ni)",
     "(o weka ala e tenpo sina)",
     "(o weka tan ni lon tenpo ni)",
-    "tan seme la, sina kute ala e toki mi",
+    "sina kute ala tan seme",
     "sina ike",
     "(anu seme? o pana e sitelen 'dQw4w9WgXcQ')"
   ],
@@ -45,30 +45,30 @@
     "themes": [
       "kule",
       "o kepeken kule pona ni...",
-      "ante la o pali e kule!",
-      "o sin e kule lipu",
-      "sina ante e kule la o pana anu seme?",
-      "kule monsi sewi pi lipu nasin",
-      "kule monsi anpa pi lipu nasin",
-      "kule sitelen pi lipu nasin",
-      "kule pi sitelen suli pi lipu nasin",
+      "ante la o sina e kule!",
+      "o kule sina e kule lipu",
+      "sina ante e kule la o pana ala pana?",
+      "kule monsi sewi lon lipu nasin",
+      "kule monsi anpa lon lipu nasin",
+      "kule sitelen lon lipu nasin",
+      "kule pi sitelen suli lon lipu nasin",
       "kule pi ijo suli",
       "kule monsi",
       "kule sitelen",
-      "o pali e kule nasa",
-      "o pana",
-      "o lanpan",
-      "kule sitelen pi lipu",
-      "kule monsi pi lipu",
-      "kule pi ijo suli pi lipu"
+      "o pana e kule nasa",
+      "o pana e kule sina",
+      "o kepeken kule ante",
+      "kule sitelen lipu",
+      "kule monsi lipu",
+      "kule pi ijo suli lon lipu"
     ]
   },
   "index": {
     "reasons": [
-      "ona li pona",
+      "ona li pona suli",
       "ona li kepeken ilo Siwete (Svelte)",
       "ona li pona tawa lukin",
-      "ilo pi tomo plai la, ona li jo e toki pona",
+      "ilo pi tomo plai la ona li pilin e ijo pi pona suli",
       "ona li jo e pakala sitelen (o lukin e ijo sewi nanpa wan)",
       "h"
     ],
@@ -80,43 +80,43 @@
   "navbar_items": [
     "lipu open",
     "sitelen pilin",
-    "o lukin ala e ni",
+    "lipu ike",
     "soweli suwi",
     "musi",
     "wile sona",
-    "sona mi",
+    "sona lipu",
     "ante"
   ],
   "smilies": {
     "texts": [
-      "ma ni la, jan pona mi - simaili - li lon! (tan:",
-      "olin pi emosiki",
+      "lipu ni la, sina ken lukin e sitelen pilin. ona pi mute suli li tan ma ni:",
+      "olin pi sitelen pilin Emosika",
       "nasin:",
-      "sina pona nasa! sina kama lukin e nanpa 2883 :)"
+      "usawi a! 2883 li lon :)"
     ],
     "sorts": [
-      "nimi (a-z)",
-      "nimi (z-a)",
-      "pali tenpo (suli-sin)",
-      "pali tenpo (sin-suli)",
+      "a-z",
+      "z-a",
+      "sin-suli",
+      "suli-sin",
       "nasin ala"
     ]
   },
   "q+a": [
-    "wile sona + sona",
-    "o alasa e sona mi!",
+    "wile sona",
+    "o pana e wile sona!",
     "o pana",
-    "pana lipu sina...",
-    "pana li pona!",
-    "o alasa e sona sin?",
+    "mi pana e wile sona sina...",
+    "pona la, wile sona sina li pana pona a!",
+    "sina wile ala wile pana e wile sona ante?",
     "lipu nanpa"
   ],
   "about": [
-    "trubiso.tk li pona la mi wile e ni",
-    "awen la: o awen e ante sina la, tan ni, lipu ni li kepeken e \"localStorage\" sina. jan seme ken lukin e ante sina la, sina jan taso. taso, lipu ni li kepeken ala e \"cookies\".",
-    "jan pali la: lipu ni pi toki ilo la ale ken lukin e ni. lon ni la sina ken pali tawa lipu ni:",
-    "venn en clembs en karl2883 en dave en carrot farmer en sina li jan pona",
-    "lon lipu ni la sina ken lukin e mi:",
-    "tawa pona"
+    "mi wile e ni: lipu ni li pona tawa sina",
+    "lipu ni li poki e ante sina lon ilo linluwi sina. taso, jan ala li ken lukin e pali ale sina lon lipu ni. sina taso. sina len",
+    "jan ale li ken pana e toki ilo tawa toki ilo pi lipu ni. sina wile pali e ni la o tawa lipu ni:",
+    "jan Venn en jan Clembs en jan Karl2883 en jan Dave en jan Carrot Farmer en sina a li jan pi pona suli a",
+    "mi lon lipu ante ni:",
+    "omekapo"
   ]
 }
