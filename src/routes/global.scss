@@ -1,5 +1,13 @@
+* {
+	box-sizing: border-box;
+}
+
 .bold {
 	font-weight: bold;
+}
+
+html {
+	overflow: hidden;
 }
 
 body {
@@ -9,30 +17,32 @@ body {
 	main.content {
 		width: 100%;
 		min-height: 100vh;
-    height: 100%;
-    margin-top: 0px;
+		height: 100%;
 		background: var(--bg);
 		color: var(--text);
-
-    font-family: 'Times New Roman', 'MS PGothic', Osaka, Times, serif;
-    button,
-    input {
-      font-family: 'Times New Roman', 'MS PGothic', Osaka, Times, serif;
-    }
+    
+		font-family: 'Times New Roman', 'MS PGothic', Osaka, Times, serif;
+		button,
+		input {
+			font-family: 'Times New Roman', 'MS PGothic', Osaka, Times, serif;
+		}
 
 		div.content-wrapper {
 			min-height: 100vh;
+      max-height: 100vh;
+      overflow: scroll;
 			display: flex;
-      flex-direction: column;
+			flex-direction: column;
 
 			a {
 				color: var(--text);
 			}
 
 			padding: 30px;
+			overflow: scroll;
 
 			&.sidebar-top {
-        margin-top: 70px;
+        padding-top: calc(70px + 30px);
 				height: calc(100% - 70px);
 			}
 
@@ -47,9 +57,13 @@ body {
 			}
 
 			&.sidebar-bottom {
-				margin-bottom: 70px;
+				padding-bottom: calc(70px + 30px);
 				height: calc(100% - 70px);
 			}
+
+			&.fixed {
+        overflow: hidden;
+      }
 		}
 	}
 }

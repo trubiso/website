@@ -1,9 +1,10 @@
 <script lang="ts">
 	import './Navbar.scss';
 	import { navbar } from '$lib/json';
-	import { mobile, sidebarLocation, sidebarStyle } from '$lib/stores';
+	import { lock, mobile, sidebarLocation, sidebarStyle } from '$lib/stores';
 	import NavbarElement from './NavbarElement.svelte';
 	import NavbarLogo from './NavbarLogo.svelte';
+	import { slide } from 'svelte/transition';
 
 	const items = navbar.order;
 
@@ -11,6 +12,7 @@
 
 	function toggleSidebar() {
 		open = !open;
+		lock.set(open);
 	}
 </script>
 
@@ -25,13 +27,15 @@
 	>
 		<div class="header-wrapper">
 			{#if $mobile}
-				<div class="navbar-toggle" on:click={toggleSidebar}>▼</div>
+				<a class="navbar-toggle" href="#h" on:click|preventDefault={toggleSidebar} class:spin={open}
+					>▼</a
+				>
 			{/if}
 			<NavbarLogo />
 		</div>
 
 		{#if open || !$mobile}
-			<div class="sidebar-wrapper">
+			<div class="sidebar-wrapper" transition:slide>
 				{#each items as item}
 					<NavbarElement name={item} />
 				{/each}

@@ -1,13 +1,13 @@
 .logo {
-  width: 100%;
-  text-align: center;
-  img {
-    padding: 13px;
-    min-width: calc(178px - 26px); // these calc things might look dumb
-    max-width: calc(178px - 26px); // but actually
-    min-height: calc(66px - 26px); // if you don't remove 26 px
-    max-height: calc(66px - 26px); // the logo gets stretched
-    user-select: none;
-    // TODO: easter egg
-  }
+	width: 100%;
+	text-align: center;
+	img {
+		padding: 13px;
+		min-width: 178px;
+		max-width: 178px;
+		min-height: 66px;
+		max-height: 66px;
+		user-select: none;
+		// TODO: easter egg
+	}
 }

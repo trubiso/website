@@ -4,7 +4,7 @@ import { themes } from './json';
 import { localStorage, persist } from '@macfja/svelte-persistent-store';
 // waiting for them to fix the require issue
 
-export const lang = writable("none");
+export const lang = writable('none');
 persist(lang, localStorage(true), 'lang');
 export const theme = writable<ITheme>(themes.smilie);
 persist(theme, localStorage(true), 'theme');
@@ -16,3 +16,4 @@ export const fishy = writable(true);
 persist(fishy, localStorage(true), 'fishy');
 export const spiny = writable(false);
 export const mobile = writable(false);
+export const lock = writable(false);

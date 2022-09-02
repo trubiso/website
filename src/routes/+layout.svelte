@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { langs } from '$lib/json';
 	import Navbar from '$lib/navbar/Navbar.svelte';
-	import { lang, mobile, sidebarLocation, theme } from '$lib/stores';
+	import { lang, mobile, sidebarLocation, lock, theme } from '$lib/stores';
 	import { get } from 'svelte/store';
 	import { onMount } from 'svelte';
 	import { themeToCSS } from '$lib/themes';
@@ -30,7 +30,7 @@
 
 <main class="content" style={themeToCSS($theme)}>
 	<Navbar />
-	
+
 	<div
 		class="content-wrapper"
 		class:sidebar-top={!$sidebarLocation && $mobile}
@@ -38,6 +38,7 @@
 		class:sidebar-right={$sidebarLocation && !$mobile}
 		class:sidebar-bottom={$sidebarLocation && $mobile}
 		class:mobile={$mobile}
+		class:fixed={$lock}
 	>
 		<slot />
 	</div>

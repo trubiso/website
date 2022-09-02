@@ -1,11 +1,13 @@
 <script lang="ts">
-  import './NavbarLogo.scss';
+	import { mobile } from '$lib/stores';
+
+	import './NavbarLogo.scss';
 
 	let clicks = 0; // easter egg
 </script>
 
 <main>
-	<div class="logo">
+	<div class="logo" class:mobile={$mobile}>
 		{#if clicks < 10}
 			<img src="/logo.png" alt="logo" on:click={() => clicks++} />
 		{:else}

@@ -5,45 +5,94 @@ nav.navbar {
 	flex-direction: column;
 	background: linear-gradient(to bottom, var(--navbarBG1), var(--navbarBG2));
 
+	&.sidebar-left {
+		left: 0;
+	}
+	&.sidebar-right {
+		right: 0;
+	}
   &.sidebar-top {
-    top: 0;
-  }
-  &.sidebar-left {
-    left: 0;
-  }
-  &.sidebar-right {
-    right: 0;
-  }
-  &.sidebar-bottom {
-    bottom: 0;
-  }
+		top: 0;
+    .header-wrapper > .spin {
+      transform: rotate(180deg);
+    }
+	}
+	&.sidebar-bottom {
+		bottom: 0;
+    .header-wrapper > .navbar-toggle {
+      transform: rotate(180deg);
+      &.spin {
+        transform: rotate(360deg);
+      }
+    }
+	}
 
-  &.sidebar-left, &.sidebar-right { // PC
-    padding-top: 20px;
-    width: 200px;
-    height: 100%;
-  }
+	&.sidebar-left,
+	&.sidebar-right {
+		// PC
+		padding-top: 20px;
+		width: 200px;
+		height: 100%;
+	}
 
-  &.sidebar-top, &.sidebar-bottom { // mobile
-    width: 100%;
-    height: 70px;
-  }
+	&.sidebar-top,
+	&.sidebar-bottom {
+		// mobile
+		width: 100%;
+		min-height: 70px;
+		max-height: 100vh;
+		overflow-y: scroll;
 
-	&.alt-bg { // ik this is a little messy but it won't matter that much
+		/*
+    .sidebar-wrapper {
+      align-self: center;
+      margin-top: 70px;
+      width: 100%;
+    }
+    */
+	}
+
+	&.alt-bg {
+		// ik this is a little messy but it won't matter that much
 		&.sidebar-top {
-			background: linear-gradient(to bottom, var(--navbarBG1), var(--bg));
+			background: linear-gradient(to bottom, var(--navbarBG1), #00000000);
 		}
 		&.sidebar-left {
-			background: linear-gradient(to right, var(--navbarBG1), var(--bg));
+			background: linear-gradient(to right, var(--navbarBG1), #00000000);
 		}
 		&.sidebar-right {
-			background: linear-gradient(to left, var(--navbarBG1), var(--bg));
+			background: linear-gradient(to left, var(--navbarBG1), #00000000);
 		}
 		&.sidebar-bottom {
-			background: linear-gradient(to top, var(--navbarBG1), var(--bg));
+			background: linear-gradient(to top, var(--navbarBG1), #00000000);
 		}
 	}
 
 	overflow-y: scroll;
 
+	/*
+  .sidebar-wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  */
+
+	.header-wrapper {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		align-self: center;
+
+		.navbar-toggle {
+			padding: 10px;
+			position: absolute;
+			transition: transform 0.4s;
+			user-select: none;
+			color: var(--navbar-text);
+			left: 0;
+			text-decoration: none;
+			color: var(--navbarText);
+		}
+	}
 }
