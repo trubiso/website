@@ -1,0 +1,14 @@
+{
+	"links": {
+		"home": "/",
+		"smilies": "/smilies",
+		"dont_click": "/bad",
+		"kitty": "/kity",
+		"games": "/games",
+		"q+a": "/q+a",
+		"about": "/about",
+		"options": "/options",
+		"log_in": "#"
+	},
+	"order": ["home", "smilies", "kitty", "games", "q+a", "about", "options"]
+}

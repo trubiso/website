@@ -1,0 +1,15 @@
+{
+  "en": {
+    "navbar": {
+      "home": "home",
+      "smilies": "smilies",
+      "dont_click": "don't click",
+      "kitty": "kitty",
+      "games": "games",
+      "q+a": "q+a",
+      "about": "about",
+      "options": "options",
+      "log_in": "log in?"
+    }
+  }
+}
