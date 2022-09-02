@@ -3,10 +3,9 @@
 	import { navbar } from '$lib/json';
 	import { mobile, sidebarLocation, sidebarStyle } from '$lib/stores';
 	import NavbarElement from './NavbarElement.svelte';
+	import NavbarLogo from './NavbarLogo.svelte';
 
 	const items = navbar.order;
-
-	let clicks = 0; // easter egg
 
 	let open = false;
 
@@ -28,14 +27,7 @@
 			{#if $mobile}
 				<div class="navbar-toggle" on:click={toggleSidebar}>▼</div>
 			{/if}
-			<div class="logo">
-				{#if clicks < 10}
-					<img src="/logo.png" alt="logo" on:click={() => clicks++} />
-				{:else}
-					<img src="/logo.png" alt=":silly:" on:click={() => clicks++} />
-					<!--TODO: finish logo (emotes map)-->
-				{/if}
-			</div>
+			<NavbarLogo />
 		</div>
 
 		{#if open || !$mobile}

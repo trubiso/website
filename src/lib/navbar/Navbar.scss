@@ -1,7 +1,6 @@
 nav.navbar {
 	display: flex;
 	position: fixed;
-	height: 100%;
 	z-index: 1;
 	flex-direction: column;
 	background: linear-gradient(to bottom, var(--navbarBG1), var(--navbarBG2));
@@ -10,15 +9,24 @@ nav.navbar {
     top: 0;
   }
   &.sidebar-left {
-    padding-top: 20px;
     left: 0;
   }
   &.sidebar-right {
-    padding-top: 20px;
     right: 0;
   }
   &.sidebar-bottom {
     bottom: 0;
+  }
+
+  &.sidebar-left, &.sidebar-right { // PC
+    padding-top: 20px;
+    width: 200px;
+    height: 100%;
+  }
+
+  &.sidebar-top, &.sidebar-bottom { // mobile
+    width: 100%;
+    height: 70px;
   }
 
 	&.alt-bg { // ik this is a little messy but it won't matter that much
