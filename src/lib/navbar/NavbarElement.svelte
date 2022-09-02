@@ -1,5 +1,5 @@
 <script lang="ts">
-	import './Navbar.scss';
+	import './NavbarElement.scss';
 
 	import { navbar } from '$lib/json';
 	import { t } from '$lib/localization';

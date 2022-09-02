@@ -1,0 +1,13 @@
+.navbar-item {
+	padding: 8px 10px 8px 10px;
+	text-decoration: none;
+	font-size: 25px;
+	color: var(--accent);
+	display: block;
+	text-align: center;
+	cursor: pointer;
+	user-select: none;
+	&-special {
+		color: var(--navbar-accent);
+	}
+}

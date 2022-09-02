@@ -1,0 +1,56 @@
+.bold {
+	font-weight: bold;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+
+	main.content {
+		width: 100%;
+		height: 100%;
+		background: var(--bg);
+		color: var(--text);
+
+		div.content-wrapper {
+			min-height: 100vh;
+			display: flex;
+      flex-direction: column;
+
+			font-family: 'Times New Roman', 'MS PGothic', Osaka, Times, serif;
+			button,
+			input {
+				font-family: 'Times New Roman', 'MS PGothic', Osaka, Times, serif;
+			}
+
+			a {
+				color: var(--text);
+			}
+
+			slot {
+				padding: 30px;
+				width: 100%;
+			}
+
+			&.sidebar-top {
+				margin-top: 70px;
+				height: calc(100% - 70px);
+			}
+
+			&.sidebar-left {
+				margin-left: 200px;
+				width: calc(100% - 200px);
+			}
+
+			&.sidebar-right {
+				margin-right: 200px;
+				width: calc(100% - 200px);
+			}
+
+			&.sidebar-bottom {
+				margin-bottom: 70px;
+				height: calc(100% - 70px);
+			}
+		}
+	}
+}

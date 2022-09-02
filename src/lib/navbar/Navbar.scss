@@ -1,0 +1,41 @@
+nav.navbar {
+	display: flex;
+	position: fixed;
+	height: 100%;
+	z-index: 1;
+	flex-direction: column;
+	background: linear-gradient(to bottom, var(--navbarBG1), var(--navbarBG2));
+
+  &.sidebar-top {
+    top: 0;
+  }
+  &.sidebar-left {
+    padding-top: 20px;
+    left: 0;
+  }
+  &.sidebar-right {
+    padding-top: 20px;
+    right: 0;
+  }
+  &.sidebar-bottom {
+    bottom: 0;
+  }
+
+	&.alt-bg { // ik this is a little messy but it won't matter that much
+		&.sidebar-top {
+			background: linear-gradient(to bottom, var(--navbarBG1), #00000000);
+		}
+		&.sidebar-left {
+			background: linear-gradient(to right, var(--navbarBG1), #00000000);
+		}
+		&.sidebar-right {
+			background: linear-gradient(to left, var(--navbarBG1), #00000000);
+		}
+		&.sidebar-bottom {
+			background: linear-gradient(to top, var(--navbarBG1), #00000000);
+		}
+	}
+
+	overflow-y: scroll;
+
+}
