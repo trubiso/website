@@ -31,16 +31,16 @@ nav.navbar {
 
 	&.alt-bg { // ik this is a little messy but it won't matter that much
 		&.sidebar-top {
-			background: linear-gradient(to bottom, var(--navbarBG1), #00000000);
+			background: linear-gradient(to bottom, var(--navbarBG1), var(--bg));
 		}
 		&.sidebar-left {
-			background: linear-gradient(to right, var(--navbarBG1), #00000000);
+			background: linear-gradient(to right, var(--navbarBG1), var(--bg));
 		}
 		&.sidebar-right {
-			background: linear-gradient(to left, var(--navbarBG1), #00000000);
+			background: linear-gradient(to left, var(--navbarBG1), var(--bg));
 		}
 		&.sidebar-bottom {
-			background: linear-gradient(to top, var(--navbarBG1), #00000000);
+			background: linear-gradient(to top, var(--navbarBG1), var(--bg));
 		}
 	}
 

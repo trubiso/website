@@ -29,6 +29,8 @@
 </svelte:head>
 
 <main class="content" style={themeToCSS($theme)}>
+	<Navbar />
+	
 	<div
 		class="content-wrapper"
 		class:sidebar-top={!$sidebarLocation && $mobile}
@@ -37,8 +39,6 @@
 		class:sidebar-bottom={$sidebarLocation && $mobile}
 		class:mobile={$mobile}
 	>
-		<Navbar />
-
 		<slot />
 	</div>
 </main>

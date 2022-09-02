@@ -14,25 +14,22 @@ body {
 		background: var(--bg);
 		color: var(--text);
 
+    font-family: 'Times New Roman', 'MS PGothic', Osaka, Times, serif;
+    button,
+    input {
+      font-family: 'Times New Roman', 'MS PGothic', Osaka, Times, serif;
+    }
+
 		div.content-wrapper {
 			min-height: 100vh;
 			display: flex;
       flex-direction: column;
 
-			font-family: 'Times New Roman', 'MS PGothic', Osaka, Times, serif;
-			button,
-			input {
-				font-family: 'Times New Roman', 'MS PGothic', Osaka, Times, serif;
-			}
-
 			a {
 				color: var(--text);
 			}
 
-			slot {
-				padding: 30px;
-				width: 100%;
-			}
+			padding: 30px;
 
 			&.sidebar-top {
         margin-top: 70px;
