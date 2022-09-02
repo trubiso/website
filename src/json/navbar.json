@@ -10,5 +10,5 @@
 		"options": "/options",
 		"log_in": "#"
 	},
-	"order": ["home", "smilies", "kitty", "games", "q+a", "about", "options"]
+	"order": ["home", "smilies", "dont_click", "kitty", "games", "q+a", "about", "options"]
 }
