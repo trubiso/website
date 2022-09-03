@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { HSVtoHEX } from '$lib/color';
+	import { createEventDispatcher } from 'svelte';
 	import Pointer from './Pointer.svelte';
 
 	import './SvPicker.scss';
@@ -8,6 +9,11 @@
 	export let val = 0;
 
 	$: pickerBG = HSVtoHEX(hue, 1, 1);
+
+	const dispatch = createEventDispatcher();
+	function change() {
+		dispatch('change');
+	}
 </script>
 
 <main>
@@ -23,6 +29,8 @@
 				irelY
 				bind:relX={sat}
 				bind:relY={val}
+				noRound
+				on:change={change}
 			/>
 		</div>
 		<div class="sv-picker-white" />

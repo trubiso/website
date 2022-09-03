@@ -1,5 +1,7 @@
 <script lang="ts">
+	import { createEventDispatcher } from 'svelte';
 	import './Pointer.scss';
+
 	export let height: string = '0';
 	export let width: string;
 	export let mrel: string = '1';
@@ -23,6 +25,10 @@
 	export let irelX = false;
 	export let irelY = false;
 
+	export let noRound = false;
+
+	const dispatch = createEventDispatcher();
+
 	function dragMouseDown(e: MouseEvent) {
 		oldLeft = e.clientX;
 		oldTop = e.clientY;
@@ -36,6 +42,7 @@
 		oldLeft = e.clientX;
 		oldTop = e.clientY;
 		clampPos();
+		dispatch('change');
 	}
 
 	function clampPos() {
@@ -47,6 +54,11 @@
 		relY = (y / boxHeight) * multRel;
 		if (irelX) relX = 1 - relX;
 		if (irelY) relY = 1 - relY;
+
+		if (!noRound) {
+			relX = Math.round(relX);
+			relY = Math.round(relY);
+		}
 	}
 
 	function stopDrag() {
@@ -60,6 +72,6 @@
 		class="point"
 		style="--x:{x + xOffset}px;--y:{y + yOffset}px;"
 		class:point-alt={twod}
-		on:mousedown|preventDefault={dragMouseDown}
+		on:mousedown={dragMouseDown}
 	/>
 </main>

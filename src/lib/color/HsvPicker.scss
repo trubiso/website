@@ -1,0 +1,21 @@
+.hsv-picker {
+	display: flex;
+  flex-direction: column;
+
+  .sv-picker-wrap, .hue-picker-wrap, .hsv-manual-wrap {
+    display: flex;
+    margin-bottom: 10px;
+  }
+
+  .hsv-manual-wrap {
+    .hsv-manual-input {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 120px;
+      input {
+        width: 100px;
+      }
+    }
+  }
+}
