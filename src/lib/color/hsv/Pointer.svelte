@@ -52,8 +52,8 @@
 		y = Math.min(y, boxHeight);
 		relX = (x / boxWidth) * multRel;
 		relY = (y / boxHeight) * multRel;
-		if (irelX) relX = 1 - relX;
-		if (irelY) relY = 1 - relY;
+		if (irelX) relX = multRel - relX;
+		if (irelY) relY = multRel - relY;
 
 		if (!noRound) {
 			relX = Math.round(relX);

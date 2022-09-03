@@ -8,7 +8,7 @@
 	export let sat = 0;
 	export let val = 0;
 
-	$: pickerBG = HSVtoHEX(hue, 1, 1);
+	$: pickerBG = HSVtoHEX(hue, 100, 100);
 
 	const dispatch = createEventDispatcher();
 	function change() {
@@ -20,13 +20,14 @@
 	<div class="sv-picker" style="--picker-bg: {pickerBG};">
 		<div class="sv-picker-bg">
 			<Pointer
-				x={sat * 360}
-				y={(1 - val) * 300}
+				x={sat * 3.6}
+				y={(100 - val) * 3}
 				width="360"
 				height="300"
 				xOffset={-7.5}
 				yOffset={-7.5}
 				irelY
+				mrel="100"
 				bind:relX={sat}
 				bind:relY={val}
 				noRound
