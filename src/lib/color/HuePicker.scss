@@ -1,0 +1,15 @@
+.hue-picker-filler {
+	width: 360px;
+	height: 25px;
+}
+
+main {
+	position: relative;
+
+	.hue-picker {
+		width: 360px;
+		height: 25px;
+		position: absolute;
+		//background: linear-gradient(to right, #f00, #ff0, #0f0, #0ff, #00f, #f0f, #f00);
+	}
+}

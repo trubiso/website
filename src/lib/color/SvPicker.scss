@@ -1,0 +1,36 @@
+.sv-picker-filler {
+	width: 400px;
+	height: 300px;
+}
+
+main {
+	position: relative;
+
+	.sv-picker {
+		width: 360px;
+		height: 300px;
+		position: absolute;
+		.sv-picker-bg, .sv-picker-white, .sv-picker-black {
+			width: 100%;
+			height: 100%;
+		}
+		.sv-picker-bg {
+			background-color: var(--picker-bg);
+		}
+
+		.sv-picker-white,
+		.sv-picker-black {
+			position: absolute;
+			top: 0;
+			left: 0;
+		}
+
+		.sv-picker-white {
+			background: linear-gradient(to right, #fff, #0000);
+		}
+
+		.sv-picker-black {
+			background: linear-gradient(to top, #000, #0000);
+		}
+	}
+}
