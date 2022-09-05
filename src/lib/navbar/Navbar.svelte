@@ -23,7 +23,9 @@
 		class:sidebar-left={!$sidebarLocation && !$mobile}
 		class:sidebar-right={$sidebarLocation && !$mobile}
 		class:sidebar-bottom={$sidebarLocation && $mobile}
-		class:alt-bg={$sidebarStyle}
+		class:alt-bg={$sidebarStyle === 1}
+		class:rainbow-bg={$sidebarStyle === 2}
+		class:rainbow-alt={$sidebarStyle === 3}
 	>
 		<div class="header-wrapper">
 			{#if $mobile}

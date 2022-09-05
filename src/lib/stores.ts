@@ -10,7 +10,7 @@ export const theme = writable<ITheme>(themes.smilie);
 persist(theme, localStorage(true), 'theme');
 export const sidebarLocation = writable(false);
 persist(sidebarLocation, localStorage(true), 'sidebarLocation');
-export const sidebarStyle = writable(false);
+export const sidebarStyle = writable(0);
 persist(sidebarStyle, localStorage(true), 'sidebarStyle');
 export const fishy = writable(true);
 persist(fishy, localStorage(true), 'fishy');

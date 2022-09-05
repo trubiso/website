@@ -68,6 +68,26 @@ nav.navbar {
 		}
 	}
 
+	&.rainbow-bg {
+		&.sidebar-left,
+	&.sidebar-right {
+		background: linear-gradient(to top, #800, #880, #080, #088, #008, #808, #800);
+	}
+		&.sidebar-top, &.sidebar-bottom {
+			background: linear-gradient(to right, #800, #880, #080, #088, #008, #808, #800);
+		}
+	}
+
+	&.rainbow-alt {
+		&.sidebar-left,
+	&.sidebar-right {
+		background: linear-gradient(to top, #f00, #ff0, #0f0, #0ff, #00f, #f0f, #f00);
+	}
+		&.sidebar-top, &.sidebar-bottom {
+			background: linear-gradient(to right, #f00, #ff0, #0f0, #0ff, #00f, #f0f, #f00);
+		}
+	}
+
 	overflow-y: scroll;
 
 	/*
