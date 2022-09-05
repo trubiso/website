@@ -2,13 +2,13 @@
 	import { createEventDispatcher } from 'svelte';
 	import './Pointer.scss';
 
-	export let height: string = '0';
-	export let width: string;
+	export let height: string | number = '0';
+	export let width: string | number;
 	export let mrel: string = '1';
 	$: twod = height !== '0';
 
-	$: boxHeight = parseInt(height);
-	$: boxWidth = parseInt(width);
+	$: boxHeight = typeof height == 'number' ? height : parseInt(height);
+	$: boxWidth = typeof width == 'number' ? width : parseInt(width);
 	$: multRel = parseFloat(mrel);
 
 	let oldLeft = 0;

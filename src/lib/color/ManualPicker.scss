@@ -1,0 +1,30 @@
+@import './Globals.scss';
+
+.manual {
+	display: flex;
+	align-self: flex-start;
+	.manual-input {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		width: 120px;
+		@media screen and (max-width: $toggleMobile) {
+			width: calc((100vw - $mBigOff) / 3);
+		}
+		input {
+			width: 100px;
+			@media screen and (max-width: $toggleMobile) {
+				width: calc((100vw - $mBigOff) / 3.6);
+			}
+		}
+	}
+
+	&.big {
+		.manual-input {
+			width: 360px;
+			@media screen and (max-width: $toggleMobile) {
+				width: calc(100vw - $mBigOff);
+			}
+		}
+	}
+}

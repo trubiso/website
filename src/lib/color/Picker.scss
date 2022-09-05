@@ -1,0 +1,13 @@
+.picker {
+	display: flex;
+  flex-direction: column;
+  width: 360px;
+  @media screen and (max-width: 420px) {
+    width: calc((100vw - 60px));
+  }
+
+  .picker-wrap {
+    display: flex;
+    margin-bottom: 10px;
+  }
+}

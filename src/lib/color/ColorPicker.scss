@@ -1,0 +1,26 @@
+@import './Globals.scss';
+
+div.color-picker {
+	display: flex;
+  align-items: flex-start;
+  @media screen and (max-width: 800px) {
+    flex-direction: column;
+  }
+	.input {
+		display: flex;
+		align-items: center;
+		> * {
+			margin-right: 5px;
+      margin-bottom: 5px;
+		}
+	}
+	.pickers-wrap {
+		display: none;
+		&.open {
+			display: block;
+			@media screen and (max-width: $toggleMobile) {
+				width: calc(100vw - $mBrdOff);
+			}
+		}
+	}
+}

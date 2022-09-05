@@ -2,7 +2,8 @@
 	import { createEventDispatcher } from 'svelte';
 	import HsvManualPicker from './HsvManualPicker.svelte';
 
-	import './HsvPicker.scss';
+	import { HEXtoHSV, HSVtoHEX } from '$lib/color';
+	import '../Picker.scss';
 	import HuePicker from './HuePicker.svelte';
 	import SvPicker from './SvPicker.svelte';
 
@@ -11,23 +12,32 @@
 		val = 100;
 
 	const dispatch = createEventDispatcher();
-	function change() {
+	function syncChange() {
 		syncShown();
+		change();
+	}
+
+	function change() {
 		dispatch('change');
+	}
+
+	export function importHEX(hex: string) {
+		[hue, sat, val] = HEXtoHSV(hex);
+		syncShown();
 	}
 
 	let syncShown: () => {};
 </script>
 
 <main>
-	<div class="hsv-picker">
-		<div class="sv-picker-wrap">
-			<SvPicker {hue} bind:sat bind:val on:change={change} />
+	<div class="picker">
+		<div class="picker-wrap">
+			<SvPicker {hue} bind:sat bind:val on:change={syncChange} />
 		</div>
-		<div class="hue-picker-wrap">
-			<HuePicker bind:hue {sat} {val} on:change={change} />
+		<div class="picker-wrap">
+			<HuePicker bind:hue {sat} {val} on:change={syncChange} />
 		</div>
-		<div class="hsv-manual-wrap">
+		<div class="picker-wrap">
 			<HsvManualPicker bind:hue bind:sat bind:val bind:syncShown on:change={change} />
 		</div>
 	</div>

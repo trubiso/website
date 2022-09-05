@@ -1,46 +1,50 @@
 <script lang="ts">
-	import { HSVtoRGB } from '$lib/color';
-	import HsvPicker from './hsv/HsvPicker.svelte';
-	import RgbHexPicker from './rgbhex/RgbHexPicker.svelte';
+	import './ColorPicker.scss';
 
-	//export let color = '#000000';
+	import { createEventDispatcher } from 'svelte';
 
-	let newColor = '#000000';
+	import AllPickers from './AllPickers.svelte';
+
+	export let color = '#000000';
+	export let label = '';
+	export let id: string;
+	let oldColor = color;
 
 	let open = false;
 
 	function toggle() {
 		open = !open;
+		if (open) {
+			oldColor = color;
+			changeHEX(color);
+		}
 	}
 
-	let hue = 40,
-		sat = 100,
-		val = 100;
+	let changeHEX: (hex: string) => {};
+
+	const dispatch = createEventDispatcher();
+	function change() {
+		dispatch('change');
+	}
 </script>
 
 <main>
+	{color}
 	<div class="color-picker">
-		<input type="color" on:click|preventDefault={toggle} />
-		<div class="color-picker-box">
-			{hue.toFixed(0)}°
-			{(sat).toFixed(1)}%
-			{(val).toFixed(1)}%
-			<div
-				style="width: 50px; height: 50px; background-color: rgb({HSVtoRGB(hue, sat, val).join(
-					','
-				)});"
+		<div class="input">
+			<input type="color" id="{id}" bind:value={color} on:click|preventDefault={toggle} />
+			{#if label !== ''}
+				<label for="{id}">{label}</label>
+			{/if}
+		</div>
+		<div class="pickers-wrap" class:open>
+			<AllPickers
+				bind:changeHEX
+				bind:oldColor
+				bind:hex={color}
+				on:change={change}
+				on:done={toggle}
 			/>
-			<br />
-			<div class="hsv-picker-wrap">
-				<HsvPicker bind:hue bind:sat bind:val />
-			</div>
-			<div class="rgb-hex-wrap">
-				<RgbHexPicker />
-			</div>
-			<!--TODO: conversion to rgb & hex-->
-			<!--TODO: open when color button is clicked-->
-			<!--TODO: sync all colors-->
-			<!--todo: sleep (it's 2:32 am at the time of writing)-->
 		</div>
 	</div>
 </main>

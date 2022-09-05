@@ -1,16 +1,23 @@
+@import '../Globals.scss';
+
 .sv-picker-filler {
-	width: 400px;
 	height: 300px;
 }
 
-main {
+main.sv-picker-wrap {
+	display: flex;
 	position: relative;
 
 	.sv-picker {
+		@media screen and (max-width: $toggleMobile) {
+			width: calc(100vw - $mBigOff);
+		}
 		width: 360px;
 		height: 300px;
 		position: absolute;
-		.sv-picker-bg, .sv-picker-white, .sv-picker-black {
+		.sv-picker-bg,
+		.sv-picker-white,
+		.sv-picker-black {
 			width: 100%;
 			height: 100%;
 		}

@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { createEventDispatcher, onMount } from 'svelte';
-	import './HsvManualPicker.scss';
+	import '../ManualPicker.scss';
 
 	export let hue = 47,
 		sat = 1,
@@ -16,6 +16,8 @@
 
 		sat = sSat;
 		val = sVal;
+
+		change();
 	}
 
 	onMount(syncShown);
@@ -32,8 +34,8 @@
 </script>
 
 <main>
-	<div class="hsv-manual">
-		<div class="hsv-manual-input">
+	<div class="manual">
+		<div class="manual-input">
 			<input
 				type="number"
 				bind:value={hue}
@@ -45,7 +47,7 @@
 			/>
 			<label for="hue">hue</label>
 		</div>
-		<div class="hsv-manual-input">
+		<div class="manual-input">
 			<input
 				type="number"
 				bind:value={sSat}
@@ -57,7 +59,7 @@
 			/>
 			<label for="sat">saturation</label>
 		</div>
-		<div class="hsv-manual-input">
+		<div class="manual-input">
 			<input
 				type="number"
 				bind:value={sVal}

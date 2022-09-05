@@ -10,20 +10,23 @@
 
 	$: pickerBG = HSVtoHEX(hue, 100, 100);
 
+	let cw = 360,
+		ch = 300;
+
 	const dispatch = createEventDispatcher();
 	function change() {
 		dispatch('change');
 	}
 </script>
 
-<main>
-	<div class="sv-picker" style="--picker-bg: {pickerBG};">
+<main class="sv-picker-wrap">
+	<div class="sv-picker" bind:clientWidth={cw} style="--picker-bg: {pickerBG};">
 		<div class="sv-picker-bg">
 			<Pointer
-				x={sat * 3.6}
-				y={(100 - val) * 3}
-				width="360"
-				height="300"
+				x={(sat * cw) / 100}
+				y={((100 - val) * ch) / 100}
+				width={cw}
+				height={ch}
 				xOffset={-7.5}
 				yOffset={-7.5}
 				irelY

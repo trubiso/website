@@ -1,4 +1,9 @@
-type RGB = [number, number, number];
+type RGB = [number, number, number]; // they're the same thing
+type HSV = [number, number, number]; // but who cares?
+
+export function radiansToDeg(rad: number): number {
+	return (rad * 180) / Math.PI;
+}
 
 export function validateHEX(hex: string): boolean {
 	if (!hex.startsWith('#')) return false;
@@ -20,6 +25,17 @@ export function validateRGB(r: number, g: number, b: number): boolean {
 		return true;
 	}
 	return v(r) && v(g) && v(b);
+}
+
+export function HEXtoRGB(hex: string): RGB {
+	if (!validateHEX(hex)) throw new Error(`Invalid hex code ${hex}.`);
+	const r = hex.slice(1, 3);
+	const g = hex.slice(3, 5);
+	const b = hex.slice(5, 7);
+	const rVal = parseInt(r, 16);
+	const gVal = parseInt(g, 16);
+	const bVal = parseInt(b, 16);
+	return [rVal, gVal, bVal];
 }
 
 export function HSVtoRGB(h: number, s: number, v: number): RGB {
@@ -65,13 +81,29 @@ export function HSVtoHEX(h: number, s: number, v: number): string {
 	return RGBtoHEX(r, g, b);
 }
 
-export function HEXtoRGB(hex: string): RGB {
-	if (!validateHEX(hex)) throw new Error(`Invalid hex code ${hex}.`);
-	const r = hex.slice(1, 3);
-	const g = hex.slice(3, 5);
-	const b = hex.slice(5, 7);
-	const rVal = parseInt(r, 16);
-	const gVal = parseInt(g, 16);
-	const bVal = parseInt(b, 16);
-	return [rVal, gVal, bVal];
+export function RGBtoHSV(r: number, g: number, b: number): HSV {
+	if (!validateRGB(r, g, b)) throw new Error(`Invalid RGB values (${r},${g},${b})`);
+	const M = Math.max(r, g, b);
+	const m = Math.min(r, g, b);
+
+	const v = M / 255;
+	const s = M === 0 ? 0 : 1 - m / M;
+
+	const t = Math.sqrt(Math.pow(r, 2) + Math.pow(g, 2) + Math.pow(b, 2) - r * g - r * b - g * b);
+	const d = r - g / 2 - b / 2;
+	const f = Math.acos(d / t);
+	const p = radiansToDeg(f);
+
+	const h = g >= b ? p : 360 - p;
+
+	const ph = isNaN(h) ? 0 : Math.round(h);
+	const ps = Math.round(s * 100);
+	const pv = Math.round(v * 100);
+
+	return [ph, ps, pv];
+}
+
+export function HEXtoHSV(hex: string): HSV {
+	const [r, g, b] = HEXtoRGB(hex);
+	return RGBtoHSV(r, g, b);
 }

@@ -1,0 +1,53 @@
+@import './Globals.scss';
+
+.all-pickers-wrap {
+  position:fixed;
+  z-index: 1;
+	background-color: var(--cardBG);
+	color: var(--cardText);
+
+  //width: 380px;
+	max-width: 380px;
+
+  @media screen and (max-width: 440px) {
+    max-width: calc(100vw - 60px);
+  }
+
+	padding: 10px;
+	.all-pickers {
+		display: flex;
+		flex-wrap: wrap;
+
+		.side-pickers {
+			display: flex;
+			flex-direction: column;
+			max-width: 360px;
+      @media screen and (max-width: 440px) {
+        max-width: calc(100vw - 80px);
+      }
+			max-height: 395px;
+
+			.previews {
+				display: flex;
+				flex-direction: row;
+				align-self: center;
+			}
+
+			.filler {
+				flex-grow: 1;
+			}
+
+			.actions {
+				display: flex;
+				flex-direction: row;
+				flex-wrap: wrap;
+
+				button {
+					flex-grow: 1;
+					padding: 5px;
+					margin: 5px;
+				}
+			}
+		}
+	}
+}

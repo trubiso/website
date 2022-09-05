@@ -17,3 +17,5 @@ persist(fishy, localStorage(true), 'fishy');
 export const spiny = writable(false);
 export const mobile = writable(false);
 export const lock = writable(false);
+export const copiedColor = writable('#000000');
+persist(copiedColor, localStorage(true), 'copiedColor')

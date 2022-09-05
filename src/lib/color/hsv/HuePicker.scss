@@ -1,5 +1,6 @@
+@import '../Globals.scss';
+
 .hue-picker-filler {
-	width: 360px;
 	height: 25px;
 }
 
@@ -7,6 +8,9 @@ main {
 	position: relative;
 
 	.hue-picker {
+		@media screen and (max-width: $toggleMobile) {
+			width: calc(100vw - $mBigOff);
+		}
 		width: 360px;
 		height: 25px;
 		position: absolute;
