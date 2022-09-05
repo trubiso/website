@@ -3,7 +3,7 @@
 </script>
 
 <main>
-	<h1>dev.trubiso.tk</h1>
+	<h1>DEVELOPAR MOED !!</h1>
 	<!-- svelte-ignore a11y-distracting-elements -->
 	<marquee class="big flashing flashy silly">UNSTAEBL !!! BE CARFUL !!!</marquee>
 	<p>
@@ -15,6 +15,7 @@
 		with that out of the way, if you find any bugs, please report them to me, in the q+a page or
 		personally :)
 	</p>
+	<br />
 	<p>if the warnings scared you here's some silly faces to calm you down</p>
 	<br />
 	<img
