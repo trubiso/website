@@ -1,9 +1,11 @@
+@import './Globals.scss';
+
 .picker {
 	display: flex;
   flex-direction: column;
   width: 360px;
   @media screen and (max-width: 420px) {
-    width: calc((100vw - 60px));
+    width: calc(100vw - $mBrdOff);
   }
 
   .picker-wrap {

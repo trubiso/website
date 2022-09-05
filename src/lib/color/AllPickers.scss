@@ -9,8 +9,8 @@
   //width: 380px;
 	max-width: 380px;
 
-  @media screen and (max-width: 440px) {
-    max-width: calc(100vw - 60px);
+  @media screen and (max-width: $toggleMobile) {
+    max-width: calc(100vw - $mBrdOff);
   }
 
 	padding: 10px;
@@ -22,8 +22,8 @@
 			display: flex;
 			flex-direction: column;
 			max-width: 360px;
-      @media screen and (max-width: 440px) {
-        max-width: calc(100vw - 80px);
+      @media screen and (max-width: $toggleMobile) {
+        max-width: calc(100vw - $mBigOff);
       }
 			max-height: 395px;
 
