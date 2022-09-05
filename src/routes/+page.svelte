@@ -31,7 +31,7 @@
 		class="ultrasilly"
 	/>
 	<br />
-	<p class="silly">HEHHEWHEAHWEHHWE</p>
+	<p class="silly">HEHHEWHEAHWEHHWEH</p>
 	<br /><br /><br /><br /><br />
 	<p>finished pages:</p>
 	<ul>
