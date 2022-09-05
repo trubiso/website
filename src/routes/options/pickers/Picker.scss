@@ -1,0 +1,47 @@
+.opt-theme {
+	.opt-picker {
+		grid-template-columns: auto auto auto auto auto auto auto auto auto auto auto auto;
+		@media screen and (max-width: 1300px) {
+			grid-template-columns: auto auto auto auto auto auto;
+		}
+		@media screen and (max-width: 1000px) {
+			grid-template-columns: auto auto auto auto;
+		}
+		@media screen and (max-width: 700px) {
+			grid-template-columns: auto auto auto;
+		}
+		@media screen and (max-width: 600px) {
+			grid-template-columns: auto auto;
+		}
+		@media screen and (max-width: 400px) {
+			grid-template-columns: auto;
+		}
+	}
+}
+
+main {
+	width: 100%;
+	.opt-picker {
+		display: grid;
+
+		max-width: 100%;
+
+		.opt-picker-item-wrap {
+			text-decoration: none;
+
+			.opt-picker-item {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				text-align: center;
+
+				color: var(--c);
+				padding: 10px;
+				background: linear-gradient(to bottom, var(--bg1), var(--bg2));
+				font-size: 14pt;
+
+				min-height: 64px;
+			}
+		}
+	}
+}
