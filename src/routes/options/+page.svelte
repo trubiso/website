@@ -18,5 +18,8 @@
 		<option value={3}>strong rainbow</option>
 	</select>
 
+        <button id="clearLocal" on:click={()=>localStorage.clear()}>clear local storage</button>
+        <label for="clearLocal">WARNING: this will erase all of your settings. only use if website is acting strangely</label>
+
 	<ThemePicker />
 </main>
