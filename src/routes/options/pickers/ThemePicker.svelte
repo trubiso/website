@@ -4,7 +4,7 @@
 	import ThemePickerItem from './ThemePickerItem.svelte';
 </script>
 
-<main class="opt-theme">
+<main class="opt opt-theme">
 	<div class="opt-picker">
 		{#each order.themes as theme}
 			<ThemePickerItem name={theme} />

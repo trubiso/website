@@ -8,7 +8,7 @@ export const lang = writable('none');
 persist(lang, createLocalStorage(true), 'lang');
 export const theme = writable<ITheme>(themes.smilie);
 persist(theme, createLocalStorage(true), 'theme');
-export const sidebarLocation = writable(false);
+export const sidebarLocation = writable(0);
 persist(sidebarLocation, createLocalStorage(true), 'sidebarLocation');
 export const sidebarStyle = writable(0);
 persist(sidebarStyle, createLocalStorage(true), 'sidebarStyle');
