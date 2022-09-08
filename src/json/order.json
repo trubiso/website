@@ -13,5 +13,17 @@
 		"white",
 		"hot_pink"
 	],
-	"langs": ["en", "sl", "ob", "es", "mk", "fr", "pl", "tp", "de"]
+	"langs": ["en", "sl", "ob", "es", "mk", "fr", "pl", "tp", "de"],
+	"themeProps": [
+		"navbarBG1",
+		"navbarBG2",
+		"navbarText",
+		"navbarAccent",
+		"accent",
+		"bg",
+		"text",
+		"cardBG",
+		"cardText",
+		"cardAccent"
+	]
 }

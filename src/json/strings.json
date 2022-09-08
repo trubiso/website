@@ -1,34 +1,46 @@
 {
-  "en": {
-    "navbar": {
-      "home": "home",
-      "smilies": "smilies",
-      "dont_click": "don't click",
-      "kitty": "kitty",
-      "games": "games",
-      "q+a": "q+a",
-      "about": "about",
-      "options": "options",
-      "log_in": "log in?"
-    },
-    "color": {
-      "hue": "hue",
-      "sat": "saturation",
-      "val": "value"
-    },
-    "themes": {
-      "smilie": "smilie",
-      "purple_marble": "purple marble",
-      "dark_marble": "dark marble",
-      "owl": "owl",
-      "plum_owl": "plum owl",
-      "purple_owl": "purple owl",
-      "lavender": "lavender",
-      "salmon": "salmon",
-      "panda": "panda",
-      "black": "black",
-      "white": "white",
-      "hot_pink": "hot pink"
-    }
-  }
+	"en": {
+		"navbar": {
+			"home": "home",
+			"smilies": "smilies",
+			"dont_click": "don't click",
+			"kitty": "kitty",
+			"games": "games",
+			"q+a": "q+a",
+			"about": "about",
+			"options": "options",
+			"log_in": "log in?"
+		},
+		"color": {
+			"hue": "hue",
+			"sat": "saturation",
+			"val": "value"
+		},
+		"themes": {
+			"smilie": "smilie",
+			"purple_marble": "purple marble",
+			"dark_marble": "dark marble",
+			"owl": "owl",
+			"plum_owl": "plum owl",
+			"purple_owl": "purple owl",
+			"lavender": "lavender",
+			"salmon": "salmon",
+			"panda": "panda",
+			"black": "black",
+			"white": "white",
+			"hot_pink": "hot pink"
+		},
+		"themeProps": {
+			"navbarBG1": "navbar background (top)",
+			"navbarBG2": "navbar background (bottom)",
+			"navbarText": "navbar text",
+			"navbarAccent": "navbar accent",
+			"accent": "navbar item",
+			"bg": "background",
+			"text": "text",
+			"cardBG": "card background",
+			"cardText": "card text",
+			"cardAccent": "card accent"
+		}
+	}
 }

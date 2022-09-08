@@ -10,3 +10,5 @@ export interface ITheme {
   cardText: string;
   cardAccent: string;
 }
+
+export type ThemeProp = keyof ITheme;

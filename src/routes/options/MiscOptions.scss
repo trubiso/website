@@ -1,0 +1,7 @@
+.misc-options {
+  display: flex;
+  flex-direction: column;
+  > div {
+    margin-bottom: 5px;
+  }
+}
