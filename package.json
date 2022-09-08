@@ -4,6 +4,7 @@
 	"private": true,
 	"scripts": {
 		"dev": "vite dev",
+		"host": "vite dev --host",
 		"build": "vite build",
 		"preview": "vite preview",
 		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
@@ -12,7 +13,7 @@
 		"format": "prettier --write ."
 	},
 	"devDependencies": {
-		"@macfja/svelte-persistent-store": "1.2.0",
+		"@macfja/svelte-persistent-store": "^2.1.0",
 		"@sveltejs/adapter-auto": "next",
 		"@sveltejs/adapter-netlify": "^1.0.0-next.76",
 		"@sveltejs/kit": "next",

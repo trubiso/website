@@ -1,6 +1,20 @@
 <script lang="ts">
 	import { mobile, sidebarLocation, sidebarStyle } from '$lib/stores';
 	import ThemePicker from './pickers/ThemePicker.svelte';
+
+	function clearLocalStorage() {
+		if (
+			confirm(
+				'do you really want to clear your local storage for this website? (WARNING: this will erase all of your settings including any custom theme you may have made. your login session will persist though)'
+			)
+		) {
+			localStorage.clear();
+			alert('local storage has been cleared successfully :)');
+			location.reload();
+		} else {
+			alert('oke, local storage has been left unchanged :)');
+		}
+	}
 </script>
 
 <main>
@@ -18,8 +32,9 @@
 		<option value={3}>strong rainbow</option>
 	</select>
 
-        <button id="clearLocal" on:click={()=>localStorage.clear()}>clear local storage</button>
-        <label for="clearLocal">WARNING: this will erase all of your settings. only use if website is acting strangely</label>
+	<br />
+	<button id="clearLocal" on:click={clearLocalStorage}>clear local storage</button>
+	<label for="clearLocal">(will fix strange behaviour)</label>
 
 	<ThemePicker />
 </main>
