@@ -1,6 +1,6 @@
 <script lang="ts">
+	import { order } from '$lib/json';
 	import './Picker.scss';
-	import { order, themes } from '$lib/json';
 	import ThemePickerItem from './ThemePickerItem.svelte';
 </script>
 
