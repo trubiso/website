@@ -1,14 +1,17 @@
 @import './Globals.scss';
 
 .all-pickers-wrap {
-  position:fixed;
-  z-index: 1;
+	position: fixed;
+  z-index: 3;
 	background-color: var(--cardBG);
 	color: var(--cardText);
 	overflow-x: hidden;
 
   //width: 380px;
-	max-width: 380px;
+	max-width: $pickerWidth;
+	
+	left: calc((100vw - $pickerWidth) / 2);
+	top: calc((100vh - $pickerHeight) / 2);
 
 	@media screen and (max-width: 600px) {
 		top: 100px;
@@ -19,11 +22,18 @@
 			bottom: 100px;
 		}
 
-		max-height: calc(100vh - 70px - 30px - 30px);
+		max-height: calc(100vh - 70px - 60px);
+		overflow-y: scroll;
+	}
+
+	@media screen and (min-width: 601px) and (max-height: calc($pickerHeight + 60px)) {
+		top: calc(30px);
+		max-height: calc(100vh - 60px);
 		overflow-y: scroll;
 	}
 
   @media screen and (max-width: $toggleMobile) {
+		left: 30px;
     max-width: calc(100vw - $mBrdOff);
   }
 

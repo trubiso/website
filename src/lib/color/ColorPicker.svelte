@@ -4,6 +4,7 @@
 	import { createEventDispatcher } from 'svelte';
 
 	import AllPickers from './AllPickers.svelte';
+	import { lock } from '$lib/stores';
 
 	export let color = '#000000';
 	export let label = '';
@@ -14,6 +15,7 @@
 
 	function toggle() {
 		open = !open;
+		lock.set(open);
 		if (open) {
 			oldColor = color;
 			changeHEX(color);
@@ -31,11 +33,14 @@
 <main>
 	<div class="color-picker">
 		<div class="input">
-			<input type="color" id="{id}" bind:value={color} on:click|preventDefault={toggle} />
+			<input type="color" {id} bind:value={color} on:click|preventDefault={toggle} />
 			{#if label !== ''}
-				<label for="{id}">{label}</label>
+				<label for={id}>{label}</label>
 			{/if}
 		</div>
+		{#if open}
+			<div class="obstruct" />
+		{/if}
 		<div class="pickers-wrap" class:open>
 			<AllPickers
 				bind:changeHEX
