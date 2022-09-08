@@ -12,6 +12,7 @@
 
 	export let oldColor = '#000000';
 	export let hex: string;
+	export let label = '';
 
 	let hue = 0,
 		sat = 0,
@@ -80,6 +81,7 @@
 <main>
 	<div class="all-pickers-wrap" class:sidebar-alt={$sidebarLocation}>
 		<div class="all-pickers">
+			<h1 class="header">{label}</h1>
 			<HsvPicker bind:hue bind:sat bind:val bind:importHEX on:change={syncHEX} />
 			<div class="side-pickers">
 				<RgbHexPicker bind:hex bind:importHSV on:change={syncHSV} />

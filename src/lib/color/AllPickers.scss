@@ -9,6 +9,7 @@
 
   //width: 380px;
 	max-width: $pickerWidth;
+	height: 725px;
 	
 	left: calc((100vw - $pickerWidth) / 2);
 	top: calc((100vh - $pickerHeight) / 2);
@@ -41,6 +42,12 @@
 	.all-pickers {
 		display: flex;
 		flex-wrap: wrap;
+
+		.header {
+			width: 100%;
+			margin-top: 5px;
+			text-align: center;
+		}
 
 		.side-pickers {
 			display: flex;

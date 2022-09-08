@@ -7,7 +7,7 @@
 	import { lock } from '$lib/stores';
 
 	export let color = '#000000';
-	export let label = '';
+	export let label: string;
 	export let id: string;
 	let oldColor = color;
 
@@ -48,6 +48,7 @@
 				bind:hex={color}
 				on:change={change}
 				on:done={toggle}
+				{label}
 			/>
 		</div>
 	</div>
