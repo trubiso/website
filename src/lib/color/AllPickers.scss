@@ -5,9 +5,23 @@
   z-index: 1;
 	background-color: var(--cardBG);
 	color: var(--cardText);
+	overflow-x: hidden;
 
   //width: 380px;
 	max-width: 380px;
+
+	@media screen and (max-width: 600px) {
+		top: 100px;
+		bottom: 30px;
+
+		&.sidebar-alt {
+			top: 30px;
+			bottom: 100px;
+		}
+
+		max-height: calc(100vh - 70px - 30px - 30px);
+		overflow-y: scroll;
+	}
 
   @media screen and (max-width: $toggleMobile) {
     max-width: calc(100vw - $mBrdOff);

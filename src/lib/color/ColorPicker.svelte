@@ -29,7 +29,6 @@
 </script>
 
 <main>
-	{color}
 	<div class="color-picker">
 		<div class="input">
 			<input type="color" id="{id}" bind:value={color} on:click|preventDefault={toggle} />

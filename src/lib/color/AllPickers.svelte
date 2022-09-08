@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { validateHEX } from '$lib/color';
-	import { copiedColor } from '$lib/stores';
+	import { copiedColor, sidebarLocation } from '$lib/stores';
 
 	import { createEventDispatcher } from 'svelte';
 	import { get } from 'svelte/store';
@@ -78,7 +78,7 @@
 </script>
 
 <main>
-	<div class="all-pickers-wrap">
+	<div class="all-pickers-wrap" class:sidebar-alt={$sidebarLocation}>
 		<div class="all-pickers">
 			<HsvPicker bind:hue bind:sat bind:val bind:importHEX on:change={syncHEX} />
 			<div class="side-pickers">
