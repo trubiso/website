@@ -15,15 +15,10 @@
 	top: calc((100vh - var(--pickerHeight)) / 2);
 
 	@media screen and (max-width: 600px) {
-		top: 100px;
-		bottom: 30px;
+		top: 60px;
+		bottom: 60px;
 
-		&.sidebar-alt {
-			top: 30px;
-			bottom: 100px;
-		}
-
-		max-height: calc(100vh - 70px - 60px);
+		max-height: calc(100vh - 70px - 70px);
 		overflow-y: scroll;
 	}
 

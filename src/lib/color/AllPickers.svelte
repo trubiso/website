@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { validateHEX } from '$lib/color';
-	import { copiedColor, sidebarLocation } from '$lib/stores';
+	import { copiedColor } from '$lib/stores';
 
 	import { createEventDispatcher } from 'svelte';
 	import { get } from 'svelte/store';
@@ -85,7 +85,6 @@
 	<div
 		class="all-pickers-wrap"
 		bind:clientHeight={pickerHeight}
-		class:sidebar-alt={$sidebarLocation}
 		style="--pickerHeight:{pickerHeight}px;"
 	>
 		<div class="all-pickers">
