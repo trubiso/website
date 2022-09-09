@@ -23,6 +23,10 @@
 	}
 
 	let changeHEX: (hex: string) => {};
+	
+	export function importHEX(hex: string) {
+		changeHEX(hex);
+	}
 
 	const dispatch = createEventDispatcher();
 	function change() {

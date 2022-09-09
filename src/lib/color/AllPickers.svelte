@@ -31,6 +31,7 @@
 	export function changeHEX(newHex: string) {
 		hex = newHex;
 		syncHSV();
+		syncHEX();
 	}
 
 	let importHEX: (hex: string) => {};
