@@ -9,10 +9,10 @@
 
   //width: 380px;
 	max-width: $pickerWidth;
-	height: 725px;
+	
 	
 	left: calc((100vw - $pickerWidth) / 2);
-	top: calc((100vh - $pickerHeight) / 2);
+	top: calc((100vh - var(--pickerHeight)) / 2);
 
 	@media screen and (max-width: 600px) {
 		top: 100px;
@@ -27,7 +27,7 @@
 		overflow-y: scroll;
 	}
 
-	@media screen and (min-width: 601px) and (max-height: calc($pickerHeight + 60px)) {
+	@media screen and (min-width: 601px) and (max-height: calc(var(--pickerHeight) + 60px)) {
 		top: calc(30px);
 		max-height: calc(100vh - 60px);
 		overflow-y: scroll;

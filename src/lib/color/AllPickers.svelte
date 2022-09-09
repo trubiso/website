@@ -77,10 +77,17 @@
 	function done() {
 		dispatch('done');
 	}
+
+	let pickerHeight = 725;
 </script>
 
 <main>
-	<div class="all-pickers-wrap" class:sidebar-alt={$sidebarLocation}>
+	<div
+		class="all-pickers-wrap"
+		bind:clientHeight={pickerHeight}
+		class:sidebar-alt={$sidebarLocation}
+		style="--pickerHeight:{pickerHeight}px;"
+	>
 		<div class="all-pickers">
 			<h1 class="header">{label}</h1>
 			<HsvPicker bind:hue bind:sat bind:val bind:importHEX on:change={syncHEX} />
