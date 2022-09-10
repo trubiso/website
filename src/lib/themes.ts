@@ -1,14 +1,28 @@
-import type { ITheme } from "./types";
+import { order, themes } from './json';
+import type { ITheme } from './types';
 
 export function themeToCSS(theme: ITheme) {
-  let result = '';
-  const themeObj = theme as unknown as Record<string, string>; // ts is dumb, chapter 3
-  // seriously though, i'm iterating over ITheme's properties and accessing them on ITheme
-  // how is that possibly `any`????? does anyone know?????? i've dealt with this error so many times already
-  // i think ts is draining my mental health
-  for (const t in theme) {
-    result += `--${t}: ${themeObj[t]};`
+	let result = '';
+	for (const t of order.themeProps) {
+		result += `--${t}: ${theme[t]};`;
+	}
+	// whatever it works
+	return result;
+}
+
+export function themeToCode(theme: ITheme) {
+	let result = '';
+	for (const t of order.themeProps) {
+		result += theme[t].slice(1);
+	}
+	return result;
+}
+
+export function codeToTheme(code: string) {
+  if (code.length % 6 !== 0) throw `Invalid theme code.`;
+  const theme: ITheme = {...themes.smilie};
+	for (let i = 0; i < code.length; i += 6) {
+    theme[order.themeProps[i / 6]] = `#${code.slice(i, i + 6)}`;
   }
-  // whatever it works
-  return result;
+  return theme;
 }
