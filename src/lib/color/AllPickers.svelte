@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { validateHEX } from '$lib/color';
+	import { HEXtoHSV, HSVtoHEX, validateHEX } from '$lib/color';
 	import { copiedColor } from '$lib/stores';
 
 	import { createEventDispatcher } from 'svelte';
@@ -19,23 +19,24 @@
 		val = 0;
 
 	function syncHEX() {
-		importHSV(hue, sat, val);
+		importHEX(HSVtoHEX(hue, sat, val));
 		change();
 	}
 
 	function syncHSV() {
-		importHEX(hex);
+		importHSV(...HEXtoHSV(hex));
 		change();
 	}
 
 	export function changeHEX(newHex: string) {
 		hex = newHex;
-		syncHSV();
-		syncHEX();
+		[hue, sat, val] = HEXtoHSV(hex);
+		importHEX(hex);
+		importHSV(hue, sat, val);
 	}
 
-	let importHEX: (hex: string) => {};
 	let importHSV: (h: number, s: number, v: number) => {};
+	let importHEX: (newHex: string) => {};
 
 	const dispatch = createEventDispatcher();
 	function change() {
@@ -89,9 +90,9 @@
 	>
 		<div class="all-pickers">
 			<h1 class="header">{label}</h1>
-			<HsvPicker bind:hue bind:sat bind:val bind:importHEX on:change={syncHEX} />
+			<HsvPicker bind:hue bind:sat bind:val bind:importHSV on:change={syncHEX} />
 			<div class="side-pickers">
-				<RgbHexPicker bind:hex bind:importHSV on:change={syncHSV} />
+				<RgbHexPicker bind:hex bind:importHEX on:change={syncHSV} />
 				<div class="previews">
 					<ColorPreview hex={oldColor} label="old" />
 					<ColorPreview {hex} label="new" />

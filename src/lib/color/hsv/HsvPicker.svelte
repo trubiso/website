@@ -21,8 +21,8 @@
 		dispatch('change');
 	}
 
-	export function importHEX(hex: string) {
-		[hue, sat, val] = HEXtoHSV(hex);
+	export function importHSV(h: number, s: number, v: number) {
+		[hue, sat, val] = [h, s, v];
 		syncShown();
 	}
 
