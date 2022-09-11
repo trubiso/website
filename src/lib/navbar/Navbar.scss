@@ -1,3 +1,5 @@
+@import '$lib/globals';
+
 nav.navbar {
 	display: flex;
 	position: fixed;
@@ -5,98 +7,72 @@ nav.navbar {
 	flex-direction: column;
 	background: linear-gradient(to bottom, var(--navbarBG1), var(--navbarBG2));
 
-	&.sidebar-left {
-		left: 0;
-	}
-	&.sidebar-right {
-		right: 0;
-	}
-  &.sidebar-top {
-		top: 0;
-    .header-wrapper > .spin {
-      transform: rotate(180deg);
-    }
-	}
-	&.sidebar-bottom {
-		bottom: 0;
-    .header-wrapper > .navbar-toggle {
-      transform: rotate(180deg);
-      &.spin {
-        transform: rotate(360deg);
-      }
-    }
-	}
-
-	&.sidebar-left,
-	&.sidebar-right {
-		// PC
-		padding-top: 20px;
-		width: 200px;
-		height: 100%;
-	}
-
-	&.sidebar-top,
-	&.sidebar-bottom {
-		// mobile
+	@media screen and (max-width: $mobile) {
 		width: 100%;
 		min-height: 70px;
 		max-height: 100vh;
 		overflow-y: scroll;
 
-		/*
-    .sidebar-wrapper {
-      align-self: center;
-      margin-top: 70px;
-      width: 100%;
-    }
-    */
-	}
+		&.sidebar-a {
+			top: 0;
+			.header-wrapper > .spin {
+				transform: rotate(180deg);
+			}
+			&.alt-bg {
+				background: linear-gradient(to bottom, var(--navbarBG1), #00000000);
+			}
+		}
 
-	&.alt-bg {
-		// ik this is a little messy but it won't matter that much
-		&.sidebar-top {
-			background: linear-gradient(to bottom, var(--navbarBG1), #00000000);
+		&.sidebar-b {
+			bottom: 0;
+			.header-wrapper > .navbar-toggle {
+				transform: rotate(180deg);
+				&.spin {
+					transform: rotate(360deg);
+				}
+			}
+			&.alt-bg {
+				background: linear-gradient(to top, var(--navbarBG1), #00000000);
+			}
 		}
-		&.sidebar-left {
-			background: linear-gradient(to right, var(--navbarBG1), #00000000);
-		}
-		&.sidebar-right {
-			background: linear-gradient(to left, var(--navbarBG1), #00000000);
-		}
-		&.sidebar-bottom {
-			background: linear-gradient(to top, var(--navbarBG1), #00000000);
-		}
-	}
 
-	&.rainbow-bg {
-		&.sidebar-left,
-	&.sidebar-right {
-		background: linear-gradient(to top, #800, #880, #080, #088, #008, #808, #800);
-	}
-		&.sidebar-top, &.sidebar-bottom {
+		&.rainbow-bg {
 			background: linear-gradient(to right, #800, #880, #080, #088, #008, #808, #800);
 		}
-	}
 
-	&.rainbow-alt {
-		&.sidebar-left,
-	&.sidebar-right {
-		background: linear-gradient(to top, #f00, #ff0, #0f0, #0ff, #00f, #f0f, #f00);
-	}
-		&.sidebar-top, &.sidebar-bottom {
+		&.rainbow-alt {
 			background: linear-gradient(to right, #f00, #ff0, #0f0, #0ff, #00f, #f0f, #f00);
 		}
 	}
 
-	overflow-y: scroll;
+	@media screen and (min-width: $noMobile) {
+		padding-top: 20px;
+		width: 200px;
+		height: 100%;
 
-	/*
-  .sidebar-wrapper {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-  }
-  */
+		&.sidebar-a {
+			left: 0;
+			&.alt-bg {
+				background: linear-gradient(to right, var(--navbarBG1), #00000000);
+			}
+		}
+
+		&.sidebar-b {
+			right: 0;
+			&.alt-bg {
+				background: linear-gradient(to left, var(--navbarBG1), #00000000);
+			}
+		}
+
+		&.rainbow-bg {
+			background: linear-gradient(to top, #800, #880, #080, #088, #008, #808, #800);
+		}
+
+		&.rainbow-alt {
+			background: linear-gradient(to top, #f00, #ff0, #0f0, #0ff, #00f, #f0f, #f00);
+		}
+	}
+	overflow-y: scroll;
 
 	.header-wrapper {
 		display: flex;

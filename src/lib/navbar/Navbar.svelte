@@ -19,10 +19,8 @@
 <main>
 	<nav
 		class="navbar"
-		class:sidebar-top={!$sidebarLocation && $mobile}
-		class:sidebar-left={!$sidebarLocation && !$mobile}
-		class:sidebar-right={$sidebarLocation && !$mobile}
-		class:sidebar-bottom={$sidebarLocation && $mobile}
+		class:sidebar-a={!$sidebarLocation}
+		class:sidebar-b={$sidebarLocation}
 		class:alt-bg={$sidebarStyle === 1}
 		class:rainbow-bg={$sidebarStyle === 2}
 		class:rainbow-alt={$sidebarStyle === 3}

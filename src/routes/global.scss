@@ -1,3 +1,5 @@
+@import '$lib/globals';
+
 * {
 	box-sizing: border-box;
 }
@@ -41,24 +43,28 @@ body {
 			padding: 30px;
 			overflow: scroll;
 
-			&.sidebar-top {
-        padding-top: calc(70px + 30px);
-				height: calc(100% - 70px);
+			@media screen and (max-width: $mobile) {
+				&.sidebar-a {
+					padding-top: calc(70px + 30px);
+					height: calc(100% - 70px);
+				}
+
+				&.sidebar-b {
+					padding-bottom: calc(70px + 30px);
+					height: calc(100% - 70px);
+				}
 			}
 
-			&.sidebar-left {
-				margin-left: 200px;
+			@media screen and (min-width: $noMobile) {
+				&.sidebar-a {
+					margin-left: 200px;
+					width: calc(100% - 200px);
+				}
+
+				&.sidebar-b {
+					margin-right: 200px;
 				width: calc(100% - 200px);
-			}
-
-			&.sidebar-right {
-				margin-right: 200px;
-				width: calc(100% - 200px);
-			}
-
-			&.sidebar-bottom {
-				padding-bottom: calc(70px + 30px);
-				height: calc(100% - 70px);
+				}
 			}
 
 			&.fixed {

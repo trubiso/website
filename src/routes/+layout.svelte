@@ -33,11 +33,8 @@
 
 	<div
 		class="content-wrapper"
-		class:sidebar-top={!$sidebarLocation && $mobile}
-		class:sidebar-left={!$sidebarLocation && !$mobile}
-		class:sidebar-right={$sidebarLocation && !$mobile}
-		class:sidebar-bottom={$sidebarLocation && $mobile}
-		class:mobile={$mobile}
+		class:sidebar-a={!$sidebarLocation}
+		class:sidebar-b={$sidebarLocation}
 		class:fixed={$lock}
 	>
 		<slot />
