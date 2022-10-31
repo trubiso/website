@@ -29,7 +29,34 @@
 
 	const dispatch = createEventDispatcher();
 
+	function dragTouchDown(e: TouchEvent) {
+		let px = e.touches[0].pageX;
+		let py = e.touches[0].pageY;
+		if (oldLeft !== 0) {
+			x += px - oldLeft;
+			if (twod) y += py - oldTop;
+		}
+		oldLeft = px;
+		oldTop = py;
+		document.ontouchcancel = stopDrag;
+		document.ontouchmove = dragTouch;
+	}
+
+	function dragTouch(e: TouchEvent) {
+		let px = e.touches[0].pageX;
+		let py = e.touches[0].pageY;
+		x -= oldLeft - px;
+		y -= oldTop - py;
+		oldLeft = px;
+		oldTop = py;
+		clampPos();
+	}
+
 	function dragMouseDown(e: MouseEvent) {
+		if (oldLeft !== 0) {
+			x += e.clientX - oldLeft;
+			if (twod) y += e.clientY - oldTop;
+		}
 		oldLeft = e.clientX;
 		oldTop = e.clientY;
 		document.onmouseup = stopDrag;
@@ -42,7 +69,6 @@
 		oldLeft = e.clientX;
 		oldTop = e.clientY;
 		clampPos();
-		dispatch('change');
 	}
 
 	function clampPos() {
@@ -59,19 +85,25 @@
 			relX = Math.round(relX);
 			relY = Math.round(relY);
 		}
+
+		dispatch('change');
 	}
 
 	function stopDrag() {
 		document.onmouseup = null;
 		document.onmousemove = null;
+		document.ontouchcancel = null;
+		document.ontouchmove = null;
 	}
 </script>
 
 <main>
 	<div
-		class="point"
-		style="--x:{x + xOffset}px;--y:{y + yOffset}px;"
-		class:point-alt={twod}
-		on:mousedown={dragMouseDown}
-	/>
+		class="point-area"
+		style="width:{width.toString()}px;height:{twod ? height.toString() : '25'}px;"
+		on:mousedown|preventDefault={dragMouseDown}
+		on:touchstart|preventDefault={dragTouchDown}
+	>
+		<div class="point" style="--x:{x + xOffset}px;--y:{y + yOffset}px;" class:point-alt={twod} />
+	</div>
 </main>
