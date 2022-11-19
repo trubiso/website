@@ -1,0 +1,44 @@
+{
+		"navbar": {
+			"home": "homepage, startpage, beginning",
+			"smilies": "smilie face list, list",
+			"dont_click": "don't enter",
+			"kitty": "",
+			"games": "",
+			"q+a": "questions + answers",
+			"about": "this page has information about the website",
+			"options": "this page lets you customize the website",
+			"log_in": ""
+		},
+		"color": {
+			"hue": "",
+			"sat": "saturation",
+			"val": "value"
+		},
+		"themes": {
+			"smilie_lavender": "light theme, yellow-color sidebar, lavender-color cards",
+      "smilie_coffee": "light theme, yellow-color sidebar, coffee-color cards",
+			"purple_marble": "light theme, marble-color sidebar",
+			"dark_marble": "light theme, dark-blue-color sidebar",
+			"owl": "(blue) dark theme, dark-color sidebar, dark-color background",
+			"plum_owl": "(plum-color) dark theme, dark-color sidebar, dark-color background",
+			"purple_owl": "(purple) dark theme, dark-color sidebar, dark-color background",
+			"lavender": "dark theme, lavender-color sidebar, yellow text",
+			"salmon": "dark theme, salmon-color sidebar, yellow text",
+			"panda": "light theme, black sidebar",
+			"hot_pink": "light theme, magenta sidebar, light pink background",
+      "deep_sea": "light theme, turquoise sidebar"
+		},
+		"themeProps": {
+			"navbarBG1": "navbar/sidebar top (usually lighter) background (the background is a gradient)",
+			"navbarBG2": "navbar/sidebar bottom (usually darker) background (the background is a gradient)",
+			"navbarText": "mobile navbar arrow color, also language picker text color",
+			"navbarAccent": "color for special items in the navbar such as options or login",
+			"accent": "NAME IS MISLEADING, color used for NAVBAR ITEMS (name is preserved due to backwards compatibility)",
+			"bg": "background color for page",
+			"text": "text color for page",
+			"cardBG": "background color for cards (q+a boxes, color picker box, you can name them boxes)",
+			"cardText": "text color for cards (q+a boxes, color picker box, you can name them boxes)",
+			"cardAccent": "accent color for cards (q+a boxes, color picker box, you can name them boxes)"
+		}
+}

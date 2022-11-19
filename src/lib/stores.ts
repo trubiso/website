@@ -6,7 +6,7 @@ import { createLocalStorage, persist } from '@macfja/svelte-persistent-store';
 
 export const lang = writable('none');
 persist(lang, createLocalStorage(true), 'lang');
-export const theme = writable<ITheme>(themes.smilie);
+export const theme = writable<ITheme>(themes.smilie_lavender);
 persist(theme, createLocalStorage(true), 'theme');
 export const sidebarLocation = writable(0);
 persist(sidebarLocation, createLocalStorage(true), 'sidebarLocation');

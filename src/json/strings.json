@@ -17,7 +17,8 @@
 			"val": "value"
 		},
 		"themes": {
-			"smilie": "smilie",
+			"smilie_lavender": "lavender smilie",
+			"smilie_coffee": "coffee smilie",
 			"purple_marble": "purple marble",
 			"dark_marble": "dark marble",
 			"owl": "owl",
@@ -26,9 +27,8 @@
 			"lavender": "lavender",
 			"salmon": "salmon",
 			"panda": "panda",
-			"black": "black",
-			"white": "white",
-			"hot_pink": "hot pink"
+			"hot_pink": "hot pink",
+			"deep_sea": "deep sea"
 		},
 		"themeProps": {
 			"navbarBG1": "navbar background (top)",

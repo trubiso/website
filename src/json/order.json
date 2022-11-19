@@ -1,6 +1,7 @@
 {
 	"themes": [
-		"smilie",
+		"smilie_lavender",
+		"smilie_coffee",
 		"purple_marble",
 		"dark_marble",
 		"owl",
@@ -9,11 +10,10 @@
 		"lavender",
 		"salmon",
 		"panda",
-		"black",
-		"white",
-		"hot_pink"
+		"hot_pink",
+		"deep_sea"
 	],
-	"langs": ["en", "sl", "ob", "es", "mk", "fr", "pl", "tp", "de"],
+	"langs": ["en", "sl", "es", "fr", "de", "pl", "mk", "tp", "jb"],
 	"themeProps": [
 		"navbarBG1",
 		"navbarBG2",
