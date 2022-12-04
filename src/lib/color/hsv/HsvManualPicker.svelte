@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { t } from '$lib/localization';
 	import { createEventDispatcher, onMount } from 'svelte';
 	import '../ManualPicker.scss';
 
@@ -45,7 +46,7 @@
 				min="0"
 				max="360"
 			/>
-			<label for="hue">hue</label>
+			<label for="hue">{t('color.hue')}</label>
 		</div>
 		<div class="manual-input">
 			<input
@@ -57,7 +58,7 @@
 				min="0"
 				max="100"
 			/>
-			<label for="sat">saturation</label>
+			<label for="sat">{t('color.sat')}</label>
 		</div>
 		<div class="manual-input">
 			<input
@@ -69,7 +70,7 @@
 				min="0"
 				max="100"
 			/>
-			<label for="val">value</label>
+			<label for="val">{t('color.val')}</label>
 		</div>
 	</div>
 </main>

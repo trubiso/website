@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { t } from '$lib/localization';
 	import { createEventDispatcher } from 'svelte';
 
 	import '../ManualPicker.scss';
@@ -24,15 +25,15 @@
 	<div class="manual">
 		<div class="manual-input">
 			<input type="number" bind:value={r} on:input={check} name="r" id="r" min="0" max="255" />
-			<label for="r">red</label>
+			<label for="r">{t('color.red')}</label>
 		</div>
 		<div class="manual-input">
 			<input type="number" bind:value={g} on:input={check} name="g" id="g" min="0" max="255" />
-			<label for="g">green</label>
+			<label for="g">{t('color.green')}</label>
 		</div>
 		<div class="manual-input">
 			<input type="number" bind:value={b} on:input={check} name="b" id="b" min="0" max="255" />
-			<label for="b">blue</label>
+			<label for="b">{t('color.blue')}</label>
 		</div>
 	</div>
 </main>

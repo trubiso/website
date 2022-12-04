@@ -9,6 +9,7 @@
 
 	function changeTheme() {
 		lang.set(name);
+		location.reload();
 	}
 </script>
 

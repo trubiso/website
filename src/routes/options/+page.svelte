@@ -1,25 +1,27 @@
 <script lang="ts">
+	import { t } from '$lib/localization';
 	import MiscOptions from './MiscOptions.svelte';
-import LangPicker from './pickers/LangPicker.svelte';
+	import LangPicker from './pickers/LangPicker.svelte';
 	import ThemePicker from './pickers/ThemePicker.svelte';
-import ThemeMaker from './thememaker/ThemeMaker.svelte';
+	import ThemeMaker from './thememaker/ThemeMaker.svelte';
 </script>
 
 <main>
-	<h1>optionse !</h1>
-	<p>heer yu can customiz how da paeg luks 4 yu !</p>
+	<h1>{t('options.options')}</h1>
+	<p>{t('options.subtitle')}</p>
 
-	<h2>languig</h2>
+	<h2>{t('options.language')}</h2>
 	<LangPicker />
-	<p><i>if da languig yu speek is not heer, yu can hed to da transletion paeg n translet da paeg to yur languig !</i></p>
+	<p>
+		<i>{t('options.translation')}</i>
+	</p>
 
-	<h2>theem</h2>
-	<h3>pik wan of da premaed theemz...</h3>
+	<h2>{t('options.theme')}</h2>
+	<h3>{t('options.premadeTheme')}</h3>
 	<ThemePicker />
-	<h3>or mek wan urslef !</h3>
+	<h3>{t('options.customizeTheme')}</h3>
 	<ThemeMaker />
 
-	<h2>miscelanius</h2>
+	<h2>{t('options.misc')}</h2>
 	<MiscOptions />
-
 </main>

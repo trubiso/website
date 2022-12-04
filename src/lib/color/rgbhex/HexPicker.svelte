@@ -1,9 +1,10 @@
 <script lang="ts">
+	import { t } from '$lib/localization';
 	import { createEventDispatcher } from 'svelte';
 
 	import '../ManualPicker.scss';
 	export let hex = '#000000';
-  let intHex = '#000000';
+	let intHex = '#000000';
 
 	function check() {
 		intHex = intHex.toLowerCase();
@@ -13,15 +14,16 @@
 
 	function checkChange() {
 		if (intHex.length > 7) intHex = intHex.slice(0, 7);
-		if (intHex.length === 4) intHex = `#${intHex[1].repeat(2)}${intHex[2].repeat(2)}${intHex[3].repeat(2)}`;
+		if (intHex.length === 4)
+			intHex = `#${intHex[1].repeat(2)}${intHex[2].repeat(2)}${intHex[3].repeat(2)}`;
 		while (intHex.length < 7) intHex += '0';
-    hex = intHex;
-    change();
+		hex = intHex;
+		change();
 	}
 
-  export function changeIntHex(newHex: string) {
-    intHex = newHex;
-  }
+	export function changeIntHex(newHex: string) {
+		intHex = newHex;
+	}
 
 	const dispatch = createEventDispatcher();
 	function change() {
@@ -40,7 +42,7 @@
 				name="hex"
 				id="hex"
 			/>
-			<label for="hex">hex</label>
+			<label for="hex">{t('color.hex')}</label>
 		</div>
 	</div>
 </main>

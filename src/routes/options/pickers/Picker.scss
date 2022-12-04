@@ -29,13 +29,23 @@
 
 .opt-lang {
 	.opt-picker {
-		grid-template-columns: repeat(9, 1fr);
-		@media screen and (max-width: 1400px) {
+		grid-template-columns: repeat(12, 1fr);
+		@media screen and (max-width: 1800px) {
+			grid-template-columns: repeat(6, 1fr);
+		}
+		@media screen and (max-width: 1600px) {
+			grid-template-columns: repeat(4, 1fr);
+		}
+		@media screen and (max-width: 1200px) {
 			grid-template-columns: repeat(3, 1fr);
 		}
-		@media screen and (max-width: 900px) {
+		@media screen and (max-width: 950px) {
+			grid-template-columns: repeat(2, 1fr);
+		}
+		@media screen and (max-width: 750px) {
 			grid-template-columns: repeat(1, 1fr);
 		}
+
 		.opt-picker-item-wrap {
 			.opt-picker-item {
 				color: var(--navbarText);
@@ -44,11 +54,11 @@
 					background-color: var(--navbarBG2);
 				}
 
-				@media screen and (min-width: 901px) {
+				@media screen and (min-width: 1201px) {
 					min-height: 48px;
 				}
 
-				@media screen and (min-width: 1401px) {
+				@media screen and (min-width: 1801px) {
 					min-height: 64px;
 				}
 			}

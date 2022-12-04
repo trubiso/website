@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { HEXtoHSV, HSVtoHEX, validateHEX } from '$lib/color';
+	import { t } from '$lib/localization';
 	import { copiedColor } from '$lib/stores';
 
 	import { createEventDispatcher } from 'svelte';
@@ -49,6 +50,7 @@
 
 	async function paste() {
 		changeHEX(get(copiedColor));
+		change();
 	}
 
 	async function copyToClipboard() {
@@ -69,10 +71,12 @@
 			return;
 		}
 		changeHEX(newHex);
+		change();
 	}
 
 	function reset() {
 		changeHEX(oldColor);
+		change();
 	}
 
 	function done() {
@@ -94,18 +98,18 @@
 			<div class="side-pickers">
 				<RgbHexPicker bind:hex bind:importHEX on:change={syncHSV} />
 				<div class="previews">
-					<ColorPreview hex={oldColor} label="old" />
-					<ColorPreview {hex} label="new" />
-					<ColorPreview hex={$copiedColor} label="saved" />
+					<ColorPreview hex={oldColor} label={t('color.old')} />
+					<ColorPreview {hex} label={t('color.new')} />
+					<ColorPreview hex={$copiedColor} label={t('color.saved')} />
 				</div>
 				<div class="filler" />
 				<div class="actions">
-					<button on:click={copy}>save</button>
-					<button on:click={paste}>load</button>
-					<button on:click={copyToClipboard}>copy to clipboard</button>
-					<button on:click={pasteFromClipboard}>paste from clipboard</button>
-					<button on:click={reset}>reset</button>
-					<button on:click={done}>done</button>
+					<button on:click={copy}>{t('color.save')}</button>
+					<button on:click={paste}>{t('color.load')}</button>
+					<button on:click={copyToClipboard}>{t('color.copy')}</button>
+					<button on:click={pasteFromClipboard}>{t('color.paste')}</button>
+					<button on:click={reset}>{t('color.reset')}</button>
+					<button on:click={done}>{t('color.done')}</button>
 				</div>
 			</div>
 		</div>
