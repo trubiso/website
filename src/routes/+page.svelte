@@ -41,11 +41,12 @@
 			<a href="/hsvtester">hsv tester (technically not a page but just a test for a huge feature)</a
 			>
 		</li>
+		<li><a href="/kity">kities</a></li>
 		<li><a href="/options">options</a></li>
 	</ul>
 	<p>
-		<b>BEWARE</b> of the sidebar, every link but home and options is broken, the website might feel bad
-		if you click them :(
+		<b>BEWARE</b> of the sidebar, every link but the pages specified above is broken, the website might
+		feel bad if you click them :(
 	</p>
 	<p>but don't beware too much of the sidebar, it has cool new options as well :)</p>
 	<p>also thanks for sticking around, i hope you didn't die in the pool of bugs :P</p>

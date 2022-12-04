@@ -41,6 +41,10 @@
 			"cardBG": "card background",
 			"cardText": "card text",
 			"cardAccent": "card accent"
+		},
+		"kitty": {
+			"loading": "getting kitty...",
+			"new": "get more kitties"
 		}
 	}
 }
