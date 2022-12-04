@@ -45,6 +45,24 @@
 		"kitty": {
 			"loading": "getting kitty...",
 			"new": "get more kitties"
+		},
+		"about": {
+			"thanks": "thank you for visiting trubiso.tk",
+			"privacyPre": "regarding privacy:",
+			"privacy": "this website uses your local storage to store your preferences, and you are the only person who can access them apart from the script that loads your preferences. this website does NOT use tracking or marketing cookies. it only uses cookies to store your login session if you decide to log into my website, you can check how that works for yourself in the repository, but if you want to save yourself the hassle, just know that i don't care about tracking you or selling your soul to the devil through cookies and my website will never devolve into such a deranged mindset that most of the internet has for some reason.",
+			"collaborationPre": "regarding collaboration:",
+			"collaboration": "this website is fully open source and i intend to keep it that way. i appreciate collaborators so if you want to contribute you can make a new issue to report bugs or make a new pull request to add some of your own code into my website. you can do so in the github repository which is linked below.",
+			"specialThanksPre": "special thanks to:",
+			"specialThanks": "venn, clembs, karl2883, dave, carrot farmer, earlofrats, angel753, ali kirb and you. i strongly appreciate your admiration and support towards this website whether it's regarding code or simply moral support.",
+			"repository": "you can find this website's source code here:",
+			"socialMedia": "you can find me on the following social media:",
+			"signoff": "take care <3"
+		},
+		"socialMedia": {
+			"github": "github",
+			"twitch": "twitch",
+			"discord": "discord",
+			"newgrounds": "newgrounds"
 		}
 	}
 }

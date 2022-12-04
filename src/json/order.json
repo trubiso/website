@@ -25,5 +25,11 @@
 		"cardBG",
 		"cardText",
 		"cardAccent"
+	],
+	"socialMedia": [
+		"github",
+		"twitch",
+		"discord",
+		"newgrounds"
 	]
 }

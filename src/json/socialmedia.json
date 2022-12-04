@@ -1,0 +1,14 @@
+{
+	"values": {
+		"github": "https://github.com/trubiso",
+		"twitch": "https://www.twitch.tv/trubiso",
+		"discord": "@Trubiso#5265",
+		"newgrounds": "https://trubiso.newgrounds.com/"
+	},
+  "links": {
+    "github": true,
+    "twitch": true,
+    "discord": false,
+    "newgrounds": true
+  }
+}
