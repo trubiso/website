@@ -1,6 +1,6 @@
 <script lang="ts">
 	import './MiscOptions.scss';
-	import { mobile, sidebarLocation, sidebarStyle } from '$lib/stores';
+	import { mobile, sidebarLocation, sidebarPopout, sidebarStyle } from '$lib/stores';
 	import { t } from '$lib/localization';
 
 	function clearLocalStorage() {
@@ -30,6 +30,14 @@
 			<option value={1}>{t('options.sidebarStyleAlpha')}</option>
 			<option value={2}>{t('options.sidebarStyleRainbow')}</option>
 			<option value={3}>{t('options.sidebarStyleStrongRainbow')}</option>
+		</select>
+	</div>
+
+	<div>
+		<label for="sidebarPopout">{t('options.sidebarPopout')}</label>
+		<select name="sidebarPopout" id="sidebarPopout" bind:value={$sidebarPopout}>
+			<option value={0}>{t('options.sidebarPopoutNo')}</option>
+			<option value={1}>{t('options.sidebarPopoutYes')}</option>
 		</select>
 	</div>
 

@@ -12,10 +12,12 @@ export const sidebarLocation = writable(0);
 persist(sidebarLocation, createLocalStorage(true), 'sidebarLocation');
 export const sidebarStyle = writable(0);
 persist(sidebarStyle, createLocalStorage(true), 'sidebarStyle');
+export const sidebarPopout = writable(0);
+persist(sidebarPopout, createLocalStorage(true), 'sidebarPopout');
 export const fishy = writable(false);
 persist(fishy, createLocalStorage(true), 'fishy');
 export const spiny = writable(false);
 export const mobile = writable(false);
 export const lock = writable(false);
 export const copiedColor = writable('#000000');
-persist(copiedColor, createLocalStorage(true), 'copiedColor')
+persist(copiedColor, createLocalStorage(true), 'copiedColor');

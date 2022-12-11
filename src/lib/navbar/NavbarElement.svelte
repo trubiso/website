@@ -7,6 +7,8 @@
 	import { spiny } from '$lib/stores';
 
 	export let name = 'home';
+	export let popout = false;
+	export let altPopout = false;
 
 	$: link = (navbar.links as Record<string, string>)[name]; // dumb TS fix that makes my code look ugly :'(
 	$: label = t(`navbar.${name}`);
@@ -18,6 +20,8 @@
 		class="navbar-item"
 		class:navbar-item-special={name === 'options'}
 		class:bold={$page.url.pathname === link}
+		class:popout
+		class:alt-popout={altPopout}
 		on:contextmenu|preventDefault={() => {
 			if (name === 'options') spiny.set(true);
 		}}

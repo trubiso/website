@@ -10,4 +10,24 @@
 	&-special {
 		color: var(--navbarAccent);
 	}
+
+	&.popout {
+		border-right: 2px solid var(--accent);
+		&.bold {
+			background-color: var(--bg);
+			color: var(--text);
+			border-top: 2px solid var(--accent);
+			border-bottom: 2px solid var(--accent);
+			border-right: 0;
+		}
+
+		&.alt-popout {
+			border-right: 2px solid var(--text);
+			&.bold {
+				border-top: 2px solid var(--text);
+				border-bottom: 2px solid var(--text);
+				border-right: 0;
+			}
+		}
+	}
 }
