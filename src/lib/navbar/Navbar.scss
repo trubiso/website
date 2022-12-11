@@ -7,6 +7,12 @@ nav.navbar {
 	flex-direction: column;
 	background: linear-gradient(to bottom, var(--navbarBG1), var(--navbarBG2));
 
+	overflow-y: scroll;
+  scrollbar-width: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
 	@media screen and (max-width: $mobile) {
 		width: 100%;
 		min-height: 70px;
