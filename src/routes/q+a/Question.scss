@@ -1,0 +1,23 @@
+.question {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  background-color: var(--cardBG);
+  color: var(--cardText);
+  margin-bottom: 20px;
+
+  &-timestamp {
+    opacity: 0.5;
+  }
+
+  &-title {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    white-space: pre-line;
+  }
+
+  &-answer {
+    font-size: 14px;
+  }
+}
