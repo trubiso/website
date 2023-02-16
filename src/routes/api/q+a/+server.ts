@@ -1,4 +1,4 @@
-import prisma from '$lib/db';
+import prisma from '$lib/server/db';
 import type { RequestEvent } from '@sveltejs/kit';
 
 export const GET = async ({ url }: RequestEvent) => {
