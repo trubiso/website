@@ -1,6 +1,5 @@
 import prisma from '$lib/db';
 import type { RequestEvent } from '@sveltejs/kit';
-import { browser } from '$app/environment';
 
 export const GET = async ({ url }: RequestEvent) => {
 	const questionsPerPage = 20;
