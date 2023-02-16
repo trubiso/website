@@ -10,7 +10,7 @@ import type { ThemeProp } from './types';
 export const emotes = emotesJSON;
 export const themes = themesJSON;
 export const langs = langsJSON;
-export const strings: Record<string, Record<string, Record<string, string>>> = stringsJSON;
+export const strings = stringsJSON;
 export const navbar = navbarJSON; // no log_in in navbar.order because it's a special element
 export const order = orderJSON as {
 	themes: string[];
