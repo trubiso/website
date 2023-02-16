@@ -9,6 +9,8 @@
   <hr>
 	<p><b>Code:</b> {$page.status}</p>
   <pre>{$page.error.message}</pre>
+  <pre>Stack:
+  {$page.error.stack}</pre>
   <hr>
   <p><EmoteZone>:please: plz report to trunbiso (wif screenshot or copyinge, to disqord prenferabli). he wil tri to fiks :excited:</EmoteZone></p>
 </main>
