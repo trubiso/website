@@ -1,10 +1,13 @@
 import prisma from '$lib/db';
 import type { RequestEvent } from '@sveltejs/kit';
+import { browser } from '$app/environment';
 
 export const GET = async ({ url }: RequestEvent) => {
 	const questionsPerPage = 20;
 	let page = 1;
 	if (url.searchParams.has('page')) page = parseInt(url.searchParams.get('page') || '1');
+
+	console.log(browser ? "i'm on the browser!" : "i'm on the server side!");
 
 	const questions = await prisma.qa.findMany({
 		where: { NOT: { answer: null } },
@@ -25,7 +28,7 @@ export const GET = async ({ url }: RequestEvent) => {
 			hasNextPage
 		}),
 		{
-      status: 200,
+			status: 200,
 			headers: new Headers({ 'Content-Type': 'application/json' })
 		}
 	);
