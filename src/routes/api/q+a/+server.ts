@@ -6,8 +6,6 @@ export const GET = async ({ url }: RequestEvent) => {
 	let page = 1;
 	if (url.searchParams.has('page')) page = parseInt(url.searchParams.get('page') || '1');
 
-	prisma.$connect().then(() => console.log('Connected to Prisma'));
-
 	const questions = await prisma.qa.findMany({
 		where: { NOT: { answer: null } },
 		orderBy: { created_at: 'desc' }
