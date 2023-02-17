@@ -36,6 +36,7 @@
 	"type": "module",
 	"dependencies": {
 		"@prisma/client": "^4.10.1",
+		"dotenv": "^16.0.3",
 		"highlight.js": "^11.7.0",
 		"marked": "^4.2.4",
 		"sass": "^1.54.8"
