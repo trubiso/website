@@ -1,0 +1,20 @@
+.page-switcher-page {
+	button {
+		border-color: var(--cardBG);
+		background-color: var(--cardAccent);
+		color: var(--cardBG);
+		border-style: solid;
+		padding: 5px;
+		cursor: pointer;
+
+		&.current {
+			font-weight: bold;
+			color: var(--cardAccent);
+			background-color: var(--cardBG);
+		}
+
+		span {
+			font-family: 'Comic Sans MS';
+		}
+	}
+}

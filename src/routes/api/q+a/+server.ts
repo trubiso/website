@@ -22,7 +22,8 @@ export const GET = async ({ url }: RequestEvent) => {
 		JSON.stringify({
 			questions: questionList,
 			hasPreviousPage,
-			hasNextPage
+			hasNextPage,
+			maximumPage: Math.ceil(questions.length / questionsPerPage),
 		}),
 		{
 			status: 200,
