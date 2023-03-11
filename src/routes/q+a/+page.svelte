@@ -23,4 +23,6 @@
 			<Question {question} />
 		{/each}
 	</div>
+
+	<PageSwitcher {...data} />
 </main>
