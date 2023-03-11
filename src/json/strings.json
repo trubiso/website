@@ -106,6 +106,10 @@
 			"twitch": "twitch",
 			"discord": "discord",
 			"newgrounds": "newgrounds"
+		},
+		"q+a": {
+			"jumpToPage": "jump to page",
+			"jumpToPageButton": "go!"
 		}
 	},
 	"sl": {
@@ -215,6 +219,10 @@
 			"twitch": "twitch",
 			"discord": "discord",
 			"newgrounds": "newgrounds"
+		},
+		"q+a": {
+			"jumpToPage": "jmup to peag",
+			"jumpToPageButton": "GOE!!!"
 		}
 	}
 }

@@ -1,4 +1,4 @@
-.page-switcher-page {
+main.page-switcher-page {
 	button {
 		border-color: var(--cardBG);
 		background-color: var(--cardAccent);
@@ -8,13 +8,21 @@
 		cursor: pointer;
 
 		&.current {
+			cursor: default;
 			font-weight: bold;
 			color: var(--cardAccent);
 			background-color: var(--cardBG);
+		}
+
+		&.is-select {
+			z-index: 2;
 		}
 
 		span {
 			font-family: 'Comic Sans MS';
 		}
 	}
+
+	display: flex;
+	flex-direction: column;
 }

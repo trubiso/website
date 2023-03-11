@@ -25,7 +25,12 @@
 	</div>
 	<div class="centerers">
 		{#each pages as page}
-			<PageSwitcherPage number={page} current={page == currentPage} />
+			<PageSwitcherPage
+				number={page}
+				current={page == currentPage}
+				defaultNumber={currentPage}
+				{maximumPage}
+			/>
 		{/each}
 	</div>
 	<div class="righters">

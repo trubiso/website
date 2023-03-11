@@ -2,10 +2,12 @@ main.page-switcher {
 	display: flex;
 	justify-content: center;
 	width: 100%;
-	
+
 	margin-bottom: 10px;
 
-	.lefters, .centerers, .righters {
+	.lefters,
+	.centerers,
+	.righters {
 		display: flex;
 		flex-grow: 1;
 	}
