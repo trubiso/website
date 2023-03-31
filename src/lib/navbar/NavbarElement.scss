@@ -33,17 +33,18 @@
 			color: var(--text);
 			border-top: 2px solid var(--accent);
 			border-bottom: 2px solid var(--accent);
-			border-right: 0;
-			border-left: 0;
-		}
 
-		&.alt-popout {
-			&.bold {
+			&.alt-popout {
 				border-top: 2px solid var(--text);
 				border-bottom: 2px solid var(--text);
+				
+				// yes it has to be done twice, css is weird
 				border-right: 0;
 				border-left: 0;
 			}
+
+			border-right: 0;
+			border-left: 0;
 		}
 	}
 }
