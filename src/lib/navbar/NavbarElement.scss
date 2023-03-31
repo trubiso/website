@@ -12,21 +12,37 @@
 	}
 
 	&.popout {
-		border-right: 2px solid var(--accent);
+		&.sidebar-a {
+			border-right: 2px solid var(--accent);
+
+			&.alt-popout {
+				border-right: 2px solid var(--text);
+			}
+		}
+
+		&.sidebar-b {
+			border-left: 2px solid var(--accent);
+
+			&.alt-popout {
+				border-left: 2px solid var(--text);
+			}
+		}
+
 		&.bold {
 			background-color: var(--bg);
 			color: var(--text);
 			border-top: 2px solid var(--accent);
 			border-bottom: 2px solid var(--accent);
 			border-right: 0;
+			border-left: 0;
 		}
 
 		&.alt-popout {
-			border-right: 2px solid var(--text);
 			&.bold {
 				border-top: 2px solid var(--text);
 				border-bottom: 2px solid var(--text);
 				border-right: 0;
+				border-left: 0;
 			}
 		}
 	}

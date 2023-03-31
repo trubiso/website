@@ -91,29 +91,59 @@ nav.navbar {
 		}
 
 		&.popout {
-			.header-wrapper {
-				border-right: 2px solid var(--accent);
-			}
-
-			.sidebar-fill {
-				border-right: 2px solid var(--accent);
-			}
-
-			.sidebar-fill-top {
-				border-right: 2px solid var(--accent);
-			}
-
-			&.alt-popout {
+			&.sidebar-a {
 				.header-wrapper {
-					border-right: 2px solid var(--text);
+					border-right: 2px solid var(--accent);
 				}
 
 				.sidebar-fill {
-					border-right: 2px solid var(--text);
+					border-right: 2px solid var(--accent);
 				}
 
 				.sidebar-fill-top {
-					border-right: 2px solid var(--text);
+					border-right: 2px solid var(--accent);
+				}
+
+				&.alt-popout {
+					.header-wrapper {
+						border-right: 2px solid var(--text);
+					}
+	
+					.sidebar-fill {
+						border-right: 2px solid var(--text);
+					}
+	
+					.sidebar-fill-top {
+						border-right: 2px solid var(--text);
+					}
+				}
+			}
+
+			&.sidebar-b {
+				.header-wrapper {
+					border-left: 2px solid var(--accent);
+				}
+
+				.sidebar-fill {
+					border-left: 2px solid var(--accent);
+				}
+
+				.sidebar-fill-top {
+					border-left: 2px solid var(--accent);
+				}
+
+				&.alt-popout {
+					.header-wrapper {
+						border-left: 2px solid var(--text);
+					}
+	
+					.sidebar-fill {
+						border-left: 2px solid var(--text);
+					}
+	
+					.sidebar-fill-top {
+						border-left: 2px solid var(--text);
+					}
 				}
 			}
 		}

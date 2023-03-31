@@ -1,10 +1,10 @@
 <script lang="ts">
-	import './Navbar.scss';
 	import { navbar } from '$lib/json';
 	import { lock, mobile, sidebarLocation, sidebarPopout, sidebarStyle, theme } from '$lib/stores';
+	import { slide } from 'svelte/transition';
+	import './Navbar.scss';
 	import NavbarElement from './NavbarElement.svelte';
 	import NavbarLogo from './NavbarLogo.svelte';
-	import { slide } from 'svelte/transition';
 
 	const items = navbar.order;
 
@@ -43,7 +43,12 @@
 		{#if open || !$mobile}
 			<div class="sidebar-wrapper" transition:slide>
 				{#each items as item}
-					<NavbarElement name={item} popout={!!$sidebarPopout && !$mobile} {altPopout} />
+					<NavbarElement
+						name={item}
+						popout={!!$sidebarPopout && !$mobile}
+						{altPopout}
+						sidebarLocation={$sidebarLocation}
+					/>
 				{/each}
 
 				<!--TODO: navbar.log_in-->
