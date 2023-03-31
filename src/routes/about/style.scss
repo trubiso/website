@@ -1,0 +1,5 @@
+main.about {
+    :not(h1) {
+		text-align: justify; // for mobile users
+	}
+}

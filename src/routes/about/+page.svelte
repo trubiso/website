@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { order, socialMedia } from '$lib/json';
 	import { t } from '$lib/localization';
+	import './style.scss';
 </script>
 
 <main class="about">

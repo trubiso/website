@@ -6,6 +6,10 @@
 	color: var(--cardText);
 	margin-bottom: 20px;
 
+	* {
+		text-align: justify; // for mobile users
+	}
+
 	&-timestamp {
 		opacity: 0.5;
 	}

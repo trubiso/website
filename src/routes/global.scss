@@ -1,7 +1,14 @@
 @import '$lib/globals';
 
+@media screen and (max-width: $mobile) {
+	h1, h2, p {
+		text-align: center;
+	}
+}
+
 * {
 	box-sizing: border-box;
+	text-align: justify;
 }
 
 .bold {
