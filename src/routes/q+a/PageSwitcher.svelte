@@ -17,26 +17,28 @@
 </script>
 
 <main class="page-switcher">
-	<div class="lefters">
-		<PageSwitcherPage number={1} overrideStyle="<<" />
-		{#if hasPreviousPage}
-			<PageSwitcherPage number={currentPage - 1} overrideStyle="<" />
-		{/if}
-	</div>
-	<div class="centerers">
-		{#each pages as page}
-			<PageSwitcherPage
-				number={page}
-				current={page == currentPage}
-				defaultNumber={currentPage}
-				{maximumPage}
-			/>
-		{/each}
-	</div>
-	<div class="righters">
-		{#if hasNextPage}
-			<PageSwitcherPage number={+currentPage + 1} overrideStyle=">" />
-		{/if}
-		<PageSwitcherPage number={maximumPage} overrideStyle=">>" />
+	<div class="wrapper">
+		<div class="lefters">
+			<PageSwitcherPage number={1} overrideStyle="<<" />
+			{#if hasPreviousPage}
+				<PageSwitcherPage number={currentPage - 1} overrideStyle="<" />
+			{/if}
+		</div>
+		<div class="centerers">
+			{#each pages as page}
+				<PageSwitcherPage
+					number={page}
+					current={page == currentPage}
+					defaultNumber={currentPage}
+					{maximumPage}
+				/>
+			{/each}
+		</div>
+		<div class="righters">
+			{#if hasNextPage}
+				<PageSwitcherPage number={+currentPage + 1} overrideStyle=">" />
+			{/if}
+			<PageSwitcherPage number={maximumPage} overrideStyle=">>" />
+		</div>
 	</div>
 </main>

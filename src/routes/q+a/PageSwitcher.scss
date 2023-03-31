@@ -1,36 +1,42 @@
 main.page-switcher {
 	display: flex;
-	justify-content: center;
 	width: 100%;
+	justify-content: center;
 
-	margin-bottom: 10px;
-
-	.lefters,
-	.centerers,
-	.righters {
+	.wrapper {
 		display: flex;
-		flex-grow: 1;
-	}
-
-	.lefters {
-		justify-content: left;
-		*.page-switcher-page {
-			margin-right: 5px;
-		}
-	}
-
-	.centerers {
 		justify-content: center;
-		*.page-switcher-page {
-			margin-left: 2.5px;
-			margin-right: 2.5px;
-		}
-	}
+		width: 300px;
 
-	.righters {
-		justify-content: right;
-		*.page-switcher-page {
-			margin-left: 5px;
+		margin-bottom: 10px;
+
+		.lefters,
+		.centerers,
+		.righters {
+			display: flex;
+			flex-grow: 1;
+		}
+
+		.lefters {
+			justify-content: left;
+			*.page-switcher-page {
+				margin-right: 5px;
+			}
+		}
+
+		.centerers {
+			justify-content: center;
+			*.page-switcher-page {
+				margin-left: 2.5px;
+				margin-right: 2.5px;
+			}
+		}
+
+		.righters {
+			justify-content: right;
+			*.page-switcher-page {
+				margin-left: 5px;
+			}
 		}
 	}
 }
