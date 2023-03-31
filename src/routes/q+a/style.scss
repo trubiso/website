@@ -1,6 +1,12 @@
 main.qa {
-  .questions-wrapper {
-    display: flex;
-    flex-direction: column;
-  }
+	.questions-wrapper {
+		display: flex;
+		flex-direction: column;
+	}
+
+	>.invalid {
+		padding: 10px;
+		margin-bottom: 10px;
+		text-align: center;
+	}
 }

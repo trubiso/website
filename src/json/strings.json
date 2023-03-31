@@ -111,7 +111,8 @@
 			"jumpToPage": "jump to page",
 			"jumpToPageButton": "go!",
 			"jumpToPageTooHigh": "the page you specified is too high, please specify a lower one",
-			"jumpToPageTooLow": "the page you specified is too low, please specify a higher one (i.e. above zero)"
+			"jumpToPageTooLow": "the page you specified is too low, please specify a higher one (i.e. above zero)",
+			"invalidPage": "you accessed an invalid page, i wonder how you did that. here's a silly face if you're bored"
 		}
 	},
 	"sl": {
@@ -226,7 +227,8 @@
 			"jumpToPage": "jmup to peag",
 			"jumpToPageButton": "GOE!!!",
 			"jumpToPageTooHigh": "da peg yu specified iz TOO HAI !!! plz input LOWAR paeg",
-			"jumpToPageTooLow": "da paeg yu specifieded is TOO LO !!! plz input HAIAR PAEG (so liek, abov zeeroe :P)"
+			"jumpToPageTooLow": "da paeg yu specifieded is TOO LO !!! plz input HAIAR PAEG (so liek, abov zeeroe :P)",
+			"invalidPage": "yu acesd an invalid paeg... i wondar how yu got heer o.O heer is a sili man if yu boringed :P"
 		}
 	}
 }
