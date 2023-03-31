@@ -36,8 +36,8 @@
 		importHSV(hue, sat, val);
 	}
 
-	let importHSV: (h: number, s: number, v: number) => {};
-	let importHEX: (newHex: string) => {};
+	let importHSV: (h: number, s: number, v: number) => void;
+	let importHEX: (newHex: string) => void;
 
 	const dispatch = createEventDispatcher();
 	function change() {

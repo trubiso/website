@@ -4,7 +4,7 @@
 
 	export let height: string | number = '0';
 	export let width: string | number;
-	export let mrel: string = '1';
+	export let mrel = '1';
 	$: twod = height !== '0';
 
 	$: boxHeight = typeof height == 'number' ? height : parseInt(height);

@@ -19,11 +19,37 @@ export function themeToCode(theme: ITheme) {
 }
 
 export function codeToTheme(code: string) {
-  if (code.length % 6 !== 0) throw `Invalid theme code.`;
-	if (code.toLowerCase().split('').some(v => !['0','1','2','3','4','5','6','7','8','9','a','b','c','d','e','f'].includes(v))) throw `Invalid theme code.`;
-  const theme: ITheme = {...themes.smilie_lavender};
+	if (code.length % 6 !== 0) throw `Invalid theme code.`;
+	if (
+		code
+			.toLowerCase()
+			.split('')
+			.some(
+				(v) =>
+					![
+						'0',
+						'1',
+						'2',
+						'3',
+						'4',
+						'5',
+						'6',
+						'7',
+						'8',
+						'9',
+						'a',
+						'b',
+						'c',
+						'd',
+						'e',
+						'f'
+					].includes(v)
+			)
+	)
+		throw `Invalid theme code.`;
+	const theme: ITheme = { ...themes.smilie_lavender };
 	for (let i = 0; i < code.length; i += 6) {
-    theme[order.themeProps[i / 6]] = `#${code.slice(i, i + 6)}`;
-  }
-  return theme;
+		theme[order.themeProps[i / 6]] = `#${code.slice(i, i + 6)}`;
+	}
+	return theme;
 }

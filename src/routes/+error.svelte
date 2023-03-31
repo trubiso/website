@@ -4,13 +4,18 @@
 </script>
 
 <main>
-  <h1>O NO!</h1>
+	<h1>O NO!</h1>
 	<p><EmoteZone>AHHHHHHHHHE ERROREEEEEEEEEE !!! HLEP MEEEEEEEEEEEEEEEEe!! :cri:</EmoteZone></p>
-  <hr>
+	<hr />
 	<p><b>Code:</b> {$page.status}</p>
-  <pre>{$page.error.message}</pre>
-  <pre>Stack:
+	<pre>{$page.error.message}</pre>
+	<pre>Stack:
   {$page.error.stack}</pre>
-  <hr>
-  <p><EmoteZone>:please: plz report to trunbiso (wif screenshot or copyinge, to disqord prenferabli). he wil tri to fiks :excited:</EmoteZone></p>
+	<hr />
+	<p>
+		<EmoteZone
+			>:please: plz report to trunbiso (wif screenshot or copyinge, to disqord prenferabli). he wil
+			tri to fiks :excited:</EmoteZone
+		>
+	</p>
 </main>

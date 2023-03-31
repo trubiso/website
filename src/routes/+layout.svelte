@@ -1,10 +1,10 @@
 <script lang="ts">
 	import { langs } from '$lib/json';
 	import Navbar from '$lib/navbar/Navbar.svelte';
-	import { lang, mobile, sidebarLocation, lock, theme } from '$lib/stores';
-	import { get } from 'svelte/store';
-	import { onMount } from 'svelte';
+	import { lang, lock, mobile, sidebarLocation, theme } from '$lib/stores';
 	import { themeToCSS } from '$lib/themes';
+	import { onMount } from 'svelte';
+	import { get } from 'svelte/store';
 	import './global.scss';
 
 	onMount(() => {

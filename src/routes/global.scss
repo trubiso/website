@@ -22,7 +22,7 @@ body {
 		height: 100%;
 		background: var(--bg);
 		color: var(--text);
-    
+
 		font-family: 'Times New Roman', 'MS PGothic', Osaka, Times, serif;
 		button,
 		input {
@@ -31,7 +31,7 @@ body {
 
 		div.content-wrapper {
 			min-height: 100vh;
-      max-height: 100vh;
+			max-height: 100vh;
 			display: flex;
 			flex-direction: column;
 
@@ -62,13 +62,13 @@ body {
 
 				&.sidebar-b {
 					margin-right: 200px;
-				width: calc(100% - 200px);
+					width: calc(100% - 200px);
 				}
 			}
 
 			&.fixed {
-        overflow: hidden;
-      }
+				overflow: hidden;
+			}
 		}
 	}
 }

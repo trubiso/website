@@ -3,8 +3,8 @@
 
 	import { createEventDispatcher } from 'svelte';
 
-	import AllPickers from './AllPickers.svelte';
 	import { lock } from '$lib/stores';
+	import AllPickers from './AllPickers.svelte';
 
 	export let color = '#000000';
 	export let label: string;
@@ -22,8 +22,8 @@
 		}
 	}
 
-	let changeHEX: (hex: string) => {};
-	
+	let changeHEX: (hex: string) => void;
+
 	export function importHEX(hex: string) {
 		changeHEX(hex);
 	}

@@ -1,23 +1,23 @@
 .point-area {
-  overscroll-behavior: contain;
-  position: absolute;
-  z-index: 1;
+	overscroll-behavior: contain;
+	position: absolute;
+	z-index: 1;
 
-  .point {
-    position: absolute;
-    //top: -5px;
-    left: var(--x);
-    top: var(--y);
-    height: 35px;
-    width: 10px;
-    background-color: white;
-    border: 2px solid black;
-  
-    &-alt {
-      width: 15px;
-      height: 15px;
-  
-      border-radius: 15px;
-    }
-  }
+	.point {
+		position: absolute;
+		//top: -5px;
+		left: var(--x);
+		top: var(--y);
+		height: 35px;
+		width: 10px;
+		background-color: white;
+		border: 2px solid black;
+
+		&-alt {
+			width: 15px;
+			height: 15px;
+
+			border-radius: 15px;
+		}
+	}
 }

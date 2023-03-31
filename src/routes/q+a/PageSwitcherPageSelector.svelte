@@ -9,15 +9,15 @@
 
 	function jump() {
 		if (chosen > maximumNumber) {
-			alert(t("q+a.jumpToPageTooHigh"));
+			alert(t('q+a.jumpToPageTooHigh'));
 			return;
 		}
 
 		if (chosen < 1) {
-			alert(t("q+a.jumpToPageTooLow"));
+			alert(t('q+a.jumpToPageTooLow'));
 			return;
 		}
-		
+
 		location.search = `?page=${chosen}`;
 	}
 </script>

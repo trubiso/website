@@ -1,9 +1,9 @@
 <script lang="ts">
-  import './style.scss';
 	import { t } from '$lib/localization';
+	import './style.scss';
 
 	let kitty: HTMLImageElement;
-	let loading: boolean = true;
+	let loading = true;
 
 	function enableButton() {
 		loading = false;

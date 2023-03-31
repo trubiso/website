@@ -2,7 +2,6 @@
 	import { createEventDispatcher } from 'svelte';
 	import HsvManualPicker from './HsvManualPicker.svelte';
 
-	import { HEXtoHSV } from '$lib/color';
 	import '../Picker.scss';
 	import HuePicker from './HuePicker.svelte';
 	import SvPicker from './SvPicker.svelte';
@@ -26,7 +25,7 @@
 		syncShown();
 	}
 
-	let syncShown: () => {};
+	let syncShown: () => void;
 </script>
 
 <main>

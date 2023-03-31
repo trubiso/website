@@ -1,19 +1,21 @@
-import { emotes } from "./json";
+import { emotes } from './json';
 
 export function padZeroes(num: number, zeroes = 2) {
-  const str = num.toString();
-  const zero = '0'.repeat(zeroes - str.length);
-  return zero + str;
+	const str = num.toString();
+	const zero = '0'.repeat(zeroes - str.length);
+	return zero + str;
 }
 
 export function dateFormat(date: Date) {
-  const day = `${date.getFullYear()}-${padZeroes(date.getMonth()+1)}-${padZeroes(date.getDate())}`;
-  const time = `${padZeroes(date.getHours())}:${padZeroes(date.getMinutes())}`;
+	const day = `${date.getFullYear()}-${padZeroes(date.getMonth() + 1)}-${padZeroes(
+		date.getDate()
+	)}`;
+	const time = `${padZeroes(date.getHours())}:${padZeroes(date.getMinutes())}`;
 	return `${day} ${time}`;
 }
 
 export function getEmote(name: string) {
-	const index = emotes.emoteNames.findIndex(x => x === name);
+	const index = emotes.emoteNames.findIndex((x) => x === name);
 	if (!index) return undefined;
-  return emotes.emoteLinks[index];
+	return emotes.emoteLinks[index];
 }

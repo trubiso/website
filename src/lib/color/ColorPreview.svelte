@@ -2,7 +2,7 @@
 	import './ColorPreview.scss';
 
 	export let hex: string;
-  export let label: string = '';
+  export let label = '';
 </script>
 
 <main class="color-preview-wrap">

@@ -23,7 +23,7 @@ export const GET = async ({ url }: RequestEvent) => {
 			questions: questionList,
 			hasPreviousPage,
 			hasNextPage,
-			maximumPage: Math.ceil(questions.length / questionsPerPage),
+			maximumPage: Math.ceil(questions.length / questionsPerPage)
 		}),
 		{
 			status: 200,

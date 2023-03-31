@@ -3,8 +3,8 @@
 	import { t } from '$lib/localization';
 	import { theme } from '$lib/stores';
 	import type { ThemeProp } from '$lib/types';
-	import { get } from 'svelte/store';
 	import { onMount } from 'svelte';
+	import { get } from 'svelte/store';
 
 	export let prop: ThemeProp = 'navbarBG1';
 	$: v = $theme[prop];
@@ -15,7 +15,7 @@
 		theme.set(t);
 	}
 
-	let importHEX: (hex: string) => {};
+	let importHEX: (hex: string) => void;
 
 	onMount(() => {
 		importHEX(v);

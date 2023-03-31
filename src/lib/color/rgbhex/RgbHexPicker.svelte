@@ -25,7 +25,7 @@
 		change();
 	}
 
-	let changeIntHex: (newHex: string) => {};
+	let changeIntHex: (newHex: string) => void;
 
 	export function importHEX(newHex: string) {
 		hex = newHex;
