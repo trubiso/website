@@ -68,6 +68,12 @@ body {
 				}
 
 				&.sidebar-b {
+					// hack to change scrollbar side
+					// will break if language is arabic, probably
+					direction: rtl;
+					* {
+						direction: ltr;
+					}
 					margin-right: 200px;
 					width: calc(100% - 200px);
 				}
