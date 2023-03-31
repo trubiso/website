@@ -3,7 +3,7 @@
 nav.navbar {
 	display: flex;
 	position: fixed;
-	z-index: 2;
+	z-index: 3;
 	flex-direction: column;
 	background: linear-gradient(to bottom, var(--navbarBG1), var(--navbarBG2));
 
