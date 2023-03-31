@@ -36,7 +36,7 @@
 			"translation": "if the language you speak is not here, you can head to the translation page and translate the page to your language",
 			"theme": "theme",
 			"premadeTheme": "pick one of the premade themes...",
-			"customizeTheme": "or make one yourself",
+			"customizeTheme": "or make one yourself!",
 			"exportTheme": "export theme",
 			"exportThemeMsg": "theme code has been copied to clipboard",
 			"importTheme": "import theme",
@@ -108,6 +108,7 @@
 			"newgrounds": "newgrounds"
 		},
 		"q+a": {
+			"title": "questions and answers",
 			"jumpToPage": "jump to page",
 			"jumpToPageButton": "go!",
 			"jumpToPageTooHigh": "the page you specified is too high, please specify a lower one",
@@ -152,7 +153,7 @@
 			"translation": "if da languig yu speek is not heer, yu can hed to da transletion paeg n translet da paeg to yur languig !",
 			"theme": "theem",
 			"premadeTheme": "pik wan of da premaed theemz...",
-			"customizeTheme": "or mek wan urslef",
+			"customizeTheme": "or mek wan YURSLEF !!",
 			"exportTheme": "export theme",
 			"exportThemeMsg": "theme code has been copied to clipboard",
 			"importTheme": "import theme",
@@ -224,6 +225,7 @@
 			"newgrounds": "newgrounds"
 		},
 		"q+a": {
+			"title": "quesions N ansars",
 			"jumpToPage": "jmup to peag",
 			"jumpToPageButton": "GOE!!!",
 			"jumpToPageTooHigh": "da peg yu specified iz TOO HAI !!! plz input LOWAR paeg",

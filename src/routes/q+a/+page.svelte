@@ -16,7 +16,7 @@
 </script>
 
 <main class="qa">
-	<h1>questions and answers</h1>
+	<h1>{t("q+a.title")}</h1>
 
 	<PageSwitcher {...data} />
 
