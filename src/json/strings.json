@@ -109,7 +109,9 @@
 		},
 		"q+a": {
 			"jumpToPage": "jump to page",
-			"jumpToPageButton": "go!"
+			"jumpToPageButton": "go!",
+			"jumpToPageTooHigh": "the page you specified is too high, please specify a lower one",
+			"jumpToPageTooLow": "the page you specified is too low, please specify a higher one (i.e. above zero)"
 		}
 	},
 	"sl": {
@@ -222,7 +224,9 @@
 		},
 		"q+a": {
 			"jumpToPage": "jmup to peag",
-			"jumpToPageButton": "GOE!!!"
+			"jumpToPageButton": "GOE!!!",
+			"jumpToPageTooHigh": "da peg yu specified iz TOO HAI !!! plz input LOWAR paeg",
+			"jumpToPageTooLow": "da paeg yu specifieded is TOO LO !!! plz input HAIAR PAEG (so liek, abov zeeroe :P)"
 		}
 	}
 }
