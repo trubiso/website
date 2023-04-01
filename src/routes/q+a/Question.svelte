@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { dateFormat } from '$lib/functions';
+	import { t } from '$lib/localization';
 	import EmoteZone from '$lib/text/EmoteZone.svelte';
 	import Markup from '$lib/text/Markup.svelte';
 	import type { qa } from '@prisma/client';
@@ -16,6 +17,10 @@
 		<Markup><EmoteZone>{question.question}</EmoteZone></Markup>
 	</div>
 	<div class="question-answer">
-		<Markup><EmoteZone>{question.answer}</EmoteZone></Markup>
+		{#if question.answer !== null}
+			<Markup><EmoteZone>{question.answer}</EmoteZone></Markup>
+		{:else}
+			<Markup><EmoteZone>{t('q+a.placeholderAnswer')}</EmoteZone></Markup>
+		{/if}
 	</div>
 </main>

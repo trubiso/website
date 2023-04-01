@@ -1,7 +1,7 @@
 <script lang="ts">
-	import './EmoteZone.scss';
 	import { emotes } from '$lib/json';
 	import { onMount } from 'svelte';
+	import './EmoteZone.scss';
 
 	export let size = '22';
 

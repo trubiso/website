@@ -8,7 +8,6 @@ main.question-submit-form {
 		padding: 10px;
 		width: 100%;
 		min-height: 250px;
-		height: 250px;
 		align-items: center;
 
 		label {
@@ -32,8 +31,8 @@ main.question-submit-form {
 		textarea {
 			min-width: 60%;
 			max-width: 100%;
-			min-height: 80%;
-			max-height: 100%;
+			min-height: calc(250px * 0.8);
+			max-height: 250px;
 			width: 100%;
 			height: 50px;
 		}

@@ -122,7 +122,9 @@
 			"submitSendError": "could not send question",
 			"submitSendErrorQuestionMissing": "your question is either empty or you just put spaces in it, try to formulate a coherent question",
 			"submitSendErrorOther": "there was an internal error when trying to send the question. it is the following:",
-			"submitTryAgain": "try again"
+			"submitTryAgain": "try again",
+			"placeholderTitle": "(untitled)",
+			"placeholderAnswer": ":silly: pretend i answered"
 		}
 	},
 	"sl": {
@@ -248,7 +250,9 @@
 			"submitSendError": "O NO !! YUR QUESION CULDNT BE SENTE !!",
 			"submitSendErrorQuestionMissing": "yur quesion is eidar EMTI or u jus put SPECES in it :P trai to formulet COHEERENT quesion pleez",
 			"submitSendErrorOther": "der was INTERNAL ERORE wen tryin to send da questione. it is da folowingeingeing:",
-			"submitTryAgain": "trai agein"
+			"submitTryAgain": "trai agein",
+			"placeholderTitle": "(untaiteld)",
+			"placeholderAnswer": ":silly: pretende i answeringed !!"
 		}
 	}
 }
