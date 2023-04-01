@@ -3,7 +3,7 @@ import type { RequestHandler } from '@sveltejs/kit';
 
 export const POST: RequestHandler = async ({ request }) => {
 	const json = await request.json();
-	const question = json.question as string;
+	const question = (json.question as string).trim();
 
 	if (question.length < 1)
 		return new Response(JSON.stringify({ success: false, error: 'question missing' }));

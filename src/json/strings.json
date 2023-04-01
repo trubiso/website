@@ -113,7 +113,16 @@
 			"jumpToPageButton": "go!",
 			"jumpToPageTooHigh": "the page you specified is too high, please specify a lower one",
 			"jumpToPageTooLow": "the page you specified is too low, please specify a higher one (i.e. above zero)",
-			"invalidPage": "you accessed an invalid page, i wonder how you did that. here's a silly face if you're bored"
+			"invalidPage": "you accessed an invalid page, i wonder how you did that. here's a silly face if you're bored",
+			"submitAskMe": "ask me!",
+			"submitSendButton": "send",
+			"submitSendingQuestion": "sending question...",
+			"submitSendSuccess": "your question has been sent successfully!",
+			"submitSendMore": "send another question",
+			"submitSendError": "could not send question",
+			"submitSendErrorQuestionMissing": "your question is either empty or you just put spaces in it, try to formulate a coherent question",
+			"submitSendErrorOther": "there was an internal error when trying to send the question. it is the following:",
+			"submitTryAgain": "try again"
 		}
 	},
 	"sl": {
@@ -230,7 +239,16 @@
 			"jumpToPageButton": "GOE!!!",
 			"jumpToPageTooHigh": "da peg yu specified iz TOO HAI !!! plz input LOWAR paeg",
 			"jumpToPageTooLow": "da paeg yu specifieded is TOO LO !!! plz input HAIAR PAEG (so liek, abov zeeroe :P)",
-			"invalidPage": "yu acesd an invalid paeg... i wondar how yu got heer o.O heer is a sili man if yu boringed :P"
+			"invalidPage": "yu acesd an invalid paeg... i wondar how yu got heer o.O heer is a sili man if yu boringed :P",
+			"submitAskMe": "ask mee!",
+			"submitSendButton": "snend",
+			"submitSendingQuestion": "snedning quesion...",
+			"submitSendSuccess": "YUR quesion has ben sent SUCESFULIE !!!",
+			"submitSendMore": "send anodar quesion",
+			"submitSendError": "O NO !! YUR QUESION CULDNT BE SENTE !!",
+			"submitSendErrorQuestionMissing": "yur quesion is eidar EMTI or u jus put SPECES in it :P trai to formulet COHEERENT quesion pleez",
+			"submitSendErrorOther": "der was INTERNAL ERORE wen tryin to send da questione. it is da folowingeingeing:",
+			"submitTryAgain": "trai agein"
 		}
 	}
 }
