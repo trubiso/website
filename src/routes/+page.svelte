@@ -1,4 +1,5 @@
 <script lang="ts">
+	import Emote from '$lib/text/Emote.svelte';
 	import './style.scss';
 </script>
 
@@ -18,19 +19,9 @@
 	<br />
 	<p>if the warnings scared you here's some silly faces to calm you down</p>
 	<br />
-	<img
-		src="https://cdn.discordapp.com/emojis/729411456491323412.png?size=1024&quality=lossless"
-		alt=":silly:"
-		class="flashy"
-	/><img
-		src="https://cdn.discordapp.com/emojis/729411456491323412.png?size=1024&quality=lossless"
-		alt=":silly:"
-		class="scaly"
-	/><img
-		src="https://cdn.discordapp.com/emojis/729411456491323412.png?size=1024&quality=lossless"
-		alt=":silly:"
-		class="ultrasilly"
-	/>
+	<Emote name="silly" spinning />
+	<Emote name="silly" scaling />
+	<Emote name="silly" spinning scaling />
 	<br />
 	<p class="silly">HEHHEWHEAHWEHHWEH</p>
 	<br /><br /><br /><br /><br />

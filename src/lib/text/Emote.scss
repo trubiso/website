@@ -1,0 +1,67 @@
+@keyframes spinning {
+	0% {
+		transform: rotate(0deg);
+	}
+	25% {
+		transform: rotate(90deg);
+	}
+	50% {
+		transform: rotate(180deg);
+	}
+	75% {
+		transform: rotate(270deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
+@keyframes scaling {
+	0% {
+		transform: scale(2);
+	}
+	25% {
+		transform: scale(1);
+	}
+	50% {
+		transform: scale(0.5);
+	}
+	75% {
+		transform: scale(1);
+	}
+	100% {
+		transform: scale(2);
+	}
+}
+
+@keyframes spinning-scaling {
+	0% {
+		transform: scale(2) rotate(0deg);
+	}
+	25% {
+		transform: scale(1) rotate(90deg);
+	}
+	50% {
+		transform: scale(0.5) rotate(180deg);
+	}
+	75% {
+		transform: scale(1) rotate(270deg);
+	}
+	100% {
+		transform: scale(2) rotate(360deg);
+	}
+}
+
+.emote {
+	&.spinning {
+		animation: spinning 0.5s infinite linear;
+	}
+
+	&.scaling {
+		animation: scaling 0.5s infinite linear;
+	}
+
+	&.spinning-scaling {
+		animation: spinning-scaling 0.5s infinite linear;
+	}
+}

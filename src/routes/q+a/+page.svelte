@@ -1,6 +1,6 @@
 <script lang="ts">
-	import { getEmote } from '$lib/functions';
 	import { t } from '$lib/localization';
+	import Emote from '$lib/text/Emote.svelte';
 	import type { qa } from '@prisma/client';
 	import PageSwitcher from './PageSwitcher.svelte';
 	import Question from './Question.svelte';
@@ -16,14 +16,14 @@
 </script>
 
 <main class="qa">
-	<h1>{t("q+a.title")}</h1>
+	<h1>{t('q+a.title')}</h1>
 
 	<PageSwitcher {...data} />
 
-	{#if data.currentPage > data.maximumPage}
+	{#if data.currentPage < 1 || data.currentPage > data.maximumPage}
 		<div class="invalid">
 			<p>{t('q+a.invalidPage')}</p>
-			<img src={getEmote('silly')} alt=":silly:" />
+			<Emote name="silly" />
 			<p />
 		</div>
 	{:else}
