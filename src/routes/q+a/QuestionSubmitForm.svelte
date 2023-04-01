@@ -39,8 +39,11 @@
 			{#if !hasSubmittedQuestion}
 				<label for="text">{t('q+a.submitAskMe')}</label>
 				<textarea name="text" id="text" cols="30" rows="10" bind:value={question} required />
+				<label for="question">{t('q+a.questionPreview')}</label>
 				{#key sampleQuestion}
+				<div id="question">
 					<Question question={sampleQuestion} />
+				</div>
 				{/key}
 				<input type="submit" value={t('q+a.submitSendButton')} />
 			{:else}

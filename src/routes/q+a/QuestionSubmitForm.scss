@@ -21,11 +21,16 @@ main.question-submit-form {
 			}
 		}
 
+		label[for='question'] {
+			margin-bottom: 10px;
+		}
+
 		input[type='submit'] {
 			display: flex;
 			text-align: center;
 			left: 50%;
 			right: 50%;
+			margin-bottom: 10px;
 		}
 
 		textarea {
@@ -35,6 +40,7 @@ main.question-submit-form {
 			max-height: 250px;
 			width: 100%;
 			height: 50px;
+			margin-bottom: 10px;
 		}
 
 		&.smaller-qi {
