@@ -4,6 +4,7 @@
 	import type { qa } from '@prisma/client';
 	import PageSwitcher from './PageSwitcher.svelte';
 	import Question from './Question.svelte';
+	import QuestionSubmitForm from './QuestionSubmitForm.svelte';
 	import './style.scss';
 
 	export let data: {
@@ -17,6 +18,8 @@
 
 <main class="qa">
 	<h1>{t('q+a.title')}</h1>
+
+	<QuestionSubmitForm />
 
 	<PageSwitcher {...data} />
 
