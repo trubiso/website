@@ -1,6 +1,7 @@
 {
 	"en": {
 		"navbar": {
+			"logo": "/logo/latin.png",
 			"home": "home",
 			"smilies": "smilies",
 			"dont_click": "don't click",
@@ -130,6 +131,7 @@
 	},
 	"sl": {
 		"navbar": {
+			"logo": "/logo/latin.png",
 			"home": "hoem",
 			"smilies": "smilis",
 			"dont_click": "dont cliq",
@@ -255,6 +257,31 @@
 			"questionPreview": "previu:",
 			"placeholderTitle": "(untaiteld)",
 			"placeholderAnswer": ":silly: pretende i answeringed !!"
+		}
+	},
+	"ar": {
+		"navbar": {
+			"logo": "/logo/arabic.png"
+		}
+	},
+	"mk": {
+		"navbar": {
+			"logo": "/logo/cyrillic.png"
+		}
+	},
+	"tp": {
+		"navbar": {
+			"logo": "/logo/tokipona.png"
+		}
+	},
+	"jb": {
+		"navbar": {
+			"logo": "/logo/lojban.png"
+		}
+	},
+	"kn": {
+		"navbar": {
+			"logo": "/logo/knpflte.png"
 		}
 	}
 }

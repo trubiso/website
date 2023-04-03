@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { t } from '$lib/localization';
 	import { mobile } from '$lib/stores';
 
 	import './NavbarLogo.scss';
@@ -9,9 +10,9 @@
 <main>
 	<div class="logo" class:mobile={$mobile}>
 		{#if clicks < 10}
-			<img src="/logo.png" alt="logo" on:click={() => clicks++} />
+			<img src="{t("navbar.logo")}" alt="logo" on:click={() => clicks++} />
 		{:else}
-			<img src="/logo.png" alt=":silly:" on:click={() => clicks++} />
+			<img src="{t("navbar.logo")}" alt=":silly:" on:click={() => clicks++} />
 			<!--TODO: finish logo (emotes map)-->
 		{/if}
 	</div>
