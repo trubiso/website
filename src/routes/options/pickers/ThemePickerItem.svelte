@@ -10,7 +10,7 @@
 	$: title = t(`themes.${name}`);
 
 	function changeTheme() {
-		theme.set(themeObj);
+		theme.set({ ...themeObj });
 	}
 </script>
 
