@@ -25,15 +25,31 @@
 	<br />
 	<p class="silly">HEHHEWHEAHWEHHWEH</p>
 	<br /><br /><br /><br /><br />
+	<p>todo:</p>
+	<ul>
+		<li>smilies page</li>
+		<li>don't click page</li>
+		<li>games page (might change to "projects")</li>
+		<li>navbar rearranging and hiding in options</li>
+		<li>theme preview in options</li>
+		<li>translation page</li>
+		<li>change the questions to markdown</li>
+		<li>have a regular homepage version for non-development trubiso.tk</li>
+		<li>make the rewrite the default and FINALLY get rid of the old trubiso.tk</li>
+		<li>profiles</li>
+		<li>to-do list page</li>
+		<li>sharing themes around to the world</li>
+		<li>center the arabic logo</li>
+		<li>bug tracker page (and hence move all of these things to it)</li>
+		<li>probably so much more that i forgot</li>
+	</ul>
 	<p>finished pages:</p>
 	<ul>
 		<li><a href="/">homepage</a></li>
-		<li>
-			<a href="/hsvtester">hsv tester (technically not a page but just a test for a huge feature)</a
-			>
-		</li>
+		<li><a href="/hsvtester">colorpicker tester (technically, just a test)</a></li>
 		<li><a href="/kity">kities</a></li>
-		<li><a href="/options">options</a></li>
+		<li><a href="/q+a">q+a</a></li>
+		<li><a href="/options">options (missing previews for themes and navbar rearranging)</a></li>
 	</ul>
 	<p>
 		<b>BEWARE</b> of the sidebar, every link but the pages specified above is broken, the website might
