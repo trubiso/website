@@ -30,6 +30,7 @@
 		<li>smilies page</li>
 		<li>don't click page</li>
 		<li>games page (might change to "projects")</li>
+		<li>add an accent color for regular text</li>
 		<li>navbar rearranging and hiding in options</li>
 		<li>theme preview in options</li>
 		<li>translation page</li>
