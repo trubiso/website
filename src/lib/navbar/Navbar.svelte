@@ -1,6 +1,14 @@
 <script lang="ts">
 	import { navbar } from '$lib/json';
-	import { lock, mobile, sidebarLocation, sidebarPopout, sidebarStyle, theme } from '$lib/stores';
+	import {
+		lock,
+		mobile,
+		sidebarLocation,
+		sidebarOpen,
+		sidebarPopout,
+		sidebarStyle,
+		theme
+	} from '$lib/stores';
 	import { slide } from 'svelte/transition';
 	import './Navbar.scss';
 	import NavbarElement from './NavbarElement.svelte';
@@ -8,13 +16,11 @@
 
 	const items = navbar.order;
 
-	let open = false;
-
 	$: altPopout = $theme.accent === $theme.bg;
 
 	function toggleSidebar() {
-		open = !open;
-		lock.set(open);
+		sidebarOpen.set(!$sidebarOpen);
+		lock.set($sidebarOpen);
 	}
 </script>
 
@@ -33,14 +39,17 @@
 
 		<div class="header-wrapper">
 			{#if $mobile}
-				<a class="navbar-toggle" href="#h" on:click|preventDefault={toggleSidebar} class:spin={open}
-					>▼</a
+				<a
+					class="navbar-toggle"
+					href="#h"
+					on:click|preventDefault={toggleSidebar}
+					class:spin={$sidebarOpen}>▼</a
 				>
 			{/if}
 			<NavbarLogo />
 		</div>
 
-		{#if open || !$mobile}
+		{#if $sidebarOpen || !$mobile}
 			<div class="sidebar-wrapper" transition:slide>
 				{#each items as item}
 					<NavbarElement

@@ -4,7 +4,7 @@
 	import { page } from '$app/stores';
 	import { navbar } from '$lib/json';
 	import { t } from '$lib/localization';
-	import { spiny } from '$lib/stores';
+	import { lock, sidebarOpen, spiny } from '$lib/stores';
 
 	export let name = 'home';
 	export let popout = false;
@@ -26,6 +26,10 @@
 		class:alt-popout={altPopout}
 		class:sidebar-a={!sidebarLocation}
 		class:sidebar-b={sidebarLocation}
+		on:click={() => {
+			sidebarOpen.set(false);
+			lock.set(false);
+		}}
 		on:contextmenu|preventDefault={() => {
 			if (name === 'options') spiny.set(true);
 		}}

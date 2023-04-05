@@ -1,8 +1,7 @@
-import { writable } from 'svelte/store';
-import type { ITheme } from './types';
-import { themes } from './json';
 import { createLocalStorage, persist } from '@macfja/svelte-persistent-store';
-// waiting for them to fix the require issue
+import { writable } from 'svelte/store';
+import { themes } from './json';
+import type { ITheme } from './types';
 
 export const lang = writable('none');
 persist(lang, createLocalStorage(true), 'lang');
@@ -14,6 +13,7 @@ export const sidebarStyle = writable(0);
 persist(sidebarStyle, createLocalStorage(true), 'sidebarStyle');
 export const sidebarPopout = writable(0);
 persist(sidebarPopout, createLocalStorage(true), 'sidebarPopout');
+export const sidebarOpen = writable(false);
 export const fishy = writable(false);
 persist(fishy, createLocalStorage(true), 'fishy');
 export const spiny = writable(false);
