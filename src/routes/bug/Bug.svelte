@@ -1,18 +1,36 @@
 <script lang="ts">
+	import { dateFormat } from '$lib/functions';
+	import Card from '$lib/text/Card.svelte';
 	import type { bug } from '@prisma/client';
 
 	export let bug: bug;
 </script>
 
 <main class="bug">
-	<b>id: </b>{bug.id}
-	<br />
-	<b>created at: </b>{bug.created_at}
-	<br />
-	<b>name: </b>{bug.name}
-	<br />
-	<b>description: </b>{bug.description}
-	<br />
-	<b>tags: </b>{bug.tags.length === 0 ? "none" : bug.tags.join(", ")}
-	<br>
+	<Card>
+		<span slot="timestamp">
+			{dateFormat(new Date(bug.created_at))}
+		</span>
+
+		<span slot="title">
+			{bug.name}
+		</span>
+
+		<span slot="body">
+			{bug.description}
+		</span>
+
+		<span slot="footer">
+			<br />
+			{#if bug.tags.length > 1}
+				<i>
+					tags: {#each bug.tags as tag, i}
+						<a href="?tag={tag}">[{tag}]</a>{#if i < bug.tags.length - 1},&nbsp;{/if}
+					{/each}
+				</i>
+			{:else}
+				<i>no tags</i>
+			{/if}
+		</span>
+	</Card>
 </main>
