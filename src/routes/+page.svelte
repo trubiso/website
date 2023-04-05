@@ -1,29 +1,27 @@
 <script lang="ts">
+	import { t } from '$lib/localization';
 	import Emote from '$lib/text/Emote.svelte';
 	import './style.scss';
 </script>
 
 <main>
-	<h1>DEVELOPAR MOED !!</h1>
+	<h1>{$t('homeDev.title')}</h1>
 	<!-- svelte-ignore a11y-distracting-elements -->
-	<marquee class="big flashing flashy silly">UNSTAEBL !!! BE CARFUL !!!</marquee>
+	<marquee class="big flashing flashy silly">{$t('homeDev.unstableWarning')}</marquee>
 	<p>
-		<b class="flashing silly">WARNING:</b> if you do not know what you are doing please go back to
-		<span class="big">https://trubiso.tk</span>, this is an <b>experimental</b> version of the page and
-		features might not be 100% polished
+		<b class="flashing silly">{$t('homeDev.warningPre')}</b> {$t('homeDev.warning1')}
+		<span class="big">https://trubiso.tk</span>{$t('homeDev.warning2')}
+		<b>{$t('homeDev.warning3')}</b>{$t('homeDev.warning4')}
 	</p>
-	<p>
-		with that out of the way, if you find any bugs, please report them to me, in the q+a page or
-		personally :)
-	</p>
+	<p>{$t('homeDev.report')}</p>
 	<br />
-	<p>if the warnings scared you here's some silly faces to calm you down</p>
+	<p>{$t('homeDev.scare')}</p>
 	<br />
 	<Emote name="silly" spinning />
 	<Emote name="silly" scaling />
 	<Emote name="silly" spinning scaling />
 	<br />
-	<p class="silly">HEHHEWHEAHWEHHWEH</p>
+	<p class="silly">{$t('homeDev.laugh')}</p>
 	<br /><br /><br /><br /><br />
 	<p>todo:</p>
 	<ul>

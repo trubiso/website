@@ -13,6 +13,18 @@
 			"options": "options",
 			"log_in": "log in?"
 		},
+		"homeDev": {
+			"title": "DEVELOPER MODE!",
+			"unstableWarning": "UNSTABLE!!! BE CAREFUL!!!",
+			"warningPre": "WARNING:",
+			"warning1": "if you do not know what you are doing please go back to ",
+			"warning2": ", this is an ",
+			"warning3": "experimental",
+			"warning4": " version of the page and features might not be 100% polished",
+			"report": "with that out of the way, if you find any bugs, please report them to me in the issues page :)",
+			"scare": "if the warnings scared you here's some silly faces to calm you down",
+			"laugh": "HEHEHEHEHEHEHE"
+		},
 		"color": {
 			"hue": "hue",
 			"sat": "saturation",
@@ -158,6 +170,18 @@
 			"options": "optniose",
 			"log_in": "loge in ?"
 		},
+		"homeDev": {
+			"title": "DEVELOPAR MOED !!",
+			"unstableWarning": "UNSTAEBL !!! BE CARFUL !!!",
+			"warningPre": "WRARNINGING:",
+			"warning1": "if yu dnot kno waht yur doinge pleez go baq to ",
+			"warning2": ", dis is an ",
+			"warning3": "eksperimentale",
+			"warning4": " vresion of da paeg n feeturz mite not be 100% polisd",
+			"report": "wif dat aut of da wei, if yu finde eni bugz, pleez report dem to mee in da issus paeg :)",
+			"scare": "if da warnings scred yu heerz som sili facese to clalm u daun",
+			"laugh": "HEHHEWHEAHWEHHWEH"
+		},
 		"color": {
 			"hue": "hiu!",
 			"sat": "snaturetnion!",
@@ -294,6 +318,18 @@
 			"about": "sobre la página",
 			"options": "opciones",
 			"log_in": "¿iniciar sesión?"
+		},
+		"homeDev": {
+			"title": "¡MODO DESARROLLADOR!",
+			"unstableWarning": "¡¡¡INESTABLE!!! ¡¡¡PRECAUCIÓN!!!",
+			"warningPre": "CUIDADO:",
+			"warning1": "si no sabes lo que estás haciendo vuelve a ",
+			"warning2": ", esta es una versión ",
+			"warning3": "experimental",
+			"warning4": " de la página y puede que las características no estén pulidas al 100%",
+			"report": "dicho eso, si encuentras algún bug, por favor envíame un informe mediante la página \"problemas\" :)",
+			"scare": "si las advertencias te han asustado aquí hay algunas caras absurdas para tranquilizarte",
+			"laugh": "jejejejejejeje"
 		},
 		"color": {
 			"hue": "matiz",
@@ -441,6 +477,18 @@
 			"about": "sona lipu",
 			"options": "ante",
 			"log_in": "log in?"
+		},
+		"homeDev": {
+			"title": "LIPU PI JAN PALI!",
+			"unstableWarning": "IJO ALE LI KEN PAKALA!!! O SONA A!!!",
+			"warningPre": "O LUKIN E NI:",
+			"warning1": "sina sona ala e pali sina la o tawa lipu ante ",
+			"warning2": ". lipu ni li ",
+			"warning3": "pini ala",
+			"warning4": " li pona nanpa wan ala.",
+			"report": "ni la, sina alasa e pakala lipu la o toki e ni tawa mi. sina ken ni lon lipu pi pakala lipu :)",
+			"scare": "toki ni li pilin monsuta e sina la sinpin nasa ni li ken pilin pona awen e sina:",
+			"laugh": "A  aa A a a  A a  A A A a a A"
 		},
 		"color": {
 			"hue": "kule",
