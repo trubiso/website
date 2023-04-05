@@ -19,3 +19,7 @@ export function getEmote(name: string) {
 	if (!index) return undefined;
 	return emotes.emoteLinks[index];
 }
+
+export function keys<T extends object>(data: T): (keyof T)[] {
+	return Object.keys(data) as (keyof T)[];
+}
