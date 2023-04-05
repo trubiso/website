@@ -42,7 +42,7 @@
 				name="hex"
 				id="hex"
 			/>
-			<label for="hex">{t('color.hex')}</label>
+			<label for="hex">{$t('color.hex')}</label>
 		</div>
 	</div>
 </main>

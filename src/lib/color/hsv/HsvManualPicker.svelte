@@ -46,7 +46,7 @@
 				min="0"
 				max="360"
 			/>
-			<label for="hue">{t('color.hue')}</label>
+			<label for="hue">{$t('color.hue')}</label>
 		</div>
 		<div class="manual-input">
 			<input
@@ -58,7 +58,7 @@
 				min="0"
 				max="100"
 			/>
-			<label for="sat">{t('color.sat')}</label>
+			<label for="sat">{$t('color.sat')}</label>
 		</div>
 		<div class="manual-input">
 			<input
@@ -70,7 +70,7 @@
 				min="0"
 				max="100"
 			/>
-			<label for="val">{t('color.val')}</label>
+			<label for="val">{$t('color.val')}</label>
 		</div>
 	</div>
 </main>

@@ -36,9 +36,9 @@
 	</div>
 	<button on:click={newImage} disabled={loading}>
 		{#if loading}
-			{t('kitty.loading')}
+			{$t('kitty.loading')}
 		{:else}
-			{t('kitty.new')}
+			{$t('kitty.new')}
 		{/if}
 	</button>
 </main>

@@ -28,7 +28,7 @@
 
 	$: sampleQuestion = {
 		created_at: new Date(),
-		question: question.trim() === '' ? t("q+a.placeholderTitle") : question,
+		question: question.trim() === '' ? $t('q+a.placeholderTitle') : question,
 		answer: null
 	};
 </script>
@@ -37,33 +37,33 @@
 	<form action="" method="post" on:submit|preventDefault={handleSubmit}>
 		<div class="question-input" class:smaller-qi={hasSubmittedQuestion}>
 			{#if !hasSubmittedQuestion}
-				<label for="text">{t('q+a.submitAskMe')}</label>
+				<label for="text">{$t('q+a.submitAskMe')}</label>
 				<textarea name="text" id="text" cols="30" rows="10" bind:value={question} required />
-				<label for="question">{t('q+a.questionPreview')}</label>
+				<label for="question">{$t('q+a.questionPreview')}</label>
 				{#key sampleQuestion}
-				<div id="question">
-					<Question question={sampleQuestion} />
-				</div>
+					<div id="question">
+						<Question question={sampleQuestion} />
+					</div>
 				{/key}
-				<input type="submit" value={t('q+a.submitSendButton')} />
+				<input type="submit" value={$t('q+a.submitSendButton')} />
 			{:else}
 				{#await questionPromise}
-					<label for="">{t('q+a.submitSendingQuestion')}</label>
+					<label for="">{$t('q+a.submitSendingQuestion')}</label>
 					<Emote name="silly" spinning />
 				{:then result}
 					{#if result.success}
-						<label for="">{t('q+a.submitSendSuccess')}</label>
-						<input type="submit" value={t('q+a.submitSendMore')} />
+						<label for="">{$t('q+a.submitSendSuccess')}</label>
+						<input type="submit" value={$t('q+a.submitSendMore')} />
 					{:else}
-						<label for="">{t('q+a.submitSendError')} !!</label>
+						<label for="">{$t('q+a.submitSendError')} !!</label>
 						<Emote name="shock" scaling />
 						{#if result.error === 'question missing'}
-							<p>{t('q+a.submitSendErrorQuestionMissing')}</p>
+							<p>{$t('q+a.submitSendErrorQuestionMissing')}</p>
 						{:else}
-							<p>{t('q+a.submitSendErrorOther')}</p>
+							<p>{$t('q+a.submitSendErrorOther')}</p>
 							<pre>{JSON.stringify(result.error)}</pre>
 						{/if}
-						<input type="submit" value={t('q+a.submitTryAgain')} />
+						<input type="submit" value={$t('q+a.submitTryAgain')} />
 					{/if}
 				{/await}
 			{/if}

@@ -13,7 +13,7 @@
 
 	$: link = (navbar.links as Record<string, string>)[name]; // dumb TS fix that makes my code look ugly :'(
 	// @ts-ignore
-	$: label = t(`navbar.${name}`);
+	$: label = $t(`navbar.${name}`);
 </script>
 
 <main>

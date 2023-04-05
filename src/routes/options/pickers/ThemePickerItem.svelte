@@ -7,7 +7,7 @@
 	export let name = 'smilie';
 
 	$: themeObj = (themes as Record<string, ITheme>)[name];
-	$: title = t(`themes.${name}`);
+	$: title = $t(`themes.${name}`);
 
 	function changeTheme() {
 		theme.set({ ...themeObj });

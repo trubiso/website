@@ -20,7 +20,7 @@
 		{#if question.answer !== null}
 			<Markup><EmoteZone>{question.answer}</EmoteZone></Markup>
 		{:else}
-			<Markup><EmoteZone>{t('q+a.placeholderAnswer')}</EmoteZone></Markup>
+			<Markup><EmoteZone>{$t('q+a.placeholderAnswer')}</EmoteZone></Markup>
 		{/if}
 	</div>
 </main>

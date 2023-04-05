@@ -17,7 +17,7 @@
 </script>
 
 <main class="qa">
-	<h1>{t('q+a.title')}</h1>
+	<h1>{$t('q+a.title')}</h1>
 
 	<QuestionSubmitForm />
 
@@ -25,7 +25,7 @@
 
 	{#if data.currentPage < 1 || data.currentPage > data.maximumPage}
 		<div class="invalid">
-			<p>{t('q+a.invalidPage')}</p>
+			<p>{$t('q+a.invalidPage')}</p>
 			<Emote name="silly" />
 			<p />
 		</div>

@@ -25,7 +25,7 @@
 <main>
 	<ColorPicker
 		id={prop}
-		label={t(`themeProps.${prop}`)}
+		label={$t(`themeProps.${prop}`)}
 		bind:importHEX
 		bind:color={v}
 		on:change={changeV}
