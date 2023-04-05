@@ -32,6 +32,15 @@
 		}
 	}
 
+	&-footer {
+		font-size: 11px;
+		margin-bottom: -12.5px;
+		white-space: pre-line;
+		p {
+			margin: 0;
+		}
+	}
+
 	a {
 		color: var(--cardAccent) !important;
 	}

@@ -20,4 +20,12 @@
 			<slot name="body" />
 		</EmoteZone></Markup>
 	</div>
+
+	<div class="card-footer">
+		<Markup><EmoteZone>
+			<slot name="footer">
+				<span />
+			</slot>
+		</EmoteZone></Markup>
+	</div>
 </main>
