@@ -2,8 +2,6 @@
 	import { dateFormat } from '$lib/functions';
 	import { t } from '$lib/localization';
 	import Card from '$lib/text/Card.svelte';
-	import EmoteZone from '$lib/text/EmoteZone.svelte';
-	import Markup from '$lib/text/Markup.svelte';
 	import type { qa } from '@prisma/client';
 	import './Question.scss';
 
@@ -15,14 +13,16 @@
 		<span slot="timestamp">
 			{dateFormat(new Date(question.created_at))}
 		</span>
+
 		<span slot="title">
-			<Markup><EmoteZone>{question.question}</EmoteZone></Markup>
+			{question.question}
 		</span>
+		
 		<span slot="body">
 			{#if question.answer !== null}
-				<Markup><EmoteZone>{question.answer}</EmoteZone></Markup>
+				{question.answer}
 			{:else}
-				<Markup><EmoteZone>{$t('q+a.placeholderAnswer')}</EmoteZone></Markup>
+				{$t('q+a.placeholderAnswer')}
 			{/if}
 		</span>
 	</Card>
