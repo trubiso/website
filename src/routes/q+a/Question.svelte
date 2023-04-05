@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { dateFormat } from '$lib/functions';
 	import { t } from '$lib/localization';
+	import Card from '$lib/text/Card.svelte';
 	import EmoteZone from '$lib/text/EmoteZone.svelte';
 	import Markup from '$lib/text/Markup.svelte';
 	import type { qa } from '@prisma/client';
@@ -10,17 +11,19 @@
 </script>
 
 <main class="question">
-	<div class="question-timestamp">
-		{dateFormat(new Date(question.created_at))}
-	</div>
-	<div class="question-title">
-		<Markup><EmoteZone>{question.question}</EmoteZone></Markup>
-	</div>
-	<div class="question-answer">
-		{#if question.answer !== null}
-			<Markup><EmoteZone>{question.answer}</EmoteZone></Markup>
-		{:else}
-			<Markup><EmoteZone>{$t('q+a.placeholderAnswer')}</EmoteZone></Markup>
-		{/if}
-	</div>
+	<Card>
+		<span slot="timestamp">
+			{dateFormat(new Date(question.created_at))}
+		</span>
+		<span slot="title">
+			<Markup><EmoteZone>{question.question}</EmoteZone></Markup>
+		</span>
+		<span slot="answer">
+			{#if question.answer !== null}
+				<Markup><EmoteZone>{question.answer}</EmoteZone></Markup>
+			{:else}
+				<Markup><EmoteZone>{$t('q+a.placeholderAnswer')}</EmoteZone></Markup>
+			{/if}
+		</span>
+	</Card>
 </main>
