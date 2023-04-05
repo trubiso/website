@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { t } from '$lib/localization';
+	import { f, t } from '$lib/localization';
 	import Emote from '$lib/text/Emote.svelte';
 	import Question from './Question.svelte';
 	import './QuestionSubmitForm.scss';
@@ -37,7 +37,7 @@
 	<form action="" method="post" on:submit|preventDefault={handleSubmit}>
 		<div class="question-input" class:smaller-qi={hasSubmittedQuestion}>
 			{#if !hasSubmittedQuestion}
-				<label for="text">{$t('q+a.submitAskMe')}</label>
+				<label for="text">{$t('q+a.askMe')}</label>
 				<textarea name="text" id="text" cols="30" rows="10" bind:value={question} required />
 				<label for="question">{$t('q+a.questionPreview')}</label>
 				{#key sampleQuestion}
@@ -45,25 +45,31 @@
 						<Question question={sampleQuestion} />
 					</div>
 				{/key}
-				<input type="submit" value={$t('q+a.submitSendButton')} />
+				<input type="submit" value={$f('submitForm.send')({ object: $t('q+a.question') })} />
 			{:else}
 				{#await questionPromise}
-					<label for="">{$t('q+a.submitSendingQuestion')}</label>
+					<label for="">{$f('submitForm.sending')({ object: $t('q+a.question') })}</label>
 					<Emote name="silly" spinning />
 				{:then result}
 					{#if result.success}
-						<label for="">{$t('q+a.submitSendSuccess')}</label>
-						<input type="submit" value={$t('q+a.submitSendMore')} />
+						<label for="">{$f('submitForm.sendSuccess')({ object: $t('q+a.question') })}</label>
+						<input
+							type="submit"
+							value={$f('submitForm.sendMore')({ object: $t('q+a.question') })}
+						/>
 					{:else}
-						<label for="">{$t('q+a.submitSendError')} !!</label>
+						<label for="">{$f('submitForm.sendError')({ object: $t('q+a.question') })} !!</label>
 						<Emote name="shock" scaling />
 						{#if result.error === 'question missing'}
-							<p>{$t('q+a.submitSendErrorQuestionMissing')}</p>
+							<p>{$t('q+a.errorQuestionMissing')}</p>
 						{:else}
-							<p>{$t('q+a.submitSendErrorOther')}</p>
+							<p>{$t('q+a.errorOther')}</p>
 							<pre>{JSON.stringify(result.error)}</pre>
 						{/if}
-						<input type="submit" value={$t('q+a.submitTryAgain')} />
+						<input
+							type="submit"
+							value={$f('submitForm.tryAgain')({ object: $t('q+a.question') })}
+						/>
 					{/if}
 				{/await}
 			{/if}

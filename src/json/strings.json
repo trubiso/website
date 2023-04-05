@@ -109,22 +109,28 @@
 			"discord": "discord",
 			"newgrounds": "newgrounds"
 		},
-		"q+a": {
-			"title": "questions and answers",
+		"navigation": {
+			"page": "page",
 			"jumpToPage": "jump to page",
 			"jumpToPageButton": "go!",
 			"jumpToPageTooHigh": "the page you specified is too high, please specify a lower one",
 			"jumpToPageTooLow": "the page you specified is too low, please specify a higher one (i.e. above zero)",
-			"invalidPage": "you accessed an invalid page, i wonder how you did that. here's a silly face if you're bored",
-			"submitAskMe": "ask me!",
-			"submitSendButton": "send",
-			"submitSendingQuestion": "sending question...",
-			"submitSendSuccess": "your question has been sent successfully!",
-			"submitSendMore": "send another question",
-			"submitSendError": "could not send question",
-			"submitSendErrorQuestionMissing": "your question is either empty or you just put spaces in it, try to formulate a coherent question",
-			"submitSendErrorOther": "there was an internal error when trying to send the question. it is the following:",
-			"submitTryAgain": "try again",
+			"invalidPage": "you accessed an invalid page, i wonder how you did that. here's a silly face if you're bored"
+		},
+		"submitForm": {
+			"send": "send",
+			"sendMore": "send another {object}",
+			"sending": "sending {object}...",
+			"sendSuccess": "your {object} has been sent successfully!",
+			"sendError": "could not send {object}",
+			"tryAgain": "try again"
+		},
+		"q+a": {
+			"title": "questions and answers",
+			"askMe": "ask me!",
+			"question": "question",
+			"errorQuestionMissing": "your question is either empty or you just put spaces in it, try to formulate a coherent question",
+			"errorOther": "there was an internal error when trying to send the question. it is the following:",
 			"questionPreview": "preview:",
 			"placeholderTitle": "(untitled)",
 			"placeholderAnswer": ":silly: pretend i answered"
@@ -240,22 +246,28 @@
 			"discord": "discord",
 			"newgrounds": "newgrounds"
 		},
-		"q+a": {
-			"title": "quesions N ansars",
+		"navigation": {
+			"page": "paeg",
 			"jumpToPage": "jmup to peag",
 			"jumpToPageButton": "GOE!!!",
 			"jumpToPageTooHigh": "da peg yu specified iz TOO HAI !!! plz input LOWAR paeg",
 			"jumpToPageTooLow": "da paeg yu specifieded is TOO LO !!! plz input HAIAR PAEG (so liek, abov zeeroe :P)",
-			"invalidPage": "yu acesd an invalid paeg... i wondar how yu got heer o.O heer is a sili man if yu boringed :P",
-			"submitAskMe": "ask mee!",
-			"submitSendButton": "snend",
-			"submitSendingQuestion": "snedning quesion...",
-			"submitSendSuccess": "YUR quesion has ben sent SUCESFULIE !!!",
-			"submitSendMore": "send anodar quesion",
-			"submitSendError": "O NO !! YUR QUESION CULDNT BE SENTE !!",
-			"submitSendErrorQuestionMissing": "yur quesion is eidar EMTI or u jus put SPECES in it :P trai to formulet COHEERENT quesion pleez",
-			"submitSendErrorOther": "der was INTERNAL ERORE wen tryin to send da questione. it is da folowingeingeing:",
-			"submitTryAgain": "trai agein",
+			"invalidPage": "yu acesd an invalid paeg... i wondar how yu got heer o.O heer is a sili man if yu boringed :P"
+		},
+		"submitForm": {
+			"send": "snend",
+			"sendMore": "send anodar {object}",
+			"sending": "snedning {object}...",
+			"sendSuccess": "YUR {object} has ben sent SUCESFULIE !!!",
+			"sendError": "O NO !! yur {object} CULDNT be sente !!",
+			"tryAgain": "trai agein"
+		},
+		"q+a": {
+			"title": "quesions N ansars",
+			"askMe": "ask mee!",
+			"question": "quesion",
+			"errorQuestionMissing": "yur quesion is eidar EMTI or u jus put SPECES in it :P trai to formulet COHEERENT quesion pleez",
+			"errorOther": "der was INTERNAL ERORE wen tryin to send da questione. it is da folowingeingeing:",
 			"questionPreview": "previu:",
 			"placeholderTitle": "(untaiteld)",
 			"placeholderAnswer": ":silly: pretende i answeringed !!"
@@ -371,22 +383,28 @@
 			"discord": "discord",
 			"newgrounds": "newgrounds"
 		},
-		"q+a": {
-			"title": "preguntas y respuestas",
+		"navigation": {
+			"page": "página",
 			"jumpToPage": "saltar a página",
 			"jumpToPageButton": "¡vamos!",
 			"jumpToPageTooHigh": "el número de página que has especificado es demasiado alto, por favor especifica uno más bajo",
 			"jumpToPageTooLow": "el número de página que has especificado es demasiado bajo, por favor especifica uno más alto (es decir, mayor a cero)",
-			"invalidPage": "has accedido una página inválida, me pregunto cómo. bueno, aquí tienes una cara absurda por si te aburres",
-			"submitAskMe": "¡pregúntame!",
-			"submitSendButton": "enviar",
-			"submitSendingQuestion": "enviando pregunta...",
-			"submitSendSuccess": "¡tu pregunta se ha enviado correctamente!",
-			"submitSendMore": "enviar otra pregunta",
-			"submitSendError": "no se ha podido enviar tu pregunta",
-			"submitSendErrorQuestionMissing": "tu pregunta está vacía o sólo has escrito espacios, para la próxima formula una pregunta coherente",
-			"submitSendErrorOther": "ha habido un problema interno mientras se intentaba enviar tu pregunta. es el siguiente:",
-			"submitTryAgain": "volver a intentarlo",
+			"invalidPage": "has accedido una página inválida, me pregunto cómo. bueno, aquí tienes una cara absurda por si te aburres"
+		},
+		"submitForm": {
+			"send": "enviar",
+			"sendMore": "enviar más {object}s",
+			"sending": "enviando {object}...",
+			"sendSuccess": "¡tu {object} se ha enviado correctamente!",
+			"sendError": "no se ha podido enviar tu {object}",
+			"tryAgain": "volver a intentarlo"
+		},
+		"q+a": {
+			"title": "preguntas y respuestas",
+			"askMe": "¡pregúntame!",
+			"question": "pregunta",
+			"errorQuestionMissing": "tu pregunta está vacía o sólo has escrito espacios, para la próxima formula una pregunta coherente",
+			"errorOther": "ha habido un problema interno mientras se intentaba enviar tu pregunta. es el siguiente:",
 			"questionPreview": "previsualización:",
 			"placeholderTitle": "(sin título)",
 			"placeholderAnswer": ":silly: haz como si esto fuera una respuesta"
@@ -495,15 +513,6 @@
 			"new": "o kama e soweli sin"
 		},
 		"about": {
-			"thanks": "thank you for visiting trubiso.tk",
-			"privacyPre": "regarding privacy:",
-			"privacy": "this website uses your local storage to store your preferences, and you are the only person who can access them apart from the script that loads your preferences. this website does NOT use tracking or marketing cookies. it only uses cookies to store your login session if you decide to log into my website, you can check how that works for yourself in the repository, but if you want to save yourself the hassle, just know that i don't care about tracking you or selling your soul to the devil through cookies and my website will never devolve into such a deranged mindset that most of the internet has for some reason.",
-			"collaborationPre": "regarding collaboration:",
-			"collaboration": "this website is fully open source and i intend to keep it that way. i appreciate collaborators so if you want to contribute you can make a new issue to report bugs or make a new pull request to add some of your own code into my website. you can do so in the github repository which is linked below.",
-			"specialThanksPre": "special thanks to:",
-			"specialThanks": "venn, clembs, karl2883, dave, carrot farmer, earlofrats, angel753, ali kirb and you. i strongly appreciate your admiration and support towards this website whether it's regarding code, assets (venn :D) or simply moral support.",
-			"repository": "you can find this website's source code here:",
-			"socialMedia": "you can find me on the following social media:",
 			"signoff": "omekapo <3"
 		},
 		"socialMedia": {
@@ -512,25 +521,31 @@
 			"discord": "ilo Siko (Discord)",
 			"newgrounds": "lipu Nuka (Newgrounds)"
 		},
-		"q+a": {
-			"title": "pana pi sona wile",
+		"navigation": {
+			"page": "kipisi",
 			"jumpToPage": "o tawa kipisi ante",
 			"jumpToPageButton": "o tawa!",
 			"jumpToPageTooHigh": "sina wile tawa kipisi ike: nanpa kipisi sina li suli. o lili e ona",
 			"jumpToPageTooLow": "sina wile tawa kipisi ike: nanpa kipisi sina li lili. o suli e ona",
-			"invalidPage": "seme la sina lon kipisi ike?? a, o lukin e sitelen musi ni",
-			"submitAskMe": "o pana e wile sona sina!",
-			"submitSendButton": "o pana",
-			"submitSendingQuestion": "wile sona li kama pana...",
-			"submitSendSuccess": "wile sona sina li kama pana pona!",
-			"submitSendMore": "o pana e wile sona ante",
-			"submitSendError": "wile sona sina li ken ala pana",
-			"submitSendErrorQuestionMissing": "wile sona sina li sitelen ala. o sitelen e wile sona a",
-			"submitSendErrorOther": "wile sona li kama pana la ike ni li kama lon insa lipu:",
-			"submitTryAgain": "o pana e wile sona ante",
+			"invalidPage": "seme la sina lon kipisi ike?? a, o lukin e sitelen musi ni"
+		},
+		"submitForm": {
+			"send": "o pana",
+			"sendMore": "o pana e {object} namako",
+			"sending": "{object} sina li kama pana...",
+			"sendSuccess": "{object} sina li kama pana pona!",
+			"sendError": "{object} sina li ken ala pana",
+			"tryAgain": "o pana e {object} ante"
+		},
+		"q+a": {
+			"title": "pana pi sona wile",
+			"askMe": "o pana e wile sona sina!",
+			"question": "wile sona",
+			"errorQuestionMissing": "wile sona sina li sitelen ala. o sitelen e wile sona a",
+			"errorOther": "wile sona li kama pana la ike ni li kama lon insa lipu:",
 			"questionPreview": "ona li kama lon la lukin ona li sama ni:",
 			"placeholderTitle": "(sitelen ala)",
-			"placeholderAnswer": ":silly: ni li sitelen pi jan Telupiso"
+			"placeholderAnswer": ":silly: ni o sitelen pi jan Telupiso"
 		}
 	},
 	"jb": {

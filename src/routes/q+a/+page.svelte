@@ -25,7 +25,7 @@
 
 	{#if data.currentPage < 1 || data.currentPage > data.maximumPage}
 		<div class="invalid">
-			<p>{$t('q+a.invalidPage')}</p>
+			<p>{$t('navigation.invalidPage')}</p>
 			<Emote name="silly" />
 			<p />
 		</div>

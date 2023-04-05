@@ -9,12 +9,12 @@
 
 	function jump() {
 		if (chosen > maximumNumber) {
-			alert($t('q+a.jumpToPageTooHigh'));
+			alert($t('navigation.jumpToPageTooHigh'));
 			return;
 		}
 
 		if (chosen < 1) {
-			alert($t('q+a.jumpToPageTooLow'));
+			alert($t('navigation.jumpToPageTooLow'));
 			return;
 		}
 
@@ -25,13 +25,13 @@
 <main class="page-switcher-page-selector">
 	<div class="thing">
 		<div>
-			<span>{$t('q+a.jumpToPage')}</span>
+			<span>{$t('navigation.jumpToPage')}</span>
 		</div>
 		<div>
 			<input type="number" bind:value={chosen} name="r" id="r" min="1" max={maximumNumber} />
 		</div>
 		<div>
-			<button on:click={jump}>{$t('q+a.jumpToPageButton')}</button>
+			<button on:click={jump}>{$t('navigation.jumpToPageButton')}</button>
 		</div>
 	</div>
 </main>

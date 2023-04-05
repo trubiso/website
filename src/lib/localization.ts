@@ -9,6 +9,7 @@ type Keys<T> = {
 		  `${K}.${Keys<T[K]>}`
 		: K;
 }[keyof T];
+type LocalizationKey = Keys<typeof strings.en>;
 
 function innerInnerT(id: string, language: string) {
 	const path = id.split('.');
@@ -41,4 +42,13 @@ function innerT(id: string, lang: string): string {
 	return r;
 }
 
-export const t = derived(lang, ($lang) => (id: Keys<typeof strings.en>) => innerT(id, $lang));
+function format(id: string, lang: string, fmt: Record<string, string>): string {
+	let data = innerT(id, lang);
+	for (const key in fmt) {
+		data = data.replaceAll(`{${key}}`, fmt[key]);
+	}
+	return data;
+}
+
+export const t = derived(lang, ($lang) => (id: LocalizationKey) => innerT(id, $lang));
+export const f = derived(lang, ($lang) => (id: LocalizationKey) => (fmt: Record<string, string>) => format(id, $lang, fmt));
