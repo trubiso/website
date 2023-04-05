@@ -39,7 +39,8 @@
 		"dotenv": "^16.0.3",
 		"highlight.js": "^11.7.0",
 		"marked": "^4.2.4",
-		"sass": "^1.54.8"
+		"sass": "^1.54.8",
+		"uuid": "^8.3.2"
 	},
 	"browser": {
 		"util": false,
