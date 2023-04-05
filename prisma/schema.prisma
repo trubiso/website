@@ -59,3 +59,11 @@ model user {
   post     post[]
   profile  profile?
 }
+
+model bug {
+  id          String   @id @db.Uuid
+  created_at  DateTime @default(now()) @db.Timestamptz(6)
+  name        String
+  description String
+  tags        String[]
+}
