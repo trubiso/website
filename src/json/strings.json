@@ -78,7 +78,7 @@
 		"themeProps": {
 			"navbarBG1": "navbar background (top)",
 			"navbarBG2": "navbar background (bottom)",
-			"navbarText": "navbar text",
+			"navbarText": "navbar arrow",
 			"navbarAccent": "navbar accent",
 			"accent": "navbar item",
 			"bg": "background",
@@ -134,6 +134,14 @@
 			"questionPreview": "preview:",
 			"placeholderTitle": "(untitled)",
 			"placeholderAnswer": ":silly: pretend i answered"
+		},
+		"bug": {
+			"title": "issue tracker",
+			"encourage": "here you can report any issues or problems you perceive while using the website. you can submit one down below:",
+			"bug": "issue",
+			"preview": "preview:",
+			"placeholderName": "(name)",
+			"placeholderDescription": "(description)"
 		}
 	},
 	"sl": {
@@ -215,7 +223,7 @@
 		"themeProps": {
 			"navbarBG1": "navbar bakgrund (tope)",
 			"navbarBG2": "navbar bakgrund (boton)",
-			"navbarText": "navbar tekste",
+			"navbarText": "navbar arow",
 			"navbarAccent": "navbar accentete",
 			"accent": "navbar itmeme",
 			"bg": "bakgrund",
@@ -352,7 +360,7 @@
 		"themeProps": {
 			"navbarBG1": "fondo de la barra de navegación (superior)",
 			"navbarBG2": "fondo de la barra de navegación (inferior)",
-			"navbarText": "texto de la barra de navegación",
+			"navbarText": "flecha de la barra de navegación",
 			"navbarAccent": "tono de contraste de la barra de navegación",
 			"accent": "elemento de la barra de navegación",
 			"bg": "fondo",
@@ -499,9 +507,9 @@
 		"themeProps": {
 			"navbarBG1": "kule monsi pi poki nasin lon sewi",
 			"navbarBG2": "kule monsi pi poki nasin lon anpa",
-			"navbarText": "kule sitelen pi poki nasin",
+			"navbarText": "kule pi ilo open pi poki nasin",
 			"navbarAccent": "kule suli pi poki nasin",
-			"accent": "kule ijo pi poki nasin",
+			"accent": "kule sitelen pi poki nasin",
 			"bg": "kule monsi",
 			"text": "kule sitelen",
 			"cardBG": "kule monsi poki",

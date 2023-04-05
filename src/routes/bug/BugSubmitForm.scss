@@ -1,0 +1,54 @@
+@import '$lib/globals';
+
+main.bug-submit-form {
+	.bug-input {
+		text-align: center;
+		display: flex;
+		flex-direction: column;
+		padding: 10px;
+		width: 100%;
+		min-height: 250px;
+		align-items: center;
+
+		label {
+			font-size: 20px;
+			font-weight: bold;
+		}
+
+		label[for=''] {
+			@media screen and (max-width: $mobile) {
+				text-align: center;
+			}
+		}
+
+		label[for='description'], label[for='name'] {
+			margin-bottom: 10px;
+		}
+
+		input[type='submit'] {
+			display: flex;
+			text-align: center;
+			left: 50%;
+			right: 50%;
+			margin-bottom: 10px;
+		}
+
+		textarea {
+			min-width: 60%;
+			max-width: 100%;
+			min-height: calc(250px * 0.8);
+			max-height: 250px;
+			width: 100%;
+			height: 50px;
+			margin-bottom: 10px;
+		}
+
+		input[type='text'] {
+			margin-bottom: 10px;
+		}
+
+		&.smaller-qi {
+			height: 100px;
+		}
+	}
+}

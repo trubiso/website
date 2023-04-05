@@ -2,6 +2,7 @@
 	import { dateFormat } from '$lib/functions';
 	import Card from '$lib/text/Card.svelte';
 	import type { bug } from '@prisma/client';
+	import './Bug.scss';
 
 	export let bug: bug;
 </script>
