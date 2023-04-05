@@ -18,7 +18,7 @@
 		<span slot="title">
 			<Markup><EmoteZone>{question.question}</EmoteZone></Markup>
 		</span>
-		<span slot="answer">
+		<span slot="body">
 			{#if question.answer !== null}
 				<Markup><EmoteZone>{question.answer}</EmoteZone></Markup>
 			{:else}
