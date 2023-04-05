@@ -66,4 +66,5 @@ model bug {
   name        String
   description String
   tags        String[]
+  approved    Boolean  @default(false)
 }
