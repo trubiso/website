@@ -1,4 +1,4 @@
-import { derived, type Readable } from 'svelte/store';
+import { derived } from 'svelte/store';
 import { strings } from './json';
 import { lang } from './stores';
 
@@ -41,6 +41,4 @@ function innerT(id: string, lang: string): string {
 	return r;
 }
 
-export function t(id: Keys<typeof strings.en>): Readable<string> {
-	return derived(lang, ($lang) => innerT(id, $lang));
-}
+export const t = derived(lang, ($lang) => (id: Keys<typeof strings.en>) => innerT(id, $lang));
