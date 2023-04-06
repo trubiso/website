@@ -3,11 +3,10 @@ main.bugs {
 		display: flex;
 		flex-direction: row;
 		flex-wrap: wrap;
+		gap: 20px;
 
 		.bug {
 			flex-grow: 1;
-			margin-left: 10px;
-			margin-right: 10px;
 		}
 	}
 }
