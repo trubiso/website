@@ -335,6 +335,28 @@
 			"questionPreview": "previu:",
 			"placeholderTitle": "(untaiteld)",
 			"placeholderAnswer": ":silly: pretende i answeringed !!"
+		},
+		"tag": {
+			"priorityHigh": "HAI prioriti",
+			"priorityMid": "meediun prioriti",
+			"priorityLow": "lo prioriti",
+			"prioritySolved": "slolvd",
+			"exploit": "eksploite",
+			"bug": "bugge",
+			"visual": "visuale",
+			"ergonomic": "ergronomiq",
+			"mobile": "mobail",
+			"pc": "p.c.",
+			"removal": "remooval",
+			"qol": "qualiti of laif",
+			"suggestion": "sungsestione",
+			"navbar": "navbrar",
+			"pages": "paegs",
+			"themes": "theemz",
+			"themeProps": "theem kolerz",
+			"pagePre": "paeg: ",
+			"themePre": "theem: ",
+			"themePropPre": "theem colore: "
 		}
 	},
 	"es": {
@@ -489,6 +511,28 @@
 			"questionPreview": "previsualización:",
 			"placeholderTitle": "(sin título)",
 			"placeholderAnswer": ":silly: haz como si esto fuera una respuesta"
+		},
+		"tag": {
+			"priorityHigh": "prioridad alta",
+			"priorityMid": "prioridad media",
+			"priorityLow": "prioridad baja",
+			"prioritySolved": "solucionado",
+			"exploit": "exploit",
+			"bug": "bug",
+			"visual": "visual",
+			"ergonomic": "ergonómico",
+			"mobile": "móvil",
+			"pc": "pc",
+			"removal": "eliminación",
+			"qol": "calidad de vida",
+			"suggestion": "sugerencia",
+			"navbar": "barra de navegación",
+			"pages": "páginas",
+			"themes": "temas",
+			"themeProps": "colores de tema",
+			"pagePre": "página: ",
+			"themePre": "tema: ",
+			"themePropPre": "color de tema: "
 		}
 	},
 	"ar": {
