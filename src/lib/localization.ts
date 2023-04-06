@@ -10,8 +10,9 @@ type Keys<T> = {
 		: K;
 }[keyof T];
 export type LocalizationKey = Keys<typeof strings.en>;
+export type LocalizationKeyFirst = keyof typeof strings.en;
 
-function innerInnerT(id: string, language: string) {
+function innerInnerT(id: string, language: string): string {
 	const path = id.split('.');
 	type Traverser = Record<string, Record<string, string>> | Record<string, string> | string;
 
@@ -50,5 +51,31 @@ function format(id: string, lang: string, fmt: Record<string, string>): string {
 	return data;
 }
 
+// regular get key method
 export const t = derived(lang, ($lang) => (id: LocalizationKey) => innerT(id, $lang));
-export const f = derived(lang, ($lang) => (id: LocalizationKey) => (fmt: Record<string, string>) => format(id, $lang, fmt));
+// get key or fallback to key name
+export const o = derived(lang, ($lang) => (id: LocalizationKey): string => {
+	try {
+		return innerT(id, $lang);
+	} catch (_) {
+		return `[${id}]`;
+	}
+});
+// get key and format with record
+export const f = derived(
+	lang,
+	($lang) => (id: LocalizationKey) => (fmt: Record<string, string>) => format(id, $lang, fmt)
+);
+// get key and format with key names gotten by o (i.e. they fallback to key name)
+export const v = derived(
+	[lang, o],
+	([$lang, $o]) =>
+		(id: LocalizationKey) =>
+		(fmt: Record<string, LocalizationKey>) => {
+			let object: Record<string, string> = {};
+			for (const key in fmt) {
+				object = { ...object, [key]: $o(fmt[key]) };
+			}
+			return format(id, $lang, object);
+		}
+);

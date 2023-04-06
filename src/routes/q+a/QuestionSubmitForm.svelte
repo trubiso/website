@@ -1,5 +1,6 @@
 <script lang="ts">
-	import { f, t } from '$lib/localization';
+	import { submitFormFormat } from '$lib/functions';
+	import { t, v } from '$lib/localization';
 	import Emote from '$lib/text/Emote.svelte';
 	import Question from './Question.svelte';
 	import './QuestionSubmitForm.scss';
@@ -31,6 +32,8 @@
 		question: question.trim() === '' ? $t('q+a.placeholderTitle') : question,
 		answer: null
 	};
+
+	const fmt = submitFormFormat('q+a');
 </script>
 
 <main class="question-submit-form">
@@ -45,20 +48,17 @@
 						<Question question={sampleQuestion} />
 					</div>
 				{/key}
-				<input type="submit" value={$f('submitForm.send')({ object: $t('q+a.question') })} />
+				<input type="submit" value={$v('submitForm.send')(fmt)} />
 			{:else}
 				{#await questionPromise}
-					<label for="">{$f('submitForm.sending')({ object: $t('q+a.question') })}</label>
+					<label for="">{$v('submitForm.sending')(fmt)}</label>
 					<Emote name="silly" spinning />
 				{:then result}
 					{#if result.success}
-						<label for="">{$f('submitForm.sendSuccess')({ object: $t('q+a.question') })}</label>
-						<input
-							type="submit"
-							value={$f('submitForm.sendMore')({ object: $t('q+a.question') })}
-						/>
+						<label for="">{$v('submitForm.sendSuccess')(fmt)}</label>
+						<input type="submit" value={$v('submitForm.sendMore')(fmt)} />
 					{:else}
-						<label for="">{$f('submitForm.sendError')({ object: $t('q+a.question') })} !!</label>
+						<label for="">{$v('submitForm.sendError')(fmt)}</label>
 						<Emote name="shock" scaling />
 						{#if result.error === 'question missing'}
 							<p>{$t('q+a.errorQuestionMissing')}</p>
@@ -66,10 +66,7 @@
 							<p>{$t('q+a.errorOther')}</p>
 							<pre>{JSON.stringify(result.error)}</pre>
 						{/if}
-						<input
-							type="submit"
-							value={$f('submitForm.tryAgain')({ object: $t('q+a.question') })}
-						/>
+						<input type="submit" value={$v('submitForm.tryAgain')(fmt)} />
 					{/if}
 				{/await}
 			{/if}

@@ -1,4 +1,5 @@
 import { emotes } from './json';
+import type { LocalizationKey, LocalizationKeyFirst } from './localization';
 
 export function padZeroes(num: number, zeroes = 2) {
 	const str = num.toString();
@@ -22,4 +23,8 @@ export function getEmote(name: string) {
 
 export function keys<T extends object>(data: T): (keyof T)[] {
 	return Object.keys(data) as (keyof T)[];
+}
+
+export function submitFormFormat(who: LocalizationKeyFirst) {
+	return { object: <LocalizationKey>(who + '.object') };
 }

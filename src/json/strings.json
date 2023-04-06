@@ -139,13 +139,13 @@
 			"sendMore": "send another {object}",
 			"sending": "sending {object}...",
 			"sendSuccess": "your {object} has been sent successfully!",
-			"sendError": "could not send {object}",
+			"sendError": "could not send {object}!!",
 			"tryAgain": "try again"
 		},
 		"q+a": {
 			"title": "questions and answers",
 			"askMe": "ask me!",
-			"question": "question",
+			"object": "question",
 			"errorQuestionMissing": "your question is either empty or you just put spaces in it, try to formulate a coherent question",
 			"errorOther": "there was an internal error when trying to send the question. it is the following:",
 			"questionPreview": "preview:",
@@ -177,7 +177,7 @@
 		"bug": {
 			"title": "issue tracker",
 			"encourage": "here you can report any issues or problems you perceive while using the website. you can submit one down below:",
-			"bug": "issue",
+			"object": "issue",
 			"tags": "tags: ",
 			"noTags": "no tags",
 			"preview": "preview:",
@@ -331,7 +331,7 @@
 		"q+a": {
 			"title": "quesions N ansars",
 			"askMe": "ask mee!",
-			"question": "quesion",
+			"object": "quesion",
 			"errorQuestionMissing": "yur quesion is eidar EMTI or u jus put SPECES in it :P trai to formulet COHEERENT quesion pleez",
 			"errorOther": "der was INTERNAL ERORE wen tryin to send da questione. it is da folowingeingeing:",
 			"questionPreview": "previu:",
@@ -501,13 +501,13 @@
 			"sendMore": "enviar más {object}s",
 			"sending": "enviando {object}...",
 			"sendSuccess": "¡tu {object} se ha enviado correctamente!",
-			"sendError": "no se ha podido enviar tu {object}",
+			"sendError": "¡¡no se ha podido enviar tu {object}!!",
 			"tryAgain": "volver a intentarlo"
 		},
 		"q+a": {
 			"title": "preguntas y respuestas",
 			"askMe": "¡pregúntame!",
-			"question": "pregunta",
+			"object": "pregunta",
 			"errorQuestionMissing": "tu pregunta está vacía o sólo has escrito espacios, para la próxima formula una pregunta coherente",
 			"errorOther": "ha habido un problema interno mientras se intentaba enviar tu pregunta. es el siguiente:",
 			"questionPreview": "previsualización:",
@@ -705,13 +705,13 @@
 			"sendMore": "o pana e {object} namako",
 			"sending": "{object} sina li kama pana...",
 			"sendSuccess": "{object} sina li kama pana pona!",
-			"sendError": "{object} sina li ken ala pana",
+			"sendError": "{object} sina li ken ala pana!!",
 			"tryAgain": "o pana e {object} ante"
 		},
 		"q+a": {
 			"title": "pana pi sona wile",
 			"askMe": "o pana e wile sona sina!",
-			"question": "wile sona",
+			"object": "wile sona",
 			"errorQuestionMissing": "wile sona sina li sitelen ala. o sitelen e wile sona a",
 			"errorOther": "wile sona li kama pana la ike ni li kama lon insa lipu:",
 			"questionPreview": "ona li kama lon la lukin ona li sama ni:",

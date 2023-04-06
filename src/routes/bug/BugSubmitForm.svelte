@@ -1,5 +1,6 @@
 <script lang="ts">
-	import { f, t } from '$lib/localization';
+	import { submitFormFormat } from '$lib/functions';
+	import { t, v } from '$lib/localization';
 	import Emote from '$lib/text/Emote.svelte';
 	import type { bug } from '@prisma/client';
 	import Bug from './Bug.svelte';
@@ -41,6 +42,8 @@
 		tags,
 		approved: true
 	} as bug;
+
+	const fmt = submitFormFormat('bug');
 </script>
 
 <main class="bug-submit-form">
@@ -73,22 +76,22 @@
 						<Bug bug={sampleBug} />
 					</div>
 				{/key}
-				<input type="submit" value={$f('submitForm.send')({ object: $t('bug.bug') })} />
+				<input type="submit" value={$v('submitForm.send')(fmt)} />
 			{:else}
 				{#await bugPromise}
-					<label for="">{$f('submitForm.sending')({ object: $t('bug.bug') })}</label>
+					<label for="">{$v('submitForm.sending')(fmt)}</label>
 					<Emote name="silly" spinning />
 				{:then result}
 					{#if result.success}
-						<label for="">{$f('submitForm.sendSuccess')({ object: $t('bug.bug') })}</label>
-						<input type="submit" value={$f('submitForm.sendMore')({ object: $t('bug.bug') })} />
+						<label for="">{$v('submitForm.sendSuccess')(fmt)}</label>
+						<input type="submit" value={$v('submitForm.sendMore')(fmt)} />
 					{:else}
-						<label for="">{$f('submitForm.sendError')({ object: $t('bug.bug') })} !!</label>
+						<label for="">{$v('submitForm.sendError')(fmt)} !!</label>
 						<Emote name="shock" scaling />
 						<!--TODO: named errors-->
 						<p>{$t('q+a.errorOther')}</p>
 						<pre>{JSON.stringify(result.error)}</pre>
-						<input type="submit" value={$f('submitForm.tryAgain')({ object: $t('bug.bug') })} />
+						<input type="submit" value={$v('submitForm.tryAgain')(fmt)} />
 					{/if}
 				{/await}
 			{/if}
