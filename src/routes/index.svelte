@@ -11,8 +11,8 @@
 <Meta title={getTitleOfPage('home', $lang)} metatitle='trubiso' description="come have fun" />
 
 <main>
+  <marquee style="position: absolute;width:calc(100%);left:0;padding:0px;background-color:gold;color:black !important;font-family:'Comic Sans MS';font-size:16pt;font-weight:bold;">BRAND NEWE!!!! STIL UNFINISHED BUT NEARLY FINISHED REWORK OF MAI WEBSIT !!! CLIK NOW !!! -&gt;&gt;&gt; <a href="https://rewrite.trubiso.tk/" style="color:black !important;">https://rewrite.trubiso.tk/</a></marquee><br/>
   <h1>{texts[$lang][0]} <Emote name="happy" size="44" /></h1>
-  <marquee style="background-color:gold;color:black;font-family:'Comic Sans MS';font-size:16pt;font-weight:bold;a{color:black;}">BRAND NEWE!!!! STIL UNFINISHED BUT NEARLY FINISHED REWORK OF MAI WEBSIT !!! CLIK NOW !!! ->>> <a href="https://rewrite.trubiso.tk/">https://rewrite.trubiso.tk/</a></marquee>
   <span> {texts[$lang][1]} <Emote name="nerd_emotiguy" /> </span>
   <ol>
     {#each reasons[$lang] as reason}
