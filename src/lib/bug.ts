@@ -11,7 +11,6 @@ const tags = [
 	'mobile',
 	'pc',
 	'removal',
-	'qol',
 	'suggestion',
 	'navbar',
 	'tags',
