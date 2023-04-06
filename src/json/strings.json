@@ -184,7 +184,8 @@
 			"noTags": "no tags",
 			"preview": "preview:",
 			"placeholderName": "(name)",
-			"placeholderDescription": "(description)"
+			"placeholderDescription": "(description)",
+			"selectedTag": "selected tag: "
 		}
 	},
 	"sl": {

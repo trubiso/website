@@ -20,6 +20,10 @@
 
 	<BugSubmitForm />
 
+	{#if data.tag !== null}
+		<h1>{$t('bug.selectedTag')}{$localizeTag(data.tag)}</h1>
+	{/if}
+
 	<div class="unsolved">
 		<div class="bug-grid">
 			{#each unsolved as bug}
@@ -30,14 +34,16 @@
 		</div>
 	</div>
 
-	<div class="solved">
-		<h1>{$localizeTag('prioritySolved')}</h1>
-		<div class="bug-grid">
-			{#each solved as bug}
-				{#key solved}
-					<Bug {bug} />
-				{/key}
-			{/each}
+	{#if solved.length}
+		<div class="solved">
+			<h2>{$localizeTag('prioritySolved')}</h2>
+			<div class="bug-grid">
+				{#each solved as bug}
+					{#key solved}
+						<Bug {bug} />
+					{/key}
+				{/each}
+			</div>
 		</div>
-	</div>
+	{/if}
 </main>
