@@ -9,7 +9,7 @@ type Keys<T> = {
 		  `${K}.${Keys<T[K]>}`
 		: K;
 }[keyof T];
-type LocalizationKey = Keys<typeof strings.en>;
+export type LocalizationKey = Keys<typeof strings.en>;
 
 function innerInnerT(id: string, language: string) {
 	const path = id.split('.');

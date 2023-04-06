@@ -152,6 +152,28 @@
 			"placeholderTitle": "(untitled)",
 			"placeholderAnswer": ":silly: pretend i answered"
 		},
+		"tag": {
+			"priorityHigh": "high priority",
+			"priorityMid": "medium priority",
+			"priorityLow": "low priority",
+			"prioritySolved": "solved",
+			"exploit": "exploit",
+			"bug": "bug",
+			"visual": "visual",
+			"ergonomic": "ergonomic",
+			"mobile": "mobile",
+			"pc": "pc",
+			"removal": "removal",
+			"qol": "quality of life",
+			"suggestion": "suggestion",
+			"navbar": "navbar",
+			"pages": "pages",
+			"themes": "themes",
+			"themeProps": "theme colors",
+			"pagePre": "page: ",
+			"themePre": "theme: ",
+			"themePropPre": "theme color: "
+		},
 		"bug": {
 			"title": "issue tracker",
 			"encourage": "here you can report any issues or problems you perceive while using the website. you can submit one down below:",
