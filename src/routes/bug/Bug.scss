@@ -1,0 +1,11 @@
+main.bug {
+	.tags-wrapper {
+		display: flex;
+		align-items: center;
+		gap: 5px;
+		.tags {
+			display: flex;
+			gap: 5px;
+		}
+	}
+}

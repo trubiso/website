@@ -1,9 +1,10 @@
 <script lang="ts">
-	import { localizeTag } from '$lib/bug';
 	import { dateFormat } from '$lib/functions';
 	import { t } from '$lib/localization';
 	import Card from '$lib/text/Card.svelte';
 	import type { bug } from '@prisma/client';
+	import './Bug.scss';
+	import BugTag from './BugTag.svelte';
 
 	export let bug: bug;
 </script>
@@ -24,14 +25,17 @@
 
 		<span slot="footer">
 			<br />
-			{#if bug.tags.length > 1}
-				<i>
-					{$t('bug.tags')}{#each bug.tags as tag, i}
-						<a href="?tag={tag}">[{$localizeTag(tag)}]</a>{#if i < bug.tags.length - 1},&nbsp;{/if}
+			{#if bug.tags.length > 0}
+			<div class="tags-wrapper">
+				<span>{$t('bug.tags')}</span>
+				<div class="tags">
+					{#each bug.tags as tag, i}
+						<BugTag tagName={tag} />
 					{/each}
-				</i>
+				</div>
+			</div>
 			{:else}
-				<i>{$t('bug.noTags')}</i>
+				<span>{$t('bug.noTags')}</span>
 			{/if}
 		</span>
 	</Card>

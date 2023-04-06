@@ -1,0 +1,10 @@
+main.bug-tag {
+	padding: 2px;
+	background-color: var(--cardAccent);
+	* {
+		color: var(--cardText) !important;
+		text-decoration: none;
+	}
+	border: 2px solid var(--cardAccent);
+	border-radius: 3px;
+}
