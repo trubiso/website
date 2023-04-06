@@ -3,10 +3,16 @@
 	import './BugTag.scss';
 
 	export let tagName: string;
+	export let noLink = false;
 
 	$: tag = $localizeTag(tagName);
 </script>
 
 <main class="bug-tag">
-	<a href="?tag={tagName}">{tag}</a>
+	{#if noLink}
+		{tag}
+	{:else}
+		<a href="?tag={tagName}">{tag}</a>
+	{/if}
+	<slot />
 </main>

@@ -5,6 +5,7 @@
 	import type { bug } from '@prisma/client';
 	import Bug from './Bug.svelte';
 	import './BugSubmitForm.scss';
+	import BugTagPicker from './BugTagPicker.svelte';
 
 	let hasSubmittedBug = false;
 	$: name = '';
@@ -70,6 +71,7 @@
 					bind:value={description}
 					required
 				/>
+				<BugTagPicker bind:chosen={tags} />
 				<label for="bug">{$t('bug.preview')}</label>
 				{#key sampleBug}
 					<div id="bug">

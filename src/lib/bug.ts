@@ -3,7 +3,7 @@ import { keys } from './functions';
 import { strings } from './json';
 import { t, type LocalizationKey as L } from './localization';
 
-const tags = [
+const basicTags = [
 	'exploit',
 	'bug',
 	'visual',
@@ -19,6 +19,7 @@ const tags = [
 	'themes',
 	'themeProps'
 ];
+const tags = [...basicTags];
 
 keys(strings.en.navbar)
 	.filter((x) => x !== 'logo' && x !== 'log_in')
@@ -27,6 +28,18 @@ keys(strings.en.themes).forEach((x) => tags.push(`theme:${x}`));
 keys(strings.en.themeProps).forEach((x) => tags.push(`themeProp:${x}`));
 
 export const bugTags = tags;
+export const sectionedBugTags = [
+	bugTags.slice(0, basicTags.length),
+	bugTags.slice(basicTags.length, basicTags.length + keys(strings.en.navbar).length - 2),
+	bugTags.slice(
+		basicTags.length + keys(strings.en.navbar).length - 2,
+		basicTags.length + keys(strings.en.navbar).length - 2 + keys(strings.en.themes).length
+	),
+	bugTags.slice(
+		basicTags.length + keys(strings.en.navbar).length - 2 + keys(strings.en.themes).length
+	)
+];
+export const sectionNames = ['tag.tags', 'tag.pages', 'tag.themes', 'tag.themeProps'] as L[];
 
 function localizeTagInner($t: (id: L) => string, tag: string): string {
 	if (tag.includes(':')) {
