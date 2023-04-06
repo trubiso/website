@@ -605,12 +605,42 @@
 			"placeholderTitle": "(без наслов)",
 			"placeholderAnswer": ":silly: преправај се дека одговорив"
 		},
+		"tag": {
+			"priorityHigh": "висок приоритет",
+			"priorityMid": "среден приоритет",
+			"priorityLow": "низок приоритет",
+			"prioritySolved": "решено",
+			"exploit": "експлоит",
+			"bug": "грешка",
+			"visual": "изглед",
+			"ergonomic": "удобност",
+			"mobile": "за мобилни уреди",
+			"pc": "за компјутер",
+			"removal": "отстранување",
+			"suggestion": "предлог",
+			"navbar": "лента за навигација",
+			"tags": "ознаки",
+			"colorpicker": "избор на бои",
+			"pages": "страници",
+			"themes": "режими",
+			"themeProps": "бои на режим",
+			"pagePre": "страница: ",
+			"themePre": "режим: ",
+			"themePropPre": "боја на режим: "
+		},
 		"bug": {
+			"title": "запис на проблеми",
+			"encourage": "овде можеш да пријавиш какви било проблеми на кои ќе наидеш на веб-сајтов. можеш да поднесеш проблем во полето подолу:",
 			"object": "проблем",
 			"one": "еден",
 			"articled": "проблемот",
 			"your": "твојот",
-			"sent": "испратен"
+			"sent": "испратен",
+			"tags": "ознаки: ",
+			"noTags": "нема ознаки",
+			"preview": "преглед:",
+			"placeholderName": "(име)",
+			"placeholderDescription": "(опис)"
 		}
 	},
 	"tp": {
