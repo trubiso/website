@@ -17,7 +17,7 @@ const tags = [
 	'colorpicker',
 	'pages',
 	'themes',
-	'theme colors'
+	'themeProps'
 ];
 
 keys(strings.en.navbar)
