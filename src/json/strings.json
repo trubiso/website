@@ -13,6 +13,11 @@
 			"options": "options",
 			"log_in": "log in?"
 		},
+		"error": {
+			"ohNo": "OH NO!",
+			"scream": "AHH ERROR! HELP ME!! :cri:",
+			"report": ":please: please report to trubiso (with a screenshot or by copying the above, to the issues page preferably). he will try to fix it :excited:"
+		},
 		"homeDev": {
 			"title": "DEVELOPER MODE!",
 			"unstableWarning": "UNSTABLE!!! BE CAREFUL!!!",
@@ -170,6 +175,11 @@
 			"options": "optniose",
 			"log_in": "loge in ?"
 		},
+		"error": {
+			"ohNo": "O NO!",
+			"scream": "AHHHHHHHHHE ERROREEEEEEEEEE !!! HLEP MEEEEEEEEEEEEEEEEe!! :cri:",
+			"report": ":please: plz report to trunbiso (wif screenshot or copyinge of abov, to da issus paeg prenferabli). he wil tri to fiks :excited:"
+		},
 		"homeDev": {
 			"title": "DEVELOPAR MOED !!",
 			"unstableWarning": "UNSTAEBL !!! BE CARFUL !!!",
@@ -319,6 +329,11 @@
 			"options": "opciones",
 			"log_in": "¿iniciar sesión?"
 		},
+		"error": {
+			"ohNo": "¡OH NO!",
+			"scream": "¡AHHH ERROR! ¡¡AYÚDAME!! :cri:",
+			"report": ":please: por favor, informa a trubiso (con una captura de pantalla o copiando el error, preferiblemente mándalo a la página \"problemas\"). intentará arreglarlo :excited:"
+		},
 		"homeDev": {
 			"title": "¡MODO DESARROLLADOR!",
 			"unstableWarning": "¡¡¡INESTABLE!!! ¡¡¡PRECAUCIÓN!!!",
@@ -461,7 +476,34 @@
 	},
 	"mk": {
 		"navbar": {
-			"logo": "/logo/cyrillic.png"
+			"logo": "/logo/cyrillic.png",
+			"home": "почетна",
+			"smilies": "смајлиња",
+			"dont_click": "не кликај",
+			"kitty": "маче",
+			"games": "игри",
+			"q+a": "прашања",
+			"bug": "пролбеми",
+			"about": "за мене",
+			"options": "нагодувања",
+			"log_in": "најави се"
+		},
+		"error": {
+			"ohNo": "О НЕ!",
+			"scream": "АААААААААААА ГРЕШКАААААААААААА!!! ПОМООООООШШШШШ!! :cri:",
+			"report": ":please: ве молам пријавете на трубисо (со слика од екранот или копирање на грешката, по можност на „проблеми“ страницата). ќе се обиде да ја поправи грешката :excited:"
+		},
+		"homeDev": {
+			"title": "ЕКСПЕРИМЕНТАЛНА ВЕРЗИЈА!",
+			"unstableWarning": "НЕСТАБИЛНО!!! ВНИМАВАЈТЕ!!!",
+			"warningPre": "ПРЕДУПРЕДУВАЊЕ:",
+			"warning1": "ако не знаеш што правиш, врати се на ",
+			"warning2": ", ова е ",
+			"warning3": "експериментална",
+			"warning4": " верзија на страницата и можно е функциите да не бидат 100% средени",
+			"report": "имајќи го тоа кажано, ако најдеш било какви грешки, пријави ми на страницата „проблеми“ :)",
+			"scare": "ако те уплашија предупредувањата еве ти смешни лица за да се смириш",
+			"laugh": "ХЕХЕХЕХЕХЕХЕХЕ"
 		}
 	},
 	"tp": {
@@ -477,6 +519,11 @@
 			"about": "sona lipu",
 			"options": "ante",
 			"log_in": "log in?"
+		},
+		"error": {
+			"ohNo": "IKE A!",
+			"scream": "A PAKALA LI LON! O PONA E MI A!! :cri:",
+			"report": ":please: o toki e pakala ni tawa jan Telupiso (o pana e sitelen sewi tawa lipu pi pakala lipu). ona li alasa pona e pakala ni :excited:"
 		},
 		"homeDev": {
 			"title": "LIPU PI JAN PALI!",
