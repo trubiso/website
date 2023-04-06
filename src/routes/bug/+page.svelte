@@ -3,6 +3,7 @@
 	import type { bug } from '@prisma/client';
 	import Bug from './Bug.svelte';
 	import BugSubmitForm from './BugSubmitForm.svelte';
+	import './style.scss';
 
 	export let data: {
 		bugs: bug[];
@@ -15,7 +16,9 @@
 
 	<BugSubmitForm />
 
-	{#each data.bugs as bug}
-		<Bug {bug} />
-	{/each}
+	<div class="bug-grid">
+		{#each data.bugs as bug}
+			<Bug {bug} />
+		{/each}
+	</div>
 </main>

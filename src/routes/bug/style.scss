@@ -1,0 +1,13 @@
+main.bugs {
+	.bug-grid {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+
+		.bug {
+			flex-grow: 1;
+			margin-left: 10px;
+			margin-right: 10px;
+		}
+	}
+}
