@@ -1,4 +1,4 @@
-import { emotes } from './json';
+import { emotes, langs, strings } from './json';
 import type { LocalizationKey, LocalizationKeyFirst } from './localization';
 
 export function padZeroes(num: number, zeroes = 2) {
@@ -31,4 +31,16 @@ function apl(a: LocalizationKeyFirst, b: string): LocalizationKey {
 
 export function submitFormFormat(who: LocalizationKeyFirst) {
 	return { object: apl(who, '.object'), one: apl(who, '.one'), articled: apl(who, '.articled'), your: apl(who, '.your'), sent: apl(who, '.sent') };
+}
+
+export function stringsForLang(lang: keyof typeof langs): number {
+	let count = 0;
+	const s = strings as object;
+	if (!(lang in s)) return count;
+	const a = (s as Record<string, object>)[lang];
+	for (const k in a) {
+		const z = (a as Record<string, object>)[k];
+		count += Object.keys(z).length;
+	}
+	return count;
 }

@@ -8,8 +8,9 @@
 		"q+a": "/q+a",
 		"bug": "/bug",
 		"about": "/about",
+		"translation": "/translation",
 		"options": "/options",
 		"log_in": "#"
 	},
-	"order": ["home", "smilies", "dont_click", "kitty", "games", "q+a", "bug", "about", "options"]
+	"order": ["home", "smilies", "dont_click", "kitty", "games", "q+a", "bug", "translation", "about", "options"]
 }

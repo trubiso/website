@@ -9,6 +9,7 @@
 			"games": "games",
 			"q+a": "q+a",
 			"bug": "issues",
+			"translation": "translation",
 			"about": "about",
 			"options": "options",
 			"log_in": "log in?"
@@ -597,7 +598,7 @@
 			"articled": "прашањето",
 			"your": "твоето",
 			"sent": "испратено",
-			"errorQuestionMissing": "прашањето ти е или празно или само си ставил белини, обиди се да составиш разбирливо прашање",
+			"errorQuestionMissing": "или прашањето ти е или празно или само си ставил белини, обиди се да составиш разбирливо прашање",
 			"errorOther": "имаше внатрешна грешка при обидот да се испрати прашањето:",
 			"questionPreview": "преглед",
 			"placeholderTitle": "(без наслов)",
