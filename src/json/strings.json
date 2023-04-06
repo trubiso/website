@@ -622,6 +622,7 @@
 			"games": "musi",
 			"q+a": "sona wile",
 			"bug": "pakala lipu",
+			"translation": "ante toki",
 			"about": "sona lipu",
 			"options": "ante",
 			"log_in": "log in?"
@@ -755,6 +756,38 @@
 			"questionPreview": "ona li kama lon la lukin ona li sama ni:",
 			"placeholderTitle": "(sitelen ala)",
 			"placeholderAnswer": ":silly: ni o sitelen pi jan Telupiso"
+		},
+		"tag": {
+			"priorityHigh": "suli a",
+			"priorityMid": "suli meso",
+			"priorityLow": "suli lili",
+			"prioritySolved": "pini",
+			"exploit": "pakala suli",
+			"bug": "pakala lipu",
+			"visual": "lukin",
+			"ergonomic": "pilin",
+			"mobile": "ilo nanpa lili",
+			"pc": "ilo nanpa suli",
+			"removal": "weka",
+			"qol": "pona lipu",
+			"suggestion": "wile",
+			"navbar": "poki nasin",
+			"pages": "lipu",
+			"themes": "kulupu kule",
+			"themeProps": "kule",
+			"pagePre": "lipu: ",
+			"themePre": "kulupu kule: ",
+			"themePropPre": "kule: "
+		},
+		"bug": {
+			"title": "pakala lipu",
+			"encourage": "lipu ni la sina ken toki e pakala lipu. sina ken ni lon poki anpa ni:",
+			"object": "pakala lipu",
+			"tags": "kule: ",
+			"noTags": "kule ala",
+			"preview": "ona li kama lon la lukin ona li sama ni:",
+			"placeholderName": "(nimi)",
+			"placeholderDescription": "(sitelen)"
 		}
 	},
 	"jb": {
