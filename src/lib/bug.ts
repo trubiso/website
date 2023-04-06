@@ -14,6 +14,8 @@ const tags = [
 	'qol',
 	'suggestion',
 	'navbar',
+	'tags',
+	'colorpicker',
 	'pages',
 	'themes',
 	'theme colors'
