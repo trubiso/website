@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { localizeTag } from '$lib/bug';
 	import { dateFormat } from '$lib/functions';
+	import { t } from '$lib/localization';
 	import Card from '$lib/text/Card.svelte';
 	import type { bug } from '@prisma/client';
 
@@ -25,12 +26,12 @@
 			<br />
 			{#if bug.tags.length > 1}
 				<i>
-					tags: {#each bug.tags as tag, i}
+					{$t('bug.tags')}{#each bug.tags as tag, i}
 						<a href="?tag={tag}">[{$localizeTag(tag)}]</a>{#if i < bug.tags.length - 1},&nbsp;{/if}
 					{/each}
 				</i>
 			{:else}
-				<i>no tags</i>
+				<i>{$t('bug.noTags')}</i>
 			{/if}
 		</span>
 	</Card>

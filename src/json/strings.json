@@ -178,6 +178,8 @@
 			"title": "issue tracker",
 			"encourage": "here you can report any issues or problems you perceive while using the website. you can submit one down below:",
 			"bug": "issue",
+			"tags": "tags: ",
+			"noTags": "no tags",
 			"preview": "preview:",
 			"placeholderName": "(name)",
 			"placeholderDescription": "(description)"
