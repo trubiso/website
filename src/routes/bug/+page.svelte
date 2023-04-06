@@ -18,7 +18,9 @@
 
 	<div class="bug-grid">
 		{#each data.bugs as bug}
-			<Bug {bug} />
+			{#key data.bugs}
+				<Bug {bug} />
+			{/key}
 		{/each}
 	</div>
 </main>
