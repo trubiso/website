@@ -7,6 +7,10 @@ main.bugs {
 
 		.bug {
 			flex-grow: 1;
+			
+			.card {
+				height: 100%;
+			}
 		}
 	}
 }

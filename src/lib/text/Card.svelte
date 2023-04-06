@@ -10,22 +10,28 @@
 	</div>
 
 	<div class="card-title">
-		<Markup><EmoteZone>
-			<slot name="title" />
-		</EmoteZone></Markup>
+		<Markup>
+			<EmoteZone>
+				<slot name="title" />
+			</EmoteZone>
+		</Markup>
 	</div>
-	
+
 	<div class="card-body">
-		<Markup><EmoteZone>
-			<slot name="body" />
-		</EmoteZone></Markup>
+		<Markup>
+			<EmoteZone>
+				<slot name="body" />
+			</EmoteZone>
+		</Markup>
 	</div>
 
 	<div class="card-footer">
-		<Markup><EmoteZone>
-			<slot name="footer">
-				<span />
-			</slot>
-		</EmoteZone></Markup>
+		<Markup>
+			<EmoteZone>
+				<slot name="footer">
+					<span />
+				</slot>
+			</EmoteZone>
+		</Markup>
 	</div>
 </main>
