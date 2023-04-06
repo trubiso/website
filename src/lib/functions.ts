@@ -25,6 +25,10 @@ export function keys<T extends object>(data: T): (keyof T)[] {
 	return Object.keys(data) as (keyof T)[];
 }
 
+function apl(a: LocalizationKeyFirst, b: string): LocalizationKey {
+	return <LocalizationKey>(a + b);
+}
+
 export function submitFormFormat(who: LocalizationKeyFirst) {
-	return { object: <LocalizationKey>(who + '.object') };
+	return { object: apl(who, '.object'), one: apl(who, '.one'), articled: apl(who, '.articled'), your: apl(who, '.your'), sent: apl(who, '.sent') };
 }

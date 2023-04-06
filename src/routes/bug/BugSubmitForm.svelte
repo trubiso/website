@@ -86,7 +86,7 @@
 						<label for="">{$v('submitForm.sendSuccess')(fmt)}</label>
 						<input type="submit" value={$v('submitForm.sendMore')(fmt)} />
 					{:else}
-						<label for="">{$v('submitForm.sendError')(fmt)} !!</label>
+						<label for="">{$v('submitForm.sendError')(fmt)}</label>
 						<Emote name="shock" scaling />
 						<!--TODO: named errors-->
 						<p>{$t('q+a.errorOther')}</p>
