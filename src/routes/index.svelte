@@ -12,6 +12,7 @@
 
 <main>
   <h1>{texts[$lang][0]} <Emote name="happy" size="44" /></h1>
+  <marquee style="background-color:gold;color:black;font-family:'Comic Sans MS';font-size:16pt;font-weight:bold;">BRAND NEWE!!!! STIL UNFINISHED BUT NEARLY FINISHED REWORK OF MAI WEBSIT !!! CLIK NOW !!! ->>> <a href="https://rewrite.trubiso.tk/">https://rewrite.trubiso.tk/</a></marquee>
   <span> {texts[$lang][1]} <Emote name="nerd_emotiguy" /> </span>
   <ol>
     {#each reasons[$lang] as reason}
