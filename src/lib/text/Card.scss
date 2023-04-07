@@ -7,9 +7,9 @@
 	background-color: var(--cardBG);
 	color: var(--cardText);
 
-	max-width: calc(100vw - 60px);
+	max-width: calc(100vw - 60px - 8.5px);
 	@media screen and (min-width: $noMobile) {
-		max-width: calc(100vw - 60px - 200px);
+		max-width: calc(100vw - 60px - 200px - 8.5px);
 	}
 
 	img {
@@ -19,6 +19,7 @@
 
 	* {
 		text-align: justify; // for mobile users
+		overflow-wrap: break-word;
 	}
 
 	&-timestamp {
