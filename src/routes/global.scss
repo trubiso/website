@@ -1,7 +1,9 @@
 @import '$lib/globals';
 
 @media screen and (max-width: $mobile) {
-	h1, h2, p {
+	h1,
+	h2,
+	p {
 		text-align: center;
 	}
 }
@@ -22,6 +24,20 @@ html {
 body {
 	margin: 0;
 	padding: 0;
+
+	img {
+		// this should fix blurry images on chromium
+		@media screen and (-webkit-min-device-pixel-ratio: 0) and (min-resolution: 0.001dpcm) {
+			image-rendering: -webkit-optimize-contrast !important;
+		}
+
+		// Unset for Safari 11+
+		@media not all and (min-resolution: 0.001dpcm) {
+			@supports (-webkit-appearance: none) and (stroke-color: transparent) {
+				image-rendering: unset !important;
+			}
+		}
+	}
 
 	main.content {
 		width: 100%;
