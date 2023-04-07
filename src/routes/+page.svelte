@@ -10,7 +10,7 @@
 	<marquee class="big flashing flashy silly">{$t('homeDev.unstableWarning')}</marquee>
 	<p>
 		<b class="flashing silly">{$t('homeDev.warningPre')}</b> {$t('homeDev.warning1')}
-		<span class="big">https://trubiso.tk</span>{$t('homeDev.warning2')}
+		<span class="big"><a href="https://trubiso.tk">https://trubiso.tk</a></span>{$t('homeDev.warning2')}
 		<b>{$t('homeDev.warning3')}</b>{$t('homeDev.warning4')}
 	</p>
 	<p>{$t('homeDev.report')}</p>
