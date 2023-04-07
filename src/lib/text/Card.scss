@@ -1,9 +1,21 @@
+@import '$lib/globals';
+
 .card {
 	display: flex;
 	flex-direction: column;
 	padding: 10px;
 	background-color: var(--cardBG);
 	color: var(--cardText);
+
+	max-width: calc(100vw - 60px);
+	@media screen and (min-width: $noMobile) {
+		max-width: calc(100vw - 60px - 200px);
+	}
+
+	img {
+		max-height: 200px;
+		max-width: 100%;
+	}
 
 	* {
 		text-align: justify; // for mobile users
