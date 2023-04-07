@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { page } from '$app/stores';
 	import { navbar } from '$lib/json';
 	import {
 		lock,
@@ -17,6 +18,7 @@
 	const items = navbar.order;
 
 	$: altPopout = $theme.accent === $theme.bg;
+	$: lastBold = $page.url.pathname === navbar.links.options;
 
 	function toggleSidebar() {
 		sidebarOpen.set(!$sidebarOpen);
@@ -34,6 +36,8 @@
 		class:rainbow-alt={$sidebarStyle === 3}
 		class:popout={$sidebarPopout}
 		class:alt-popout={altPopout}
+		class:last-bold={lastBold}
+		class:open={$sidebarOpen}
 	>
 		<div class="sidebar-fill-top" />
 
@@ -54,7 +58,8 @@
 				{#each items as item}
 					<NavbarElement
 						name={item}
-						popout={!!$sidebarPopout && !$mobile}
+						mobile={$mobile}
+						popout={!!$sidebarPopout}
 						{altPopout}
 						sidebarLocation={$sidebarLocation}
 					/>

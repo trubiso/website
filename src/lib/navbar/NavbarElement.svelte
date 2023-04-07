@@ -7,6 +7,7 @@
 	import { lock, sidebarOpen, spiny } from '$lib/stores';
 
 	export let name = 'home';
+	export let mobile = false;
 	export let popout = false;
 	export let altPopout = false;
 	export let sidebarLocation = 0;
@@ -22,8 +23,9 @@
 		class="navbar-item"
 		class:navbar-item-special={name === 'options'}
 		class:bold={$page.url.pathname === link}
-		class:popout
+		class:popout={popout && !mobile}
 		class:alt-popout={altPopout}
+		class:mobile-popout={popout && mobile}
 		class:sidebar-a={!sidebarLocation}
 		class:sidebar-b={sidebarLocation}
 		on:click={() => {

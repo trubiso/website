@@ -49,6 +49,14 @@ nav.navbar {
 		&.rainbow-alt {
 			background: linear-gradient(to right, #f00, #ff0, #0f0, #0ff, #00f, #f0f, #f00);
 		}
+
+		&.popout {
+			&.open {
+				&:not(.last-bold) {
+					border-bottom: 2px solid var(--accent);
+				}
+			}
+		}
 	}
 
 	@media screen and (min-width: $noMobile) {
@@ -108,11 +116,11 @@ nav.navbar {
 					.header-wrapper {
 						border-right: 2px solid var(--text);
 					}
-	
+
 					.sidebar-fill {
 						border-right: 2px solid var(--text);
 					}
-	
+
 					.sidebar-fill-top {
 						border-right: 2px solid var(--text);
 					}
@@ -136,11 +144,11 @@ nav.navbar {
 					.header-wrapper {
 						border-left: 2px solid var(--text);
 					}
-	
+
 					.sidebar-fill {
 						border-left: 2px solid var(--text);
 					}
-	
+
 					.sidebar-fill-top {
 						border-left: 2px solid var(--text);
 					}
