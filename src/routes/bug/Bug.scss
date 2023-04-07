@@ -5,6 +5,10 @@ main.bug {
 		gap: 5px;
 		.tags {
 			display: flex;
+			flex-wrap: wrap;
+			.bug-tag {
+				flex-grow: 1;
+			}
 			gap: 5px;
 		}
 	}

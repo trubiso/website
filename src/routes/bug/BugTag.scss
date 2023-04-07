@@ -4,7 +4,9 @@ main.bug-tag {
 	padding: 2px;
 	background-color: var(--cardAccent);
 	.tag {
+		display: flex;
 		flex-grow: 1;
+		justify-content: center;
 
 		a,
 		span {
