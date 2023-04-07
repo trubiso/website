@@ -31,9 +31,9 @@
 		"accent": "#181818",
 		"bg": "#ffffff",
 		"text": "#101020",
-		"cardBG": "#101020",
-		"cardText": "#ffffff",
-		"cardAccent": "#dd5555"
+		"cardBG": "#f2eac9",
+		"cardText": "#000000",
+		"cardAccent": "#dba400"
 	},
 	"dark_marble": {
 		"navbarBG1": "#32324f",
