@@ -9,10 +9,14 @@
 </script>
 
 <main class="bug-tag">
-	{#if noLink}
-		{tag}
-	{:else}
-		<a href="?tag={tagName}">{tag}</a>
-	{/if}
-	<slot />
+	<div class="tag">
+		{#if noLink}
+			<span>{tag}</span>
+		{:else}
+			<a href="?tag={tagName}">{tag}</a>
+		{/if}
+	</div>
+	<div class="foreign">
+		<slot />
+	</div>
 </main>

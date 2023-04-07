@@ -1,9 +1,17 @@
 main.bug-tag {
+	display: flex;
+	align-items: center;
 	padding: 2px;
 	background-color: var(--cardAccent);
-	a {
-		color: var(--cardBG) !important;
-		text-decoration: none;
+	.tag {
+		flex-grow: 1;
+
+		a,
+		span {
+			color: var(--cardBG) !important;
+			text-decoration: none;
+			text-align: center;
+		}
 	}
 	border: 2px solid var(--cardAccent);
 	border-radius: 3px;

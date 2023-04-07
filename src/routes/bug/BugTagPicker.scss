@@ -1,11 +1,25 @@
 main.bug-tag-picker {
 	display: flex;
 	align-items: center;
+	flex-wrap: wrap;
 	gap: 5px;
 
+	.bug-tag {
+		flex-grow: 1;
+	}
+
+	.bug-tag-picker-close {
+		margin-left: 5px;
+	}
+
 	form {
+		select {
+			flex-grow: 1;
+		}
+		flex-grow: 1;
 		display: flex;
 		align-items: center;
+		flex-wrap: wrap;
 		gap: 5px;
 	}
 }
