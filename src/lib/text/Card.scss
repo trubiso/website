@@ -51,8 +51,8 @@
 	}
 
 	&-footer {
-		font-size: 11px;
-		margin-bottom: -12.5px;
+		font-size: 13px;
+		margin-bottom: calc(-15px + 1px - 0.8334px);
 		white-space: pre-line;
 		p {
 			margin: 0;
