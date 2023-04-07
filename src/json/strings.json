@@ -185,7 +185,8 @@
 			"preview": "preview:",
 			"placeholderName": "(name)",
 			"placeholderDescription": "(description)",
-			"selectedTag": "selected tag: "
+			"selectedTag": "selected tag: ",
+			"unsolved": "open"
 		}
 	},
 	"sl": {

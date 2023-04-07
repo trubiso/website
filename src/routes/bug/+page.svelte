@@ -24,19 +24,22 @@
 		<h1>{$t('bug.selectedTag')}{$localizeTag(data.tag)}</h1>
 	{/if}
 
-	<div class="unsolved">
-		<div class="bug-grid">
-			{#each unsolved as bug}
-				{#key unsolved}
-					<Bug {bug} />
-				{/key}
-			{/each}
+	{#if unsolved.length}
+		<div class="unsolved">
+			<h2>{$t('bug.unsolved')} ({unsolved.length})</h2>
+			<div class="bug-grid">
+				{#each unsolved as bug}
+					{#key unsolved}
+						<Bug {bug} />
+					{/key}
+				{/each}
+			</div>
 		</div>
-	</div>
+	{/if}
 
 	{#if solved.length}
 		<div class="solved">
-			<h2>{$localizeTag('prioritySolved')}</h2>
+			<h2>{$localizeTag('prioritySolved')} ({solved.length})</h2>
 			<div class="bug-grid">
 				{#each solved as bug}
 					{#key solved}
