@@ -7,9 +7,9 @@
 	background-color: var(--cardBG);
 	color: var(--cardText);
 
-	max-width: calc(100vw - 60px - 8.5px);
+	max-width: calc(100vw - 60px);
 	@media screen and (min-width: $noMobile) {
-		max-width: calc(100vw - 60px - 200px - 8.5px);
+		max-width: calc(100vw - 60px - 200px);
 	}
 
 	img {
