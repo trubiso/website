@@ -119,7 +119,7 @@
 			"specialThanks": "venn, clembs, karl2883, dave, carrot farmer, earlofrats, angel753, ali kirb and you. i strongly appreciate your admiration and support towards this website whether it's regarding code, assets (venn :D) or simply moral support.",
 			"repository": "you can find this website's source code here:",
 			"socialMedia": "you can find me on the following social media:",
-			"signoff": "take care <3"
+			"signoff": "take care"
 		},
 		"socialMedia": {
 			"github": "github",
@@ -308,7 +308,7 @@
 			"specialThanks": "venn, clembs, karl2883, dave, carrot farmer, earlofrats, angel753, ali kirb and you. i strongly appreciate your admiration and support towards this website whether it's regarding code, assets (venn :D) or simply moral support.",
 			"repository": "you can find this website's source code here:",
 			"socialMedia": "you can find me on the following social media:",
-			"signoff": "take care <3"
+			"signoff": "take care"
 		},
 		"socialMedia": {
 			"github": "github",
@@ -485,7 +485,7 @@
 			"specialThanks": "venn, clembs, karl2883, dave, carrot farmer, earlofrats, angel753, ali kirb y a ti. aprecio muchísimo vuestra admiración y apoyo a mi página web, como si es en cuanto a código, elementos audiovisuales (venn :D) o simplemente apoyo moral.",
 			"repository": "puedes encontrar el código de la página aquí:",
 			"socialMedia": "me puedes encontrar en las siguientes redes sociales:",
-			"signoff": "cuídate <3"
+			"signoff": "cuídate"
 		},
 		"socialMedia": {
 			"github": "github",
@@ -666,7 +666,7 @@
 			"specialThanks": "venn, clembs, karl2833, dave, carrot farmer, earlofrats, angel753, ali kirb и до тебе. многу ти го ценам восхитот и поддршката кон веб-сајтов без разлика дали се работи за код, средства (venn :D) или едноставно морална поддршка.",
 			"repository": "можеш да го најдеш изворниот код на сајтов овде:",
 			"socialMedia": "можеш да ме најдеш на следниве социјални мрежи:",
-			"signoff": "чувај се <3"
+			"signoff": "чувај се"
 		},
 		"socialMedia": {
 			"github": "github",
@@ -853,7 +853,7 @@
 			"new": "o kama e soweli sin"
 		},
 		"about": {
-			"signoff": "omekapo <3"
+			"signoff": "omekapo"
 		},
 		"socialMedia": {
 			"github": "lipu Kita (GitHub)",
@@ -923,7 +923,17 @@
 	},
 	"jb": {
 		"navbar": {
-			"logo": "/logo/lojban.png"
+			"logo": "/logo/lojban.png",
+			"kitty": "mlatu"
+		},
+		"about": {
+			"signoff": ".i .ai ko kurji ko"
+		},
+		"socialMedia": {
+			"github": "la gitxab.",
+			"twitch": "la tuitc.",
+			"discord": "la diskord.",
+			"newgrounds": "la niugraundz."
 		}
 	},
 	"kn": {
