@@ -1,3 +1,4 @@
+import cookie from 'cookie';
 import { emotes, langs, strings } from './json';
 import type { LocalizationKey, LocalizationKeyFirst } from './localization';
 
@@ -30,7 +31,13 @@ function apl(a: LocalizationKeyFirst, b: string): LocalizationKey {
 }
 
 export function submitFormFormat(who: LocalizationKeyFirst) {
-	return { object: apl(who, '.object'), one: apl(who, '.one'), articled: apl(who, '.articled'), your: apl(who, '.your'), sent: apl(who, '.sent') };
+	return {
+		object: apl(who, '.object'),
+		one: apl(who, '.one'),
+		articled: apl(who, '.articled'),
+		your: apl(who, '.your'),
+		sent: apl(who, '.sent')
+	};
 }
 
 export function stringsForLang(lang: keyof typeof langs): number {
@@ -43,4 +50,17 @@ export function stringsForLang(lang: keyof typeof langs): number {
 		count += Object.keys(z).length;
 	}
 	return count;
+}
+
+export function getRequestCookie(request: Request, name: string): string | null {
+	try {
+		const header = request.headers.get('Cookie');
+		if (header === null) return null;
+		const cookies = cookie.parse(header);
+		if (cookies === null) return null;
+		if (!Object.keys(cookies).includes(name)) return null;
+		else return cookies[name];
+	} catch (_) {
+		return null;
+	}
 }
