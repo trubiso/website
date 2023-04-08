@@ -924,7 +924,32 @@
 	"jb": {
 		"navbar": {
 			"logo": "/logo/lojban.png",
-			"kitty": "mlatu"
+			"dont_click": "xlali",
+			"kitty": "mlatu",
+			"games": "kelci",
+			"q+a": "preti",
+			"bug": "nabmi",
+			"translation": "fanva",
+			"about": "kibystu fatci",
+			"options": "tikygau"
+		},
+		"color": {
+			"hue": "ka se skari",
+			"sat": "ka carmi",
+			"val": "value",
+			"red": "ka xunre",
+			"green": "ka crino",
+			"blue": "ka blanu",
+			"hex": "ju'u paxa",
+			"old": "lo purci",
+			"new": "lo balvi",
+			"saved": "saved",
+			"save": "save",
+			"load": "load",
+			"copy": "copy to clipboard",
+			"paste": "paste from clipboard",
+			"reset": "reset",
+			"done": "mulno"
 		},
 		"about": {
 			"signoff": ".i .ai ko kurji ko"
@@ -934,6 +959,19 @@
 			"twitch": "la tuitc.",
 			"discord": "la diskord.",
 			"newgrounds": "la niugraundz."
+		},
+		"navigation": {
+			"page": "papri"
+		},
+		"q+a": {
+			"title": "lo preti .e lo danfu be py",
+			"askMe": ".ai preti fi ko mi",
+			"object": "question",
+			"errorQuestionMissing": "your question is either empty or you just put spaces in it, try to formulate a coherent question",
+			"errorOther": "there was an internal error when trying to send the question. it is the following:",
+			"questionPreview": "preview:",
+			"placeholderTitle": "(untitled)",
+			"placeholderAnswer": ":silly: pretend i answered"
 		}
 	},
 	"kn": {
