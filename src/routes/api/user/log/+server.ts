@@ -1,4 +1,5 @@
 import { getRequestCookie } from '$lib/functions';
+import prisma from '$lib/server/db';
 import {
 	checkLogin,
 	findToken,
@@ -7,8 +8,7 @@ import {
 	randomHash,
 	replyError,
 	replyWithCookies
-} from '$lib/login';
-import prisma from '$lib/server/db';
+} from '$lib/server/user';
 import type { RequestHandler } from '@sveltejs/kit';
 import * as bcrypt from 'bcryptjs';
 
