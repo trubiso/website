@@ -45,9 +45,9 @@
 
 <main class="login-modal-form">
 	{#if inProgress}
-		<div class="progress-text">
+		<span class="progress-text">
 			{$t(`login.${current}InProgress`)}
-		</div>
+		</span>
 		<div class="spinner">
 			<Emote name="silly" spinning scaling />
 		</div>
