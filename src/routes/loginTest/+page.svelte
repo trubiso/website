@@ -1,30 +1,25 @@
 <script lang="ts">
+	import { interpretLog, isPositiveResult } from '$lib/login';
 	import cookie from 'cookie';
 	import { onMount } from 'svelte';
 	let username: string;
 	let password: string;
 
 	async function submitLogin() {
-		const req = await fetch(`/api/user/log`, {
+		const res = await fetch(`/api/user/log`, {
 			method: 'POST',
 			body: JSON.stringify({
 				username,
 				password
 			})
 		});
-		const result = await req.json();
+		const interpreted = await interpretLog<true>(res);
 
-		switch (req.status) {
-			case 500:
-				alert(`error: ${result.body.error}\n${result.body.message}`);
-				break;
-			case 200:
-				document.cookie = result.body.usernameCookie;
-				alert('login successful');
-				break;
-			default:
-				alert(`unhandled status ${req.status}`);
-				break;
+		if (isPositiveResult(interpreted)) {
+			document.cookie = interpreted.usernameCookie;
+			alert('login successful');
+		} else {
+			alert(`error: ${interpreted.error}\n${interpreted.message}`);
 		}
 
 		changeMsg();
@@ -40,22 +35,16 @@
 
 			let url = `/api/user/log?username=${username}`;
 			if (all) url += '&all';
-			const req = await fetch(url, {
+			const res = await fetch(url, {
 				method: 'GET'
 			});
-			const result = await req.json();
+			const interpreted = await interpretLog<false>(res);
 
-			switch (req.status) {
-				case 500:
-					alert(`error: ${result.body.error}\n${result.body.message}`);
-					break;
-				case 200:
-					document.cookie = result.body.usernameCookie;
-					alert('logout successful');
-					break;
-				default:
-					alert(`unhandled status ${req.status}`);
-					break;
+			if (isPositiveResult(interpreted)) {
+				document.cookie = interpreted.usernameCookie;
+				alert('logout successful');
+			} else {
+				alert(`error: ${interpreted.error}\n${interpreted.message}`);
 			}
 
 			changeMsg();
