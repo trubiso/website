@@ -9,12 +9,15 @@ export const POST: RequestHandler = async ({ request }) => {
 
 		const username: string = req.username.trim();
 		const password: string = req.password;
+		const passwordConfirm: string = req.passwordConfirm;
+
+		if (password !== passwordConfirm) return replyError('password', "Passwords don't match.");
 
 		const sameName = await prisma.user.findFirst({
 			where: { username: { equals: username, mode: 'insensitive' } }
 		});
 
-		if (sameName != null) return replyError('username', 'Username already exists.');
+		if (sameName !== null) return replyError('username', 'Username already exists.');
 
 		if (!username.match(/^[a-zA-Z0-9._\-?!]+$/))
 			return replyError('badname', 'Username must only have alphanumeric characters/punctuation.');

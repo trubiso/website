@@ -30,7 +30,7 @@ interface RegisterPositive extends Messenger {
 }
 
 interface RegisterNegative extends Negative {
-	error: 'username' | 'badname' | 'badnamelen' | '';
+	error: 'username' | 'badname' | 'badnamelen' | 'password' | 'unknown';
 	message: string;
 }
 
