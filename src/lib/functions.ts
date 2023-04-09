@@ -64,3 +64,7 @@ export function getRequestCookie(request: Request, name: string): string | null 
 		return null;
 	}
 }
+
+export function getCookies(): Record<string, string> {
+	return cookie.parse(document.cookie);
+}

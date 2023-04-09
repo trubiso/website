@@ -11,6 +11,7 @@
 	export let popout = false;
 	export let altPopout = false;
 	export let sidebarLocation = 0;
+	export let forceSpecial = false;
 
 	$: link = (navbar.links as Record<string, string>)[name]; // dumb TS fix that makes my code look ugly :'(
 	// @ts-ignore
@@ -21,7 +22,7 @@
 	<a
 		href={link}
 		class="navbar-item"
-		class:navbar-item-special={name === 'options'}
+		class:navbar-item-special={name === 'options' || forceSpecial}
 		class:bold={$page.url.pathname === link}
 		class:popout={popout && !mobile}
 		class:alt-popout={altPopout}
@@ -36,6 +37,8 @@
 			if (name === 'options') spiny.set(true);
 		}}
 	>
-		{label}
+		<slot>
+			{label}
+		</slot>
 	</a>
 </main>

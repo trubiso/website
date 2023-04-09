@@ -12,6 +12,7 @@
 	} from '$lib/stores';
 	import { slide } from 'svelte/transition';
 	import './Navbar.scss';
+	import NavbarAccount from './NavbarAccount.svelte';
 	import NavbarElement from './NavbarElement.svelte';
 	import NavbarLogo from './NavbarLogo.svelte';
 
@@ -55,21 +56,34 @@
 
 		{#if $sidebarOpen || !$mobile}
 			<div class="sidebar-wrapper" transition:slide>
-				{#each items as item}
+				<div class="top">
+					{#each items as item}
+						<NavbarElement
+							name={item}
+							mobile={$mobile}
+							popout={!!$sidebarPopout}
+							{altPopout}
+							sidebarLocation={$sidebarLocation}
+						/>
+					{/each}
+				</div>
+
+				<div class="sidebar-fill" />
+
+				<div class="bottom">
 					<NavbarElement
-						name={item}
+						name="log_in"
 						mobile={$mobile}
 						popout={!!$sidebarPopout}
 						{altPopout}
 						sidebarLocation={$sidebarLocation}
-					/>
-				{/each}
-
-				<!--TODO: navbar.log_in-->
+						forceSpecial
+					>
+						<NavbarAccount />
+					</NavbarElement>
+				</div>
 			</div>
 		{/if}
-
-		<div class="sidebar-fill" />
 
 		<div style="display: none;">trubiso.tk/awesome</div>
 		<!--easter egg :silly:-->

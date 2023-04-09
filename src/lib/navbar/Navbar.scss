@@ -64,6 +64,15 @@ nav.navbar {
 		width: 200px;
 		height: 100%;
 
+		.sidebar-wrapper {
+			height: 100%;
+			display: flex;
+			flex-direction: column;
+			.top {
+				flex-grow: 1;
+			}
+		}
+
 		&.sidebar-a {
 			left: 0;
 			&.alt-bg {
