@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { interpretLog, isPositiveResult } from '$lib/login';
+	import { interpretLog, isPositiveResult } from '$lib/api';
 	import cookie from 'cookie';
 	import { onMount } from 'svelte';
 	let username: string;
