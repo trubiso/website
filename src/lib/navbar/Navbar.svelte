@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { page } from '$app/stores';
 	import { navbar } from '$lib/json';
+	import LoginModal from '$lib/login/LoginModal.svelte';
 	import {
 		lock,
 		mobile,
@@ -20,6 +21,7 @@
 
 	$: altPopout = $theme.accent === $theme.bg;
 	$: lastBold = $page.url.pathname === navbar.links.options;
+	let isFormOpen = false;
 
 	function toggleSidebar() {
 		sidebarOpen.set(!$sidebarOpen);
@@ -70,6 +72,10 @@
 
 				<div class="sidebar-fill" />
 
+				{#if isFormOpen}
+					<LoginModal onClose={() => (isFormOpen = false)} />
+				{/if}
+
 				<div class="bottom">
 					<NavbarElement
 						name="log_in"
@@ -78,6 +84,10 @@
 						{altPopout}
 						sidebarLocation={$sidebarLocation}
 						forceSpecial
+						onClick={(e) => {
+							e.preventDefault();
+							isFormOpen = true;
+						}}
 					>
 						<NavbarAccount />
 					</NavbarElement>

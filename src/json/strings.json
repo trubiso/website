@@ -12,7 +12,8 @@
 			"translation": "translation",
 			"about": "about",
 			"options": "options",
-			"log_in": "log in?"
+			"log_in": "log in?",
+			"logged_in": "profile"
 		},
 		"error": {
 			"ohNo": "OH NO!",
@@ -187,6 +188,26 @@
 			"placeholderDescription": "(description)",
 			"selectedTag": "selected tag: ",
 			"unsolved": "open"
+		},
+		"login": {
+			"loginTitle": "LOG IN!",
+			"registerTitle": "REGISTER!",
+			"username": "username",
+			"usernamePlaceholder": "tongue",
+			"password": "password",
+			"passwordPlaceholder": "very secret!",
+			"passwordConfirm": "confirm password",
+			"passwordConfirmPlaceholder": "don't make a mistake!",
+			"loginButton": "log in",
+			"registerButton": "register",
+			"loginSwitch": "or maybe register!",
+			"registerSwitch": "or maybe log in!",
+			"safety": "this form is safe and has been checked by the government of Smilieland",
+			"errorTitle": "AHH!",
+			"loginError_ok": "you were already logged in",
+			"loginError_username": "there is no user called {user}",
+			"loginError_password": "you entered the wrong password",
+			"loginError_unknown": "an unknown error happened:"
 		}
 	},
 	"sl": {

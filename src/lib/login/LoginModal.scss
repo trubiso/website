@@ -1,0 +1,29 @@
+$width: 375px;
+$height: 450px;
+$sideOffset: 60px;
+
+main.login-modal {
+	div.form {
+		z-index: 5;
+		position: fixed;
+		width: $width;
+		max-width: $width;
+		height: $height;
+
+		left: calc((100vw - $width) / 2);
+		top: calc((100vh - $height) / 2);
+		background-color: white;
+		border: 2px solid black;
+		border-radius: 3px;
+
+		@media screen and (max-width: calc($width + $sideOffset)) {
+			left: 30px;
+			width: calc(100% - $sideOffset);
+		}
+
+		@media screen and (max-height: calc($height + $sideOffset)) {
+			top: 30px;
+			height: calc(100% - $sideOffset);
+		}
+	}
+}

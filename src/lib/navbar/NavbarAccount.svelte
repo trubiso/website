@@ -8,7 +8,7 @@
 	function update() {
 		const cookies = getCookies();
 		const username = cookies['username'];
-		if (username !== undefined) message = username;
+		if (username !== undefined) $t('navbar.logged_in');
 		else message = $t('navbar.log_in');
 	}
 

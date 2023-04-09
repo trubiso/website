@@ -12,6 +12,10 @@
 	export let altPopout = false;
 	export let sidebarLocation = 0;
 	export let forceSpecial = false;
+	export let onClick = (e: Event) => {
+		sidebarOpen.set(false);
+		lock.set(false);
+	};
 
 	$: link = (navbar.links as Record<string, string>)[name]; // dumb TS fix that makes my code look ugly :'(
 	// @ts-ignore
@@ -29,10 +33,7 @@
 		class:mobile-popout={popout && mobile}
 		class:sidebar-a={!sidebarLocation}
 		class:sidebar-b={sidebarLocation}
-		on:click={() => {
-			sidebarOpen.set(false);
-			lock.set(false);
-		}}
+		on:click={onClick}
 		on:contextmenu|preventDefault={() => {
 			if (name === 'options') spiny.set(true);
 		}}
