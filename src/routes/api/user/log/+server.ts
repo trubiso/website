@@ -10,7 +10,7 @@ import {
 } from '$lib/login';
 import prisma from '$lib/server/db';
 import type { RequestHandler } from '@sveltejs/kit';
-import * as bcrypt from 'bcrypt';
+import * as bcrypt from 'bcryptjs';
 
 // LOG IN
 export const POST: RequestHandler = async ({ request }) => {

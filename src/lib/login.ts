@@ -1,6 +1,6 @@
 import prisma from '$lib/server/db';
 import type { user } from '@prisma/client';
-import * as bcrypt from 'bcrypt';
+import * as bcrypt from 'bcryptjs';
 import cookie from 'cookie';
 import * as uuid from 'uuid';
 
@@ -56,7 +56,7 @@ export function makeCookie(name: string, data: string | null, baseDate: number |
 	});
 }
 
-export async function hash(data: string | Buffer): Promise<string> {
+export async function hash(data: string): Promise<string> {
 	return await bcrypt.hash(data, await bcrypt.genSalt(10));
 }
 
