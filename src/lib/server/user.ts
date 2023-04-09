@@ -64,7 +64,7 @@ export async function randomHash(): Promise<string> {
 	return await hash(uuid.v4());
 }
 
-export function reply(body: object, status: number, headers?: HeadersInit): Response {
+export function reply(body: object, status = 200, headers?: HeadersInit): Response {
 	return new Response(JSON.stringify({ body }), { status, headers });
 }
 

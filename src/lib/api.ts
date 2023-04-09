@@ -1,14 +1,23 @@
-interface LogPositive {
+interface Messenger {
+	message: string;
+}
+
+interface Negative extends Messenger {
+	error: string;
+	message: string;
+}
+
+interface LogPositive extends Messenger {
 	message: string;
 	usernameCookie: string;
 }
 
-interface LogoutNegative {
+interface LogoutNegative extends Negative {
 	error: 'ok' | 'unknown';
 	message: string;
 }
 
-interface LoginNegative {
+interface LoginNegative extends Negative {
 	error: 'ok' | 'username' | 'password' | 'unknown';
 	message: string;
 }
@@ -16,25 +25,52 @@ interface LoginNegative {
 export type Logout = LogoutNegative | LogPositive;
 export type Login = LoginNegative | LogPositive;
 
-export async function interpretLog<T extends boolean>(
-	res: Response
-): Promise<T extends false ? Logout : Login> {
+interface RegisterPositive extends Messenger {
+	message: string;
+}
+
+interface RegisterNegative extends Negative {
+	error: 'username' | 'badname' | 'badnamelen' | '';
+	message: string;
+}
+
+export type Register = RegisterPositive | RegisterNegative;
+
+async function status<A, B>(
+	res: Response,
+	// eslint-disable-next-line @typescript-eslint/no-explicit-any
+	positive: (body: any) => A,
+	// eslint-disable-next-line @typescript-eslint/no-explicit-any
+	negative: (body: any) => B
+): Promise<A | B> {
 	const json = await res.json();
 	const body = json.body;
 	switch (res.status) {
 		case 200:
-			return <LogPositive>{
-				message: body.message,
-				usernameCookie: body.usernameCookie
-			};
+			return positive(body);
 		case 500:
-			return {
-				message: body.message,
-				error: body.error
-			};
+			return negative(body);
 		default:
 			throw 'what';
 	}
+}
+
+async function statusCast<A, B>(res: Response): Promise<A | B> {
+	return status(
+		res,
+		(body) => body as A,
+		(body) => body as B
+	);
+}
+
+export async function interpretUserLog<T extends boolean>(
+	res: Response
+): Promise<T extends false ? Logout : Login> {
+	return statusCast(res);
+}
+
+export async function interpretUserNew(res: Response): Promise<Register> {
+	return statusCast(res);
 }
 
 export function isPositiveResult(

@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { interpretLog, isPositiveResult } from '$lib/api';
+	import { interpretUserLog, isPositiveResult } from '$lib/api';
 	import cookie from 'cookie';
 	import { onMount } from 'svelte';
 	let username: string;
@@ -13,7 +13,7 @@
 				password
 			})
 		});
-		const interpreted = await interpretLog<true>(res);
+		const interpreted = await interpretUserLog<true>(res);
 
 		if (isPositiveResult(interpreted)) {
 			document.cookie = interpreted.usernameCookie;
@@ -38,7 +38,7 @@
 			const res = await fetch(url, {
 				method: 'GET'
 			});
-			const interpreted = await interpretLog<false>(res);
+			const interpreted = await interpretUserLog<false>(res);
 
 			if (isPositiveResult(interpreted)) {
 				document.cookie = interpreted.usernameCookie;

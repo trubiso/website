@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { interpretLog, isPositiveResult } from '$lib/api';
+	import { interpretUserLog, isPositiveResult } from '$lib/api';
 	import { t } from '$lib/localization';
 	import Emote from '$lib/text/Emote.svelte';
 	import { createEventDispatcher } from 'svelte';
@@ -24,7 +24,7 @@
 				password
 			})
 		});
-		const interpreted = await interpretLog<true>(res);
+		const interpreted = await interpretUserLog<true>(res);
 
 		if (isPositiveResult(interpreted)) {
 			document.cookie = interpreted.usernameCookie;
