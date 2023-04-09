@@ -10,8 +10,8 @@
 		"about": "/about",
 		"translation": "/translation",
 		"options": "/options",
-		"log_in": "#",
-		"logged_in": "#"
+		"log_in": "/loginTest",
+		"logged_in": "/loginTest"
 	},
 	"order": ["home", "smilies", "dont_click", "kitty", "games", "q+a", "bug", "translation", "about", "options"]
 }

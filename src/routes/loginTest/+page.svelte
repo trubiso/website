@@ -48,6 +48,7 @@
 			}
 
 			changeMsg();
+			location.reload();
 		};
 	}
 

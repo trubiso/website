@@ -3,13 +3,13 @@
 	import { t } from '$lib/localization';
 	import { onMount } from 'svelte';
 
-	let message = $t('navbar.log_in');
+	export let isLoggedIn = false;
+	$: message = isLoggedIn ? $t('navbar.logged_in') : $t('navbar.log_in');
 
-	function update() {
+	export function update() {
 		const cookies = getCookies();
 		const username = cookies['username'];
-		if (username !== undefined) message = $t('navbar.logged_in');
-		else message = $t('navbar.log_in');
+		isLoggedIn = username !== undefined;
 	}
 
 	onMount(() => {

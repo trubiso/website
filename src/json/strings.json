@@ -200,6 +200,8 @@
 			"passwordConfirmPlaceholder": "don't make a mistake!",
 			"loginButton": "log in",
 			"registerButton": "register",
+			"loginInProgress": "logging in...",
+			"registerInProgress": "registering...",
 			"loginSwitch": "or maybe register!",
 			"registerSwitch": "or maybe log in!",
 			"safety": "this form is safe and has been checked by the government of Smilieland",

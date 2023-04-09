@@ -27,7 +27,7 @@
 		href={link}
 		class="navbar-item"
 		class:navbar-item-special={name === 'options' || forceSpecial}
-		class:bold={$page.url.pathname === link}
+		class:bold={$page.url.pathname === link && !forceSpecial}
 		class:popout={popout && !mobile}
 		class:alt-popout={altPopout}
 		class:mobile-popout={popout && mobile}

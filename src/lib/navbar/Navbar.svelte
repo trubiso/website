@@ -22,6 +22,8 @@
 	$: altPopout = $theme.accent === $theme.bg;
 	$: lastBold = $page.url.pathname === navbar.links.options;
 	let isFormOpen = false;
+	let isLoggedIn: boolean;
+	let updateAccount: () => void;
 
 	function toggleSidebar() {
 		sidebarOpen.set(!$sidebarOpen);
@@ -73,7 +75,7 @@
 				<div class="sidebar-fill" />
 
 				{#if isFormOpen}
-					<LoginModal onClose={() => (isFormOpen = false)} />
+					<LoginModal on:close={() => (isFormOpen = false)} on:login={updateAccount} />
 				{/if}
 
 				<div class="bottom">
@@ -85,11 +87,12 @@
 						sidebarLocation={$sidebarLocation}
 						forceSpecial
 						onClick={(e) => {
+							if (isLoggedIn) return;
 							e.preventDefault();
 							isFormOpen = true;
 						}}
 					>
-						<NavbarAccount />
+						<NavbarAccount bind:update={updateAccount} bind:isLoggedIn />
 					</NavbarElement>
 				</div>
 			</div>
