@@ -72,6 +72,10 @@ export function replyError<T extends object>(error: string, message: string): Re
 	return reply(<T>{ error, message }, 500);
 }
 
+export function replyErrorInvalid() {
+	return replyError('unknown', "look. i don't know what you want, but that request is not valid. please don't flood my website :)");
+}
+
 export function replyWithCookies<T extends object>(
 	message: string,
 	usernameCookie: string,

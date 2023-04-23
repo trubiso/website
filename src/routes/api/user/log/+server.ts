@@ -7,6 +7,7 @@ import {
 	makeCookie,
 	randomHash,
 	replyError,
+	replyErrorInvalid,
 	replyWithCookies
 } from '$lib/server/user';
 import type { RequestHandler } from '@sveltejs/kit';
@@ -16,6 +17,8 @@ import * as bcrypt from 'bcryptjs';
 export const POST: RequestHandler = async ({ request }) => {
 	try {
 		const req = await request.json();
+
+		if (!('username' in req && 'password' in req)) return replyErrorInvalid();
 
 		const username = req.username;
 		const password = req.password;

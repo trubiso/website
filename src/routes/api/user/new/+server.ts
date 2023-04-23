@@ -1,11 +1,14 @@
 import prisma from '$lib/server/db';
-import { hash, reply, replyError } from '$lib/server/user';
+import { hash, reply, replyError, replyErrorInvalid } from '$lib/server/user';
 import type { RequestHandler } from '@sveltejs/kit';
 import * as uuid from 'uuid';
 
 export const POST: RequestHandler = async ({ request }) => {
 	try {
 		const req = await request.json();
+
+		if (!('username' in req && 'password' in req && 'passwordConfirm' in req))
+			return replyErrorInvalid();
 
 		const username: string = req.username.trim();
 		const password: string = req.password;

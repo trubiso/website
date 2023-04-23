@@ -36,6 +36,19 @@ interface RegisterNegative extends Negative {
 
 export type Register = RegisterPositive | RegisterNegative;
 
+export interface LogoutInput {
+	all: boolean;
+}
+export interface LoginInput {
+	username: string;
+	password: string;
+}
+export interface RegisterInput {
+	username: string;
+	password: string;
+	passwordConfirm: string;
+}
+
 async function status<A, B>(
 	res: Response,
 	// eslint-disable-next-line @typescript-eslint/no-explicit-any
