@@ -1,5 +1,6 @@
 <script lang="ts">
-	import { interpretUserLog, isPositiveResult } from '$lib/api';
+	import { isPositiveResult } from '$lib/api';
+	import { api } from '$lib/apiInteract';
 	import { t } from '$lib/localization';
 	import Emote from '$lib/text/Emote.svelte';
 	import { createEventDispatcher } from 'svelte';
@@ -17,25 +18,19 @@
 	async function submit() {
 		inProgress = true;
 		if (registering) return alert('TODO: registering');
-		const res = await fetch(`/api/user/log`, {
-			method: 'POST',
-			body: JSON.stringify({
-				username,
-				password
-			})
-		});
-		const interpreted = await interpretUserLog<true>(res);
 
-		if (isPositiveResult(interpreted)) {
-			document.cookie = interpreted.usernameCookie;
+		const req = await api('user/login', { username, password });
+
+		if (isPositiveResult(req)) {
+			document.cookie = req.usernameCookie;
 		} else {
-			alert($t(`login.loginError_${interpreted.error}`));
-			alert(`error: ${interpreted.error}\n${interpreted.message}`);
+			alert($t(`login.loginError_${req.error}`));
+			alert(`error: ${req.error}\n${req.message}`);
 		}
 
 		inProgress = false;
 		dispatch('login');
-		if (isPositiveResult(interpreted)) dispatch('loginSuccess');
+		if (isPositiveResult(req)) dispatch('loginSuccess');
 	}
 
 	function switchMode() {

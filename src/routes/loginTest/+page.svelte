@@ -1,19 +1,13 @@
 <script lang="ts">
-	import { interpretUserLog, isPositiveResult } from '$lib/api';
+	import { isPositiveResult } from '$lib/api';
+	import { api } from '$lib/apiInteract';
 	import cookie from 'cookie';
 	import { onMount } from 'svelte';
 	let username: string;
 	let password: string;
 
 	async function submitLogin() {
-		const res = await fetch(`/api/user/log`, {
-			method: 'POST',
-			body: JSON.stringify({
-				username,
-				password
-			})
-		});
-		const interpreted = await interpretUserLog<true>(res);
+		const interpreted = await api('user/login', { username, password });
 
 		if (isPositiveResult(interpreted)) {
 			document.cookie = interpreted.usernameCookie;
@@ -28,17 +22,11 @@
 	function submitLogout(all: boolean) {
 		return async () => {
 			const cookies = cookie.parse(document.cookie);
-			const username = cookies['username'];
-			if (username === null) {
+			if (cookies[username] === null) {
 				alert('not logged in');
 			}
 
-			let url = `/api/user/log?username=${username}`;
-			if (all) url += '&all';
-			const res = await fetch(url, {
-				method: 'GET'
-			});
-			const interpreted = await interpretUserLog<false>(res);
+			const interpreted = await api('user/logout', { all });
 
 			if (isPositiveResult(interpreted)) {
 				document.cookie = interpreted.usernameCookie;

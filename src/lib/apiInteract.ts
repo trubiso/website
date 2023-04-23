@@ -20,7 +20,7 @@ async function apiUserLog<T extends 'GET' | 'POST'>(
 	if (x === 'GET' && (i as LogoutInput).all) url += '?all';
 	const res = await f(url, {
 		method: x,
-		body: JSON.stringify(x === 'GET' ? {} : i)
+		body: x === 'GET' ? undefined : JSON.stringify(i)
 	});
 	const isLogin = x === 'POST';
 	return interpretUserLog<typeof isLogin>(res);
