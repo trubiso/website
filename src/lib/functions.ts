@@ -47,7 +47,7 @@ export function stringsForLang(lang: keyof typeof langs): number {
 	const a = (s as Record<string, object>)[lang];
 	for (const k in a) {
 		const z = (a as Record<string, object>)[k];
-		count += Object.keys(z).length;
+		for (const g in z) if (g in (strings.en as Record<string, object>)[k]) count += 1;
 	}
 	return count;
 }
