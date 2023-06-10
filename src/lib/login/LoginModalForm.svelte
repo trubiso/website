@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { isPositiveResult } from '$lib/api';
+	import { isNegativeRegister, isPositiveResult } from '$lib/api';
 	import { api } from '$lib/apiInteract';
 	import { t } from '$lib/localization';
 	import Emote from '$lib/text/Emote.svelte';
@@ -16,21 +16,41 @@
 
 	const dispatch = createEventDispatcher();
 	async function submit() {
+		// TODO: proper errors
 		inProgress = true;
-		if (registering) return alert('TODO: registering');
+		let worked = false;
+		if (registering) {
+			const req = await api('user/new', { username, password, passwordConfirm });
 
-		const req = await api('user/login', { username, password });
-
-		if (isPositiveResult(req)) {
-			document.cookie = req.usernameCookie;
+			if (!isNegativeRegister(req)) {
+				worked = true;
+			} else {
+				let errorString =
+					$t('login.errorTitle') + ' ' +
+					(req.error === 'unknown'
+						? `${$t('login.error_unknown')}\n${req.message}`
+						: $t(`login.registerError_${req.error}`));
+				alert(errorString);
+			}
 		} else {
-			alert($t(`login.loginError_${req.error}`));
-			alert(`error: ${req.error}\n${req.message}`);
+			const req = await api('user/login', { username, password });
+
+			if (isPositiveResult(req)) {
+				document.cookie = req.usernameCookie;
+				worked = true;
+			} else {
+				let errorString =
+					$t('login.errorTitle') + ' ' +
+					(req.error === 'unknown'
+						? `${$t('login.error_unknown')}\n${req.message}`
+						: $t(`login.loginError_${req.error}`));
+				alert(errorString);
+			}
 		}
 
 		inProgress = false;
 		dispatch('login');
-		if (isPositiveResult(req)) dispatch('loginSuccess');
+		if (worked) dispatch('loginSuccess');
 	}
 
 	function switchMode() {
@@ -74,7 +94,7 @@
 				<div class="input">
 					<label for="passwordConfirm">{$t('login.passwordConfirm')}</label>
 					<input
-						type="passwordConfirm"
+						type="password"
 						name="passwordConfirm"
 						id="passwordConfirm"
 						placeholder={$t('login.passwordConfirmPlaceholder')}

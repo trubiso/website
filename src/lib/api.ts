@@ -86,8 +86,14 @@ export async function interpretUserNew(res: Response): Promise<Register> {
 	return statusCast(res);
 }
 
+// TODO: merge all isPositive functions into one
+
 export function isPositiveResult(
 	x: LogPositive | LoginNegative | LogoutNegative
 ): x is LogPositive {
 	return 'usernameCookie' in x;
+}
+
+export function isNegativeRegister(x: RegisterPositive | RegisterNegative): x is RegisterNegative {
+	return 'error' in x;
 }

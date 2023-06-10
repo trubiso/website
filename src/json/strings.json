@@ -209,7 +209,11 @@
 			"loginError_ok": "you were already logged in",
 			"loginError_username": "there is no user called {user}",
 			"loginError_password": "you entered the wrong password",
-			"loginError_unknown": "an unknown error happened:"
+			"registerError_username": "username already exists",
+			"registerError_badname": "username must only have alphanumeric characters/punctuation",
+			"registerError_badnamelen": "username must be less than 32 characters",
+			"registerError_password": "passwords don't match",
+			"error_unknown": "an unknown error happened:"
 		}
 	},
 	"sl": {
