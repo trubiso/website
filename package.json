@@ -13,7 +13,7 @@
   },
   "devDependencies": {
     "@sveltejs/adapter-netlify": "^1.0.0-next.48",
-    "@sveltejs/kit": "1.0.0-next.287",
+    "@sveltejs/kit": "1.15.2",
     "@types/bcrypt": "^5.0.0",
     "@types/cookie": "^0.4.1",
     "@types/marked": "^4.0.3",
