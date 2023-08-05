@@ -1,0 +1,2 @@
+<!--TODO: this component should take in data and a component to visualize it, then add visual elements to sort the data, search across it, select a subset of it based on a property, split it across pages, etc-->
+<!--      it will be really useful but 05/08/2023 trubiso is not doing it-->
