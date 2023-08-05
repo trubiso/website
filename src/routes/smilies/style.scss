@@ -1,0 +1,25 @@
+@import '$lib/globals';
+
+main.smilies {
+	@media screen and (max-width: $mobile) {
+		text-align: center;
+		.emote-grid > .emote-grid-emote > .image-container {
+			display: flex;
+			justify-content: center;
+		}
+	}
+
+	.emote-grid > .emote-grid-emote {
+		span.lucky {
+			cursor: default;
+			color: var(--bg);
+			position: absolute;
+		}
+
+		.image-container {
+			img {
+				text-align: center;
+			}
+		}
+	}
+}

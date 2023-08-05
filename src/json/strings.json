@@ -110,6 +110,18 @@
 			"loading": "getting kitty...",
 			"new": "get more kitties"
 		},
+		"smilies": {
+			"welcome": "here are my friend smilies!",
+			"lucky": "lucky you! you found a 2883 :)"
+		},
+		"sort": {
+			"sortMode": "sort mode:",
+			"alphabet": "alphabetical (a-z)",
+			"alphabetRev": "alphabetical (z-a)",
+			"creation": "creation date (old-new)",
+			"creationRev": "creation date (new-old)",
+			"random": "random"
+		},
 		"about": {
 			"thanks": "thank you for visiting trubiso.tk",
 			"privacyPre": "regarding privacy:",
