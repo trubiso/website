@@ -7,6 +7,6 @@
 	<p>...what is this even supposed to be</p>
 	<p>have a funny duck for the inconvenience</p>
 	<div class="duck">
-		<img src="https://random-d.uk/api/randomimg" alt="the duck didn't even load :(" />
+		<img src="https://random-d.uk/api/randomimg" alt="duck" />
 	</div>
 </main>
