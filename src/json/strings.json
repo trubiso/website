@@ -32,6 +32,16 @@
 			"scare": "if the warnings scared you here's some silly faces to calm you down",
 			"laugh": "HEHEHEHEHEHEHE"
 		},
+		"homeStable": {
+			"title": "welcome to my website",
+			"reasonsPre": "why you should use it:",
+			"reason1": "its great",
+			"reason2": "it uses svelte",
+			"reason3": "it is pretty",
+			"reason4": "it has a great point of view on industrail machinery",
+			"reason5": "it has typos (see item above)",
+			"reason6": "h"
+		},
 		"color": {
 			"hue": "hue",
 			"sat": "saturation",

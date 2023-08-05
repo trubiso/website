@@ -18,7 +18,7 @@ export function dateFormat(date: Date) {
 
 export function getEmote(name: string) {
 	const index = emotes.emoteNames.findIndex((x) => x === name);
-	if (!index) return undefined;
+	if (index < 0) return undefined;
 	return emotes.emoteLinks[index];
 }
 
@@ -26,7 +26,7 @@ export function keys<T extends object>(data: T): (keyof T)[] {
 	return Object.keys(data) as (keyof T)[];
 }
 
-function apl(a: LocalizationKeyFirst, b: string): LocalizationKey {
+export function apl(a: LocalizationKeyFirst, b: string): LocalizationKey {
 	return <LocalizationKey>(a + b);
 }
 
