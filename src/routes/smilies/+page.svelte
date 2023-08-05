@@ -10,6 +10,10 @@
 <main class="smilies">
 	<h1>{$t('navbar.smilies')}</h1>
 	{$t('smilies.welcome')}
+	{$t('smilies.source1')}
+	<a href="https://discord.gg/JY7PapMSFR" target="_blank">{$t('smilies.source2')}</a>{$t(
+		'smilies.source3'
+	)}
 	<div class="emote-grid">
 		{#each sortedEmotes as emote, i}
 			<div class="emote-grid-emote">

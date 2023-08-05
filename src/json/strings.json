@@ -112,6 +112,9 @@
 		},
 		"smilies": {
 			"welcome": "here are my friend smilies!",
+			"source1": "(main smilie source:",
+			"source2": "emotiguy appreciation",
+			"source3": ")",
 			"lucky": "lucky you! you found a 2883 :)"
 		},
 		"sort": {
