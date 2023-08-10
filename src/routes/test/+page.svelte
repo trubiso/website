@@ -1,5 +1,5 @@
 <script lang="ts">
-	const pages = ['hsv', 'login'];
+	const pages = ['hsv', 'login', 'strainer'];
 </script>
 
 <main>
