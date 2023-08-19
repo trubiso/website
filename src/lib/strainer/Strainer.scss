@@ -1,0 +1,19 @@
+main.strainer {
+	div.strainer-grid {
+		display: flex;
+
+		&.grid-h {
+			flex-direction: row;
+			flex-wrap: wrap;
+			gap: 20px;			
+		}
+
+		&.grid-v {
+			flex-direction: column;
+		}
+
+		.grid-entry {
+			flex-grow: 1;
+		}
+	}
+}

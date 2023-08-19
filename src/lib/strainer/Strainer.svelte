@@ -7,16 +7,24 @@
 <!--TODO: add config menu to add these back-->
 
 <script lang="ts">
-	import type { SvelteComponent } from "svelte";
+	import type { SvelteComponent } from 'svelte';
+	import './Strainer.scss';
 
 	export let data: { [key: string]: any }[];
 	export let renderComponent: typeof SvelteComponent;
+
+	let gridType: 'h' | 'v' = 'v';
 </script>
 
 <main class="strainer">
-	<ul>
+	<button on:click={() => (gridType = gridType === 'h' ? 'v' : 'h')}
+		>switch grid, curr = {gridType}</button
+	>
+	<div class="strainer-grid grid-{gridType}">
 		{#each data as entry}
-			<li><svelte:component this={renderComponent} {...entry}/></li>
+			<div class="grid-entry">
+				<svelte:component this={renderComponent} {...entry} />
+			</div>
 		{/each}
-	</ul>
+	</div>
 </main>
