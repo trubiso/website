@@ -1,0 +1,25 @@
+main.strainer-options {
+	.option {
+		width: 200px;
+		padding: 5px;
+		border: 2px solid var(--cardText);
+		border-radius: 5px;
+		background-color: var(--cardBG);
+		color: var(--cardText);
+		.title {
+			text-align: center;
+			font-weight: bold;
+		}
+		hr {
+			color: var(--cardText);
+			border: 1px solid var(--cardText);
+			margin-left: -5px;
+			width: calc(100% + 10px);
+		}
+		.body {
+			padding-top: 15px;
+			padding-bottom: 15px;
+			text-align: center;
+		}
+	}
+}

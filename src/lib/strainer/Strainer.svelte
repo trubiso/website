@@ -36,6 +36,7 @@
 	import { shuffle } from '$lib/array';
 	import type { SvelteComponent } from 'svelte';
 	import './Strainer.scss';
+	import StrainerOptions from './StrainerOptions.svelte';
 
 	export let data: StrainerData;
 
@@ -98,9 +99,7 @@
 </script>
 
 <main class="strainer">
-	<button on:click={() => (gridType = gridType === 'h' ? 'v' : 'h')}
-		>switch grid, curr = {gridType}</button
-	>
+	<StrainerOptions bind:gridType={gridType} />
 	<div class="strainer-grid grid-{gridType}">
 		{#each processData(data, dataSettings) as entry}
 			<div class="grid-entry">
